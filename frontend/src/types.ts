@@ -125,6 +125,15 @@ export interface WatchlistItem {
   last_updated: string
 }
 
+export interface PdufaEntry {
+  ticker: string
+  drug: string
+  pdufa_date: string
+  days_to_pdufa: number
+  indication: string
+  source: string
+}
+
 export interface PostMortemEntry {
   id: number
   ticker: string

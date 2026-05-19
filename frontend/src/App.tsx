@@ -5,14 +5,16 @@ import { ScanPanel } from './components/ScanPanel'
 import { WatchlistTable } from './components/WatchlistTable'
 import { SetupCard } from './components/SetupCard'
 import { PostMortemTable } from './components/PostMortemTable'
-import type { Regime, WatchlistItem, PostMortemEntry, TickerAnalysis } from './types'
+import { PdufaPanel } from './components/PdufaPanel'
+import type { Regime, WatchlistItem, PostMortemEntry, TickerAnalysis, PdufaEntry } from './types'
 
-type Tab = 'scan' | 'watchlist' | 'postmortem'
+type Tab = 'scan' | 'watchlist' | 'postmortem' | 'pdufa'
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'scan',      label: 'Scan' },
   { id: 'watchlist', label: 'Watchlist' },
   { id: 'postmortem',label: 'Post-Mortem' },
+  { id: 'pdufa',     label: 'PDUFA' },
 ]
 
 export default function App() {
@@ -26,6 +28,7 @@ export default function App() {
   const regime = useApi<Regime>('/api/regime', true, 5 * 60 * 1000)  // refresh every 5 min
   const watchlist = useApi<WatchlistItem[]>('/api/watchlist', true, 30_000)
   const postmortem = useApi<PostMortemEntry[]>('/api/postmortem', true)
+  const pdufa = useApi<PdufaEntry[]>('/api/pdufa', tab === 'pdufa', 60 * 60 * 1000) // refresh each hour
 
   async function handleTickerSearch(e: React.FormEvent) {
     e.preventDefault()
@@ -146,6 +149,13 @@ export default function App() {
               entries={postmortem.data ?? []}
               loading={postmortem.loading}
               onRefresh={postmortem.refetch}
+            />
+          )}
+          {tab === 'pdufa' && (
+            <PdufaPanel
+              entries={pdufa.data ?? []}
+              loading={pdufa.loading}
+              onRefresh={pdufa.refetch}
             />
           )}
         </div>

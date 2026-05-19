@@ -7,6 +7,7 @@ Also serves the pre-built React frontend from /static.
 import asyncio
 import logging
 import sys
+import threading
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
@@ -49,6 +50,12 @@ _scorer = Scorer()
 _tech = TechnicalAnalyzer()
 _catalyst_v = CatalystVerifier()
 _wm = WatchlistManager()
+_wm_lock = threading.Lock()
+
+
+def _wm_add_candidate(ticker: str, data: dict) -> None:
+    with _wm_lock:
+        _wm.add_candidate(ticker, data)
 
 
 # ── Pydantic models ───────────────────────────────────────────────────────────
@@ -209,13 +216,15 @@ async def update_ticker_status(ticker: str, body: StatusUpdate):
     valid = ("watching", "entered", "invalidated", "closed")
     if body.status not in valid:
         raise HTTPException(400, f"status must be one of {valid}")
-    _wm.update_status(ticker.upper(), body.status, body.notes)
+    with _wm_lock:
+        _wm.update_status(ticker.upper(), body.status, body.notes)
     return {"ok": True, "ticker": ticker.upper(), "status": body.status}
 
 
 @app.delete("/api/watchlist/{ticker}")
 async def remove_ticker(ticker: str):
-    _wm.update_status(ticker.upper(), "closed", "removed via UI")
+    with _wm_lock:
+        _wm.update_status(ticker.upper(), "closed", "removed via UI")
     return {"ok": True}
 
 

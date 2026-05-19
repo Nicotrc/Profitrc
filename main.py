@@ -41,6 +41,7 @@ from modules.behavioral_filter import BehavioralFilter
 from modules.risk_manager import RiskManager
 from modules.alert_engine import AlertEngine
 from modules.watchlist_manager import WatchlistManager
+from modules.data_cache import DataCache
 from output.trade_card import TradeCardGenerator
 
 load_dotenv()
@@ -128,6 +129,7 @@ def run_pipeline(
     # ── Process each candidate ────────────────────────────────────────────────
     passed: list[dict] = []
     skipped: list[dict] = []
+    data_cache = DataCache()
 
     for c in raw_candidates:
         ticker = c.get("ticker")
@@ -135,6 +137,10 @@ def run_pipeline(
             continue
 
         try:
+            ticker_data = data_cache.get(ticker)
+            if ticker_data.rvol > 0:
+                c["rvol"] = ticker_data.rvol
+
             result = _process_candidate(
                 ticker=ticker,
                 candidate=c,
@@ -148,6 +154,7 @@ def run_pipeline(
                 alert_eng=alert_eng,
                 wm=wm,
                 interactive=interactive,
+                ticker_data=ticker_data,
             )
             if result:
                 passed.append(result)
@@ -182,6 +189,7 @@ def _process_candidate(
     alert_eng: AlertEngine,
     wm: WatchlistManager,
     interactive: bool,
+    ticker_data=None,
 ) -> dict | None:
     """
     Runs the full 4-layer pipeline on a single candidate.
@@ -204,14 +212,14 @@ def _process_candidate(
         return None
 
     # ── Technical analysis ────────────────────────────────────────────────────
-    tech_result = tech.get_technical_score(ticker)
+    tech_result = tech.get_technical_score(ticker, ticker_data=ticker_data)
 
     if tech_result.get("blow_off_top"):
         console.print(f"    [red]✗ Blow-off top detected — SKIP (hard rule)[/red]")
         return None
 
     # ── Scoring ───────────────────────────────────────────────────────────────
-    rvol = candidate.get("rvol") or scanner_rvol_or_zero(ticker)
+    rvol = (ticker_data.rvol if ticker_data else None) or candidate.get("rvol") or scanner_rvol_or_zero(ticker)
     catalyst_data["blow_off_top"] = tech_result.get("blow_off_top", False)
 
     scorecard = scorer.score_ticker(
@@ -219,6 +227,7 @@ def _process_candidate(
         catalyst_data=catalyst_data,
         rvol=rvol,
         technical_score=tech_result.get("score", 0),
+        ticker_data=ticker_data,
     )
 
     if scorecard.verdict == "SKIP":
@@ -257,6 +266,7 @@ def _process_candidate(
         entry_high=entry_high,
         stop_price=stop_price,
         tier=catalyst_data["tier"],
+        ticker_data=ticker_data,
     )
     risk_pkg["behavioral_passed"] = behavioral["passed"]
     risk_pkg["behavioral_block_reason"] = behavioral.get("block_reason")

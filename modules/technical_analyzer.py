@@ -265,16 +265,21 @@ class TechnicalAnalyzer:
 
     # ── Composite Technical Score (0–20) ─────────────────────────────────────
 
-    def get_technical_score(self, ticker: str) -> dict:
+    def get_technical_score(self, ticker: str, ticker_data=None) -> dict:
         """
         Fetches daily and hourly OHLCV, runs all SMC checks, and returns:
         {
             score (0–20), bos, choch, fvg_zones, orderblocks,
             entry_zone {low, high}, invalidation, pattern, blow_off_top
         }
+        Uses pre-fetched ticker_data if provided to avoid redundant downloads.
         """
-        df_daily = self._fetch_ohlcv(ticker, period="6mo", interval="1d")
-        df_hourly = self._fetch_ohlcv(ticker, period="60d", interval="1h")
+        if ticker_data is not None and not ticker_data.daily.empty:
+            df_daily = ticker_data.daily
+            df_hourly = ticker_data.hourly
+        else:
+            df_daily = self._fetch_ohlcv(ticker, period="6mo", interval="1d")
+            df_hourly = self._fetch_ohlcv(ticker, period="60d", interval="1h")
 
         result = {
             "score": 0,

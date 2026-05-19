@@ -185,22 +185,56 @@ class RegimeGate:
 
     def _fomc_warning(self) -> bool:
         """
-        Placeholder: returns True if a known FOMC date is within 2 days.
-        In v1 this checks a hardcoded near-term list; a future version can
-        scrape the Fed calendar.
+        Returns True if a FOMC meeting is within FOMC_WARNING_DAYS.
+        Tries to fetch dates from federalreserve.gov; falls back to hardcoded list.
         """
-        # Known 2026 FOMC meeting dates (update quarterly)
-        fomc_dates = [
-            "2026-01-28", "2026-03-18", "2026-05-06", "2026-06-17",
-            "2026-07-29", "2026-09-16", "2026-10-28", "2026-12-16",
-        ]
+        cache_key = f"fomc_{datetime.now(timezone.utc).date()}"
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
         today = datetime.now(timezone.utc).date()
-        for d in fomc_dates:
-            meeting = datetime.strptime(d, "%Y-%m-%d").date()
-            if 0 <= (meeting - today).days <= config.FOMC_WARNING_DAYS:
-                logger.warning("FOMC warning: meeting on %s (within %d days)", d, config.FOMC_WARNING_DAYS)
-                return True
-        return False
+        fomc_dates = []
+
+        try:
+            import requests as _req
+            import re as _re
+            resp = _req.get(
+                "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+                timeout=10,
+                headers={"User-Agent": "PROFITRC Research nicola.research@example.com"},
+            )
+            if resp.ok:
+                date_pattern = _re.compile(
+                    r'(\w+)\s+(\d+)(?:[-–]\d+)?,\s+(\d{4})',
+                    _re.IGNORECASE,
+                )
+                for match in date_pattern.finditer(resp.text):
+                    try:
+                        month_str, day_str, year_str = match.groups()
+                        dt = datetime.strptime(f"{month_str} {day_str} {year_str}", "%B %d %Y").date()
+                        fomc_dates.append(dt)
+                    except ValueError:
+                        continue
+        except Exception as e:
+            logger.debug("FOMC fetch failed: %s — using fallback", e)
+
+        if not fomc_dates:
+            fomc_dates = [
+                datetime.strptime(d, "%Y-%m-%d").date() for d in [
+                    "2026-01-28", "2026-03-18", "2026-05-06", "2026-06-17",
+                    "2026-07-29", "2026-09-16", "2026-10-28", "2026-12-16",
+                    "2027-01-27", "2027-03-17",
+                ]
+            ]
+
+        result = any(
+            0 <= (d - today).days <= config.FOMC_WARNING_DAYS
+            for d in fomc_dates
+        )
+        if result:
+            logger.warning("FOMC warning: meeting within %d days", config.FOMC_WARNING_DAYS)
+        self._cache[cache_key] = result
+        return result
 
     def _megacap_earnings_week(self) -> bool:
         """
@@ -246,21 +280,16 @@ class RegimeGate:
 
     def get_regime(self) -> dict:
         """
-        Aggregates all 4 indicator scores and returns a full regime dict:
-        {
-            "regime":            "TRADE" | "SELECTIVE" | "CAUTION" | "NO_TRADE",
-            "score":             int  (-4 to +4),
-            "components": {
-                "vix":   {"value", "delta_3d", "score"},
-                "spy":   {"value", "ma50", "deviation_pct", "score"},
-                "dxy":   {"value", "change_5d_pct", "score"},
-                "yield": {"value_pct", "delta_3d_bps", "score"},
-            },
-            "fomc_warning":        bool,
-            "megacap_earnings":    bool,
-            "timestamp":           str (ISO-8601 UTC),
-        }
+        Aggregates all 4 indicator scores and returns a full regime dict.
+        Result is cached for 15 minutes to avoid redundant downloads.
         """
+        cache_key = "full_regime"
+        cached = self._cache.get(cache_key)
+        if cached:
+            age = (datetime.now(timezone.utc) - cached["_fetched_at"]).total_seconds()
+            if age < 900:  # 15 minutes TTL
+                return {k: v for k, v in cached.items() if k != "_fetched_at"}
+
         vix_score, vix_detail = self.get_vix_score()
         spy_score, spy_detail = self.get_spy_score()
         dxy_score, dxy_detail = self.get_dxy_score()
@@ -293,6 +322,7 @@ class RegimeGate:
             "megacap_earnings": megacap,
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }
+        self._cache[cache_key] = {**result, "_fetched_at": datetime.now(timezone.utc)}
         logger.info(
             "Regime=%s  score=%d  VIX=%d SPY=%d DXY=%d YLD=%d  fomc=%s",
             regime, total, vix_score, spy_score, dxy_score, yld_score, fomc,

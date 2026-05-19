@@ -3,7 +3,8 @@ import { TickerAnalysis } from '../types'
 function pct(n: number) { return `${(n * 100).toFixed(0)}%` }
 function fmt(n: number | null | undefined, prefix = '$') {
   if (n == null) return '—'
-  return `${prefix}${n.toFixed(4)}`
+  const decimals = n >= 1 ? 2 : 4
+  return `${prefix}${n.toFixed(decimals)}`
 }
 
 function ScoreBar({ value, max, color }: { value: number; max: number; color: string }) {
@@ -134,7 +135,7 @@ export function SetupCard({ analysis, onClose }: Props) {
             <Row label="FVG zones" value={technical.fvg_zones.filter(f => !f.filled).length} />
             {technical.entry_zone.low && technical.entry_zone.high && (
               <Row label="Entry zone"
-                value={`$${technical.entry_zone.low.toFixed(4)} – $${technical.entry_zone.high.toFixed(4)}`}
+                value={`${fmt(technical.entry_zone.low)} – ${fmt(technical.entry_zone.high)}`}
                 valueClass="text-accent-yellow" />
             )}
             {technical.invalidation && (
@@ -151,7 +152,7 @@ export function SetupCard({ analysis, onClose }: Props) {
           <div className="bg-bg-panel rounded-lg p-4">
             <div className="text-xs text-slate-400 uppercase tracking-widest mb-3">Trade Plan</div>
             <Row label="Entry zone"
-              value={`$${risk.entry_low?.toFixed(4)} – $${risk.entry_high?.toFixed(4)}`}
+              value={`${fmt(risk.entry_low)} – ${fmt(risk.entry_high)}`}
               valueClass="text-accent-yellow" />
             <Row label="Stop loss" value={fmt(risk.stop_loss)} valueClass="text-accent-red" />
             <Row label="Target 1" value={`${fmt(risk.target1)}  ${risk.rr_t1}R`} valueClass="text-accent-green" />

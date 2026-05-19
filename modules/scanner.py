@@ -192,57 +192,43 @@ class Scanner:
 
     def fetch_earnings_movers(self) -> list[dict]:
         """
-        Scrapes Yahoo Finance earnings calendar for AH beats.
-        Returns [{"ticker", "eps_actual", "eps_estimate", "surprise_pct", "revenue_beat"}]
-        filtered by EPS beat >25% OR revenue beat >20%.
+        Fetches today's earnings calendar from Nasdaq JSON API (free, no key).
+        Falls back to empty list if unavailable.
         """
-        resp = _get(config.URL_YAHOO_EARNINGS, timeout=20)
-        if resp is None:
-            logger.error("fetch_earnings_movers: request failed")
-            return []
-
-        soup = BeautifulSoup(resp.text, "lxml")
+        import datetime as dt
+        today = dt.date.today().strftime("%Y-%m-%d")
         candidates: list[dict] = []
 
-        # Yahoo Finance earnings table rows
-        rows = soup.select("table tbody tr")
-        for row in rows:
-            cells = row.find_all("td")
-            if len(cells) < 5:
-                continue
-            try:
-                ticker_el = cells[0].find("a") or cells[0]
-                ticker = ticker_el.get_text(strip=True).upper()
-                if not re.match(r'^[A-Z]{1,5}(\.[A-Z])?$', ticker):
-                    continue
+        try:
+            url = f"https://api.nasdaq.com/api/calendar/earnings?date={today}"
+            headers = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
+            resp = requests.get(url, headers=headers, timeout=15)
+            if resp.ok:
+                data = resp.json()
+                rows = (data.get("data", {}) or {}).get("rows", []) or []
+                for row in rows:
+                    ticker = (row.get("symbol") or "").upper()
+                    if not ticker or not re.match(r'^[A-Z]{1,5}$', ticker):
+                        continue
+                    try:
+                        info = yf.Ticker(ticker).fast_info
+                        price = getattr(info, "last_price", None) or 0
+                        if not _price_in_range(price):
+                            continue
+                        candidates.append({
+                            "ticker": ticker,
+                            "price": price,
+                            "change_pct": 0,
+                            "surprise_pct": 0,
+                            "source": "nasdaq_earnings",
+                        })
+                        time.sleep(config.REQUEST_DELAY * 0.5)
+                    except Exception:
+                        continue
+        except Exception as e:
+            logger.warning("fetch_earnings_movers (nasdaq): %s", e)
 
-                # Columns vary — try to extract EPS actual vs estimate
-                eps_actual_text = cells[2].get_text(strip=True).replace(",", "") if len(cells) > 2 else ""
-                eps_est_text = cells[3].get_text(strip=True).replace(",", "") if len(cells) > 3 else ""
-
-                eps_actual = float(eps_actual_text) if eps_actual_text not in ("N/A", "", "--") else None
-                eps_est = float(eps_est_text) if eps_est_text not in ("N/A", "", "--") else None
-
-                surprise_pct = 0.0
-                if eps_actual is not None and eps_est is not None and eps_est != 0:
-                    surprise_pct = ((eps_actual - eps_est) / abs(eps_est)) * 100
-
-                # Only keep significant beats
-                if surprise_pct < config.EPS_BEAT_MIN_PCT:
-                    continue
-
-                candidates.append({
-                    "ticker": ticker,
-                    "eps_actual": eps_actual,
-                    "eps_estimate": eps_est,
-                    "surprise_pct": round(surprise_pct, 1),
-                    "revenue_beat": False,  # upgraded if revenue data available
-                    "source": "yahoo_earnings",
-                })
-            except (ValueError, IndexError, AttributeError):
-                continue
-
-        logger.info("fetch_earnings_movers: %d candidates pass beat filter", len(candidates))
+        logger.info("fetch_earnings_movers: %d candidates", len(candidates))
         return candidates
 
     def fetch_premarket_gainers(self) -> list[dict]:
@@ -389,22 +375,9 @@ class Scanner:
         elif phase in (2, 3):
             raw += self.fetch_yahoo_trending()
 
-        # Apply primary float filter (skip tickers where float >> FLOAT_MAX_TIER2)
-        filtered: list[dict] = []
-        for c in raw:
-            ticker = c.get("ticker")
-            if not ticker:
-                # SEC 8-K entries may not have ticker yet; pass through for later enrichment
-                filtered.append(c)
-                continue
-            # Price already filtered upstream; only float-check if ticker present
-            fl = self.get_float(ticker)
-            if fl == 0 or fl <= config.FLOAT_MAX_TIER2 * 3:
-                # Keep unknowns and anything up to 3× TIER2 cap (scorer will penalise)
-                c["float_shares"] = fl
-                filtered.append(c)
-            else:
-                logger.debug("Phase%d skip %s: float %dM too large", phase, ticker, fl // 1_000_000)
+        # Float check moved to DataCache during pipeline processing.
+        # Keep entries without a price (e.g. SEC 8-K) and those within price range.
+        filtered = [c for c in raw if not c.get("price") or _price_in_range(c["price"])]
 
         deduped = self._deduplicate(filtered)
         logger.info("Phase %d: %d raw → %d after dedup/float filter", phase, len(raw), len(deduped))

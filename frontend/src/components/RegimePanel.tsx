@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Regime, RegimeName } from '../types'
 
 const REGIME_COLOR: Record<RegimeName, string> = {
@@ -35,6 +36,14 @@ interface Props {
 }
 
 export function RegimePanel({ regime, loading, onRefresh }: Props) {
+  const [elapsed, setElapsed] = useState(0)
+
+  useEffect(() => {
+    setElapsed(0)
+    const timer = setInterval(() => setElapsed(e => e + 1), 1000)
+    return () => clearInterval(timer)
+  }, [regime?.timestamp])
+
   if (loading && !regime) {
     return (
       <div className="bg-bg-surface border border-bg-border rounded-lg p-4 animate-pulse">
@@ -126,8 +135,12 @@ export function RegimePanel({ regime, loading, onRefresh }: Props) {
         </div>
       )}
 
-      <div className="mt-2 text-[10px] text-slate-600">
-        {new Date(regime.timestamp).toLocaleString()} UTC
+      <div className="mt-2 text-[10px] text-slate-600 flex items-center gap-1">
+        {elapsed < 60
+          ? `Updated ${elapsed}s ago`
+          : `Updated ${Math.floor(elapsed / 60)}min ago`}
+        {' · '}
+        {`Next refresh in ${Math.max(1, Math.ceil((300 - elapsed) / 60))}min`}
       </div>
     </div>
   )

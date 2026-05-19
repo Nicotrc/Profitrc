@@ -14,6 +14,18 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 import config
 
+POSITIVE_KEYWORDS = [
+    "beat", "beats", "exceeds", "raises guidance", "contract", "awarded",
+    "approved", "approval", "partnership", "deal", "record", "growth",
+    "acquisition", "buy", "upgrade", "bullish",
+]
+
+NEGATIVE_KEYWORDS = [
+    "miss", "misses", "below", "lowers guidance", "lawsuit", "investigation",
+    "sec probe", "delisting", "bankruptcy", "downgrade", "dilution",
+    "offering", "selloff", "resign", "fraud",
+]
+
 logger = logging.getLogger(__name__)
 
 
@@ -92,15 +104,19 @@ class Scorer:
 
     # ── Volume Score (0–25) ───────────────────────────────────────────────────
 
-    def calculate_volume_score(self, ticker: str, rvol: float | None = None) -> tuple[int, list[str]]:
+    def calculate_volume_score(self, ticker: str, rvol: float | None = None, ticker_data=None) -> tuple[int, list[str]]:
         """
         Uses pre-computed RVOL if provided, otherwise fetches from yfinance.
+        Uses ticker_data.daily for multi-day check if available.
         """
         flags: list[str] = []
 
         if rvol is None:
-            from modules.scanner import Scanner
-            rvol = Scanner().calculate_rvol(ticker)
+            if ticker_data is not None:
+                rvol = ticker_data.rvol
+            else:
+                from modules.scanner import Scanner
+                rvol = Scanner().calculate_rvol(ticker)
 
         if rvol >= 20:
             score = 25
@@ -116,8 +132,12 @@ class Scorer:
 
         # Multi-day accumulation bonus: 3 of last 5 days above average volume
         try:
-            import yfinance as yf, pandas as pd
-            df = yf.download(ticker, period="1mo", progress=False, auto_adjust=True)
+            import pandas as pd
+            if ticker_data is not None and not ticker_data.daily.empty:
+                df = ticker_data.daily
+            else:
+                df = yf.download(ticker, period="1mo", progress=False, auto_adjust=True)
+                time.sleep(config.REQUEST_DELAY)
             if not df.empty:
                 if isinstance(df.columns, pd.MultiIndex):
                     df.columns = df.columns.get_level_values(0)
@@ -127,14 +147,12 @@ class Scorer:
                 if above_avg_days >= 3:
                     score = min(score + 5, config.VOLUME_MAX)
                     flags.append("MULTI_DAY_ACCUM")
-                # Pull-back volume check (last 2 bars lower than prior 2)
                 if len(df) >= 4:
                     pullback_vol = df["Volume"].iloc[-2:].mean()
                     prior_vol = df["Volume"].iloc[-4:-2].mean()
                     if pullback_vol < prior_vol * 0.7:
                         score = min(score + 3, config.VOLUME_MAX)
                         flags.append("PULLBACK_LOW_VOL")
-                time.sleep(config.REQUEST_DELAY)
         except Exception as exc:
             logger.debug("volume multi-day check(%s): %s", ticker, exc)
 
@@ -142,54 +160,74 @@ class Scorer:
 
     # ── Sentiment Score (0–20) ────────────────────────────────────────────────
 
-    def calculate_sentiment_score(self, ticker: str) -> tuple[int, list[str]]:
+    def calculate_sentiment_score(self, ticker: str, ticker_data=None) -> tuple[int, list[str]]:
         """
         Counts news headline mentions from Yahoo Finance in the last 48h.
+        Applies keyword polarity analysis before scoring.
         Classifies as: absent (5) | nascent (12) | acceleration (20) | saturated (0)
-        Saturated = hype is already exhausted → red flag.
         """
         flags: list[str] = []
-        count = 0
+
         try:
-            t = yf.Ticker(ticker)
-            news = t.news or []
-            # news items have 'providerPublishTime' (Unix timestamp)
-            import time as _time
-            cutoff = _time.time() - 48 * 3600
-            recent = [n for n in news if n.get("providerPublishTime", 0) >= cutoff]
-            count = len(recent)
-            time.sleep(config.REQUEST_DELAY)
+            if ticker_data is not None:
+                news_items = ticker_data.news_items
+                count = ticker_data.news_count_48h
+            else:
+                import time as _time
+                t = yf.Ticker(ticker)
+                news = t.news or []
+                cutoff = _time.time() - 48 * 3600
+                news_items = [n for n in news if n.get("providerPublishTime", 0) >= cutoff]
+                count = len(news_items)
+                time.sleep(config.REQUEST_DELAY)
         except Exception as exc:
             logger.debug("sentiment(%s): %s", ticker, exc)
-            count = 0
+            return 5, ["SENTIMENT_DATA_ERROR"]
 
         if count == 0:
-            score = 5
-        elif count <= 3:
-            score = 12
-            flags.append("NASCENT_SENTIMENT")
-        elif count <= 8:
-            score = 20
-            flags.append("SENTIMENT_ACCELERATING")
-        else:
-            # Too many mentions = late-stage hype = saturated
-            score = 0
-            flags.append("HYPE_SATURATED_RED_FLAG")
+            return 5, flags
 
+        # Keyword polarity check on titles and summaries
+        positive_hits = 0
+        negative_hits = 0
+        for item in news_items:
+            text = (item.get("title", "") + " " + item.get("summary", "")).lower()
+            if any(kw in text for kw in POSITIVE_KEYWORDS):
+                positive_hits += 1
+            if any(kw in text for kw in NEGATIVE_KEYWORDS):
+                negative_hits += 1
+
+        # Dominant negative news overrides count-based scoring
+        if negative_hits > positive_hits and negative_hits >= 2:
+            flags.append("NEGATIVE_NEWS_DOMINANT")
+            return 5, flags
+
+        if count <= 3:
+            score, sentiment_flag = 12, "NASCENT_SENTIMENT"
+        elif count <= 8:
+            score, sentiment_flag = 20, "SENTIMENT_ACCELERATING"
+        else:
+            score, sentiment_flag = 0, "HYPE_SATURATED_RED_FLAG"
+
+        flags.append(sentiment_flag)
         return score, flags
 
     # ── Risk Score (0–10, higher = LOWER risk) ────────────────────────────────
 
-    def calculate_risk_score(self, ticker: str) -> tuple[int, list[str]]:
+    def calculate_risk_score(self, ticker: str, ticker_data=None) -> tuple[int, list[str]]:
         """
         Evaluates dilution / float / structural red flags.
-        Uses yfinance info plus a lightweight 8-K summary check.
+        Uses ticker_data.info if available to avoid redundant downloads.
         """
         flags: list[str] = []
         try:
-            info = yf.Ticker(ticker).info
-            float_shares = info.get("floatShares") or info.get("sharesOutstanding") or 0
-            time.sleep(config.REQUEST_DELAY)
+            if ticker_data is not None and ticker_data.info:
+                info = ticker_data.info
+                float_shares = ticker_data.float_shares
+            else:
+                info = yf.Ticker(ticker).info
+                float_shares = info.get("floatShares") or info.get("sharesOutstanding") or 0
+                time.sleep(config.REQUEST_DELAY)
         except Exception as exc:
             logger.warning("risk_score(%s) info fetch: %s", ticker, exc)
             return 5, ["INFO_FETCH_FAILED"]
@@ -238,6 +276,7 @@ class Scorer:
         catalyst_data: dict,
         rvol: float | None = None,
         technical_score: int | None = None,
+        ticker_data=None,
     ) -> ScoreCard:
         """
         Calculates full ScoreCard.
@@ -252,9 +291,9 @@ class Scorer:
         card = ScoreCard(ticker=ticker)
 
         cat_score, cat_flags = self.calculate_catalyst_score(catalyst_data)
-        vol_score, vol_flags = self.calculate_volume_score(ticker, rvol=rvol)
-        sent_score, sent_flags = self.calculate_sentiment_score(ticker)
-        risk_score, risk_flags = self.calculate_risk_score(ticker)
+        vol_score, vol_flags = self.calculate_volume_score(ticker, rvol=rvol, ticker_data=ticker_data)
+        sent_score, sent_flags = self.calculate_sentiment_score(ticker, ticker_data=ticker_data)
+        risk_score, risk_flags = self.calculate_risk_score(ticker, ticker_data=ticker_data)
 
         # Technical score supplied externally (from TechnicalAnalyzer) or default
         tech_score = technical_score if technical_score is not None else 0

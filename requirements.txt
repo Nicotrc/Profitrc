@@ -13,3 +13,6 @@ lxml>=4.9
 fastapi>=0.111.0
 uvicorn[standard]>=0.30.0
 scipy>=1.13.0
+pytz>=2024.1
+pytest>=8.0
+# plyer>=2.1   # optional: desktop notifications

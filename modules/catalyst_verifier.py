@@ -154,8 +154,8 @@ class CatalystVerifier:
         """
         feed_url = (
             f"https://www.sec.gov/cgi-bin/browse-edgar"
-            f"?action=getcompany&company={ticker}&type=8-K"
-            f"&dateb=&owner=include&count=5&search_text=&output=atom"
+            f"?action=getcompany&CIK={ticker}&type=8-K"
+            f"&dateb=&owner=include&count=5&output=atom"
         )
 
         empty = {"has_recent_8k": False, "filing_date": None, "url": None, "summary": ""}

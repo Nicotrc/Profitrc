@@ -195,14 +195,17 @@ class RiskManager:
 
     # ── Volatility estimate ───────────────────────────────────────────────────
 
-    def estimate_volatility(self, ticker: str, window: int = 20) -> float:
+    def estimate_volatility(self, ticker: str, window: int = 20, ticker_data=None) -> float:
         """
         Annualised historical volatility from daily log-returns.
-        Used by TradeCardGenerator for probability estimates.
+        Uses pre-fetched ticker_data if provided to avoid redundant downloads.
         Returns 0.80 (80%) as a conservative default on failure.
         """
         try:
-            df = yf.download(ticker, period="3mo", progress=False, auto_adjust=True)
+            if ticker_data is not None and not ticker_data.daily.empty:
+                df = ticker_data.daily
+            else:
+                df = yf.download(ticker, period="3mo", progress=False, auto_adjust=True)
             if df.empty or len(df) < window + 1:
                 return 0.80
             if isinstance(df.columns, pd.MultiIndex):
@@ -224,9 +227,11 @@ class RiskManager:
         entry_high: float,
         stop_price: float,
         tier: int = 1,
+        ticker_data=None,
     ) -> dict:
         """
         Convenience method: computes sizing + volatility + R/R metrics.
+        Targets are set at 2R, 3.5R, 6R instead of fixed percentages.
         entry_mid = midpoint of entry zone.
         """
         entry_mid = (entry_low + entry_high) / 2
@@ -237,13 +242,16 @@ class RiskManager:
             tier=tier,
         )
 
-        vol = self.estimate_volatility(ticker)
-        t1 = round(entry_mid * 1.30, 4)
-        t2 = round(entry_mid * 1.60, 4)
-        t3 = round(entry_mid * 2.00, 4)
+        vol = self.estimate_volatility(ticker, ticker_data=ticker_data)
 
-        def rr(target: float) -> float:
-            return round((target - entry_mid) / (entry_mid - stop_price), 2) if entry_mid != stop_price else 0.0
+        risk_distance = entry_mid - stop_price  # always positive (validated upstream)
+
+        # Targets at 2R, 3.5R, 6R per PROFITRC_v2.md
+        t1_rr, t2_rr, t3_rr = 2.0, 3.5, 6.0
+        t1 = round(entry_mid + risk_distance * t1_rr, 4)
+        t2 = round(entry_mid + risk_distance * t2_rr, 4)
+        t3 = round(entry_mid + risk_distance * t3_rr, 4)
+        t1 = max(t1, round(entry_mid * 1.10, 4))  # enforce minimum +10% for T1
 
         return {
             **sizing,
@@ -254,8 +262,8 @@ class RiskManager:
             "target1": t1,
             "target2": t2,
             "target3": t3,
-            "rr_t1": rr(t1),
-            "rr_t2": rr(t2),
-            "rr_t3": rr(t3),
+            "rr_t1": t1_rr,
+            "rr_t2": t2_rr,
+            "rr_t3": t3_rr,
             "volatility": vol,
         }
