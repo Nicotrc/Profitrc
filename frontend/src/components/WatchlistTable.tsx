@@ -24,10 +24,18 @@ export function WatchlistTable({ items, loading, onRefresh, onAnalyze }: Props) 
     setAnalyzing(ticker)
     try {
       const res = await fetch(`/api/analyze/${ticker}`)
-      const data: TickerAnalysis = await res.json()
-      onAnalyze(data)
+      const data = await res.json()
+      if (!res.ok) {
+        const msg = typeof data?.detail === 'string' ? data.detail : `HTTP ${res.status}`
+        throw new Error(msg)
+      }
+      if (!data?.scorecard?.verdict) {
+        throw new Error('Invalid analysis response from server')
+      }
+      onAnalyze(data as TickerAnalysis)
     } catch (e) {
       console.error(e)
+      alert(e instanceof Error ? e.message : 'Analysis failed')
     } finally {
       setAnalyzing(null)
     }

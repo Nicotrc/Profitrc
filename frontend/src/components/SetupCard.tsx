@@ -36,6 +36,18 @@ interface Props {
 export function SetupCard({ analysis, onClose }: Props) {
   const { ticker, scorecard, technical, catalyst, risk, probabilities } = analysis
 
+  if (!scorecard?.verdict) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70" onClick={onClose}>
+        <div className="bg-bg-surface border border-accent-red/30 rounded-xl p-6 max-w-md" onClick={e => e.stopPropagation()}>
+          <p className="text-accent-red text-sm">Analisi non disponibile per {ticker}.</p>
+          <p className="text-slate-500 text-xs mt-2">Riavvia il container: ./deploy-local.sh --rebuild</p>
+          <button onClick={onClose} className="mt-4 text-xs text-accent-cyan">Chiudi</button>
+        </div>
+      </div>
+    )
+  }
+
   const verdictColor = scorecard.verdict === 'PROCEED' ? 'text-accent-green'
     : scorecard.verdict === 'REVIEW' ? 'text-accent-yellow'
     : 'text-accent-red'

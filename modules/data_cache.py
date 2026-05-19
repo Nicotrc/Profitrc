@@ -39,19 +39,25 @@ class TickerData:
 
         try:
             self.daily = ticker_obj.history(period="6mo", interval="1d", auto_adjust=True)
-            if isinstance(self.daily.columns, pd.MultiIndex):
+            if self.daily is None:
+                self.daily = pd.DataFrame()
+            elif isinstance(self.daily.columns, pd.MultiIndex):
                 self.daily.columns = self.daily.columns.get_level_values(0)
             time.sleep(config.REQUEST_DELAY)
         except Exception as e:
             logger.warning("daily fetch(%s): %s", self.ticker, e)
+            self.daily = pd.DataFrame()
 
         try:
             self.hourly = ticker_obj.history(period="60d", interval="1h", auto_adjust=True)
-            if isinstance(self.hourly.columns, pd.MultiIndex):
+            if self.hourly is None:
+                self.hourly = pd.DataFrame()
+            elif isinstance(self.hourly.columns, pd.MultiIndex):
                 self.hourly.columns = self.hourly.columns.get_level_values(0)
             time.sleep(config.REQUEST_DELAY)
         except Exception as e:
             logger.warning("hourly fetch(%s): %s", self.ticker, e)
+            self.hourly = pd.DataFrame()
 
         try:
             self.info = ticker_obj.info or {}

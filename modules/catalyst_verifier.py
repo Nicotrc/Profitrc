@@ -38,6 +38,33 @@ def _get(url: str, timeout: int = config.REQUEST_TIMEOUT) -> requests.Response |
 
 
 class CatalystVerifier:
+    _cik_by_ticker: dict[str, str] | None = None
+
+    @classmethod
+    def _ticker_to_cik(cls, ticker: str) -> str | None:
+        """Resolve ticker → zero-padded CIK via SEC company_tickers.json (cached)."""
+        if cls._cik_by_ticker is None:
+            cls._cik_by_ticker = {}
+            resp = _get("https://www.sec.gov/files/company_tickers.json", timeout=20)
+            if resp is not None:
+                try:
+                    payload = resp.json()
+                    for item in payload.values():
+                        sym = str(item.get("ticker", "")).upper()
+                        cik = str(item.get("cik_str", "")).zfill(10)
+                        if sym and cik:
+                            cls._cik_by_ticker[sym] = cik
+                except Exception as exc:
+                    logger.warning("SEC company_tickers load failed: %s", exc)
+        return cls._cik_by_ticker.get(ticker.upper())
+
+    @staticmethod
+    def _parse_atom_feed(url: str):
+        """Parse Atom/RSS via requests (avoids feedparser SSL issues on some hosts)."""
+        resp = _get(url, timeout=20)
+        if resp is not None:
+            return feedparser.parse(resp.content)
+        return feedparser.parse(url)
 
     # ── Tier Classification ───────────────────────────────────────────────────
 
@@ -152,15 +179,16 @@ class CatalystVerifier:
             "summary": str,
         }
         """
+        cik = self._ticker_to_cik(ticker) or ticker.upper()
         feed_url = (
             f"https://www.sec.gov/cgi-bin/browse-edgar"
-            f"?action=getcompany&CIK={ticker}&type=8-K"
+            f"?action=getcompany&CIK={cik}&type=8-K"
             f"&dateb=&owner=include&count=5&output=atom"
         )
 
         empty = {"has_recent_8k": False, "filing_date": None, "url": None, "summary": ""}
 
-        feed = feedparser.parse(feed_url)
+        feed = self._parse_atom_feed(feed_url)
         if feed.bozo and not feed.entries:
             logger.warning("verify_sec_filing(%s): feed parse issue", ticker)
             return empty

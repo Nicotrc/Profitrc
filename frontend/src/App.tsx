@@ -38,9 +38,15 @@ export default function App() {
     setAnalyzeError(null)
     try {
       const res = await fetch(`/api/analyze/${t}`)
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      const data: TickerAnalysis = await res.json()
-      setSelectedAnalysis(data)
+      const data = await res.json()
+      if (!res.ok) {
+        const msg = typeof data?.detail === 'string' ? data.detail : `HTTP ${res.status}`
+        throw new Error(msg)
+      }
+      if (!data?.scorecard?.verdict) {
+        throw new Error('Risposta analisi non valida — riavvia Docker con --rebuild')
+      }
+      setSelectedAnalysis(data as TickerAnalysis)
       setTickerInput('')
     } catch (err) {
       setAnalyzeError(err instanceof Error ? err.message : 'Analysis failed')
@@ -133,6 +139,7 @@ export default function App() {
           {tab === 'scan' && (
             <ScanPanel
               capital={capital}
+              regime={regime.data?.regime}
               onSelectTicker={setSelectedAnalysis}
             />
           )}

@@ -90,6 +90,29 @@ def _run_sync(fn, *args):
     return loop.run_in_executor(executor, fn, *args)
 
 
+def _json_safe(value: Any) -> Any:
+    """Convert numpy/pandas scalars for JSON responses."""
+    import numpy as np
+    import pandas as pd
+
+    if isinstance(value, dict):
+        return {k: _json_safe(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(v) for v in value]
+    if isinstance(value, (np.bool_, bool)):
+        return bool(value)
+    if isinstance(value, (np.integer,)):
+        return int(value)
+    if isinstance(value, (np.floating, float)):
+        f = float(value)
+        if f != f:  # NaN
+            return None
+        return f
+    if isinstance(value, pd.Timestamp):
+        return value.isoformat()
+    return value
+
+
 def _build_ticker_analysis(ticker: str, capital: float = 10_000.0) -> dict:
     """Full per-ticker pipeline using shared DataCache to avoid redundant downloads."""
     ticker = ticker.upper()
@@ -117,9 +140,15 @@ def _build_ticker_analysis(ticker: str, capital: float = 10_000.0) -> dict:
 
     rm = RiskManager(capital=capital)
     entry_zone = tech.get("entry_zone", {})
-    entry_low = entry_zone.get("low") or 5.0
-    entry_high = entry_zone.get("high") or 5.5
-    stop = tech.get("invalidation") or (entry_low * 0.75)
+    last_price = None
+    if not ticker_data.daily.empty:
+        last_price = float(ticker_data.daily["Close"].iloc[-1])
+    entry_low, entry_high, stop = rm.normalize_long_levels(
+        entry_zone.get("low"),
+        entry_zone.get("high"),
+        tech.get("invalidation"),
+        last_price=last_price,
+    )
 
     risk = rm.build_risk_package(
         ticker=ticker,
@@ -138,14 +167,14 @@ def _build_ticker_analysis(ticker: str, capital: float = 10_000.0) -> dict:
         volatility=risk.get("volatility", 0.80),
     )
 
-    return {
+    return _json_safe({
         "ticker": ticker,
         "scorecard": card.to_dict(),
         "technical": tech,
         "catalyst": cat,
         "risk": risk,
         "probabilities": probs,
-    }
+    })
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
@@ -161,24 +190,38 @@ async def get_regime():
 
 
 @app.post("/api/scan/{phase}")
-async def run_scan(phase: int, body: CapitalRequest = CapitalRequest()):
+async def run_scan(
+    phase: int,
+    body: CapitalRequest = CapitalRequest(),
+    bypass_regime: bool = False,
+    max_analyze: int = 20,
+):
     """
-    Run a scan phase (0–3). Returns candidates that passed all filters.
+    Run a scan phase (0–3). Returns analyzed candidates (PROCEED, REVIEW, and SKIP).
     phase 0 = AH evening, 1 = premarket, 2 = opening, 3 = midday
-    Non-blocking: runs in thread pool.
+    bypass_regime=true runs the scan even in NO_TRADE (research / diagnostics).
     """
     if phase not in (0, 1, 2, 3):
         raise HTTPException(400, "phase must be 0–3")
+    max_analyze = max(1, min(max_analyze, 50))
 
     def _scan():
         regime = _regime_gate.get_regime()
-        if regime["regime"] == "NO_TRADE":
-            return {"regime": regime, "candidates": [], "skipped": 0,
-                    "message": "NO_TRADE regime — system in standby"}
+        message = None
+        if regime["regime"] == "NO_TRADE" and not bypass_regime:
+            message = (
+                "NO_TRADE — scan eseguito in modalità diagnostica. "
+                "Solo PROCEED/REVIEW sono operativi."
+            )
+        elif regime["regime"] == "NO_TRADE":
+            message = "NO_TRADE regime — scan con bypass_regime=true"
 
         raw = _scanner.run_phase_scan(phase)
-        results = []
-        for c in raw:
+        results: list[dict] = []
+        passed: list[dict] = []
+        errors: list[str] = []
+
+        for c in raw[:max_analyze]:
             ticker = c.get("ticker")
             if not ticker:
                 continue
@@ -187,13 +230,26 @@ async def run_scan(phase: int, body: CapitalRequest = CapitalRequest()):
                 analysis["source"] = c.get("source", "")
                 analysis["change_pct"] = c.get("change_pct", 0)
                 analysis["price"] = c.get("price")
+                results.append(analysis)
                 if analysis["scorecard"]["verdict"] != "SKIP":
-                    results.append(analysis)
+                    passed.append(analysis)
             except Exception as ex:
                 logger.warning("scan skip %s: %s", ticker, ex)
+                errors.append(f"{ticker}: {ex}")
 
-        return {"regime": regime, "candidates": results,
-                "raw_count": len(raw), "passed_count": len(results)}
+        if not message and not raw:
+            message = "No tickers from data sources — check network or try another phase."
+
+        return {
+            "regime": regime,
+            "candidates": results,
+            "passed_candidates": passed,
+            "raw_count": len(raw),
+            "passed_count": len(passed),
+            "analyzed_count": len(results),
+            "errors": errors[:10],
+            "message": message,
+        }
 
     try:
         result = await _run_sync(_scan)
@@ -209,7 +265,12 @@ async def analyze_ticker(ticker: str, capital: float = 10_000.0):
         result = await _run_sync(_build_ticker_analysis, ticker.upper(), capital)
         return result
     except Exception as e:
-        raise HTTPException(500, str(e))
+        logger.exception("analyze_ticker(%s) failed", ticker)
+        raise HTTPException(
+            500,
+            f"Analisi {ticker.upper()} fallita: {e}. "
+            "Esegui ./deploy-local.sh --rebuild se il problema persiste.",
+        )
 
 
 @app.get("/api/watchlist")

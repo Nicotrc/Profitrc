@@ -12,21 +12,27 @@ const PHASES = [
 interface ScanResult {
   regime: { regime: RegimeName; score: number }
   candidates: TickerAnalysis[]
+  passed_candidates?: TickerAnalysis[]
   raw_count: number
   passed_count: number
+  analyzed_count?: number
+  errors?: string[]
   message?: string
 }
 
 interface Props {
   capital: number
+  regime?: RegimeName
   onSelectTicker: (a: TickerAnalysis) => void
 }
 
-export function ScanPanel({ capital, onSelectTicker }: Props) {
+export function ScanPanel({ capital, regime, onSelectTicker }: Props) {
   const [activePhase, setActivePhase] = useState<number | null>(null)
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<ScanResult | null>(null)
   const [error, setError] = useState<string | null>(null)
+  // In NO_TRADE lo scan è bloccato lato API senza bypass
+  const [bypassRegime, setBypassRegime] = useState(regime === 'NO_TRADE')
 
   async function runScan(phase: number) {
     setLoading(true)
@@ -34,7 +40,8 @@ export function ScanPanel({ capital, onSelectTicker }: Props) {
     setError(null)
     setResult(null)
     try {
-      const data = await post<ScanResult>(`/api/scan/${phase}`, { capital })
+      const qs = bypassRegime ? '?bypass_regime=true' : ''
+      const data = await post<ScanResult>(`/api/scan/${phase}${qs}`, { capital })
       setResult(data)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Scan failed')
@@ -45,6 +52,16 @@ export function ScanPanel({ capital, onSelectTicker }: Props) {
 
   return (
     <div className="space-y-4">
+      <label className="flex items-center gap-2 text-[11px] text-slate-500 cursor-pointer">
+        <input
+          type="checkbox"
+          checked={bypassRegime}
+          onChange={e => setBypassRegime(e.target.checked)}
+          className="rounded border-bg-border"
+        />
+        Bypass NO_TRADE (diagnostics)
+      </label>
+
       {/* Phase buttons */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
         {PHASES.map(p => (
@@ -84,19 +101,26 @@ export function ScanPanel({ capital, onSelectTicker }: Props) {
       {result && !loading && (
         <div className="space-y-3 animate-fade-in">
           {/* Summary bar */}
-          <div className="flex items-center gap-4 text-[11px] text-slate-500 bg-bg-panel rounded-lg px-4 py-2">
-            <span>Scanned: <span className="text-slate-300">{result.raw_count ?? '—'}</span></span>
-            <span>Passed: <span className="text-accent-green font-semibold">{result.passed_count ?? result.candidates.length}</span></span>
+          <div className="flex items-center gap-4 text-[11px] text-slate-500 bg-bg-panel rounded-lg px-4 py-2 flex-wrap">
+            <span>Raw: <span className="text-slate-300">{result.raw_count ?? '—'}</span></span>
+            <span>Analyzed: <span className="text-slate-300">{result.analyzed_count ?? result.candidates.length}</span></span>
+            <span>Passed: <span className="text-accent-green font-semibold">{result.passed_count ?? 0}</span></span>
             {result.message && <span className="text-accent-yellow">{result.message}</span>}
           </div>
 
+          {result.errors && result.errors.length > 0 && (
+            <div className="text-[10px] text-accent-red bg-accent-red/10 border border-accent-red/20 rounded p-2">
+              {result.errors.slice(0, 3).join(' · ')}
+            </div>
+          )}
+
           {result.candidates.length === 0 ? (
             <div className="text-center py-6 text-slate-600 text-sm bg-bg-panel rounded-lg border border-bg-border">
-              No candidates passed all filters in this scan.
+              Nessun ticker analizzato (raw: {result.raw_count ?? 0}). Prova Phase 0 o attendi il mercato.
             </div>
           ) : (
             <div className="space-y-2">
-              {result.candidates.map(a => (
+              {result.candidates.filter(a => a?.scorecard?.verdict).map(a => (
                 <CandidateRow key={a.ticker} analysis={a} onClick={() => onSelectTicker(a)} />
               ))}
             </div>
@@ -109,9 +133,10 @@ export function ScanPanel({ capital, onSelectTicker }: Props) {
 
 function CandidateRow({ analysis, onClick }: { analysis: TickerAnalysis; onClick: () => void }) {
   const { ticker, scorecard, catalyst, risk, probabilities } = analysis
+  if (!scorecard?.verdict) return null
   const verdictColor = scorecard.verdict === 'PROCEED' ? 'text-accent-green'
     : scorecard.verdict === 'REVIEW' ? 'text-accent-yellow' : 'text-accent-red'
-  const tierColor = catalyst.tier === 1 ? 'bg-accent-green/10 text-accent-green border-accent-green/30'
+  const tierColor = (catalyst?.tier ?? 2) === 1 ? 'bg-accent-green/10 text-accent-green border-accent-green/30'
     : 'bg-accent-yellow/10 text-accent-yellow border-accent-yellow/30'
   const evPos = (probabilities?.expected_value ?? 0) >= 0
 

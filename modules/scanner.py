@@ -31,6 +31,14 @@ _HEADERS = {
 }
 
 
+def _parse_feed(url: str):
+    """Fetch Atom/RSS with requests then parse (reliable TLS vs feedparser alone)."""
+    resp = _get(url, timeout=config.REQUEST_TIMEOUT)
+    if resp is not None:
+        return feedparser.parse(resp.content)
+    return feedparser.parse(url)
+
+
 def _get(url: str, timeout: int = config.REQUEST_TIMEOUT) -> requests.Response | None:
     """GET with retry on transient errors."""
     for attempt in range(3):
@@ -152,7 +160,7 @@ class Scanner:
         Returns [{"company", "cik", "filing_date", "url", "summary"}]
         for filings within the last `hours_back` hours.
         """
-        feed = feedparser.parse(config.URL_SEC_8K_ATOM)
+        feed = _parse_feed(config.URL_SEC_8K_ATOM)
         if feed.bozo:
             logger.warning("fetch_sec_8k_filings: feed parse warning: %s", feed.bozo_exception)
 
@@ -283,6 +291,60 @@ class Scanner:
         logger.info("fetch_premarket_gainers: %d candidates in range", len(candidates))
         return candidates
 
+    def fetch_yahoo_screener(self, screen_id: str = "most_actives") -> list[dict]:
+        """
+        Yahoo Finance predefined screener (JSON API). Reliable fallback when HTML scrape fails.
+        screen_id: most_actives | day_gainers | day_losers
+        """
+        url = "https://query1.finance.yahoo.com/v1/screener/predefined/saved"
+        params = {
+            "formatted": "true",
+            "lang": "en-US",
+            "region": "US",
+            "scrIds": screen_id,
+            "count": 50,
+        }
+        candidates: list[dict] = []
+        try:
+            r = None
+            for attempt in range(3):
+                r = requests.get(url, params=params, headers=_HEADERS, timeout=20)
+                if r.status_code == 429:
+                    logger.warning("Yahoo screener rate-limited, retry %d", attempt + 1)
+                    time.sleep(3 * (attempt + 1))
+                    continue
+                r.raise_for_status()
+                break
+            if r is None or r.status_code != 200:
+                return candidates
+            quotes = (
+                r.json()
+                .get("finance", {})
+                .get("result", [{}])[0]
+                .get("quotes", [])
+            ) or []
+            for q in quotes:
+                ticker = (q.get("symbol") or "").upper()
+                if not re.match(r"^[A-Z]{1,5}$", ticker):
+                    continue
+                price = float(q.get("regularMarketPrice") or q.get("price") or 0)
+                if not _price_in_range(price):
+                    continue
+                change_pct = float(q.get("regularMarketChangePercent") or 0)
+                candidates.append({
+                    "ticker": ticker,
+                    "price": price,
+                    "change_pct": change_pct,
+                    "volume_str": str(q.get("regularMarketVolume", "N/A")),
+                    "source": f"yahoo_{screen_id}",
+                })
+            time.sleep(config.REQUEST_DELAY)
+        except Exception as exc:
+            logger.warning("fetch_yahoo_screener(%s): %s", screen_id, exc)
+
+        logger.info("fetch_yahoo_screener(%s): %d in range", screen_id, len(candidates))
+        return candidates
+
     def fetch_yahoo_trending(self) -> list[dict]:
         """
         Fetches Yahoo Finance most-active / trending tickers via yfinance screener.
@@ -333,6 +395,8 @@ class Scanner:
                 continue
 
         logger.info("fetch_yahoo_trending: %d candidates in range", len(candidates))
+        if not candidates:
+            candidates = self.fetch_yahoo_screener("most_actives")
         return candidates
 
     # ── Deduplication helper ─────────────────────────────────────────────────
@@ -367,18 +431,30 @@ class Scanner:
             raw += self.fetch_ah_movers()
             raw += self.fetch_earnings_movers()
             raw += self.fetch_sec_8k_filings(hours_back=4)
+            if len([c for c in raw if c.get("ticker")]) < 5:
+                raw += self.fetch_yahoo_screener("day_gainers")
 
         elif phase == 1:
             raw += self.fetch_premarket_gainers()
             raw += self.fetch_sec_8k_filings(hours_back=12)
+            if len([c for c in raw if c.get("ticker")]) < 5:
+                raw += self.fetch_yahoo_screener("day_gainers")
 
         elif phase in (2, 3):
             raw += self.fetch_yahoo_trending()
+            if len([c for c in raw if c.get("ticker")]) < 5:
+                raw += self.fetch_yahoo_screener("most_actives")
 
         # Float check moved to DataCache during pipeline processing.
         # Keep entries without a price (e.g. SEC 8-K) and those within price range.
         filtered = [c for c in raw if not c.get("price") or _price_in_range(c["price"])]
 
         deduped = self._deduplicate(filtered)
+
+        # Last-resort: earnings calendar often works when scrapers / Yahoo API are blocked
+        if not any(c.get("ticker") for c in deduped):
+            logger.warning("Phase %d: no tickers — trying earnings calendar fallback", phase)
+            deduped = self._deduplicate(self.fetch_earnings_movers())
+
         logger.info("Phase %d: %d raw → %d after dedup/float filter", phase, len(raw), len(deduped))
         return deduped

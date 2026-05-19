@@ -261,9 +261,15 @@ def _process_candidate(
         return None
 
     # ── Risk package ──────────────────────────────────────────────────────────
-    stop_price = tech_result.get("invalidation") or (entry_mid_approx * 0.75)
-    entry_low = entry_zone.get("low") or entry_mid_approx * 0.97
-    entry_high = entry_zone.get("high") or entry_mid_approx * 1.03
+    last_price = None
+    if ticker_data is not None and not ticker_data.daily.empty:
+        last_price = float(ticker_data.daily["Close"].iloc[-1])
+    entry_low, entry_high, stop_price = risk_mgr.normalize_long_levels(
+        entry_zone.get("low"),
+        entry_zone.get("high"),
+        tech_result.get("invalidation"),
+        last_price=last_price or entry_mid_approx,
+    )
 
     risk_pkg = risk_mgr.build_risk_package(
         ticker=ticker,

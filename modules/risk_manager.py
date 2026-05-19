@@ -19,6 +19,29 @@ logger = logging.getLogger(__name__)
 
 class RiskManager:
 
+    @staticmethod
+    def normalize_long_levels(
+        entry_low: float | None,
+        entry_high: float | None,
+        stop_price: float | None,
+        last_price: float | None = None,
+    ) -> tuple[float, float, float]:
+        """
+        Ensure valid long setup: entry_low < entry_high and stop below entry_low.
+        Uses last_price when technical entry zone is missing.
+        """
+        px = last_price if last_price and last_price > 0 else 5.0
+        low = entry_low if entry_low and entry_low > 0 else round(px * 0.98, 4)
+        high = entry_high if entry_high and entry_high > 0 else round(px * 1.02, 4)
+        if high <= low:
+            high = round(low * 1.04, 4)
+
+        stop = stop_price
+        if stop is None or stop <= 0 or stop >= low:
+            stop = round(low * 0.80, 4)
+
+        return low, high, stop
+
     def __init__(self, capital: float):
         if capital <= 0:
             raise ValueError("Capital must be positive")
@@ -234,6 +257,9 @@ class RiskManager:
         Targets are set at 2R, 3.5R, 6R instead of fixed percentages.
         entry_mid = midpoint of entry zone.
         """
+        entry_low, entry_high, stop_price = self.normalize_long_levels(
+            entry_low, entry_high, stop_price,
+        )
         entry_mid = (entry_low + entry_high) / 2
 
         sizing = self.calculate_position_size(

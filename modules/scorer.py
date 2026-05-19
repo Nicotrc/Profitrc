@@ -214,7 +214,12 @@ class Scorer:
 
     # ── Risk Score (0–10, higher = LOWER risk) ────────────────────────────────
 
-    def calculate_risk_score(self, ticker: str, ticker_data=None) -> tuple[int, list[str]]:
+    def calculate_risk_score(
+        self,
+        ticker: str,
+        ticker_data=None,
+        catalyst_data: dict | None = None,
+    ) -> tuple[int, list[str]]:
         """
         Evaluates dilution / float / structural red flags.
         Uses ticker_data.info if available to avoid redundant downloads.
@@ -244,10 +249,13 @@ class Scorer:
             score = 3
             flags.append("LARGE_FLOAT")
 
-        # Check recent SEC filings for red-flag language
+        # Check recent SEC filings for red-flag language (reuse pipeline data when available)
         try:
-            from modules.catalyst_verifier import CatalystVerifier
-            filing = CatalystVerifier().verify_sec_filing(ticker)
+            if catalyst_data and catalyst_data.get("sec_filing"):
+                filing = catalyst_data["sec_filing"]
+            else:
+                from modules.catalyst_verifier import CatalystVerifier
+                filing = CatalystVerifier().verify_sec_filing(ticker)
             summary_lower = filing.get("summary", "").lower()
 
             DILUTION_SIGNALS = [
@@ -293,7 +301,9 @@ class Scorer:
         cat_score, cat_flags = self.calculate_catalyst_score(catalyst_data)
         vol_score, vol_flags = self.calculate_volume_score(ticker, rvol=rvol, ticker_data=ticker_data)
         sent_score, sent_flags = self.calculate_sentiment_score(ticker, ticker_data=ticker_data)
-        risk_score, risk_flags = self.calculate_risk_score(ticker, ticker_data=ticker_data)
+        risk_score, risk_flags = self.calculate_risk_score(
+            ticker, ticker_data=ticker_data, catalyst_data=catalyst_data,
+        )
 
         # Technical score supplied externally (from TechnicalAnalyzer) or default
         tech_score = technical_score if technical_score is not None else 0
