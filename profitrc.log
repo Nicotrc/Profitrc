@@ -1,0 +1,4 @@
+2026-05-18 23:16:45,408 | INFO | modules.regime_gate | Mega-cap earnings this week: NVDA on 2026-05-20
+2026-05-18 23:16:45,409 | INFO | modules.regime_gate | Regime=NO_TRADE  score=-3  VIX=-1 SPY=0 DXY=-1 YLD=-1  fomc=False
+2026-05-18 23:17:00,691 | INFO | modules.regime_gate | Mega-cap earnings this week: NVDA on 2026-05-20
+2026-05-18 23:17:00,691 | INFO | modules.regime_gate | Regime=NO_TRADE  score=-3  VIX=-1 SPY=0 DXY=-1 YLD=-1  fomc=False
