@@ -123,12 +123,16 @@ class TradeCardGenerator:
         )
         stop_loss = technical.get("invalidation") or risk.get("stop_loss")
 
-        # Targets: T1 = +30%, T2 = +60%, T3 = +100% from entry midpoint (heuristic)
-        t1 = round(entry_mid * 1.30, 2) if entry_mid else None
-        t2 = round(entry_mid * 1.60, 2) if entry_mid else None
-        t3 = round(entry_mid * 2.00, 2) if entry_mid else None
+        # Use pre-calculated R-based targets from risk_manager (2R/3.5R/6R).
+        # Fall back to fixed percentages only if risk package has no values.
+        t1 = risk.get("target1") or (round(entry_mid * 1.30, 2) if entry_mid else None)
+        t2 = risk.get("target2") or (round(entry_mid * 1.60, 2) if entry_mid else None)
+        t3 = risk.get("target3") or (round(entry_mid * 2.00, 2) if entry_mid else None)
+        rr_t1 = risk.get("rr_t1", "N/A")
+        rr_t2 = risk.get("rr_t2", "N/A")
+        rr_t3 = risk.get("rr_t3", "N/A")
 
-        # R/R ratios
+        # Kept for backward-compat with other callers, unused for T1/T2/T3
         def rr(target: float | None) -> str:
             if target and entry_mid and stop_loss and entry_mid != stop_loss:
                 ratio = (target - entry_mid) / (entry_mid - stop_loss)
@@ -256,11 +260,11 @@ class TradeCardGenerator:
         if stop_loss:
             plan_table.add_row("Stop Loss", f"${stop_loss:.4f}")
         if t1:
-            plan_table.add_row("Target 1 (T1)", f"${t1:.2f}  R/R = {rr(t1)}")
+            plan_table.add_row("Target 1 (T1)", f"${t1:.2f}  R/R = {rr_t1}R")
         if t2:
-            plan_table.add_row("Target 2 (T2)", f"${t2:.2f}  R/R = {rr(t2)}")
+            plan_table.add_row("Target 2 (T2)", f"${t2:.2f}  R/R = {rr_t2}R")
         if t3:
-            plan_table.add_row("Target 3 (T3)", f"${t3:.2f}+  R/R = {rr(t3)}")
+            plan_table.add_row("Target 3 (T3)", f"${t3:.2f}+  R/R = {rr_t3}R")
         plan_table.add_row("Horizon", f"7–14 days (adjust per catalyst)")
         plan_table.add_row("Tier sizing",
             f"TIER 1 = full size" if tier == 1 else f"TIER 2 = 50% size")

@@ -31,22 +31,30 @@ class BehavioralFilter:
 
     # ── Automated checks ─────────────────────────────────────────────────────
 
-    def auto_checks(self, ticker: str, entry_price: float | None = None) -> dict:
+    def auto_checks(
+        self,
+        ticker: str,
+        entry_price: float | None = None,
+        ticker_data=None,
+    ) -> dict:
         """
         Objective HARD BLOCKS (non-negotiable, per PROFITRC_v2.md):
 
         1. BIRD rule: ticker gained >300% in last 48h → BLOCK
         2. Already in parabolic vertical move (today +100%)
         3. Gap today >50% (already extended)
-        4. Hype saturation detected by scorer (passed in via flags)
 
-        Returns: {"passed": bool, "flags": list[str]}
+        Uses pre-fetched ticker_data if provided to avoid redundant download.
         """
         flags: list[str] = []
 
         try:
-            df = yf.download(ticker, period="5d", interval="1d",
-                             progress=False, auto_adjust=True)
+            if ticker_data is not None and not ticker_data.daily.empty:
+                df = ticker_data.daily.copy()
+            else:
+                df = yf.download(ticker, period="5d", interval="1d",
+                                 progress=False, auto_adjust=True)
+
             if df.empty:
                 return {"passed": True, "flags": ["DATA_UNAVAILABLE"]}
 
@@ -192,21 +200,13 @@ class BehavioralFilter:
         ticker: str,
         entry_price: float | None = None,
         interactive: bool = True,
+        ticker_data=None,
     ) -> dict:
         """
         Runs auto_checks first. If passed and interactive=True, runs checklist.
-        Logs result.
-
-        Returns:
-        {
-            "passed": bool,
-            "flags": list[str],
-            "block_reason": str | None,
-            "auto_passed": bool,
-            "interactive_passed": bool | None,
-        }
+        Accepts ticker_data to avoid redundant downloads in auto_checks.
         """
-        auto = self.auto_checks(ticker, entry_price)
+        auto = self.auto_checks(ticker, entry_price, ticker_data=ticker_data)
         result: dict = {
             "passed": False,
             "flags": auto["flags"],

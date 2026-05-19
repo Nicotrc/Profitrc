@@ -247,7 +247,12 @@ def _process_candidate(
         or candidate.get("price", 5.0)
     )
 
-    behavioral = behavior.run_filter(ticker, entry_price=entry_mid_approx, interactive=interactive)
+    behavioral = behavior.run_filter(
+        ticker,
+        entry_price=entry_mid_approx,
+        interactive=interactive,
+        ticker_data=ticker_data,
+    )
 
     if not behavioral["passed"]:
         console.print(
@@ -318,7 +323,7 @@ def analyze_ticker(ticker: str, capital: float = 10_000.0) -> None:
     """
     python main.py --ticker ACHV
     Runs the full pipeline on a single ticker regardless of scan phase.
-    Behavioral filter is interactive.
+    Uses DataCache to avoid redundant yfinance downloads.
     """
     gate = RegimeGate()
     regime = gate.get_regime()
@@ -333,17 +338,26 @@ def analyze_ticker(ticker: str, capital: float = 10_000.0) -> None:
     wm = WatchlistManager()
     card_gen = TradeCardGenerator()
 
+    data_cache = DataCache()
+    ticker_data = data_cache.get(ticker.upper())
+
+    current_price = (
+        ticker_data.info.get("currentPrice")
+        or ticker_data.info.get("regularMarketPrice")
+        or 5.0
+    )
+
     sec_filing = catalyst_v.verify_sec_filing(ticker)
     catalyst_data = catalyst_v.classify_tier(
         sec_filing.get("summary", ""),
         sec_filing.get("url", ""),
     )
     catalyst_data["sec_filing"] = sec_filing
-    catalyst_data["days_to_event"] = 7  # default for single-ticker mode
+    catalyst_data["days_to_event"] = 7
 
     _process_candidate(
         ticker=ticker.upper(),
-        candidate={"ticker": ticker, "price": 5.0},
+        candidate={"ticker": ticker, "price": current_price},
         regime=regime,
         scorer=scorer,
         tech=tech,
@@ -354,6 +368,7 @@ def analyze_ticker(ticker: str, capital: float = 10_000.0) -> None:
         alert_eng=alert_eng,
         wm=wm,
         interactive=True,
+        ticker_data=ticker_data,
     )
 
 

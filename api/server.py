@@ -29,6 +29,7 @@ from modules.technical_analyzer import TechnicalAnalyzer
 from modules.catalyst_verifier import CatalystVerifier
 from modules.risk_manager import RiskManager
 from modules.watchlist_manager import WatchlistManager
+from modules.data_cache import DataCache
 import config
 
 logger = logging.getLogger(__name__)
@@ -90,16 +91,20 @@ def _run_sync(fn, *args):
 
 
 def _build_ticker_analysis(ticker: str, capital: float = 10_000.0) -> dict:
-    """Full per-ticker pipeline (sync, runs in executor)."""
+    """Full per-ticker pipeline using shared DataCache to avoid redundant downloads."""
     ticker = ticker.upper()
+
+    cache = DataCache()
+    ticker_data = cache.get(ticker)
+
     sec = _catalyst_v.verify_sec_filing(ticker)
     cat = _catalyst_v.classify_tier(sec.get("summary", ""), sec.get("url", ""))
     cat["sec_filing"] = sec
     cat["days_to_event"] = 7
 
-    tech = _tech.get_technical_score(ticker)
+    tech = _tech.get_technical_score(ticker, ticker_data=ticker_data)
 
-    rvol = _scanner.calculate_rvol(ticker)
+    rvol = ticker_data.rvol if ticker_data.rvol > 0 else _scanner.calculate_rvol(ticker)
     cat["blow_off_top"] = tech.get("blow_off_top", False)
 
     card = _scorer.score_ticker(
@@ -107,6 +112,7 @@ def _build_ticker_analysis(ticker: str, capital: float = 10_000.0) -> dict:
         catalyst_data=cat,
         rvol=rvol,
         technical_score=tech.get("score", 0),
+        ticker_data=ticker_data,
     )
 
     rm = RiskManager(capital=capital)
@@ -121,6 +127,7 @@ def _build_ticker_analysis(ticker: str, capital: float = 10_000.0) -> dict:
         entry_high=entry_high,
         stop_price=stop,
         tier=cat.get("tier", 2),
+        ticker_data=ticker_data,
     )
 
     from output.trade_card import TradeCardGenerator
