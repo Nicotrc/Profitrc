@@ -1,0 +1,24 @@
+{
+  "schema": "PROFITRC-MEMORY-v1",
+  "last_updated": "",
+  "discovery_weekly": {
+    "date": "",
+    "candidates": [],
+    "macro_note": ""
+  },
+  "discovery_daily": {
+    "date": "",
+    "candidates": [],
+    "alerts": []
+  },
+  "morning_brief": {
+    "date": "",
+    "candidates": [],
+    "macro_regime": ""
+  },
+  "phase0_serale": {
+    "date": "",
+    "candidates": [],
+    "watchlist_movers": []
+  }
+}
