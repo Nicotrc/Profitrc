@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-22",
+  "last_updated": "2026-05-22T19:00:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -62,9 +62,84 @@
     "macro_note": ""
   },
   "discovery_daily": {
-    "date": "",
-    "candidates": [],
-    "alerts": []
+    "date": "2026-05-22",
+    "alerts": [
+      "IMMX — offerta $150M chiude oggi 22/05, watch bounce >$8.94 post-closing",
+      "GRDX — earnings Monday 25/05 pre-market (3 giorni), float 2.78M tiny",
+      "SMMT — ASCO HARMONi-6 OS plenary 31/05 (9 giorni), binary catalyst"
+    ],
+    "candidates": [
+      {
+        "ticker": "IMMX",
+        "score": 68,
+        "tier": "TIER2",
+        "catalyst": "95% CR rate NEXICART-2 (19/20 pz AL amyloidosis, zero ricadute) + offerta $150M a $8.94/azione chiude oggi. Analyst PT avg $19.20 (+115%)",
+        "entry": "8.40-8.94",
+        "stop": "7.50",
+        "t1": "12.00",
+        "t2": "18.00",
+        "rr": "2.5:1",
+        "fonte": "2D",
+        "giudizio": "ALERT URGENTE",
+        "warning": "Float >40M post-offerta (sopra soglia <15M); stock sotto prezzo offerta $8.94 = pressione diluitiva oggi"
+      },
+      {
+        "ticker": "NRXP",
+        "score": 64,
+        "tier": "TIER2",
+        "catalyst": "FDA cleared NRX-101 trial (07/05), primo ordine commerciale ketamina (27/04). Strong Buy consensus, PT $38.25-$39.02 (+1163% da $3.09). Volume 1.55x ADV",
+        "entry": "2.90-3.10",
+        "stop": "2.40",
+        "t1": "5.00",
+        "t2": "8.00",
+        "rr": "2.7:1",
+        "fonte": "2D",
+        "giudizio": "ALERT URGENTE",
+        "warning": "Float ~30M (sopra soglia <15M); catalizzatori emersi 2-4 settimane fa, consolidamento in corso"
+      },
+      {
+        "ticker": "CETX",
+        "score": 63,
+        "tier": "TIER2",
+        "catalyst": "NAVSEA selection + acquisizione Invocon aerospace/defense completata gen 2026. Q2 FY2026 revenue $18.1M, gross margin 38%, defense segment $1.2M. Analyst PT avg $11.22 (+893%)",
+        "entry": "1.05-1.15",
+        "stop": "0.85",
+        "t1": "2.00",
+        "t2": "4.00",
+        "rr": "3.5:1",
+        "fonte": "2E",
+        "giudizio": "MONITORING",
+        "warning": "Danelfin AI Score 1/10 (strong sell) vs analisti tradizionali positivi - segnale divergente; mercato cap $10M = estrema volatilita"
+      },
+      {
+        "ticker": "SMMT",
+        "score": 61,
+        "tier": "TIER2",
+        "catalyst": "ASCO 2026 plenary: HARMONi-6 OS data ivonescimab 31/05 (9 giorni). FDA PDUFA novembre 2026 per NSCLC EGFR. Binary pre-catalyst drift play",
+        "entry": "16.50-17.00",
+        "stop": "14.50",
+        "t1": "22.00",
+        "t2": "30.00",
+        "rr": "2.3:1",
+        "fonte": "2D",
+        "giudizio": "MONITORING",
+        "warning": "Float molto grande (istituzionale, >100M); pre-market -3.89% oggi; binary event - sizing 1-2% max"
+      },
+      {
+        "ticker": "GRDX",
+        "score": 54,
+        "tier": "MONITORING",
+        "catalyst": "Earnings Monday 25/05 pre-market (3 giorni). Float 2.78M (tiny). AI/energy data center infrastructure theme. 8-K private placement completato (capitale assicurato). Società ex-Entero Therapeutics rinominata",
+        "entry": "3.80-4.20",
+        "stop": "3.20",
+        "t1": "6.00",
+        "t2": "8.50",
+        "rr": "2.0:1",
+        "fonte": "2C",
+        "giudizio": "MONITORING",
+        "warning": "Nessuna copertura analitica (score analitico 0-7pt); dati prezzo inconsistenti tra fonti ($2.03 vs $4.67); volume avg 184K/gg sotto soglia 200K"
+      }
+    ]
   },
   "morning_brief": {
     "date": "2026-05-22",
