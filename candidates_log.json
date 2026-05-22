@@ -51,7 +51,10 @@
     "QURE",
     "VSAT",
     "AEHR",
-    "CRMD"
+    "CRMD",
+    "FRGT",
+    "IMPP",
+    "SY"
   ],
   "discovery_weekly": {
     "date": "",
@@ -65,105 +68,44 @@
   },
   "morning_brief": {
     "date": "2026-05-22",
-    "macro_regime": "TRADE 3/4 🟢 (VIX↓ QQQ>MA50 DXY↑❌ 10Y↓)",
-    "big_themes": [
-      "NVDA Q1FY27 beat +85% YoY: 82B USD revenue",
-      "DoC 2B USD quantum: RGTI+QBTS+INFQ +30%",
-      "Iran-oil DXY rialzo geopolitico"
-    ],
+    "macro_regime": "TRADE 3/4",
+    "big_themes": [],
     "candidates": [
       {
         "ticker": "ONDS",
         "score": 78,
         "tier": "TIER2",
-        "catalyst": "Q1 2026: rev 50.1M +1000% YoY, EPS 0.81 vs -0.0525 est; Mistral 175M merger; Optimus Blue UAS DoW",
-        "float_note": "492M shares - watchlist item, no float<15M",
         "entry": "8.80-9.20",
         "stop": "7.40",
         "t1": "12.00",
         "t2": "15.28",
-        "rr": "2.3:1",
-        "layer": "L2 swing",
-        "analyst": "Strong Buy 6 analisti PT 19.83",
-        "fonte": "watchlist",
-        "giudizio": "TIER2"
+        "rr": "2.3:1"
       },
       {
         "ticker": "CRMD",
         "score": 72,
         "tier": "TIER2",
-        "catalyst": "Q1 beat + guidance raised 325-345M annual; Phase III REZZAYO data Q2 attesi; PT 14.83 +85%",
-        "float_note": "77.41M shares - watchlist item",
         "entry": "7.80-8.10",
         "stop": "6.40",
         "t1": "11.00",
         "t2": "14.83",
-        "rr": "2.0:1",
-        "layer": "L2 swing",
-        "analyst": "Strong Buy 6 analisti PT 14.83",
-        "fonte": "watchlist",
-        "giudizio": "TIER2"
+        "rr": "2.0:1"
       },
       {
         "ticker": "SNAL",
         "score": 61,
         "tier": "MONITORING",
-        "catalyst": "Q1 earnings beat +35.7% rev, profitable (da loss). Short interest 47.5% float. Squeeze play.",
-        "float": "13.05M",
         "entry": "1.05-1.15",
         "stop": "0.86",
         "t1": "1.60",
         "t2": "2.00",
-        "rr": "2.0:1",
-        "layer": "L1 intraday/L2 swing",
-        "analyst": "n.d.",
-        "fonte": "watchlist/hunter (float<15M verified)",
-        "giudizio": "MONITORING",
-        "flags": [
-          "GIA_CORSO_8gg",
-          "SHORT_SQUEEZE_LIVE",
-          "BIRD_RULE_CHECK"
-        ]
+        "rr": "2.0:1"
       }
-    ],
-    "skip_list": [
-      {
-        "ticker": "IBRX",
-        "reason": "BIRD RULE - FDA warning lettera + class action + -21% crash"
-      },
-      {
-        "ticker": "BBAI",
-        "reason": "class action + financial restatements ongoing"
-      },
-      {
-        "ticker": "HUMA",
-        "reason": "Nasdaq delisting warning, price <1 USD"
-      },
-      {
-        "ticker": "ZENA",
-        "reason": "product recall + trend ribassista -40% 10gg"
-      },
-      {
-        "ticker": "NVTS",
-        "reason": "GIA CORSO oggi +18.32% - troppo tardi per entry"
-      },
-      {
-        "ticker": "YCBD",
-        "reason": "prezzo 0.83 sotto soglia 1 USD + no catalyst"
-      },
-      {
-        "ticker": "TRNR",
-        "reason": "market cap 2.45M quasi-delisted"
-      }
-    ],
-    "watchlist_add_suggestions": [
-      "ACNT (Ascent Industries - micro float, specialty chem)"
-    ],
-    "notes": "Hunter module parziale: 1/3 candidati float<15M confermato (SNAL). Quantum rally (RGTI+QBTS+INFQ) esclusivamente mid-cap, float>>15M. NVDA Q1FY27 beat macro tailwind AI/semi."
+    ]
   },
   "phase0_serale": {
     "date": "",
     "candidates": [],
-    "watchlist_movers": []
+    "alerts": []
   }
 }
