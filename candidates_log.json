@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-22T22:00:00+02:00",
+  "last_updated": "2026-05-22T19:30:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -54,7 +54,9 @@
     "CRMD",
     "FRGT",
     "IMPP",
-    "SY"
+    "SY",
+    "GOVX",
+    "MTVA"
   ],
   "discovery_weekly": {
     "date": "",
@@ -64,16 +66,16 @@
   "discovery_daily": {
     "date": "2026-05-22",
     "alerts": [
-      "IMMX — INVALIDATO: close $8.39 sotto prezzo offerta $8.94 + float >40M post-offering",
-      "GRDX — earnings Monday 25/05 pre-market, price $3.87 in zona entry 3.80-4.20, float 6.2M",
-      "SMMT — CATALIZZATORE PRE-SPARATO: down 27% dopo HARMONi-6 OS Plenary (post-May 3). ASCO 31/05 ancora ahead ma aspettative ridimensionate"
+      "IMMX – INVALIDATOR: close $8.39 below offering price $8.94 + float >40M post-offering",
+      "GRDX – earnings Monday 25/05 pre-market, price $3.87 in entry zone 3.80-4.20, float 6.2M",
+      "SMMT – CATALIZZATORE PRE-SEPARATO: down 27% after HARMONI-6 OS Plenary (post-May 3). ASCO 31/05 still ahead but dimensioned expectations"
     ],
     "candidates": [
       {
         "ticker": "IMMX",
         "score": 45,
         "tier": "SKIP",
-        "catalyst": "95% CR rate NEXICART-2 + offerta $150M chiusa oggi. INVALIDATO: close $8.39 sotto offering price $8.94 + float ora >40M (filtro <15M violato)",
+        "catalyst": "95% CR rate NEXICARТ-2 + offering $150M closure today. INVALIDATOR: close $8.39 below offering price $8.94 + float now >40M",
         "entry": "SKIP",
         "stop": "N/A",
         "t1": "N/A",
@@ -81,13 +83,13 @@
         "rr": "N/A",
         "fonte": "2D",
         "giudizio": "SKIP",
-        "warning": "Float >40M post-offerta. Stock sotto prezzo offerta = pressione diluitiva. VIOLAZIONE FILTRO PROFITRC."
+        "warning": "Float >40M post-offering. VIOLATION FILTER PROFITRC."
       },
       {
         "ticker": "NRXP",
         "score": 64,
         "tier": "TIER2",
-        "catalyst": "FDA cleared NRX-101 trial (07/05), ketamine ANDA approval Summer 2026, CCO named, Q1 results May 18 (no negative surprise). PT $38.25, 4x Strong Buy",
+        "catalyst": "FDA cleared NRX-101 trial (07/05), ketamine ANDA approval Summer 2026, PT $38.25, 4x Strong Buy",
         "entry": "2.90-3.10",
         "stop": "2.40",
         "t1": "5.00",
@@ -95,13 +97,13 @@
         "rr": "2.7:1",
         "fonte": "2D",
         "giudizio": "TIER2",
-        "warning": "Float ~30M (sopra soglia <15M). Nessun trigger AH stasera. Tesi valida ma entry solo su breakout confermato."
+        "warning": "Float ~30M over threshold. Entry only on confirmed breakout."
       },
       {
         "ticker": "CETX",
         "score": 25,
         "tier": "SKIP",
-        "catalyst": "NAVSEA selection + Invocon acquisition. INVALIDATO: prezzo $0.84 sotto soglia minima $1",
+        "catalyst": "NAVSEA + Invocon. INVALIDATOR: price $0.84 <$1",
         "entry": "SKIP",
         "stop": "N/A",
         "t1": "N/A",
@@ -109,13 +111,13 @@
         "rr": "N/A",
         "fonte": "2E",
         "giudizio": "SKIP",
-        "warning": "Prezzo <$1. VIOLAZIONE FILTRO PROFITRC."
+        "warning": "Price <$1. VIOLATION FILTER."
       },
       {
         "ticker": "SMMT",
         "score": 42,
         "tier": "SKIP",
-        "catalyst": "HARMONi-6 OS data GIA' presentati (intorno a May 3-8): SMMT down 27% dopo plenary. ASCO May 31 ancora ahead. Ivonescimab OS deludente vs attese.",
+        "catalyst": "HARMONI-6 OS already sparked negatively (-27%). ASCO May 31 residual.",
         "entry": "SKIP",
         "stop": "N/A",
         "t1": "N/A",
@@ -123,13 +125,13 @@
         "rr": "N/A",
         "fonte": "2D",
         "giudizio": "SKIP",
-        "warning": "Catalizzatore principale gia' sparato negativamente. Stock a $16.79 (-27% dai massimi). ASCO May 31 = event risk residuo ma bias ribassista."
+        "warning": "Main catalyst already sparked negatively."
       },
       {
         "ticker": "GRDX",
         "score": 54,
         "tier": "MONITORING",
-        "catalyst": "Earnings Monday 25/05 pre-market. Float 6.2M (tiny). Private placement + debt settlement completati maggio 2026. Price $3.87 in zona entry.",
+        "catalyst": "Earnings Monday 25/05 pre-market. Float 6.2M. Private placement + debt settlement completed May 2026.",
         "entry": "3.80-4.20",
         "stop": "3.20",
         "t1": "6.00",
@@ -137,9 +139,85 @@
         "rr": "2.0:1",
         "fonte": "2C",
         "giudizio": "MONITORING",
-        "warning": "No analyst coverage. Volume avg 184K/gg (sotto soglia 200K). Entry solo su earnings beat confermato Monday."
+        "warning": "Volume avg 184K/gg under threshold. Entry only on earnings beat."
       }
     ]
+  },
+  "candidati_scanner": {
+    "date": "2026-05-22",
+    "run_time": "19:30 IT",
+    "added_to_watchlist": [
+      {
+        "ticker": "GOVX",
+        "price": 3.86,
+        "change_pct": 40.36,
+        "score": 62,
+        "fonte": "2A",
+        "float": "~1.73M shares (micro)",
+        "volume_today": "41.0M",
+        "catalyst": "WHO Ebola Public Health Emergency declaration + Noble Capital reiterated Outperform/$10 target",
+        "tier": "TIER2",
+        "warning": "+213% in 7 days (da $1.23). Blow-off risk. MONITORING ONLY – no entry without pullback."
+      },
+      {
+        "ticker": "MTVA",
+        "price": 3.99,
+        "change_pct": 39.02,
+        "score": 55,
+        "fonte": "2A",
+        "float": "5.16M shares",
+        "volume_today": "37.1M",
+        "catalyst": "3 ADA 2026 conference abstracts accepted + peer-reviewed vanoglipel (GPR119) MASH/liver fibrosis data",
+        "tier": "TIER2",
+        "warning": "+112% negli ultimi 3 giorni (da $1.88). Extended. Entry only on confirmed pullback to FVG."
+      }
+    ],
+    "excluded": [
+      {
+        "ticker": "AKTX",
+        "score": 45,
+        "motivo": "Blow-off +166% today. Preclinical ASCO abstract only. ADS float unclear. SKIP."
+      },
+      {
+        "ticker": "HYLN",
+        "score": 15,
+        "motivo": "178M shares outstanding – float massivo. Fuori dal filtro <15M. SKIP."
+      },
+      {
+        "ticker": "FJET",
+        "score": 20,
+        "motivo": "44.2M shares outstanding. Float troppo grande. SKIP."
+      },
+      {
+        "ticker": "VCIG",
+        "score": 10,
+        "motivo": "NASDAQ late filing notice (20-F). Compliance risk. Catalyst vago. SKIP."
+      },
+      {
+        "ticker": "FLWS",
+        "score": 32,
+        "motivo": "SI 40.21% ma nessun catalyst oggi. Volume normale. Score <50pt. SKIP."
+      },
+      {
+        "ticker": "LFVN",
+        "score": 32,
+        "motivo": "SI 37.64% float 9.88M ma nessun catalyst oggi. Score <50pt. SKIP."
+      },
+      {
+        "ticker": "BIYA",
+        "score": 5,
+        "motivo": "Chinese company pump-style volume 88M senza catalyst verificabile. SKIP."
+      },
+      {
+        "ticker": "LFS",
+        "score": 5,
+        "motivo": "Japanese company nuovo listato +89% senza catalyst verificato. SKIP."
+      }
+    ],
+    "watchlist_size": {
+      "before": 53,
+      "after": 55
+    }
   },
   "morning_brief": {
     "date": "2026-05-22",
@@ -189,20 +267,19 @@
       "color": "GREEN"
     },
     "watchlist_movers": [
-      "NVTS +16.7% (halo NVDA earnings beat) — fuori range $28.34>$25",
-      "CRMD +1.64% close, AH -0.62% ($8.01) — tesi CONFERMATA",
-      "ONDS -1.92% close, AH +0.33% ($9.21) — tesi CONFERMATA, zona entry ok",
-      "REPL $5.21 flat — in watchlist, post-FDA rejection May 5",
-      "CMPS ~$10.10 — FDA NDA rolling review + Priority Voucher (April 24) — in watchlist",
-      "SNAL AH ~$0.90-0.91 — dati contrastanti, earnings gia' giocati mid-May — SKIP",
-      "AKTX +122.6% intraday poi AH $11.31 (-35.6%) — SKIP (preclinical + PIPE dilution)"
+      "NVTS +16.7% (halo NVDA earnings beat) – out of range $28.34>$25",
+      "CRMD +1.64% close, AH -0.62% ($8.01) – tests CONFIRMED",
+      "ONDS -1.92% close, AH +0.33% ($9.21) – tests CONFIRMED, entry zone ok",
+      "REPL $5.21 flat – post-FDA rejection May 5",
+      "CMPS ~$10.10 – FDA NDA rolling review + Priority Voucher (April 24)",
+      "SNAL AH ~$0.90-0.91 – SKIP",
+      "AKTX +122.6% intraday then AH $11.31 (-35.6%) – SKIP (preclinical + PIPE dilution)"
     ],
     "candidates": [
       {
         "ticker": "ONDS",
         "score": 78,
         "tier": "TIER2",
-        "catalyst": "Watchlist Morning Brief confermato: nessun news negativo AH, tesi intatta",
         "ah_pct": "+0.33%",
         "close": "9.18",
         "entry": "8.80-9.20",
@@ -218,7 +295,6 @@
         "ticker": "CRMD",
         "score": 72,
         "tier": "TIER2",
-        "catalyst": "Watchlist Morning Brief confermato: close +1.64%, AH lieve ritracciamento normale",
         "ah_pct": "-0.62%",
         "close": "8.06",
         "entry": "7.80-8.10",
@@ -234,7 +310,6 @@
         "ticker": "NRXP",
         "score": 64,
         "tier": "TIER2",
-        "catalyst": "FDA clearance NRX-101, ketamine ANDA summer approval, 4x Strong Buy PT $38.25. Nessun trigger AH negativo.",
         "ah_pct": "flat",
         "close": "3.09",
         "entry": "2.90-3.10",
@@ -245,35 +320,33 @@
         "sizing": "PROBE 15%",
         "fonte": "discovery_daily",
         "giudizio": "TIER2",
-        "warning": "Float ~30M sopra filtro 15M. Entry solo su momentum confermato."
+        "warning": "Float ~30M over filter 15M."
       }
     ],
     "invalidated_tonight": [
-      "IMMX — close $8.39 sotto offering price $8.94 + float >40M → SKIP",
-      "CETX — prezzo $0.84 <$1 → SKIP",
-      "SMMT — catalizzatore HARMONi-6 OS gia' sparato negativamente (down 27%) → SKIP",
-      "AKTX — preclinical only + PIPE a $3.74 (sconto 67%) + AH -35.6% → SKIP",
-      "SNAL — earnings gia' giocati mid-May, AH sotto zona entry → SKIP"
+      "IMMX – float >40M ☞ SKIP",
+      "CETX – price $0.84 <$1 ☞ SKIP",
+      "SMMT – catalyst sparked negatively ☞ SKIP",
+      "AKTX – PIPE dilution, AH -35.6% ☞ SKIP",
+      "SNAL – below entry zone ☞ SKIP"
     ],
     "hunter_new_candidates": [
       {
         "ticker": "AKTX",
-        "nome": "Akari Therapeutics",
-        "evento": "KRAS pancreatic cancer preclinical data + $5.5M PIPE",
         "score": 37,
         "tier": "SKIP",
         "close": "17.575",
         "ah_pct": "-35.6%",
         "ah_price": "11.31",
         "float": "~1.14M ADSs",
-        "giudizio": "SKIP — preclinical non clinico, PIPE a -67% = diluzione immediata, AH in forte vendita"
+        "giudizio": "SKIP – preclinical + PIPE at -67% dilution"
       }
     ],
     "alerts": [
-      "SMMT ASCO May 31: watch finale la settimana prossima, ma bias ribassista post -27%",
-      "GRDX earnings Monday 25/05: se beat > entry 3.80-4.20 con float 6.2M",
-      "CMPS FDA NDA rolling review in corso: seguire timeline Q4 2026",
-      "NRXP ketamine ANDA: prossimo catalizzatore estate 2026, attesa breakout"
+      "SMMT ASCO May 31: watch but bearish bias post -27%",
+      "GRDX earnings Monday 25/05: entry 3.80-4.20 on beat",
+      "CMPS FDA NDA rolling review: follow Q4 2026",
+      "NRXP ketamine ANDA: breakout pending"
     ]
   }
 }
