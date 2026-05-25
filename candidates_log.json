@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-24T20:00:00+02:00",
+  "last_updated": "2026-05-26T11:30:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -57,7 +57,37 @@
     "AMPG"
   ],
   "discovery_daily": [],
-  "morning_brief": [],
+  "morning_brief": [
+    {
+      "ticker": "LFS",
+      "score_meccanico": 67,
+      "tier": "MONITORING",
+      "catalyst": "Acquisizione Tokai Sports (100% equity, 1.200 membri, 20 sedi Nagoya) — 6-K depositato 21/05/2026",
+      "pensiero_critico": {
+        "regime": "TRANSIZIONE VIX ~16.7 — primo giorno post-Memorial Day, abbassato a MONITORING",
+        "catalyst_verified": true,
+        "catalyst_freshness": "pubblicato 21/05/2026 — day 2 post-catalyst, primo trading day post-holiday Memorial Day",
+        "narrativa_numeri": "operativo con revenue reale — business sportivo attivo in Giappone (sports school)",
+        "rischio_asimmetrico": "gap fill $1.80-2.20 rischio immediato — stock +96% su May 22; post-holiday profit-taking",
+        "kindleberger": "Stage 1-2 — primo grande giorno catalizzato (May 22 +96%), oggi day 2",
+        "bird_rule": false,
+        "diluzione": false,
+        "flags": [
+          "⚠️ CATALYST QUALITÀ BASSA (piccola acquisizione giapponese, no termini finanziari divulgati)",
+          "⚠️ REGIME TRANSIZIONE → -1 tier (TIER2→MONITORING)",
+          "⚠️ POST-HOLIDAY UNCERTAINTY — primo giorno dopo 3gg di chiusura (Memorial Day)"
+        ],
+        "giudizio": "PROCEDI MONITORING"
+      },
+      "entry": "2.80-3.20",
+      "stop": "2.20",
+      "t1": "4.50",
+      "t2": "5.50",
+      "rr": "1.9:1",
+      "fonte": "2A",
+      "warning": "Entry SOLO su pullback da apertura — non inseguire open post-holiday; attesa test supporto $2.80-3.20"
+    }
+  ],
   "phase0_serale": [],
   "discovery_weekly": [
     {
