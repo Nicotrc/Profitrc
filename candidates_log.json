@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-26T11:30:00+02:00",
+  "last_updated": "2026-05-25T19:00:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -56,7 +56,155 @@
     "MTVA",
     "AMPG"
   ],
-  "discovery_daily": [],
+  "discovery_daily": [
+    {
+      "date": "2026-05-25",
+      "session": "Discovery Scout 19:00 IT (Memorial Day — mercati chiusi, analisi pre-opening 26/05)",
+      "macro_note": "NYSE chiuso Memorial Day 25/05. Regime TRANSIZIONE confermato. China broker crackdown (Futu, Tiger) capital rotation US small-cap biotech. PCE May 28 HIGH IMPACT. 10Y 4.57% easing. Russell 2000 +0.91%.",
+      "alerts": [
+        "REPL ASCO oral May 30 + May 31: RP1 3yr OS + RP2 final Ph1. SI 43.93% squeeze risk. WATCHLIST UPGRADE.",
+        "SPRO PDUFA FDA June 18: tebipenem HBr cUTI primo oral carbapenem USA. NUOVO.",
+        "IBRX FDA sBLA acceptance May 19 ANKTIVA papillary + Saudi launch. Q1 +168% YoY. WATCHLIST UPGRADE.",
+        "PCE May 28 HIGH IMPACT: se benign small-cap rally, se hot risk-off.",
+        "YMM/VIPS China broker crackdown: caution/exit ADR cinesi."
+      ],
+      "candidates": [
+        {
+          "ticker": "SPRO",
+          "score": 59,
+          "tier": "MONITORING",
+          "catalyst": "PDUFA June 18 2026 — tebipenem HBr cUTI (primo oral carbapenem USA). Phase 3 PIVOT-PO stopped early for efficacy. NDA GSK. Milestones >$300M + royalties.",
+          "pensiero_critico": {
+            "regime": "TRANSIZIONE — capital rotation biotech PDUFA. 10Y easing allenta pressione growth.",
+            "catalyst_verified": true,
+            "catalyst_freshness": "PRE-PDUFA 24 giorni — window positioning FRESH",
+            "narrativa_numeri": "Cash $56.1M runway to 2028. Q1 loss $7.2M. Revenue Q1 $258K. 2025 profitto $8.6M da GSK milestones. Non revenue-generating autonomamente.",
+            "rischio_asimmetrico": "worst case FDA reject: -70% verso $0.75. Binary puro.",
+            "kindleberger": "Stage 3 (da 52w low $0.656 a $2.50 = +281%, recovery da CRL crash Apr 10)",
+            "bird_rule": false,
+            "diluzione": false,
+            "flags": [
+              "FLOAT 57M >> 15M filter",
+              "BINARY June 18 probe 1% obbligatorio",
+              "Kindleberger Stage 3",
+              "Revenue minimale dipende tutto da FDA"
+            ],
+            "giudizio": "MONITORING — pre-PDUFA probe 1% max loss"
+          },
+          "entry": "$2.30-$2.60",
+          "stop": "$1.80",
+          "t1": "$3.50",
+          "rr": "1.8:1",
+          "fonte": "2D",
+          "giudizio": "MONITORING probe 1% max loss",
+          "warning": "Binary June 18. Float 57M. No scaling pre-FDA. GSK credibilita ma CRL precedente."
+        },
+        {
+          "ticker": "ATLX",
+          "score": 58,
+          "tier": "MONITORING",
+          "catalyst": "US-Japan Joint Fact Sheet: Neves Project unico litio brasiliano in lista per potential government support. Mitsui $30M + offtake. DFS IRR 145%, NPV $539M vs cap $125M.",
+          "pensiero_critico": {
+            "regime": "TRANSIZIONE — critical minerals geopolitics tailwind US-Japan partnership",
+            "catalyst_verified": true,
+            "catalyst_freshness": "PARZIALMENTE PREZZATO (news May 13-18, stock pullback da $5.98 a $4.23 = entry ora migliore)",
+            "narrativa_numeri": "Pre-revenue. Non-dilutive $40M funding secured. Mitsui offtake. Dec2025 $10M offering (6+ mesi fa SAFE). Permitting ok.",
+            "rischio_asimmetrico": "worst case: support non materializzato, litio debole: -35-40% verso $2.50",
+            "kindleberger": "Stage 1-2 (development, recovery pullback)",
+            "bird_rule": false,
+            "diluzione": false,
+            "flags": [
+              "Float ~27M > 15M filter",
+              "Pre-revenue mining execution risk",
+              "Support ancora potential non firmato",
+              "Litio ciclico"
+            ],
+            "giudizio": "MONITORING — critical minerals geopolitics play"
+          },
+          "entry": "$3.90-$4.30",
+          "stop": "$3.40",
+          "t1": "$6.00",
+          "t2": "$8.50",
+          "rr": "2.1:1",
+          "fonte": "2E",
+          "giudizio": "MONITORING probe 1-2% max loss",
+          "warning": "US-Japan support non ancora firmato. Timeline sviluppo lunga. Sizing conservativo."
+        }
+      ],
+      "watchlist_updates": [
+        {
+          "ticker": "REPL",
+          "action": "UPGRADE MONITORING scala-in pre-ASCO",
+          "score_updated": 62,
+          "note": "ASCO oral May 30+31. RP1 3yr OS + RP2 final Ph1. SI 43.93% squeeze. Entry probe May 29. Cash $18M 15mesi. FDA CRL headwind Apr10 ma ASCO rebound tecnico."
+        },
+        {
+          "ticker": "IBRX",
+          "action": "UPGRADE MONITORING verso TIER2",
+          "note": "FDA sBLA May19 ANKTIVA papillary. Q1 +168% $44.2M. Cash $380.9M. Saudi launch. PT $15.25 +100%. 4 analyst Strong Buy."
+        },
+        {
+          "ticker": "CMPS",
+          "action": "MANTIENI MONITORING ASCO momentum",
+          "note": "ASCO week + FDA Priority Voucher + rolling NDA. Part B Q3 2026. Cash $466M. PT $20."
+        },
+        {
+          "ticker": "SOUN",
+          "action": "MANTIENI MONITORING",
+          "note": "LivePerson acquisition $500M opportunity. Q1 +52%. $8.15. PT $13.50. 8/10 Buy."
+        },
+        {
+          "ticker": "PIII",
+          "action": "MANTIENI no-entry K4",
+          "note": "Q1 turnaround EPS $5.17 surprise. PT $14 vs $3.93. Aspettare $3.50-4.00 stabilizzazione."
+        },
+        {
+          "ticker": "YMM",
+          "action": "CAUTION ridurre/uscire",
+          "note": "China broker crackdown Futu -35% Tiger -47% premarket. ADR pressure. Exit sizing."
+        },
+        {
+          "ticker": "VIPS",
+          "action": "CAUTION",
+          "note": "China broker crackdown impatto. Monitor apertura May 26."
+        },
+        {
+          "ticker": "RXT",
+          "action": "SCALA-IN pullback",
+          "note": "AMD AI cloud + Q1 beat. -20% da peak $5.82. Pullback tecnico. Form 144 warning."
+        }
+      ],
+      "skip_today": [
+        {
+          "ticker": "GOVX",
+          "motivo": "CONFERMATO: PIPE $3M 19/05 < 30gg. Revisit June18+"
+        },
+        {
+          "ticker": "AKTX",
+          "motivo": "+241% Friday. K4. PIPE $5.5M ADS recente."
+        },
+        {
+          "ticker": "ARDX",
+          "motivo": "43pt: revenue +38% solido ma STALE Q1 Apr30 25+gg. No catalyst 48h."
+        },
+        {
+          "ticker": "FENC",
+          "motivo": "44pt: ASCO June1 interessante ma dati insufficienti float>15M."
+        },
+        {
+          "ticker": "BIYA",
+          "motivo": "Crypto play. Non coerente PROFITRC."
+        }
+      ],
+      "morning_brief_seeds": [
+        "REPL: ASCO oral May30+31 — probe entro May29, SI 43.93% squeeze (WATCHLIST)",
+        "SPRO: PDUFA June18 — pre-positioning $2.30-2.60 probe 1% (NUOVO)",
+        "PCE May28 HIGH IMPACT: benign=small-cap rally, hot=risk-off",
+        "China crackdown: uscire YMM/VIPS, capital rotation US biotech confermata",
+        "IBRX: sBLA papillary + Saudi + revenue +168% — upgrade candidato TIER2"
+      ]
+    }
+  ],
   "morning_brief": [
     {
       "ticker": "LFS",
