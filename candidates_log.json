@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-26T19:00:00+02:00",
+  "last_updated": "2026-05-26T19:30:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -62,6 +62,85 @@
     "IDYA"
   ],
   "discovery_daily": [
+    {
+      "date": "2026-05-26",
+      "scan_time": "19:30 IT",
+      "scanner": "PROFITRC Candidati Scanner v2",
+      "macro_regime": "TRANSIZIONE — VIX 17.07 (+2.89%). SPY +0.21%, QQQ +0.43%. Tutti i candidati abbassati di 1 tier per regime.",
+      "candidates_qualificati": [],
+      "note": "Nessun candidato ha superato il doppio gate (score meccanico >=50pt + Pensiero Critico) oggi. Principali motivi di esclusione: float >15M (BRAI 206M, HYLN 178M, UAVS 41M, CRBP 15.3M), prezzo fuori range (INOD , QBTS .67, USAR .19), prezzo < (OTLK /bin/zsh.45, QTEX /bin/zsh.73), diluzione letale (SKK .8M share issuance, BIYA 100M share offering, KZIA 10.7M ADS registration, TE convertible notes M), volume insufficiente (PRFX 67K shares), KINDLEBERGER Stage 3+ + BIRD RULE attiva (QUCY +791% mensile, trending su multiple piattaforme).",
+      "esclusi_gate1": [
+        {
+          "ticker": "BRAI",
+          "score": 15,
+          "motivo": "Float 206M shares (filtro duro >15M)"
+        },
+        {
+          "ticker": "TE",
+          "score": 20,
+          "motivo": "Float >15M (54M volume implica large float) + convertible notes M diluzione"
+        },
+        {
+          "ticker": "HYLN",
+          "score": 18,
+          "motivo": "Float 178M shares (filtro duro >15M)"
+        },
+        {
+          "ticker": "INOD",
+          "score": 0,
+          "motivo": "Prezzo  (filtro duro >)"
+        },
+        {
+          "ticker": "QBTS",
+          "score": 0,
+          "motivo": "Prezzo .67 (filtro duro >) + float 367M"
+        },
+        {
+          "ticker": "USAR",
+          "score": 0,
+          "motivo": "Prezzo .19 (filtro duro >)"
+        },
+        {
+          "ticker": "UAVS",
+          "score": 15,
+          "motivo": "Float 41M shares (filtro duro >15M)"
+        },
+        {
+          "ticker": "PRFX",
+          "score": 28,
+          "motivo": "Volume oggi 67K (<200K filtro duro) + stock -10% + catalyst preclinico su maiali (debole)"
+        },
+        {
+          "ticker": "QUCY",
+          "score": 33,
+          "motivo": "Score 33/100 sotto soglia 50pt: +791% mensile (Kindleberger Stage 3) + BIRD RULE (trending Timothy Sykes, Benzinga, CoinCentral) + IP license da entity sconosciuta (BP United)"
+        }
+      ],
+      "esclusi_pre_score_diluzione": [
+        {
+          "ticker": "SKK",
+          "motivo": "🚨 DILUZIONE LETALE — emissione azioni per .8M vs market cap M (2770% diluzione) + shelf M"
+        },
+        {
+          "ticker": "BIYA",
+          "motivo": "🚨 DILUZIONE LETALE — secondary offering 100M shares (M vs market cap .77M)"
+        },
+        {
+          "ticker": "KZIA",
+          "motivo": "🚨 DILUZIONE LETALE — prospectus 10.7M ADS + Phase 1b (early stage)"
+        },
+        {
+          "ticker": "HCWB",
+          "motivo": "🚨 DILUZIONE — unit financing M"
+        },
+        {
+          "ticker": "OTLK",
+          "motivo": "Prezzo /bin/zsh.45 (< filtro duro) NONOSTANTE catalyst eccezionale (FDA appeal won, LYTENAVA Class 1 BLA resubmission June 2026 — tenere in osservazione per recupero >)"
+        }
+      ],
+      "watchlist_size": 56,
+      "github_sync": "rules.json non aggiornato (nessun candidato qualificato). candidates_log.json aggiornato per audit trail."
+    },
     {
       "date": "2026-05-26",
       "scan_time": "19:00 IT",
