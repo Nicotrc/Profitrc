@@ -671,14 +671,16 @@
         "shares": 307,
         "entry_price": 4.69,
         "commission_usd": 1,
-        "stop_loss": 4.57,
+        "stop_loss": 4.75,
+        "stop_precedente": 4.57,
+        "stop_note": "Trailing alzato 20:08 IT 26/05 — da $4.57 a $4.75 (sotto supporto $4.76-4.80). Blocca min +$18 se colpito.",
         "costo_totale_usd": 1440.83,
         "rischio_max_usd": 37.84,
         "entry_date": "2026-05-26",
         "catalyst": "Q4 FY2026 earnings AMC 26/05/2026 ore 22:30 IT — Digital Turbine binary event",
         "pattern": "Pre-Earnings Binary Bet",
         "status": "OPEN",
-        "note": "Gap risk overnight. Valutare chiusura parziale prima del print se +5% intraday. Stop intraday $4.57 non protegge da gap ribassista post-earnings."
+        "note": "Hold through earnings. Stop alzato a $4.75 (trailing). Gap risk overnight se miss. P&L attuale +$50 a 20:08 IT."
       },
       {
         "ticker": "CRMD",
@@ -698,7 +700,7 @@
       }
     ],
     "storico_chiuse": [],
-    "ultimo_aggiornamento": "2026-05-26 16:15 IT — v1.0 sezione creata"
+    "ultimo_aggiornamento": "2026-05-26 20:08 IT — APPS stop alzato $4.57 → $4.75 (trailing pre-earnings)"
   },
 
   "notes": "Sistema PROFITRC v2.2 — Multi-layer speculativo costruito su 29 fonti accademiche e istituzionali (Hamilton 2016, Kahneman/Tversky 1979, Fama-French 1993, Ernie Chan 2009, Kindleberger, Reinhart/Rogoff 2008, Glasserman Columbia). Universo operativo: NYSE/NASDAQ small/micro-cap $1-25, float <15M, catalyst event-driven TIER 1/2. Broker: IBKR. Piattaforma analisi: TradingView Desktop + Claude AI via MCP (78 tools). Automazioni: CCR Morning Brief 11:00 IT + CCR Phase 0 Serale 22:00 IT + Auto Watchlist Adder 19:45 IT. Pine Scripts custom: PFRC RVOL + PFRC Regime Dashboard. Framework v2.2: 5 layer sequenziali (L0 Regime Gate → L1 Scan/Discovery → L2 Catalyst Verification → L3 Technical SMC → L4 Behavioral Filter). Output standard: PROFITRC Setup Card (score 0-100, soglia 65). Watchlist: 56 ticker, Maggio 2026. REGOLA SYNC: ogni modifica alla watchlist TradingView aggiorna immediatamente questo file."
