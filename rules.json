@@ -591,7 +591,23 @@
         "output_format": "PROFITRC Setup Card con Subtotale /55 — Technical Score completato il giorno dopo con TradingView MCP"
       }
     ],
-    "nota_architettura": "I CCR non possono chiamare strumenti MCP locali (TradingView gira su Mac di Nicola). Usano WebSearch come sostituto per la scoperta. Il Technical Score viene completato in sessione locale con Claude Desktop + MCP."
+    "nota_architettura": "I CCR non possono chiamare strumenti MCP locali (TradingView gira su Mac di Nicola). Usano WebSearch come sostituto per la scoperta. Il Technical Score viene completato in sessione locale con Claude Desktop + MCP.",
+    "agenti_locali": [
+      {
+        "nome": "PROFITRC Premarket Gap Scanner",
+        "taskId": "profitrc-premarket-gap",
+        "tipo": "LOCAL scheduled task (Claude Code Desktop)",
+        "cron_locale": "30 14 * * 1-5",
+        "orario_it": "14:30 IT (Lun-Ven) — 60 min prima apertura NYSE",
+        "dst": "automatico — usa orario locale IT, nessun aggiornamento manuale necessario",
+        "funzione": "Scansiona watchlist PROFITRC per gap premarket >10% dal close precedente. Per ogni match: verifica catalyst (8-K SEC, news), applica filtri PROFITRC (diluzione, Kindleberger, float, BIRD RULE), calcola score 0-100, genera piano entry con Pensiero Critico completo. Segnala posizioni aperte impattate dal gap. Push su candidates_log.json sezione premarket_gap.",
+        "output": "candidates_log.json → sezione 'premarket_gap' + alert testuale in sessione",
+        "tools": ["WebSearch", "WebFetch", "GitHub API"],
+        "gap_threshold": ">10% dal close precedente",
+        "entry_window": "15:35-15:45 IT (dopo silenzio apertura 15:30-15:35)",
+        "integrazione_open_positions": "Legge open_positions da rules.json — non suggerisce nuovi entry su ticker già in posizione, segnala solo P&L implicito del gap"
+      }
+    ]
   },
 
   "standard_output_format": {
