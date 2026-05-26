@@ -1,0 +1,705 @@
+{
+  "sistema": "PROFITRC — Sistema Speculativo Multi-Layer v2.0",
+  "autore": "Nicola",
+  "aggiornato": "2026-05-26 — v2.5 (watchlist sincronizzata: 56 ticker — LFS aggiunto da Candidati Scanner 26/05/2026 11:30 IT, tier MONITORING)",
+  "universo": "NYSE / NASDAQ | Float target <15M | Catalyst TIER 1/2 | Orizzonte 1-30 giorni | $1-25",
+
+  "watchlist": [
+    "YCBD", "HUMA", "TRNR", "DXF",  "SNAL", "ZENA", "BIAF", "LOCL",
+    "MBRX", "CMND", "AVXL", "GCTS", "CODX", "PBM",  "BBAI", "AIV",
+    "RXT",  "ACRS", "ACHV", "CING", "TBLA", "LAC",  "REPL", "NIO",
+    "GLOO", "BULL", "FLO",  "IBRX", "EOSE", "SOUN", "QS",   "YMM",
+    "RCAT", "ONDS", "EVC",  "LUMN", "WYY",  "CMPS", "OGN",  "PIII",
+    "VIPS", "RDCM", "POET", "APPN", "HIMS", "NVTS", "QURE", "VSAT",
+    "AEHR", "CRMD",
+    "FRGT", "IMPP", "SY",
+    "GOVX", "MTVA",
+    "LFS"
+  ],
+
+  "default_timeframe": "D",
+
+  "timezone": {
+    "trader_location": "Italia (Europe/Rome)",
+    "tz_summer": "CEST — UTC+2 (fine marzo → fine ottobre)",
+    "tz_winter": "CET — UTC+1 (fine ottobre → fine marzo)",
+    "mercato_target": "NYSE / NASDAQ — Eastern Time (ET)",
+    "orari_chiave_IT": {
+      "premarket_US_inizio": "10:00 IT (04:00 ET) — inizio movimenti premarket",
+      "fase_0_scanner": "10:00–14:30 IT — finestra Fase 0 premarket",
+      "morning_brief": "11:00 IT (09:00 UTC / 05:00 ET) — brief quotidiano",
+      "apertura_nyse": "15:30 IT (09:30 ET) — inizio sessione regolare",
+      "silenzio_apertura": "15:30–15:35 IT — NO TRADE",
+      "finestra_entry": "15:35–15:45 IT (09:35–09:45 ET) — unica finestra entry Layer 1",
+      "chiusura_nyse": "22:00 IT (16:00 ET) — fine sessione regolare",
+      "fase_meno1_serale": "22:00–23:00 IT — scan serale obbligatorio AH + 8-K"
+    },
+    "nota_dst": "Attenzione: USA e Italia cambiano ora legale in date diverse — verificare offset nei periodi di transizione (marzo e novembre). In quei periodi l'offset può essere +5h invece di +6h."
+  },
+
+  "layers": {
+    "layer_1": {
+      "nome": "Bullet Intraday",
+      "descrizione": "Singola posizione concentrata su catalyst TIER 1/2 intraday",
+      "capitale_usd": 2000,
+      "orizzonte": "intraday (same day)",
+      "prezzo_range_usd": "1-7",
+      "stop_max_pct": 25,
+      "stop_max_usd": 500,
+      "entry_window_it": "15:35-15:45",
+      "silenzio_apertura_it": "15:30-15:35",
+      "max_posizioni": 1
+    },
+    "layer_2": {
+      "nome": "Swing Position",
+      "descrizione": "Posizioni swing su catalyst TIER 1/2 con orizzonte multi-settimana",
+      "capitale": "separato e non comunicante con Layer 1",
+      "orizzonte": "15-30 giorni",
+      "prezzo_range_usd": "1-25",
+      "stop_max_pct": 20,
+      "max_posizioni": 3
+    }
+  },
+
+  "macro_regime_check": {
+    "descrizione": "Verifica mattutina obbligatoria — 4 indicatori macro da completare in Fase 0",
+    "indicatori": [
+      "VIX trend 3 giorni: in calo = risk-on confermato",
+      "SPY/QQQ sopra MA50: trend up = mercato in espansione",
+      "DXY in calo: liquidità supportiva, capitali verso asset rischiosi",
+      "10Y yield stabile o in calo: narrative di crescita attiva"
+    ],
+    "semaforo": {
+      "verde_trade": "3/4 indicatori positivi → operatività piena su TIER 1/2",
+      "giallo_selective": "2/4 indicatori positivi → solo catalyst TIER 1, sizing ridotto",
+      "rosso_no_trade": "1/4 o meno positivi → cash, nessun trade, attendere chiarimento"
+    },
+    "regimi_fed": {
+      "easing_pivot": "Risk-on, small cap outperform → TRADE, massima aggressività",
+      "pause": "Selettivo, quality bias, earnings drive → SELECTIVE solo TIER 1",
+      "hiking_aggressivo": "Risk-off, VIX alto → NO TRADE, ridurre esposizione",
+      "qe_restart": "Explosive risk-on → TRADE, window of opportunity"
+    }
+  },
+
+  "bias_criteria": {
+    "descrizione": "Criteri SMC-based per determinare il bias direzionale su ogni titolo (timeframe H4)",
+    "bullish": [
+      "BOS (Break of Structure) confermato verso l'alto su H4",
+      "Prezzo sopra EMA 21 su H4 con chiusura candle sopra",
+      "Volume ratio >2x ADV sulla rottura strutturale",
+      "Catalyst TIER 1/2 verificato su SEC 8-K o comunicato ufficiale",
+      "FVG (Fair Value Gap) identificato come zona di supporto attiva",
+      "Pull-back ordinato verso FVG/EMA con volume in calo (accumulo, non distribuzione)"
+    ],
+    "bearish": [
+      "CHoCH (Change of Character) confermato verso il basso su H4",
+      "Prezzo sotto EMA 21 su H4 con chiusura candle sotto",
+      "Volume in distribuzione: alto sui cali, basso sui rimbalzi",
+      "Catalyst invalidato o nuova notizia avversa post-entry",
+      "Blow-off già avvenuto (+300% senza pull-back ordinato)",
+      "Reverse split recente (<6 mesi): SKIP assoluto"
+    ],
+    "neutral": [
+      "Struttura SMC indeterminata: nessun BOS/CHoCH chiaro su H4",
+      "Prezzo in range attorno all'EMA 21 (choppy action)",
+      "Volume nella media o in calo (ratio <1.5x ADV): nessun momentum",
+      "Nessun catalyst TIER 1/2 identificato: solo speculazione narrativa",
+      "Regime macro in transizione (2/4 indicatori): attendere chiarimento"
+    ]
+  },
+
+  "scoring_system": {
+    "descrizione": "PROFITRC v2 — Score totale 0-100. Soglia minima per procedere: 65/100. Se Catalyst Score < 10 → SCARTO automatico indipendentemente dagli altri score.",
+    "dimensioni": {
+      "catalyst_score": {
+        "max": 25,
+        "tabella": {
+          "8K_firmato_contratto_reale": 25,
+          "fda_approval_pdufa_positivo": 22,
+          "dod_governo_importo_confermato": 22,
+          "ma_prezzo_acquirente_definiti": 23,
+          "earnings_beat_guidance_raise": 20,
+          "partnership_termini_finanziari": 15,
+          "partnership_senza_termini": 12,
+          "conference_launch_entro_7gg": 10,
+          "mou_non_vincolante": "3 → TIER 3 → SKIP",
+          "catalyst_gia_scontato": 0
+        },
+        "regola_critica": "Catalyst Score < 10 = SCARTO automatico"
+      },
+      "volume_score": {
+        "max": 25,
+        "tabella": {
+          "rvol_20x_plus": 25,
+          "rvol_10_20x": 20,
+          "rvol_5_10x": 14,
+          "rvol_3_5x": 8,
+          "rvol_sotto_3x": 3,
+          "accumulazione_progressiva_multiday": "+5 bonus",
+          "volume_calo_durante_pullback": "+3 bonus",
+          "spike_isolato_senza_followthrough": "-5 malus"
+        },
+        "strumento_mcp": "PFRC RVOL (Pine Script salvato) — leggibile via data_get_study_values"
+      },
+      "sentiment_score": {
+        "max": 20,
+        "tabella": {
+          "accelerazione_nascente_retail": 20,
+          "crescita_organica_no_hype": 15,
+          "narrativa_emergente_x_reddit": 12,
+          "sentiment_neutro_assente": 5,
+          "hype_saturo_viralita_estrema": "0 + RED FLAG",
+          "newsletter_promo_pump_coordinato": "-10 → SCARTO"
+        },
+        "warning": "Sentiment alto + Catalyst basso = probabile pump senza sostanza → SCARTO",
+        "fonti": ["Reddit (r/pennystocks, r/stocks)", "StockTwits", "X/Twitter", "Unusual Whales"]
+      },
+      "technical_score": {
+        "max": 20,
+        "tabella": {
+          "bos_confermato_h4_d1": 5,
+          "fvg_identificato_zona_entry": 5,
+          "choch_recente_inversione": 4,
+          "orderblock_su_tf_superiore": 3,
+          "bull_flag_consolidation_volume_basso": 3,
+          "vwap_reclaim_apertura_debole": 2,
+          "compressione_multiday_sotto_resistenza": 2,
+          "blowoff_top_parabola": "-10 → SCARTO",
+          "struttura_rotta_ribasso_no_recovery": -5
+        },
+        "strumenti_mcp": [
+          "SMC Structures and FVG → data_get_pine_lines + data_get_pine_labels",
+          "High Probability Order Blocks [AlgoAlpha] → data_get_pine_lines",
+          "Absorption Bubbles → data_get_pine_labels",
+          "PRO Scalper → data_get_study_values",
+          "Shannon Entropy V2 → data_get_study_values"
+        ],
+        "note": "Unico score completabile via TradingView MCP — gli altri 4 richiedono fonti esterne"
+      },
+      "risk_score": {
+        "max": 10,
+        "nota": "Punteggio più alto = rischio MINORE",
+        "tabella": {
+          "float_15M_no_warrant_no_atm": 10,
+          "float_15_30M_struttura_pulita": 8,
+          "float_30M_plus_setup_eccezionale": 5,
+          "dilution_risk_convertibles_warrants": 2,
+          "atm_offering_ultimi_30gg": 1,
+          "reverse_split_6_mesi": "0 → SCARTO",
+          "insider_selling_significativo": "0 → SCARTO"
+        }
+      }
+    },
+    "soglia_minima_totale": 65,
+    "tier_sizing": {
+      "tier_1": "Full sizing (Layer 1 $2K / Layer 2 sizing standard)",
+      "tier_2": "Sizing ridotto 50% + stop più stretto -15%"
+    }
+  },
+
+  "multi_timeframe_analysis": {
+    "descrizione": "Analisi obbligatoria su 4 timeframe sequenziali — PROFITRC v2 Layer 3",
+    "workflow": [
+      {
+        "timeframe": "Daily / Weekly",
+        "ruolo": "Trend principale",
+        "check": "BOS confermato verso l'alto? Struttura macro bullish?",
+        "mcp_tool": "chart_set_timeframe('D') poi data_get_pine_lines + data_get_pine_labels"
+      },
+      {
+        "timeframe": "4H (240 min)",
+        "ruolo": "Struttura intermedia",
+        "check": "CHoCH recente? Ultimo swing high superato? FVG presente?",
+        "mcp_tool": "chart_set_timeframe('240') poi data_get_pine_lines + data_get_pine_labels"
+      },
+      {
+        "timeframe": "1H (60 min)",
+        "ruolo": "Entry zone",
+        "check": "FVG identificato? Orderblock come supporto? VWAP reclaim?",
+        "mcp_tool": "chart_set_timeframe('60') poi data_get_pine_lines"
+      },
+      {
+        "timeframe": "15min",
+        "ruolo": "Timing entry",
+        "check": "Pull-back in zona? Volume in calo durante pull-back?",
+        "mcp_tool": "chart_set_timeframe('15') poi data_get_ohlcv(count:20, summary:false) + PFRC RVOL"
+      }
+    ]
+  },
+
+  "catalyst_tier": {
+    "tier_1": {
+      "label": "ACTIONABLE — alto sizing permesso",
+      "azione": "Trade attivo con sizing pieno Layer 1 ($2K) o Layer 2",
+      "criteri": [
+        "8-K SEC depositato con contratto firmato e importo definito",
+        "FDA approval / PDUFA positive outcome confermato",
+        "Earnings beat >25% EPS o >20% Revenue con guidance raise",
+        "Financing istituzionale reale con term sheet firmato (non solo annuncio)",
+        "Contratto DoD/governo/NATO con valore >30% market cap",
+        "M&A announcement con prezzo, termine e acquirente definiti"
+      ]
+    },
+    "tier_2": {
+      "label": "SPECULATIVO — sizing ridotto, stop più stretto",
+      "azione": "Trade possibile con sizing 50% rispetto a TIER 1 e stop più stretto (-15%)",
+      "criteri": [
+        "MOU con controparte nota ma non ancora contratto vincolante",
+        "Partnership annunciata senza termini finanziari confermati",
+        "Trial clinico in corso (non ancora data PDUFA definita)",
+        "Contratto pending regulatory approval (condizionale)",
+        "Guidance raise senza catalyst concreti a supporto"
+      ]
+    },
+    "tier_3": {
+      "label": "SKIP — nessun trade in nessuna condizione",
+      "azione": "SKIP assoluto — nessun trade indipendentemente dalla struttura tecnica",
+      "criteri": [
+        "MOU non vincolante con entità sconosciute o non verificabili",
+        "AI-washing: cambio nome o pivot senza prodotto/ricavi reali",
+        "Reverse split recente (<6 mesi): struttura del capitale compromessa",
+        "Titolo già +300% in 1 giorno senza pull-back (blow-off stage 3-4 Kindleberger)",
+        "Promozione pagata, newsletter pump, social media FOMO",
+        "Blow-off day 3+ su parabola verticale senza nuovo catalyst TIER 1"
+      ]
+    }
+  },
+
+  "entry_rules": {
+    "long": [
+      "Catalyst TIER 1/2 verificato su fonte primaria (SEC 8-K, comunicato ufficiale, press release)",
+      "Regime macro: TRADE o SELECTIVE (non NO TRADE)",
+      "Silenzio apertura rispettato: nessun entry nelle prime 5 minuti NYSE (15:30-15:35 IT)",
+      "Pull-back confermato dal picco di apertura: almeno -3% dal massimo intraday",
+      "Volume in calo durante il pull-back: accumulo istituzionale, non distribuzione",
+      "Prezzo in zona FVG o supporto strutturale SMC identificato preventivamente",
+      "Stop loss definito, calcolato e ACCETTATO psicologicamente PRIMA del click",
+      "R/R minimo 1:2: se il target non è almeno 2x il rischio, non entrare",
+      "Nessun entry se il titolo ha già fatto +300% nella stessa sessione (BIRD-rule)"
+    ]
+  },
+
+  "exit_rules": [
+    "T1 (+15-25%): chiudere 33-50% della posizione, spostare stop a breakeven sul resto",
+    "T2 (+40-60%): chiudere ulteriore 33%, trailing stop SMC-based sul residuo",
+    "T3 (target massimo del pattern): chiusura totale della posizione",
+    "Trailing stop: si sposta SOLO dopo nuovo BOS confermato verso l'alto su 15min",
+    "Floor di gain: una volta raggiunto +8-9%, il trailing non scende MAI sotto questo livello",
+    "Regola 3 candele 15min: se il prezzo non si muove nella direzione attesa entro 3 candele → revisione tesi",
+    "Invalidation da catalyst: nuova notizia avversa che contraddice il catalyst → exit immediata a mercato",
+    "Invalidation tecnica: chiusura candle sotto lo stop strutturale → exit end of day senza eccezioni",
+    "Pre-PDUFA rule: chiudere 50% PRIMA del PDUFA day per ridurre binary risk"
+  ],
+
+  "risk_rules": [
+    "Stop loss PRIMA dell'entry, mai dopo — se non sai dove stai sbagliando, non entrare",
+    "Layer 1 sizing: $2,000 bullet unico — stop max -25% (~$500 rischio reale per trade)",
+    "Layer 1 e Layer 2: capitali separati e non comunicanti in nessuna condizione",
+    "Rischio massimo per singolo trade: 1-2% del capitale totale del portafoglio speculativo",
+    "Position size: ≤1-2% dell'ADV per evitare market impact su small cap illiquide",
+    "Max posizioni contemporanee Layer 2: 3-5 (una sola bullet Layer 1 alla volta)",
+    "Portfolio stop loss mensile: -20% del capitale speculativo → liquidare tutto e ricostruire",
+    "Fattori di correlazione: non aprire posizioni multiple sullo stesso settore/fattore nello stesso giorno",
+    "Pre-FOMC: ridurre esposizione 48h prima se posizioni significative aperte",
+    "No trade consecutivi: dopo 2 loss nella stessa sessione → stop per il giorno, post-mortem serale",
+    "R/R minimo: 1:2 su ogni trade — se il target non è 2x il rischio, saltare il setup",
+    "Stress test pre-entry (sizing >1%): il trade regge a VIX +20? Regge a contagio settoriale -20%?"
+  ],
+
+  "pipeline_operativa": {
+    "fase_meno1": {
+      "orario_it": "22:00-23:00",
+      "obbligatoria": true,
+      "nome": "Scan Serale",
+      "tasks": [
+        "Scan earnings After Hours: EPS beat >25% o Revenue beat >20% su $1-25",
+        "Scan 8-K SEC filings dopo 16:00 ET: contratti, acquisizioni, financing TIER 1",
+        "AH Movers: volume ratio >10x ADV, float <15M, prezzo $1-7 (Layer 1) o $1-25 (Layer 2)",
+        "Catalyst classification: assegnare TIER 1/2/3 a ogni candidato",
+        "Due diligence: verificare track record CEO, insider buying, red flags strutturali",
+        "Output: watchlist serale max 3 titoli con tesi, entry range, stop ipotetico"
+      ]
+    },
+    "fase_0": {
+      "orario_it": "10:00-14:00",
+      "nome": "Premarket Scanner",
+      "tasks": [
+        "Market regime check: VIX + SPY + DXY + 10Y yield → TRADE/SELECTIVE/NO TRADE",
+        "Verifica watchlist serale: il catalyst è ancora valido? Nuove notizie avverse?",
+        "Premarket movers: volume ratio premarket vs ADV su candidati",
+        "Technical setup H4: BOS confermato? FVG identificato? Stop level strutturale definito?",
+        "Pattern matching: il setup corrisponde a uno dei 6 pattern ad alta probabilità?"
+      ]
+    },
+    "fase_1": {
+      "orario_it": "15:30-15:35",
+      "nome": "Silenzio Apertura",
+      "azione": "NESSUN TRADE — solo osservazione. Volatilità artificiale, spread amplificati, falsi segnali."
+    },
+    "fase_2": {
+      "orario_it": "15:35-15:45",
+      "nome": "Finestra Entry",
+      "azione": "Entry su pull-back confermato (-3% dal picco) con stop definito e R/R ≥1:2"
+    },
+    "fase_3": {
+      "orario_it": "15:45-22:00",
+      "nome": "Gestione Posizione",
+      "azione": "Trailing stop SMC-based, regola 3 candele 15min, scale-out su T1/T2/T3"
+    }
+  },
+
+  "pattern_library": {
+    "pattern_1_shell_pivot_ai": {
+      "nome": "Shell-Pivot-AI (BIRD-type)",
+      "setup": "Shell azienda + cessione business legacy + pivot AI/tech + financing reale (8-K)",
+      "catalyst_tier": "TIER 1",
+      "timing": "Entry il mattino del giorno 1 DOPO l'8-K — MAI dopo +300%",
+      "expected_move": "+50% a +876% giorno 1",
+      "stop": "-20-25% dal picco intraday dopo entry"
+    },
+    "pattern_2_fda_pdufa": {
+      "nome": "FDA PDUFA Pre-Run",
+      "setup": "Biotech micro-cap con data PDUFA entro 14 giorni e probabilità approvazione >50%",
+      "catalyst_tier": "TIER 1 (PDUFA confermata) / TIER 2 (trial in corso)",
+      "entry": "2 settimane prima della data PDUFA (pre-run window)",
+      "expected_move": "+50-200% pre-PDUFA, +300% su approvazione",
+      "stop": "Strutturale sotto ultimo swing low significativo su H4",
+      "exit_speciale": "Chiudere 50% PRIMA del PDUFA day per eliminare binary risk"
+    },
+    "pattern_3_short_squeeze": {
+      "nome": "Short Squeeze da Catalyst",
+      "setup": "Short Interest >30% del float + notizia inattesa positiva TIER 1",
+      "catalyst_tier": "TIER 1 obbligatorio",
+      "expected_move": "Amplificato dal forced covering: +50-300%",
+      "identificazione": "Verificare SI su Finviz/Shortsqueeze.com prima dell'entry",
+      "stop": "Price action debole entro prime 2 ore = squeeze non scattato → exit"
+    },
+    "pattern_4_defense_contract": {
+      "nome": "Defense Contract Micro-Cap",
+      "setup": "Contratto DoD/NATO/Governo con valore >30% della market cap attuale",
+      "catalyst_tier": "TIER 1 (contratto firmato con importo) / TIER 2 (pending)",
+      "settori": "Difesa, drone, cybersecurity, sensoristica, dual-use",
+      "expected_move": "+30-150% entro 1-3 settimane",
+      "stop": "-20% dall'entry"
+    },
+    "pattern_5_pre_earnings": {
+      "nome": "Pre-Earnings Run",
+      "setup": "Earnings in 5-15 giorni + consensus analisti pessimista + struttura tecnica bullish su H4",
+      "catalyst_tier": "TIER 2 (speculativo su aspettativa beat)",
+      "expected_move": "+15-40% nel periodo pre-earnings",
+      "exit_rule": "CHIUDERE PRIMA degli earnings — non tenere il binary risk",
+      "stop": "-15% dall'entry"
+    },
+    "pattern_6_continuation": {
+      "nome": "Continuation Setup (5-7 giorni)",
+      "setup": "Titolo con +25-50% negli ultimi 5 giorni + pull-back ordinato verso FVG o EMA 21",
+      "catalyst_tier": "TIER 1 originale ancora intatto, nessuna notizia avversa",
+      "condizioni": [
+        "Volume in calo durante il pull-back (accumulo, non distribuzione)",
+        "Pull-back fermato su FVG identificato o EMA 21",
+        "Catalyst originale non contradetto da nuove informazioni"
+      ],
+      "expected_move": "+15-30% nel follow-through entro 5-7 giorni",
+      "stop": "Sotto il minimo del pull-back (swing low strutturale)"
+    }
+  },
+
+  "anti_pattern_library": [
+    {
+      "id": 1,
+      "nome": "FOMO Chase",
+      "descrizione": "Entrare dopo +200-300% perché 'può salire ancora'",
+      "regola": "BIRD-rule: dopo +300% in 1 giorno = NO TRADE assoluto. Il denaro si fa PRIMA del blow-off."
+    },
+    {
+      "id": 2,
+      "nome": "Filtro Settoriale a Priori",
+      "descrizione": "'Non seguo questo settore' → miss sistematici su setup eccellenti",
+      "regola": "La Fase -1 scansiona TUTTI i settori. I dati vengono prima, i settori vengono dopo."
+    },
+    {
+      "id": 3,
+      "nome": "Hold Loser / Close Winner (Disposition Effect)",
+      "descrizione": "Tenere i perdenti aspettando il recupero, vendere i vincenti troppo presto",
+      "regola": "Stop loss meccanico sui perdenti. Trailing stop (mai stop fisso) sui vincenti."
+    },
+    {
+      "id": 4,
+      "nome": "Post-Mortem Mancato",
+      "descrizione": "Trade sbagliato non analizzato → stesso errore ripetuto nella sessione successiva",
+      "regola": "Post-mortem scritto entro 24h da ogni loss significativo. L'errore non analizzato è un errore futuro garantito."
+    },
+    {
+      "id": 5,
+      "nome": "Over-diversificazione",
+      "descrizione": "15+ posizioni small cap = nessun impatto reale sul capitale, impossibile da gestire",
+      "regola": "Max 3-5 posizioni Layer 2, una sola bullet Layer 1. Concentrazione + gestione attiva."
+    },
+    {
+      "id": 6,
+      "nome": "Silenzio Apertura Violato",
+      "descrizione": "Entry nei primi 5 minuti di NYSE: volatilità artificiale, spread amplificati, falsi segnali",
+      "regola": "Finestra entry SOLO 15:35-15:45 IT. Il silenzio apertura (15:30-15:35 IT) è sacro."
+    },
+    {
+      "id": 7,
+      "nome": "Stop Loss Post-Entry",
+      "descrizione": "Definire o spostare lo stop DOPO essere entrati in posizione (decisione emotiva)",
+      "regola": "Stop PRIMA dell'entry, sempre. Se non sai dove stai sbagliando, non entrare."
+    },
+    {
+      "id": 8,
+      "nome": "Catalyst Non Verificato",
+      "descrizione": "Tradare su titolo 'sentito parlare' su social, newsletter o forum senza verifica primaria",
+      "regola": "Verifica 8-K/comunicato stampa ufficiale obbligatoria. MOU non vincolante = TIER 3 = SKIP."
+    },
+    {
+      "id": 9,
+      "nome": "Attesa Eccessiva di Conferma",
+      "descrizione": "'Aspetto 5 giorni per essere sicuro' → il setup è già finito quando entri",
+      "regola": "Con $2K e -25% stop, il rischio è già calibrato. La finestra entry è 15:35-15:45, non 16:30."
+    }
+  ],
+
+  "10_commandments": [
+    "1. NO TRADE senza catalyst TIER 1/2 verificato — cash è una posizione valida. Aspetta il setup.",
+    "2. Stop loss PRIMA dell'entry, mai dopo — se non sai dove stai sbagliando, non entrare.",
+    "3. Titolo già +300% in 1 giorno = NO TRADE assoluto — il denaro si fa PRIMA del blow-off.",
+    "4. MOU non vincolante = TIER 3 = SKIP — solo contratti firmati con importo definito.",
+    "5. Nessun filtro settoriale nello scouting — i dati vengono prima, i settori vengono dopo.",
+    "6. Trailing stop SMC: si sposta SOLO dopo BOS confermato — mai sotto il floor di gain (+8-9%).",
+    "7. Silenzio apertura NYSE: 15:30-15:35 IT — finestra entry: 15:35-15:45 IT su pull-back.",
+    "8. Fase -1 serale è OBBLIGATORIA ogni giorno — il sistema si alimenta di informazioni fresche.",
+    "9. Layer 1 e Layer 2: capitali separati e non comunicanti — un loss non finanzia l'altro.",
+    "10. Post-mortem entro 24h su ogni loss significativo — l'errore non analizzato è un errore futuro."
+  ],
+
+  "due_diligence_checklist": {
+    "livello_1_catalyst": [
+      "Fonte primaria: 8-K SEC filing depositato e leggibile",
+      "Il catalyst è reale o solo marketing? Contratto firmato o MOU?",
+      "C'è un importo finanziario definito o solo 'partnership strategica'?",
+      "Il financing è confermato (term sheet firmato) o 'in discussione'?"
+    ],
+    "livello_2_management": [
+      "Il CEO ha già realizzato quanto promette in aziende precedenti?",
+      "C'è insider buying recente (Form 4 SEC) nelle ultime 2 settimane?",
+      "La guidance precedente è stata rispettata o smentita?"
+    ],
+    "livello_3_red_flags": [
+      "Il float è artificialmente basso per warrant + convertibili imminenti?",
+      "Ci sono lock-up expiry imminenti (entro 30 giorni)?",
+      "C'è un reverse split recente (<6 mesi)? Se sì → SKIP",
+      "Ci sono relazioni pagate tra CEO e newsletter/promotori?",
+      "Short Interest >30%: opportunità squeeze o red flag fondamentale?"
+    ]
+  },
+
+  "pre_trade_stress_test": [
+    "Se VIX sale da X a X+20 durante la posizione, il trade tiene?",
+    "Se il settore cade -20% per contagio, dove finisce la posizione?",
+    "Se viene annunciato un evento macro avverso entro 48h, ho un piano di uscita?",
+    "Il mio stop loss regge a uno slippage del 5% (flash crash scenario)?",
+    "La position size è ≤1-2% dell'ADV per evitare market impact all'uscita?"
+  ],
+
+  "behavioral_checklist_pre_trade": [
+    "Ho una tesi contraria credibile? (se non riesco a formularla → probabile bias)",
+    "Il mio stop loss è definito prima dell'entry? (no = overconfidence sul timing)",
+    "Sto dimensionando la posizione su R/R oggettivo o su 'sensazione di certezza'?",
+    "Quante volte ho avuto ragione nell'ultima settimana? (calibration check anti-overconfidence)",
+    "Sto entrando per un catalyst verificato o per FOMO da social/news?"
+  ],
+
+  "pine_indicators": {
+    "descrizione": "Indicatori Pine Script salvati su TradingView Desktop — aggiungere al chart prima di ogni sessione",
+    "indicatori_profitrc": [
+      {
+        "nome": "PROFITRC RVOL",
+        "shorttitle": "PFRC RVOL",
+        "versione": "v6",
+        "funzione": "Calcola RVOL (volume relativo vs ADV) e Volume Score (0-25pt) — PROFITRC Layer 1",
+        "output_mcp": ["data_get_study_values → 'RVOL x', 'Volume Score /25', 'ADV'", "data_get_pine_tables → tabella con RVOL, ADV, Tier, Score"],
+        "settings": "ADV Period: 20 bars (default) — su timeframe intraday"
+      },
+      {
+        "nome": "PROFITRC Regime Dashboard",
+        "shorttitle": "PFRC Rgm",
+        "versione": "v6",
+        "funzione": "Calcola score macro Layer 0 (VIX/SPY/DXY/10Y) e regime operativo — funziona su qualsiasi simbolo",
+        "output_mcp": ["data_get_study_values → 'Regime Score', 'VIX Score', 'SPY Score', 'DXY Score', '10Y Score', 'VIX'", "data_get_pine_tables → tabella Layer 0 con regime finale"],
+        "note": "Usa request.security() su VIX, AMEX:SPY, TVC:DXY, TVC:US10Y — aggiornato su Daily"
+      }
+    ],
+    "indicatori_smc_esterni": [
+      {
+        "nome": "SMC Structures and FVG",
+        "id_sessione": "HK2Yaw",
+        "output_mcp": "data_get_pine_lines + data_get_pine_labels → BOS, CHoCH, FVG con prezzi"
+      },
+      {
+        "nome": "High Probability Order Blocks [AlgoAlpha]",
+        "id_sessione": "DIUjOf",
+        "output_mcp": "data_get_pine_lines → zone Order Block"
+      },
+      {
+        "nome": "Absorption Bubbles",
+        "id_sessione": "mVcpfK",
+        "output_mcp": "data_get_pine_labels → segnali di assorbimento"
+      },
+      {
+        "nome": "PRO Scalper",
+        "id_sessione": "W5DpKz",
+        "output_mcp": "data_get_study_values"
+      },
+      {
+        "nome": "Shannon Entropy V2",
+        "id_sessione": "2MkjwS",
+        "output_mcp": "data_get_study_values"
+      }
+    ],
+    "workflow_sessione": [
+      "1. Aprire TradingView Desktop con CDP attivo (porta 9222)",
+      "2. Aggiungere al chart: PFRC Rgm (Regime Dashboard) + PFRC RVOL",
+      "3. chart_get_state per verificare tutti gli indicatori attivi",
+      "4. data_get_pine_tables (filter='PFRC Rgm') → leggere regime Layer 0",
+      "5. Per ogni candidato: chart_set_symbol → multi_timeframe_analysis → data_get_pine_lines/labels → PFRC RVOL → generate Setup Card"
+    ]
+  },
+
+  "automazioni_ccr": {
+    "descrizione": "Agenti remoti Claude (CCR) schedulati — girano su cloud Anthropic, NON hanno accesso a TradingView MCP locale",
+    "agenti": [
+      {
+        "nome": "PROFITRC Morning Brief",
+        "id": "trig_01RdMphAoNd5W47FB6SSNJT3",
+        "url": "https://claude.ai/code/routines/trig_01RdMphAoNd5W47FB6SSNJT3",
+        "cron": "0 9 * * 1-5",
+        "orario_it": "11:00 IT (CEST) — 10:00 IT in CET invernale → aggiornare cron a '0 10 * * 1-5' a ottobre",
+        "funzione": "Regime check macro + scan watchlist + catalyst classification → output operativo pre-sessione",
+        "tools": ["WebSearch", "WebFetch"]
+      },
+      {
+        "nome": "PROFITRC Phase 0 Serale — Discovery",
+        "id": "trig_01LxkgtqVQiV6ypLAsjNhEx5",
+        "url": "https://claude.ai/code/routines/trig_01LxkgtqVQiV6ypLAsjNhEx5",
+        "cron": "0 20 * * 1-5",
+        "orario_it": "22:00 IT (CEST) — coincide con chiusura NYSE 16:00 ET",
+        "funzione": "Phase 0 serale: scan 8-K SEC AH + AH movers + earnings AH + catalyst noti per domani → output Setup Card parziale (Catalyst/Sentiment/Risk Score pre-compilati)",
+        "tools": ["WebSearch", "WebFetch"],
+        "output_format": "PROFITRC Setup Card con Subtotale /55 — Technical Score completato il giorno dopo con TradingView MCP"
+      }
+    ],
+    "nota_architettura": "I CCR non possono chiamare strumenti MCP locali (TradingView gira su Mac di Nicola). Usano WebSearch come sostituto per la scoperta. Il Technical Score viene completato in sessione locale con Claude Desktop + MCP."
+  },
+
+  "standard_output_format": {
+    "descrizione": "Formato PROFITRC Setup Card — output standard obbligatorio per ogni trade analizzato. Non usare formati informali.",
+    "formato": [
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "PROFITRC SETUP CARD",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "TICKER:           [es. ACHV]",
+      "DATA:             [es. 21/05/2026]",
+      "REGIME:           [BULL/SELECTIVE/CAUTION/NO TRADE]",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "CATALYST:         [descrizione breve]",
+      "CATALYST TIER:    [TIER 1 / TIER 2]",
+      "FONTE CATALYST:   [8-K SEC / Comunicato / FDA.gov]",
+      "DATA CATALYST:    [data evento]",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "SCORING:",
+      "  Catalyst Score: [xx/25]",
+      "  Volume Score:   [xx/25]  ← da PFRC RVOL",
+      "  Sentiment Score:[xx/20]",
+      "  Technical Score:[xx/20]  ← da SMC Structures + OB + FVG",
+      "  Risk Score:     [xx/10]",
+      "  TOTALE:         [xx/100] ← minimo 65 per procedere",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "STRUTTURA TECNICA:",
+      "  BOS confermato: [SI / NO | timeframe]",
+      "  FVG zone:       [es. $5.10–$5.35]",
+      "  Orderblock:     [es. $4.80–$5.00]",
+      "  CHoCH recente:  [SI / NO | timeframe]",
+      "  RVOL:           [Xx | Volume Score xx/25]",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "PIANO OPERATIVO:",
+      "  Entry Zone:      [es. $5.20–$5.45]",
+      "  Stop Loss:       [es. $4.45 — sotto CHoCH 4H]",
+      "  Target 1 (T1):   [es. $6.50 | R/R = 2.1:1 | size: 33%]",
+      "  Target 2 (T2):   [es. $7.80 | R/R = 3.5:1 | size: 50%]",
+      "  Target 3 (T3):   [es. trailing SMC | size: 17%]",
+      "  Time Horizon:    [es. 7–14 giorni]",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "SIZING:",
+      "  Rischio max:     [es. €20 (2% di €1K)]",
+      "  Position size:   [es. 48 azioni a $14.52 = €650]",
+      "  Tier sizing:     [TIER 1 = full / TIER 2 = 50%]",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "SCENARI:",
+      "  BULL:  [scenario ottimista con target e probabilità]",
+      "  BASE:  [scenario più probabile]",
+      "  BEAR:  [scenario stop hit + recovery o no]",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "PROBABILITA STIMATE:",
+      "  P(raggiunge T1): [es. 55%]",
+      "  P(stop hit):     [es. 30%]",
+      "  P(neutro):       [es. 15%]",
+      "  Expected Value:  [es. +€8.50 per trade]",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "ANTI-PATTERN CHECK: [PASSED / BLOCKED — motivo specifico]",
+      "BEHAVIORAL FILTER:  [PASSED / flag specifico]",
+      "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    ]
+  },
+
+  "open_positions": {
+    "descrizione": "Posizioni aperte — registrate SOLO su input esplicito di Nicola. Le routine CCR (Morning Brief, Phase 0 Serale, Discovery) devono leggere questo campo e considerare le posizioni aperte nella propria analisi.",
+    "istruzioni_ccr": [
+      "Prima di ogni Setup Card: verificare se il ticker è già in open_positions → non suggerire nuovi entry sullo stesso ticker",
+      "Per ogni posizione open: segnalare P&L corrente stimato, distanza % dallo stop, catalyst imminenti rilevanti",
+      "Se distanza dallo stop < 5% del prezzo corrente → ALERT PRIORITARIO nella sezione iniziale del brief",
+      "Se arriva notizia avversa su ticker in posizione open → segnalare come INVALIDATION RISK prima di tutto",
+      "Considerare la posizione open nel regime check: non aprire nuove posizioni correlate se già esposti"
+    ],
+    "posizioni": [
+      {
+        "ticker": "APPS",
+        "exchange": "NASDAQ",
+        "layer": 1,
+        "shares": 307,
+        "entry_price": 4.69,
+        "commission_usd": 1,
+        "stop_loss": 4.57,
+        "costo_totale_usd": 1440.83,
+        "rischio_max_usd": 37.84,
+        "entry_date": "2026-05-26",
+        "catalyst": "Q4 FY2026 earnings AMC 26/05/2026 ore 22:30 IT — Digital Turbine binary event",
+        "pattern": "Pre-Earnings Binary Bet",
+        "status": "OPEN",
+        "note": "Gap risk overnight. Valutare chiusura parziale prima del print se +5% intraday. Stop intraday $4.57 non protegge da gap ribassista post-earnings."
+      },
+      {
+        "ticker": "CRMD",
+        "exchange": "NASDAQ",
+        "layer": 1,
+        "shares": 106,
+        "entry_price": 8.27,
+        "commission_usd": 1,
+        "stop_loss": 7.50,
+        "costo_totale_usd": 877.62,
+        "rischio_max_usd": 82.62,
+        "entry_date": "2026-05-26",
+        "catalyst": "RIZEAO Phase III top-line data attesa Q2 2026 imminente + DEFENCATH $258.8M FY2025 + guidance raise $325-345M",
+        "pattern": "Pre-Catalyst Phase III Swing",
+        "status": "OPEN",
+        "note": "Score 65pt TIER2. Entry bull flag breakout $8.27. Stop strutturale $7.50. RIZEAO Ph.III data potenzialmente imminente (Q2 2026 = entro giugno) — catalyst principale del portfolio. Candidato top PROFITRC."
+      }
+    ],
+    "storico_chiuse": [],
+    "ultimo_aggiornamento": "2026-05-26 16:15 IT — v1.0 sezione creata"
+  },
+
+  "notes": "Sistema PROFITRC v2.2 — Multi-layer speculativo costruito su 29 fonti accademiche e istituzionali (Hamilton 2016, Kahneman/Tversky 1979, Fama-French 1993, Ernie Chan 2009, Kindleberger, Reinhart/Rogoff 2008, Glasserman Columbia). Universo operativo: NYSE/NASDAQ small/micro-cap $1-25, float <15M, catalyst event-driven TIER 1/2. Broker: IBKR. Piattaforma analisi: TradingView Desktop + Claude AI via MCP (78 tools). Automazioni: CCR Morning Brief 11:00 IT + CCR Phase 0 Serale 22:00 IT + Auto Watchlist Adder 19:45 IT. Pine Scripts custom: PFRC RVOL + PFRC Regime Dashboard. Framework v2.2: 5 layer sequenziali (L0 Regime Gate → L1 Scan/Discovery → L2 Catalyst Verification → L3 Technical SMC → L4 Behavioral Filter). Output standard: PROFITRC Setup Card (score 0-100, soglia 65). Watchlist: 56 ticker, Maggio 2026. REGOLA SYNC: ogni modifica alla watchlist TradingView aggiorna immediatamente questo file."
+}
