@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-26T11:00:00+02:00",
+  "last_updated": "2026-05-26T19:00:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -56,9 +56,233 @@
     "MTVA",
     "AMPG",
     "CMPX",
-    "SPRO"
+    "SPRO",
+    "RDW",
+    "RIGL",
+    "IDYA"
   ],
   "discovery_daily": [
+    {
+      "date": "2026-05-26",
+      "scan_time": "19:00 IT",
+      "macro_regime": "TRANSIZIONE BULLISH - SPY +8% vs MA50 (Russell 2000 record), SpaceX IPO euphoria, ASCO week. VIX 16.76. DXY weakening. 10Y 4.56%. Consumer Confidence 93.1 (beat 91.9). Gas ~4.50. PCE rischio Giovedi 28/05.",
+      "alerts": [
+        "RIGL - ASCO oral May 29 GAVRETO AcceleRET-Lung Phase 3 final data (3 giorni)",
+        "REPL - ASCO oral May 30-31 RP1+nivo 3-year OS melanoma (4-5 giorni)",
+        "MBRX - ASCO poster May 30 annamycin cardiac safety (4 giorni)",
+        "PCE May 28 - ridurre esposizione sera del 28 maggio",
+        "SpaceX IPO roadshow June 8, listing June 12 (SPCX) - space sector catalyst continuo"
+      ],
+      "candidates": [
+        {
+          "ticker": "CRMD",
+          "score": 69,
+          "tier": "TIER2",
+          "catalyst": "Q1 2026 revenue 27.4M, net income 8.6M (PRIMO TRIMESTRE PROFITTEVOLE), guidance raised 25-345M FY2026, DefenCath Medicare expansion, REZZAYO Phase III Q2 readout upcoming",
+          "pensiero_critico": {
+            "regime": "TRANSIZIONE BULLISH",
+            "catalyst_verified": true,
+            "catalyst_freshness": "STALE (Q1 May 14) ma REZZAYO Q2 readout come prossimo catalyst binario",
+            "narrativa_numeri": "CONFERMATA - revenue record, primo trimestre profittevole, guidance raised. Numeri solidi.",
+            "rischio_asimmetrico": "worst case: REZZAYO Phase III fallisce -> -40%; competition DefenCath",
+            "kindleberger": "Stage 1 (da .13 52w low a ~.06 = +31%; 52w high 7.43)",
+            "bird_rule": false,
+            "diluzione": false,
+            "flags": [
+              "Float 72M sopra filtro <15M",
+              "Q1 catalyst parzialmente prezzato (14 maggio)"
+            ],
+            "giudizio": "ALERT URGENTE TIER2 - fundamentals eccellenti, profittevole, Strong Buy 5/0/0 PT 3.25"
+          },
+          "entry": ".80-.30",
+          "stop": ".10",
+          "t1": "1.00",
+          "t2": "4.50",
+          "rr": "2.1:1",
+          "fonte": "Morning Brief confermato + Q1 upgrade",
+          "giudizio": "ALERT URGENTE TIER2",
+          "warning": "Float 72M sopra filtro; sizing 50%; REZZAYO Q2 readout catalyst binario futuro"
+        },
+        {
+          "ticker": "RDW",
+          "score": 61,
+          "tier": "MONITORING",
+          "catalyst": "SpaceX S-1 IPO filing May 20 (IPO June 12 SPCX) + Q1 revenue +58% YoY 7M + record backlog 98M + drone deals + lunar milestone. Up 145% YTD.",
+          "pensiero_critico": {
+            "regime": "TRANSIZIONE BULLISH - SpaceX IPO euphoria + space sector rotation massiva",
+            "catalyst_verified": true,
+            "catalyst_freshness": "FRESH intraday (SpaceX IPO catalyst + Motley Fool article TODAY May 26)",
+            "narrativa_numeri": "CONFERMATA: Q1 7M (+58% YoY), backlog 98M record, FY2026 guidance 50-500M.",
+            "rischio_asimmetrico": "worst case: SpaceX IPO delude o posticipato -> space sector de-rating -35-40%; stock 3-14",
+            "kindleberger": "Stage 2-3 (up 145% YTD + 2.18 oggi dopo +27.3%)",
+            "bird_rule": true,
+            "diluzione": false,
+            "flags": [
+              "GIA CORSO +27.3% oggi",
+              "BIRD RULE (space stocks trending SpaceX IPO)",
+              "Float probabile >50M",
+              "Non entrare oggi - aspettare pullback"
+            ],
+            "giudizio": "MONITORING - aspettare pullback 7-18.50 (previous close area)"
+          },
+          "entry": "7.00-8.50",
+          "stop": "5.50",
+          "t1": "2.50",
+          "rr": "2.2:1",
+          "fonte": "2D (SpaceX IPO sector play)",
+          "giudizio": "MONITORING - probe 1% max loss post-pullback",
+          "warning": "NON ENTRARE OGGI a 2+ - atteso pullback verso 7-18.50. BIRD RULE attiva."
+        },
+        {
+          "ticker": "REPL",
+          "score": 63,
+          "tier": "MONITORING",
+          "catalyst": "ASCO oral May 30-31 (RP1+nivo 3-year OS melanoma + Phase 1 RP2 final). BLA resubmission accepted FDA. FDA Commissioner change -> hope RP1 reconsideration. SI 43.93%.",
+          "pensiero_critico": {
+            "regime": "TRANSIZIONE BULLISH + ASCO week tailwind",
+            "catalyst_verified": true,
+            "catalyst_freshness": "FRESH - ASCO oral May 30 in 4 giorni; dati non ancora pubblicati",
+            "narrativa_numeri": "Clinical stage: no revenue. FDA CRL April 10. BLA resubmission accepted. Tripled dal minimo .50 (aprile).",
+            "rischio_asimmetrico": "worst case: ASCO data non impressionante o FDA mantiene posizione -> ritorno -3 area -> -40%",
+            "kindleberger": "Stage 3 (da minimo .50 aprile a ~.50 = +200%)",
+            "bird_rule": true,
+            "diluzione": true,
+            "flags": [
+              "Stage 3 (200% dal minimo di aprile)",
+              "BIRD RULE (top Russell 2000 May performers)",
+              "ATM 00M attiva",
+              "Float 76M",
+              "GIA CORSO >20% nel mese"
+            ],
+            "giudizio": "MONITORING - probe 1% max loss | Stage 3 + BIRD RULE + ATM = sizing 25%"
+          },
+          "entry": ".80-.20",
+          "stop": ".20",
+          "t1": ".50",
+          "rr": "2.3:1",
+          "fonte": "Watchlist upgrade (ASCO oral catalyst)",
+          "giudizio": "MONITORING - probe 1% max loss sizing 25%",
+          "warning": "Stage 3 + ATM + BIRD RULE: solo su pullback .80-4.20. Sizing 25% del probe normale."
+        },
+        {
+          "ticker": "RIGL",
+          "score": 55,
+          "tier": "MONITORING",
+          "catalyst": "ASCO oral May 29 (3 GIORNI) - GAVRETO Phase 3 AcceleRET-Lung FINAL DATA (prima linea RET fusion+ NSCLC). Q1 revenue 8.8M, net income .7M, cash 46.7M.",
+          "pensiero_critico": {
+            "regime": "TRANSIZIONE BULLISH + ASCO week",
+            "catalyst_verified": true,
+            "catalyst_freshness": "FRESH - abstract non ancora pubblicato, rivelato mattina May 29",
+            "narrativa_numeri": "CONFERMATA: profittevole Q1 (EPS /bin/bash.44), cash 46.7M, 3 prodotti commerciali (TAVALISSE, REZLIDHIA, GAVRETO). Q1 lieve miss stime.",
+            "rischio_asimmetrico": "worst case: Phase 3 OS non significativa -> GAVRETO royalties ridotte -> -30-35%",
+            "kindleberger": "Stage non determinato (prezzo 8.54; 52w range non verificato)",
+            "bird_rule": false,
+            "diluzione": false,
+            "flags": [
+              "Prezzo 8.54 sopra filtro 5",
+              "Q1 lieve miss stime -> sentiment tiepido",
+              "Float non verificato (stimato >15M)"
+            ],
+            "giudizio": "MONITORING - ASCO oral in 3 giorni, prezzo sopra filtro"
+          },
+          "entry": "6.00-8.00",
+          "stop": "3.50",
+          "t1": "4.00",
+          "rr": "2.0:1",
+          "fonte": "2D (ASCO oral May 29)",
+          "giudizio": "MONITORING - probe 1% max loss",
+          "warning": "Prezzo 8.54 sopra filtro 5; catalyst in 3 giorni - monitorare per entry pre-ASCO"
+        },
+        {
+          "ticker": "IDYA",
+          "score": 54,
+          "tier": "MONITORING",
+          "catalyst": "ASCO LBA oral June 1 (6 giorni) - COMPLETE Phase 2/3 OptimUM-02 darovasertib+crizotinib uveal melanoma (PFS 6.9 vs 3.1 mesi, -58% risk, primary endpoint MET aprile 2026)",
+          "pensiero_critico": {
+            "regime": "TRANSIZIONE BULLISH + ASCO week",
+            "catalyst_verified": true,
+            "catalyst_freshness": "PARTIALLY PRICED - primary endpoint annunciato aprile 2026. ASCO June 1 = dataset completo (OS, secondary endpoints, durability)",
+            "narrativa_numeri": "Primary endpoint confermato. Cash runway e market cap non verificati in dettaglio.",
+            "rischio_asimmetrico": "worst case: OS data o secondary endpoints deboli a ASCO -> -30-40%",
+            "kindleberger": "Stage non determinato (stock surged aprile su primary data)",
+            "bird_rule": false,
+            "diluzione": false,
+            "flags": [
+              "Prezzo 9.54 sopra filtro 5",
+              "Catalyst PARTIALLY PRICED (aprile primary announcement)",
+              "Float e cash non verificati a fondo"
+            ],
+            "giudizio": "MONITORING borderline - LBA full dataset puo rivelare OS e secondary endpoints non ancora pubblicati"
+          },
+          "entry": "8.00-9.50",
+          "stop": "5.00",
+          "t1": "6.00",
+          "rr": "1.8:1",
+          "fonte": "2D (ASCO LBA June 1)",
+          "giudizio": "MONITORING - probe 1% max loss",
+          "warning": "Prezzo sopra filtro 5; catalyst partially priced; solo se LBA rivela nuovi dati OS significativi"
+        }
+      ],
+      "watchlist_movers": {
+        "top5": [
+          {
+            "ticker": "YCBD",
+            "price": "~$0.97",
+            "change": "+18.45%",
+            "note": "cannabis sector momentum (Trump DEA reclassification finalized)"
+          },
+          {
+            "ticker": "REPL",
+            "price": "~$4.44-4.95",
+            "change": "+significativo mese",
+            "note": "FDA hope + ASCO oral May 30-31, tripled dal minimo"
+          },
+          {
+            "ticker": "SNAL",
+            "price": "$1.12",
+            "change": "+25% nel mese",
+            "note": "Q1 beat profit swing +$2.1M"
+          },
+          {
+            "ticker": "CRMD",
+            "price": "$8.06",
+            "change": "+1.64% (21/05)",
+            "note": "Q1 profittevole $38.6M net income, guidance raised"
+          },
+          {
+            "ticker": "CMPS",
+            "price": "$11.81",
+            "change": "+1.90%",
+            "note": "dual Phase 3 met + FDA rolling NDA + cash $466M"
+          }
+        ],
+        "bottom3": [
+          {
+            "ticker": "SOUN",
+            "price": "~$8.18",
+            "change": "-16% YTD",
+            "note": "LivePerson overhang, alta valutazione"
+          },
+          {
+            "ticker": "YMM",
+            "change": "CAUTION/EXIT",
+            "note": "China broker crackdown"
+          },
+          {
+            "ticker": "VIPS",
+            "change": "CAUTION",
+            "note": "China crackdown impact"
+          }
+        ]
+      },
+      "morning_brief_feed": [
+        "RIGL: abstract ASCO rilasciato stamattina May 29 - leggere subito Phase 3 GAVRETO final OS data -> potenziale gap-up se positivo",
+        "REPL: ASCO oral May 30 (RP1+nivo 3-year OS melanoma) -> ALERT se dati confermano OS benefit vs SoC",
+        "CRMD: scala-in su dip .80-.30, REZZAYO Phase III Q2 readout imminente -> catalyst binario prossimo",
+        "SpaceX roadshow June 8 -> monitorare RDW per pullback 7-18.50 entry window",
+        "PCE Giovedi 28 maggio - ridurre esposizione small cap mercoledi sera, re-entry post-dato"
+      ]
+    },
     {
       "date": "2026-05-25",
       "session": "Discovery Scout 19:00 IT (Memorial Day — mercati chiusi, analisi pre-opening 26/05)",
