@@ -309,29 +309,121 @@
           "ticker": "AKTX",
           "score_gate1": 58,
           "giudizio_finale": "SKIP",
-          "motivo": "PRE-CHECK: PIPE $5.5M tranche 1 closing May 27 (DOMANI) + Kindleberger Stage 3 (da $5.14 a $18.27 = +255% su May 22)"
+          "motivo": "PRE-CHECK: PIPE 5.5M tranche 1 closing May 27 + Kindleberger Stage 3 (+255% su May 22) [MB 11:00]"
         },
         {
           "ticker": "PCLA",
           "score_gate1": 35,
           "giudizio_finale": "SKIP",
-          "motivo": "Below 55pt threshold (no catalyst fondamentale) + Kindleberger Stage 4 (>300% move) + pure momentum ADR giapponese"
+          "motivo": "Below 55pt + K.Stage4 + pure momentum ADR giapponese [MB 11:00]"
         },
         {
           "ticker": "NRXP",
           "score_gate1": 50,
           "giudizio_finale": "SKIP",
-          "motivo": "Below 55pt + Going Concern Warning Q1 2026 + ATM facility attiva = diluzione quasi certa + cash runway solo Q3 2026 (<6M effettivi)"
+          "motivo": "Going Concern Q1 2026 + ATM facility + cash runway solo Q3 2026 [MB 11:00]"
+        },
+        {
+          "ticker": "PHGE",
+          "score_gate1": 42,
+          "giudizio_finale": "SKIP",
+          "motivo": "GOING CONCERN confermato Q1 10-Q + prezzo effettivo 0.62 (not 1.86 PM) [11:30]"
+        },
+        {
+          "ticker": "UZX",
+          "score_gate1": 0,
+          "giudizio_finale": "SKIP",
+          "motivo": "Prezzo 0.99 < 1.00 soglia minima [11:30]"
+        },
+        {
+          "ticker": "QTEX",
+          "score_gate1": 0,
+          "giudizio_finale": "SKIP",
+          "motivo": "Float 41.52M >> 15M soglia. Rebranding quantum-washing, no contratto firmato [11:30]"
+        },
+        {
+          "ticker": "ARTL",
+          "score_gate1": 28,
+          "giudizio_finale": "SKIP",
+          "motivo": "Nessun catalyst verificato May 26. Ultimo news May 14. Shelf 75M + ATM history [11:30]"
+        },
+        {
+          "ticker": "MNTS",
+          "score_gate1": 38,
+          "giudizio_finale": "SKIP",
+          "motivo": "No catalyst fresco. 5M PIPE. Spike 9.88 PM→7.38 regular hours (Stage 4 reversal) [11:30]"
+        },
+        {
+          "ticker": "VCIG",
+          "score_gate1": 15,
+          "giudizio_finale": "SKIP",
+          "motivo": "DILUZIONE LETALE 1462x shares + SEC 20-F filing failure + mcap 2.3M [11:30]"
+        },
+        {
+          "ticker": "CPSH",
+          "score_gate1": 0,
+          "giudizio_finale": "SKIP",
+          "motivo": "Volume 80K < soglia 100K [11:30]"
+        },
+        {
+          "ticker": "MSW",
+          "score_gate1": 0,
+          "giudizio_finale": "SKIP",
+          "motivo": "No catalyst, HK construction micro-cap, leadership instability [11:30]"
+        },
+        {
+          "ticker": "IPW",
+          "score_gate1": 0,
+          "giudizio_finale": "SKIP",
+          "motivo": "Reverse split 1:8 effective May 22 (< 6 mesi) [11:30]"
+        },
+        {
+          "ticker": "MNPR",
+          "score_gate1": 0,
+          "giudizio_finale": "SKIP",
+          "motivo": "Prezzo 63.12 >> 25 massimo [11:30]"
+        },
+        {
+          "ticker": "LFVN",
+          "score_gate1": 22,
+          "giudizio_finale": "SKIP",
+          "motivo": "Earnings miss + Lake Street downgrade Buy→Hold May 6. No catalyst positivo [11:30]"
+        },
+        {
+          "ticker": "LTRN",
+          "score_gate1": 38,
+          "giudizio_finale": "SKIP",
+          "motivo": "Registered direct 2.14M shares @ 2.06 closed May 13 (< 30gg). No fresh catalyst [11:30]"
+        },
+        {
+          "ticker": "ROLR",
+          "score_gate1": 32,
+          "giudizio_finale": "SKIP",
+          "motivo": "Score < 50pt. Catalyst Crypto.com April 14 = stale. No pre-market movement oggi [11:30]"
         }
       ],
-      "watch_for": "ASCO May 29-June 2: nuovi candidati attesi da oral/poster presentations. PCE May 28 macro catalyst."
+      "scan_timestamp": "2026-05-26T11:30:00+02:00",
+      "scan_type": "CANDIDATI_SCANNER_V2_APERTURA",
+      "regime_note": "VIX 17.44 (-3.43%) TRANSIZIONE. Morning Brief 4/4 TRADE GREEN. Regime effettivo: TRANSIZIONE borderline TRADE.",
+      "watch_for": "ASCO May 29-June 2: nuovi candidati da oral/poster. PCE May 28. MBRX (ASCO May 30), CRMD, SPRO restano candidati validi."
     },
     "ibrx_warning": "IBRX class action deadline TODAY May 26 — securities fraud lawsuit Anktiva false claims. SKIP immediato, legal risk massimo.",
     "skip_list_update": [
       "IBRX (legal)",
-      "AKTX (PIPE)",
-      "PCLA (Kindleberger 4)",
-      "NRXP (going concern)"
+      "AKTX (PIPE+K.Stage3)",
+      "PCLA (K.Stage4)",
+      "NRXP (going concern)",
+      "PHGE (going concern)",
+      "UZX (prezzo<1)",
+      "QTEX (float>15M+quantum-washing)",
+      "ARTL (no fresh catalyst)",
+      "MNTS (no catalyst+PIPE+spike-reversal)",
+      "VCIG (1462x dilution+SEC failure)",
+      "IPW (reverse split May22)",
+      "MNPR (prezzo>25)",
+      "LFVN (miss+downgrade)",
+      "LTRN (offering<30gg)",
+      "ROLR (score<50)"
     ],
     "nio_vips_ymm_warning": "NIO -7.14%, FUTU -35% (non watchlist ma China context). Conferma exit/caution su YMM e VIPS."
   },
