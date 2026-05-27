@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-27T11:30:00+02:00",
+  "last_updated": "2026-05-27T22:00:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -243,381 +243,182 @@
       }
     ]
   },
-  "phase0_serale": [
-    {
-      "date": "2026-05-26",
-      "session": "Phase 0 Serale 22:00 IT",
-      "regime": {
-        "vix": 16.59,
-        "spy_day": "+0.57%",
-        "russell_day": "+1.0%",
-        "nasdaq_day": "+1.0%",
-        "10y_yield": "4.56%",
-        "futures_ah": "positivi (Iran peace talks, oil retreating)",
-        "regime_domani": "TRANSIZIONE/BULL CAUTO",
-        "note": "Russell +1% positivo small cap. PCE May 28 = tail risk. ASCO week starts May 29."
+  "phase0_serale": {
+    "date": "2026-05-27",
+    "regime": "BULL — VIX 17.01, S&P futures +0.23%, Nasdaq +0.37%, DXY 99.10 (debole), 10Y 4.48% (in calo). Dow nuovo record. Iran peace talks = oil in calo. Contesto favorevole per small cap biotech.",
+    "watchlist_movers": [
+      "MNTS -18.28% AH ($18.31) — PIPE $25M at-market",
+      "ONDS -9.40% AH ($9.10) — dilution 424(b)(7) overhang",
+      "LFVN +27.01% AH ($8.80) — short squeeze puro, no catalyst",
+      "CODX +89.90% day (+270% week) — Ebola PCR assay Bundibugyo",
+      "CING flat AH ($3.95) — PDUFA May 31 silenzio pre-FDA",
+      "MBRX -2.09% AH ($2.44) — stabile, ASCO May 30 domani"
+    ],
+    "universe_removals": [
+      "CRMD — float 77.41M shares (>15M limit) — rimozione permanente universo",
+      "SPRO — float 57.90M shares (>15M limit) — rimozione permanente universo",
+      "HUMA — float 125.19M shares (>15M limit) — rimozione permanente universo",
+      "AVXL — Nasdaq delinquency notice ricevuto 22/05/2026 (incapace di depositare 10-Q Q1 2026) — RED FLAG"
+    ],
+    "candidates": [
+      {
+        "ticker": "CING",
+        "nome": "Cingulate Inc.",
+        "score": 73,
+        "tier": "TIER2",
+        "catalyst": "PDUFA May 31 — FDA decisione CTx-1301 dexmethylphenidate ADHD (primo oral ADHD novel-formulation delivery platform). Patent cleared May 26.",
+        "close": "$3.95",
+        "ah_pct": "~flat",
+        "float": "~7.3M shares (non-affiliate), 13.3M total outstanding",
+        "cash_runway": "$25.9M → runway into 2027",
+        "pensiero_critico": {
+          "regime": "BULL — VIX 17, futures +0.23%. Biotech small cap favorevole",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — PDUFA May 31 in 4 giorni. Patent cleared May 26.",
+          "pre_check_dilution": "⚠️ ATM shelf S-3 $200M attiva + storico ATM (Wainwright). PIPE $12M chiuso Feb 17 (99 giorni fa, >30gg). Nessuna diluzione negli ultimi 30gg confermata.",
+          "narrativa_numeri": "Narrativa confermata: pre-commerciale, cash $25.9M→2027, Q1 loss widened ma atteso. CTx-1301 per ADHD mercato multimiliardario.",
+          "rischio_asimmetrico": "Worst case: FDA CRL → $1.50-2.00 (-50-60%). Binary event. Causa: CRL su safety/efficacy CTx-1301.",
+          "kindleberger": "Stage 1 (+23% da 52-week low $3.20) — Entry valida",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ ATM shelf attiva (S-3 $200M)",
+            "⚠️ BINARY EVENT — PDUFA CRL risk -50-60%"
+          ],
+          "giudizio": "TIER2 — 50% sizing. Binary bet su PDUFA May 31. Stage 1, analyst Strong Buy (3/3), PT medio $27.37. Entry pre-PDUFA con sizing ridotto per rischio binario."
+        },
+        "entry": "$3.70-4.10",
+        "stop": "$3.00",
+        "t1": "$7.00",
+        "t2": "$11.00",
+        "rr": "3.5:1",
+        "fonte": "4B (PDUFA calendar)",
+        "giudizio": "TIER2",
+        "warning": "Binary event: CRL → -50-60%. Non aumentare sizing. ATM shelf attiva post-approval risk."
       },
-      "watchlist_movers": [
-        {
-          "ticker": "MBRX",
-          "close": "$2.456",
-          "day_pct": "+2.8%",
-          "ah_pct": "0%",
-          "note": "Pre-ASCO positioning"
+      {
+        "ticker": "MBRX",
+        "nome": "Moleculin Biotech Inc.",
+        "score": 62,
+        "tier": "MONITORING",
+        "catalyst": "ASCO Annual Meeting poster May 30 (domani) — Cardiac safety Annamycin (L-annamycin): pooled analysis 90 pazienti, no LVEF change, no drug-induced cardiotoxicity. Session 13:30-16:30 CDT Poster Board #8.",
+        "close": "$2.44",
+        "ah_pct": "-2.09%",
+        "float": "small float (dati Q1 2026 confermati)",
+        "cash_runway": "~$8.9M (Dec 2025) — borderline 6-9 mesi. Monitor.",
+        "pensiero_critico": {
+          "regime": "BULL — favorevole per ASCO week biotech",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — ASCO poster May 30 domani. Abstract pubblicato May 21.",
+          "pre_check_dilution": "Shelf S-3 attiva (2021). No PIPE recente 2026 trovato. Monitorare.",
+          "narrativa_numeri": "Cash ~$8.9M (borderline). Pre-commerciale. Annamycin in trial oncologici. Cardiac safety data = milestone di derisking.",
+          "rischio_asimmetrico": "Worst case: dati ASCO deludenti o nessuna reazione → $1.50-2.00. Causa: mercato già prezzato parte del catalyst.",
+          "kindleberger": "Stage 1-2 (verificare da 52-week low — prezzo stabile ~$2.44)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ CASH RUNWAY BORDERLINE (~$8.9M, verificare Q1 2026)",
+            "⚠️ VOLUME AH THIN — -2.09% AH, movimento modesto"
+          ],
+          "giudizio": "MONITORING — probe 1% max loss. ASCO domani = catalyst fresher che mai. Cash borderline."
         },
-        {
-          "ticker": "CMPS",
-          "close": "$12.26",
-          "day_pct": "+3.81%",
-          "ah_pct": "0%",
-          "note": "Phase 3 TRD momentum"
-        },
-        {
-          "ticker": "CRMD",
-          "close": "$8.26",
-          "day_pct": "+0.2%",
-          "ah_pct": "0%",
-          "note": "Stabile post-Phase III"
-        },
-        {
-          "ticker": "SPRO",
-          "close": "$2.48",
-          "day_pct": "flat",
-          "ah_pct": "0%",
-          "note": "PDUFA June 18 positioning"
-        },
-        {
-          "ticker": "ONDS",
-          "close": "$9.06",
-          "day_pct": "-1.3%",
-          "ah_pct": "0%",
-          "note": "Pullback post-Q1"
-        },
-        {
-          "ticker": "SOUN",
-          "close": "$8.31",
-          "day_pct": "-0.5%",
-          "ah_pct": "0%",
-          "note": "Debole -16% YTD"
-        },
-        {
-          "ticker": "BBAI",
-          "close": "$4.18",
-          "day_pct": "-2%",
-          "ah_pct": "0%",
-          "note": "Debole -27% YTD"
-        },
-        {
-          "ticker": "HIMS",
-          "close": "$23.97",
-          "day_pct": "flat",
-          "ah_pct": "0%",
-          "note": "SKIP: $350M capital raise diluzione"
-        }
-      ],
-      "ah_movers_esterni": [
-        {
-          "ticker": "YMAT",
-          "day_pct": "+185%",
-          "ah_reason": "Taiwan financing auth — SKIP: pump, equity negativa -$6.78M"
-        },
-        {
-          "ticker": "PHGE",
-          "day_pct": "+96%",
-          "ah_reason": "Zorronet AI app — SKIP: AI washing, perdite $19.1M/q"
-        },
-        {
-          "ticker": "RDW",
-          "close": "$21.73",
-          "day_pct": "+27.3%",
-          "ah_pct": "-12.12%",
-          "ah_price": "$19.61",
-          "note": "SKIP: float 191M, market cap $2.8B"
-        }
-      ],
-      "eliminated_today": [
-        {
-          "ticker": "REPL",
-          "motivo": "FDA CRL aprile 10 — stock -80%. ELIMINATO PERMANENTE."
-        },
-        {
-          "ticker": "RDW",
-          "motivo": "Float 191M shares, market cap $2.8B. Fuori universo."
-        },
-        {
-          "ticker": "RIGL",
-          "motivo": "Prezzo $29.02 > $25 limite universo."
-        },
-        {
-          "ticker": "IDYA",
-          "motivo": "Prezzo $31.83 > $25 limite universo."
-        },
-        {
-          "ticker": "IBRX",
-          "motivo": "Securities fraud class action + FDA warning letter Anktiva. SKIP."
-        },
-        {
-          "ticker": "RCAT",
-          "motivo": "Equity offering $225M maggio 13. Diluzione massiva."
-        },
-        {
-          "ticker": "CMPX",
-          "motivo": "180M shares outstanding. Fuori universo float <15M."
-        },
-        {
-          "ticker": "HIMS",
-          "motivo": "$350M capital raise. Diluzione."
-        },
-        {
-          "ticker": "EVC",
-          "motivo": "92M shares, market cap $905M. Fuori universo."
-        },
-        {
-          "ticker": "NVTS",
-          "motivo": "Prezzo $31.9 > $25."
-        },
-        {
-          "ticker": "ASTS",
-          "motivo": "388M shares, $36B market cap."
-        },
-        {
-          "ticker": "HYLN",
-          "motivo": "178M shares, $832M market cap."
-        },
-        {
-          "ticker": "YMAT",
-          "motivo": "Pump play, equity negativa -$6.78M."
-        },
-        {
-          "ticker": "PHGE",
-          "motivo": "AI washing. Perdite $19.1M/q."
-        },
-        {
-          "ticker": "AMPG",
-          "motivo": "25M shares (sopra 15M threshold). Catalyst stale maggio 20."
-        }
-      ],
-      "candidates": [
-        {
-          "ticker": "MBRX",
-          "score": 62,
-          "tier": "MONITORING",
-          "catalyst": "ASCO poster May 30 annamycin cardiac safety + MIRACLE interim June 2026",
-          "close": "$2.456",
-          "day_pct": "+2.8%",
-          "ah_pct": "0%",
-          "pensiero_critico": {
-            "regime": "TRANSIZIONE/BULL CAUTO. ASCO week favorevole oncology.",
-            "catalyst_verified": true,
-            "catalyst_freshness": "FRESH — ASCO poster May 30 (4 giorni). MIRACLE interim June.",
-            "narrativa_numeri": "Q1 loss widening. Cash post-financing ($7.9M Jan 2026) incerto. Cleveland Clinic: no cardiotoxicity OK.",
-            "rischio_asimmetrico": "worst case $1.80 (ASCO poster delude — ma è safety, non efficacy primaria)",
-            "kindleberger": "Stage 2-3 (da ~$0.80 a $2.45 in 5 mesi)",
-            "bird_rule": false,
-            "diluzione": false,
-            "flags": [
-              "KINDLEBERGER Stage 2-3",
-              "CASH RUNWAY incerto <$10M",
-              "ASCO poster = safety only (non efficacy principale)"
-            ],
-            "giudizio": "MONITORING — probe 1% max loss. Catalyst principale = MIRACLE June."
-          },
-          "entry": "$2.30-$2.55",
-          "stop": "$1.80",
-          "t1": "$3.80",
-          "t2": "$5.50",
-          "rr": "2.0:1",
-          "fonte": "morning_brief aggiornato + serale",
-          "giudizio": "MONITORING",
-          "warning": "ASCO poster = safety data (catalyst debole). Sizing minimo. Catalyst principale = MIRACLE June interim."
-        },
-        {
-          "ticker": "SPRO",
-          "score": 62,
-          "tier": "MONITORING",
-          "catalyst": "PDUFA June 18 tebipenem HBr cUTI — primo oral carbapenem USA",
-          "close": "$2.48",
-          "ah_pct": "0%",
-          "pensiero_critico": {
-            "regime": "TRANSIZIONE/BULL CAUTO. Anti-infettivi favorevoli.",
-            "catalyst_verified": true,
-            "catalyst_freshness": "FRESH — PDUFA 23 giorni. Cash $56.129M runway 2028 confermato Q1.",
-            "narrativa_numeri": "Q1 loss $7.2M (in calo). Cash $56.129M, runway 2028 OK. No revenue.",
-            "rischio_asimmetrico": "worst case $1.30 se FDA CRL June 18 (binary -47%)",
-            "kindleberger": "Stage 1-2",
-            "bird_rule": false,
-            "diluzione": false,
-            "flags": [
-              "BINARY PDUFA (dipendenza totale da approvazione FDA)",
-              "Entry ottimale ~June 3-8 (10-15 giorni prima PDUFA)"
-            ],
-            "giudizio": "MONITORING — probe 1% max loss. Entry ottimale non domani ma ~June 3-8."
-          },
-          "entry": "$2.30-$2.60",
-          "stop": "$1.75",
-          "t1": "$4.00",
-          "t2": "$6.00",
-          "rr": "2.1:1",
-          "fonte": "morning_brief confermato + Q1 verify",
-          "giudizio": "MONITORING",
-          "warning": "PDUFA 23 giorni. Probe only domani. Binary outcome — sizing minimo."
-        },
-        {
-          "ticker": "CRMD",
-          "score": 58,
-          "tier": "MONITORING",
-          "catalyst": "DefenCath commercial momentum + REZZAYO NDA incoming (Phase III pos. apr 27 — STALE 29gg)",
-          "close": "$8.26",
-          "day_pct": "+0.2%",
-          "ah_pct": "0%",
-          "pensiero_critico": {
-            "regime": "TRANSIZIONE/BULL CAUTO. Commercial biotech favorevole.",
-            "catalyst_verified": true,
-            "catalyst_freshness": "STALE — Phase III data aprile 27 (29 giorni fa). No catalyst fresco AH.",
-            "narrativa_numeri": "Revenue $27.4M Q1, profittevole OK. NDA submission prossima (timing incerto).",
-            "rischio_asimmetrico": "worst case $6.20 (NDA delay o FDA richiede ulteriori dati per REZZAYO)",
-            "kindleberger": "Stage 2 (da ~$5-6 pre-Phase III a $8.26)",
-            "bird_rule": false,
-            "diluzione": false,
-            "flags": [
-              "CATALYST STALE 29 giorni",
-              "No trigger fresco per domani"
-            ],
-            "giudizio": "MONITORING — skip entry domani. Attendere NDA filing fresco."
-          },
-          "entry": "$7.80-$8.30",
-          "stop": "$6.00",
-          "t1": "$11.00",
-          "t2": "$14.50",
-          "rr": "2.1:1",
-          "fonte": "discovery_daily degradato (da TIER2 69pt)",
-          "giudizio": "MONITORING",
-          "warning": "Catalyst STALE 29gg. Entry SOLO su NDA filing fresco. Non entrare domani senza trigger."
-        },
-        {
-          "ticker": "ONDS",
-          "score": 60,
-          "tier": "MONITORING",
-          "catalyst": "Q1 revenue +1065% ($50.1M), beat +31%, 8 Strong Buy analysts, avg PT $20.12",
-          "close": "$9.06",
-          "ah_pct": "0%",
-          "pensiero_critico": {
-            "regime": "TRANSIZIONE/BULL CAUTO. Defense/drone sector favorevole.",
-            "catalyst_verified": true,
-            "catalyst_freshness": "STALE — Q1 earnings maggio 14 (12 giorni). No nuovo catalyst domani.",
-            "narrativa_numeri": "Revenue +1065% da Omnisys acquisition (non organico). GAAP $361.2M = non-cash valuation gains. Cautela su profittabilità reale operativa.",
-            "rischio_asimmetrico": "worst case $7.50 (rerating se non-cash non si ripetono + acquisizione non integrata)",
-            "kindleberger": "Stage 1-2 (da $0.89 low a $9.06)",
-            "bird_rule": false,
-            "diluzione": false,
-            "flags": [
-              "CATALYST STALE Q1 earnings maggio 14",
-              "GAAP net income driven by non-cash valuation gains (non operativo)"
-            ],
-            "giudizio": "MONITORING — no entry domani. Attendere pullback a $8.50-$8.80 + nuovo catalyst."
-          },
-          "entry": "$8.50-$9.20",
-          "stop": "$7.50",
-          "t1": "$12.00",
-          "t2": "$16.00",
-          "rr": "1.9:1",
-          "fonte": "discovery_weekly aggiornato",
-          "giudizio": "MONITORING",
-          "warning": "Q1 catalyst stale 12gg. Revenue da acquisizione (non organico). Forte consensus MA nessun trigger fresco."
-        }
-      ],
-      "hunter_module_summary": {
-        "scanned_new": 12,
-        "qualified_tier1_tier2": 0,
-        "qualified_monitoring": 0,
-        "note": "Nessun candidato nuovo TIER1/TIER2/MONITORING dall'AH di oggi. YMAT/PHGE eliminati (pump/AI washing). SpaceX sector (RDW/ASTS/PL/RKLB) tutti fuori universo per float/market cap. Hunter confermato candidati precedenti con analisi critica aggiornata.",
-        "skip_summary": "YMAT (pump), PHGE (AI washing), RDW (float 191M), ASTS (388M), RCAT (diluzione $225M), HYLN (178M), CMPX (180M), IDYA (>$25), RIGL (>$25), HIMS (capital raise), EVC (92M), NVTS (>$25)"
+        "entry": "$2.30-2.55",
+        "stop": "$1.80",
+        "t1": "$3.80",
+        "t2": "$5.50",
+        "rr": "2.3:1",
+        "fonte": "memoria (aggiornato STEP4B)",
+        "giudizio": "MONITORING",
+        "warning": "Cash runway borderline. Probe 1% max. Non scalare prima di conferma volume session ASCO day."
       },
-      "watchlist_updates_recommended": {
-        "REMOVE": [
-          "REPL",
-          "RDW",
-          "RIGL",
-          "IDYA",
-          "IBRX",
-          "CMPX"
-        ],
-        "SKIP_ACTIVE": [
-          "RCAT",
-          "HIMS",
-          "YMAT",
-          "PHGE"
-        ],
-        "MAINTAIN_MONITORING": [
-          "CRMD",
-          "MBRX",
-          "SPRO",
-          "ONDS",
-          "CMPS",
-          "AVXL",
-          "POET"
-        ]
+      {
+        "ticker": "CODX",
+        "nome": "Co-Diagnostics Inc.",
+        "score": 52,
+        "tier": "SKIP",
+        "catalyst": "Ebola Bundibugyo PCR assay strategy — DRC/Uganda outbreak. CoSara JV partnership per deployment.",
+        "close": "$8.31",
+        "ah_pct": "+89.9% giornaliero (May 26), +270% settimana",
+        "float": "~3.7M shares (2.1M pre-PIPE + 1.65M PIPE May 21)",
+        "cash_runway": "$8.2M (Mar 31) — cash strain documentata",
+        "pensiero_critico": {
+          "regime": "BULL",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — movimento iniziato settimana scorsa, già +270%",
+          "pre_check_dilution": "PIPE $3M chiuso ~May 21 (6 giorni fa, <30gg) + 3.29M warrants a $1.821 (IN THE MONEY a $8.31) = overhang massiccio",
+          "narrativa_numeri": "Cash strain ($8.2M). Ebola assay = sviluppo, non approvazione FDA. Dipende da evoluzione outbreak e contratti governativi.",
+          "rischio_asimmetrico": "Worst case: warrant exercise massivo + cash strain → $2-3. Causa: 3.29M warrants a $1.821 esercitabili.",
+          "kindleberger": "Stage 4 (+559% da 52-week low $1.26 di 12 giorni fa) — SKIP OBBLIGATORIO",
+          "bird_rule": true,
+          "diluzione": true,
+          "flags": [
+            "⚠️ KINDLEBERGER Stage 4 — SKIP",
+            "⚠️ PIPE recente (<30gg, chiuso ~May 21)",
+            "⚠️ WARRANT OVERHANG 3.29M shares a $1.821",
+            "⚠️ CASH STRAIN documentata",
+            "🚨 BIRD RULE — trending su social media"
+          ],
+          "giudizio": "SKIP — Stage 4 Kindleberger + PIPE recente + warrant overhang + cash strain. Catalyst reale (Ebola) ma move già esaurito."
+        },
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "fonte": "4A (AH movers) + watchlist",
+        "giudizio": "SKIP",
+        "warning": "Movimento speculativo Stage 4. Nessuna entry. Monitorare eventuale pullback verso $3-4 per rivalutazione futura."
       }
-    },
-    {
-      "date": "2026-05-25",
-      "session": "Phase 0 Serale 22:00 IT",
-      "regime": {
-        "vix_estimate": "<16",
-        "spy": "BULL S&P +0.4%",
-        "10y_yield": "4.56%",
-        "regime_domani": "BULL (cauto)"
+    ],
+    "skip_list": [
+      {
+        "ticker": "MNTS",
+        "motivo": "PIPE AH $25M private placement (2.94M shares at-market, ~$8.50/share vs close $22.51) — trappola retail AH. Kindleberger Stage 3+. SKIP OBBLIGATORIO."
       },
-      "candidates": [
-        {
-          "ticker": "CRMD",
-          "score": 62,
-          "tier": "MONITORING",
-          "catalyst": "REZZAYO Phase III ReSPECT non-inferiore",
-          "entry": "$7.80-$8.30",
-          "stop": "$7.10",
-          "t1": "$11.00",
-          "rr": "2.1:1",
-          "giudizio": "MONITORING"
-        },
-        {
-          "ticker": "SPRO",
-          "score": 62,
-          "tier": "MONITORING",
-          "catalyst": "PDUFA June 18",
-          "entry": "$2.30-$2.60",
-          "stop": "$1.80",
-          "t1": "$3.50",
-          "t2": "$5.00",
-          "rr": "1.8:1",
-          "giudizio": "MONITORING probe 1%"
-        },
-        {
-          "ticker": "MBRX",
-          "score": 57,
-          "tier": "MONITORING",
-          "catalyst": "ASCO poster May 30",
-          "entry": "$2.20-$2.55",
-          "stop": "$1.80",
-          "t1": "$3.80",
-          "t2": "$5.50",
-          "rr": "2.0:1",
-          "giudizio": "MONITORING probe 1%"
-        },
-        {
-          "ticker": "CMPX",
-          "score": 50,
-          "tier": "MONITORING",
-          "catalyst": "ASCO May 29 CTX-8371 Phase 1",
-          "entry": "$1.90-$2.10",
-          "stop": "$1.55",
-          "t1": "$3.00",
-          "rr": "2.0:1",
-          "giudizio": "MONITORING probe 0.5%"
-        }
+      {
+        "ticker": "ONDS",
+        "motivo": "Rule 424(b)(7) prospectus — diluzione share overhang. 'Rampant dilution'. AH -9.4%."
+      },
+      {
+        "ticker": "LFVN",
+        "motivo": "Short squeeze puro, NO catalyst. Earnings MISS (EPS $0.11 vs $0.16 stima, rev miss). BIRD RULE attiva. Score ~45/100."
+      },
+      {
+        "ticker": "CODX",
+        "motivo": "Kindleberger Stage 4 (+559% da low). PIPE recente <30gg. Warrant overhang 3.29M shares."
+      },
+      {
+        "ticker": "CRMD",
+        "motivo": "Float 77.41M shares — fuori universo small-micro cap (<15M). Rimozione permanente."
+      },
+      {
+        "ticker": "SPRO",
+        "motivo": "Float 57.90M shares — fuori universo. Rimozione permanente. (Cash ottimo $56.1M→2028 ma float troppo grande)"
+      },
+      {
+        "ticker": "HUMA",
+        "motivo": "Float 125.19M shares — fuori universo. Rimozione permanente."
+      },
+      {
+        "ticker": "AVXL",
+        "motivo": "Nasdaq delinquency notice May 22 (incapace di depositare 10-Q Q1 2026). RED FLAG governance."
+      }
+    ],
+    "watchlist_update": {
+      "aggiungi": [
+        "CING (TIER2 | 73pt) — PDUFA May 31 FDA CTx-1301 ADHD. Float ~7-13M. PT medio $27."
+      ],
+      "rimuovi_universo": [
+        "CRMD (float 77M)",
+        "SPRO (float 57.9M)",
+        "HUMA (float 125M)"
+      ],
+      "flag_attenzione": [
+        "AVXL (Nasdaq delinquency)",
+        "ONDS (dilution ongoing)",
+        "MNTS (PIPE completed)"
       ]
     }
-  ],
+  },
   "discovery_weekly": [
     {
       "ticker": "CRMD",
