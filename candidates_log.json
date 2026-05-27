@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-26T22:00:00+02:00",
+  "last_updated": "2026-05-27T11:00:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -223,62 +223,103 @@
     }
   ],
   "morning_brief": {
-    "date": "2026-05-26",
-    "macro_regime": "TRADE 4/4",
+    "date": "2026-05-27",
+    "macro_regime": "TRADE 4/4 🟢",
     "big_themes": [
-      "ASCO Annual Meeting starts May 29",
-      "Post-Memorial Day primo giorno trading",
-      "PCE data May 28",
-      "IBRX securities class action deadline OGGI — SKIP"
+      "ASCO week May 29-June 2 — biotech tailwind pre-event (MBRX/SPRO posizionati)",
+      "PCE data May 28 — tail risk macro, sizing conservativo",
+      "US-Iran ottimismo — DXY debole ~99.2, positivo small cap",
+      "Space economy (MNTS) momentum post-earnings Q1 +967% YoY revenue",
+      "VIX 16.59 strutturale in calo — contesto risk-on confermato"
     ],
     "candidates": [
       {
         "ticker": "MBRX",
         "score": 62,
         "tier": "MONITORING",
-        "catalyst": "ASCO poster May 30 annamycin cardiac safety",
-        "entry": "$2.20-$2.40",
+        "catalyst": "ASCO Annual Meeting poster May 30 — cardiac safety Annamycin su 90 pazienti AML/sarcoma (zero cardiotossicita). Patent HK secured May 8.",
+        "pensiero_critico": {
+          "regime": "CONFERMATO 4/4. VIX 16.59 strutturale. SPY sopra MA50 recovery ordinata. DXY calo safe-haven US-Iran. 10Y 4.47% growth-positive.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — poster presentato May 30 (tra 3 giorni). Annuncio abstract May 21.",
+          "narrativa_numeri": "Cash runway incerto Q1 loss. ATM ATTIVO: vendite recenti 354K shares a $2.01 per $0.8M. S-3 shelf 64.8M shares per resale. Diluzione strutturale presente.",
+          "rischio_asimmetrico": "Worst case: $1.50-1.80 se dati ASCO deludono o ATM acceleration post-evento. Floor ATM ~$2.01.",
+          "kindleberger": "Stage 1 (titolo da $0.90 a $2.40 in 3 mesi, ~165%)",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "⚠️ ATM ATTIVO — vendite recenti a $2.01/share reset warrant",
+            "⚠️ S-3 shelf 64.8M shares resale pendente"
+          ],
+          "giudizio": "MONITORING — ATM non e kill flag immediato ma cap sizing a 25%. Pre-ASCO play valido."
+        },
+        "entry": "$2.30-$2.50",
         "stop": "$1.80",
-        "t1": "$3.20",
-        "t2": "$3.80",
-        "rr": "2.1:1",
-        "giudizio": "MONITORING"
-      },
-      {
-        "ticker": "CRMD",
-        "score": 65,
-        "tier": "TIER2",
-        "catalyst": "DefenCath + REZZAYO Phase III Q2",
-        "entry": "$7.80-$8.30",
-        "stop": "$7.10",
-        "t1": "$11.00",
-        "t2": "$13.50",
-        "rr": "2.1:1",
-        "giudizio": "TIER2 sizing 50%"
+        "t1": "$3.80",
+        "t2": "$5.00",
+        "rr": "2.3:1",
+        "fonte": "memory_phase0_serale",
+        "giudizio": "MONITORING",
+        "warning": "ATM attivo — rischio diluizione post-ASCO se dati neutri. Sizing 25% max."
       },
       {
         "ticker": "SPRO",
         "score": 62,
         "tier": "MONITORING",
-        "catalyst": "PDUFA June 18 tebipenem HBr",
+        "catalyst": "FDA PDUFA tebipenem HBr June 18, 2026 (22 giorni). Cash runway 2028. Revenue 2025 $66.8M, Q4 net income $31.5M. Zero PIPE/ATM in 2026.",
+        "pensiero_critico": {
+          "regime": "CONFERMATO 4/4. Biotech favorito in ASCO week + regime risk-on.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — PDUFA June 18 (22 giorni). Catalyst hardcoded dalla FDA.",
+          "narrativa_numeri": "Fondamentali solidi: revenue $66.8M, net income $8.6M full-year 2025, cash runway 2028. CLEAN di diluzione 2026.",
+          "rischio_asimmetrico": "Worst case: $0.65-1.00 se FDA emette CRL (Complete Response Letter). Binary event -70% one-day.",
+          "kindleberger": "Stage 1 (52w range $0.66-$3.22, attuale $2.63)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ BINARY RISK — CRL scenario letale, no hold through FDA senza gestione rischio"
+          ],
+          "giudizio": "MONITORING — Clean candidato. Sizing 25% max per binary. Scalare verso June 18."
+        },
         "entry": "$2.30-$2.60",
-        "stop": "$1.80",
-        "t1": "$3.50",
-        "t2": "$4.50",
-        "rr": "1.8:1",
-        "giudizio": "MONITORING probe 1%"
+        "stop": "$1.75",
+        "t1": "$4.00",
+        "t2": "$6.00",
+        "rr": "2.5:1",
+        "fonte": "memory_phase0_serale",
+        "giudizio": "MONITORING",
+        "warning": "Binary event PDUFA June 18 — exit prima del D-Day o gestione con opzioni."
+      },
+      {
+        "ticker": "MNTS",
+        "score": 63,
+        "tier": "MONITORING",
+        "catalyst": "Q1 2026 earnings beat: revenue $3.2M (+967% YoY), Vigoride 7 su SpaceX Transporter-16 (10 payload), contratti DARPA/NASA/Space Force/MDA Golden Dome. Cash 12+ mesi, zero convertible debt. Istituzionale $5M.",
+        "pensiero_critico": {
+          "regime": "CONFERMATO 4/4. Defense/space narrative positiva in contesto Golden Dome. VIX basso favorisce momentum.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESCO — Q1 annunciati May 26 (ieri). Pre-market May 27: $13.06 vs chiusura $15.51 (-16% pullback).",
+          "narrativa_numeri": "Revenue reale: $3.2M Q1 (piccolo ma in forte crescita). Proiezione $10M 2026. Cash 12 mesi confermato. PIPE Jan 2026 e Apr 15 2026 (42 giorni fa, fuori 30gg).",
+          "rischio_asimmetrico": "Worst case: $5-7 se mean reversion post-momentum (perdita -50%+ dal peak). Float ultra-tiny = volatilita estrema.",
+          "kindleberger": "Stage 3 ($4.57 -> $15.51 in maggio = +239%). Pullback pre-market $13.06.",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ KINDLEBERGER STAGE 3 — +239% in maggio, caution",
+            "⚠️ FLOAT ULTRA-TINY — SI 987% di float, volatilita estrema",
+            "⚠️ PIPE HISTORY — Jan+Apr 2026 (non ultimi 30gg ma pattern present)"
+          ],
+          "giudizio": "MONITORING — Probe 1% max loss. Stage 3 impedisce full sizing. Watch pullback a $10-12 per entry migliore."
+        },
+        "entry": "$12.50-$13.50",
+        "stop": "$10.00",
+        "t1": "$18.00",
+        "t2": "$22.00",
+        "rr": "2.0:1",
+        "fonte": "hunter_4A_4D",
+        "giudizio": "MONITORING",
+        "warning": "Kindleberger Stage 3 — solo probe 1% max loss. No chasing se rientra sopra $15.51."
       }
-    ],
-    "hunter_scan": {
-      "result": "NO TIER1/2/MONITORING VALIDI",
-      "analyzed": 15,
-      "timestamp": "2026-05-26T11:30:00+02:00"
-    },
-    "ibrx_warning": "Securities class action deadline OGGI — SKIP immediato",
-    "skip_list_update": [
-      "IBRX (legal+FDA warning)",
-      "AKTX (PIPE)",
-      "NRXP (going concern)"
     ]
   },
   "phase0_serale": [
