@@ -689,34 +689,51 @@
         "commission_usd": 1,
         "stop_loss": 4.75,
         "stop_precedente": 4.57,
-        "stop_note": "Trailing alzato 20:08 IT 26/05 — da $4.57 a $4.75 (sotto supporto $4.76-4.80). Blocca min +$18 se colpito.",
+        "stop_note": "Trailing alzato 20:08 IT 26/05 — da $4.57 a $4.75 (sotto supporto $4.76-4.80). Stop da aggiornare in apertura post-earnings gap up.",
         "costo_totale_usd": 1440.83,
-        "rischio_max_usd": 37.84,
         "entry_date": "2026-05-26",
-        "catalyst": "Q4 FY2026 earnings AMC 26/05/2026 ore 22:30 IT — Digital Turbine binary event",
-        "pattern": "Pre-Earnings Binary Bet",
+        "catalyst": "Q4 FY2026 earnings beat confermato AMC 26/05/2026 — EPS $0.16 vs $0.09 atteso (+78%), Revenue $142.55M vs $133.23M (+7%), FY2027 guidance $630-650M vs consensus $619M. AH +14.5-18% a ~$5.68.",
+        "pattern": "Pre-Earnings Binary Bet → post-earnings continuation",
         "status": "OPEN",
-        "note": "Hold through earnings. Stop alzato a $4.75 (trailing). Gap risk overnight se miss. P&L attuale +$50 a 20:08 IT."
+        "note": "Earnings beat confermato. Premarket del 27/05 in forte rialzo. Stop da alzare in apertura seguendo struttura SMC. Aggiornare trailing dopo BOS confermato su 15min in apertura."
       },
+      {
+        "ticker": "EDIT",
+        "exchange": "NASDAQ",
+        "layer": 1,
+        "shares": 268,
+        "entry_price": 3.19,
+        "commission_usd": 1,
+        "stop_loss": null,
+        "stop_note": "Stop loss da definire in apertura sessione — identificare supporto strutturale su H4/1H",
+        "costo_totale_usd": 855.92,
+        "entry_date": "2026-05-27",
+        "catalyst": "Editas Medicine — offerta azionaria $3.00/azione oversubscribed, premarket +10-15% sopra offering price ($3.19 entry). Offerta massicciamente oversubscribed = segnale istituzionale bullish. Narrativa CRISPR gene editing su pipeline ETH-615 (beta-thal/SCD). Stop da definire.",
+        "pattern": "Post-Offering Oversubscribed Bounce",
+        "status": "OPEN",
+        "note": "Entry premarket 27/05 a $3.19. Offerta a $3.00 oversubscribed → closing +37% sopra offering = domanda istituzionale forte. Stop loss NON ancora definito — priorità assoluta in apertura sessione. Risk score ridotto fino a stop confermato."
+      }
+    ],
+    "storico_chiuse": [
       {
         "ticker": "CRMD",
         "exchange": "NASDAQ",
         "layer": 1,
         "shares": 106,
         "entry_price": 8.27,
-        "commission_usd": 1,
-        "stop_loss": 7.50,
-        "costo_totale_usd": 877.62,
-        "rischio_max_usd": 82.62,
+        "exit_price": 8.04,
+        "commission_usd": 2,
         "entry_date": "2026-05-26",
-        "catalyst": "RIZEAO Phase III top-line data attesa Q2 2026 imminente + DEFENCATH $258.8M FY2025 + guidance raise $325-345M",
+        "exit_date": "2026-05-27",
+        "exit_note": "Chiuso in premarket 27/05 a $8.04",
+        "catalyst": "RIZEAO Phase III top-line data attesa Q2 2026 + DEFENCATH $258.8M FY2025",
         "pattern": "Pre-Catalyst Phase III Swing",
-        "status": "OPEN",
-        "note": "Score 65pt TIER2. Entry bull flag breakout $8.27. Stop strutturale $7.50. RIZEAO Ph.III data potenzialmente imminente (Q2 2026 = entro giugno) — catalyst principale del portfolio. Candidato top PROFITRC."
+        "pnl_usd": -26.38,
+        "pnl_pct": -3.09,
+        "note": "Score 65pt TIER2. Entry bull flag breakout $8.27. Uscita premarket $8.04 prima dell'apertura NYSE. Tesi RIZEAO Ph.III ancora intatta — candidato da tenere in watchlist per re-entry su catalyst confermato."
       }
     ],
-    "storico_chiuse": [],
-    "ultimo_aggiornamento": "2026-05-26 20:08 IT — APPS stop alzato $4.57 → $4.75 (trailing pre-earnings)"
+    "ultimo_aggiornamento": "2026-05-27 premarket IT — CRMD chiusa ($8.04, P&L -$26.38), EDIT aperta (268 azioni @ $3.19), APPS hold post-earnings beat (+78% EPS)"
   },
 
   "notes": "Sistema PROFITRC v2.2 — Multi-layer speculativo costruito su 29 fonti accademiche e istituzionali (Hamilton 2016, Kahneman/Tversky 1979, Fama-French 1993, Ernie Chan 2009, Kindleberger, Reinhart/Rogoff 2008, Glasserman Columbia). Universo operativo: NYSE/NASDAQ small/micro-cap $1-25, float <15M, catalyst event-driven TIER 1/2. Broker: IBKR. Piattaforma analisi: TradingView Desktop + Claude AI via MCP (78 tools). Automazioni: CCR Morning Brief 11:00 IT + CCR Phase 0 Serale 22:00 IT + Auto Watchlist Adder 19:45 IT. Pine Scripts custom: PFRC RVOL + PFRC Regime Dashboard. Framework v2.2: 5 layer sequenziali (L0 Regime Gate → L1 Scan/Discovery → L2 Catalyst Verification → L3 Technical SMC → L4 Behavioral Filter). Output standard: PROFITRC Setup Card (score 0-100, soglia 65). Watchlist: 56 ticker, Maggio 2026. REGOLA SYNC: ogni modifica alla watchlist TradingView aggiorna immediatamente questo file."
