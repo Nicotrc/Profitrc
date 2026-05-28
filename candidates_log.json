@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-28T11:00:00+02:00",
+  "last_updated": "2026-05-28T14:30:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -638,5 +638,58 @@
       "MBRX ASCO poster May 30",
       "SPRO PDUFA June 18 (positioning window opens ~June 3)"
     ]
-  }
+  },
+  "premarket_gap": [
+    {
+      "date": "2026-05-28",
+      "scan_time": "14:30 IT",
+      "macro_regime": "TRANSIZIONE — VIX 17.01 (futures 18.53 elevated PCE risk), PCE core +2.8% YoY hot (vs 2.7% exp, +0.4% MoM), SPY futures +0.67%, NQ futures +1.03% (SNOW +38% earnings blowout), 10Y 4.48% declining (Iran deal), Russell 2000 flat",
+      "gap_candidates": [],
+      "watchlist_in_gap": [],
+      "gap_movers_non_watchlist": [
+        "NCT +134%",
+        "ATPC +121%",
+        "IOTR +80%",
+        "ASTC +62%",
+        "JFB +46%",
+        "SNYR +40%",
+        "SNOW +37% earnings B AWS deal",
+        "MASK +34%",
+        "CRSR +30%",
+        "UMAC +28%",
+        "SNGX +107.6% May27 Ebola vaccine",
+        "VRRM -49.5% May27 Avis contract loss",
+        "ZS -22.9% May27 FCF guidance cut"
+      ],
+      "open_positions_alert": [
+        {
+          "ticker": "APPS",
+          "direction": "POSITIVE",
+          "entry": 4.69,
+          "shares": 307,
+          "premarket_price": 6.7,
+          "trading_range_today": "5.37-7.62",
+          "gap_pct_from_entry": 42.9,
+          "catalyst": "Q4 FY2026 earnings beat May 26: EPS 0.16 vs 0.09 exp, revenue 142.55M beat, EBITDA +53% YoY, FY2027 guidance 630-650M above consensus. Gap May 27 +13% premarket +34% intraday.",
+          "pnl_implied": "+.07",
+          "azione_suggerita": "RAISE STOP a .37 (intraday support today). Consider TAKE PROFIT parziale 50% se ritorna .50+. HOLD core — earnings catalyst multi-day.",
+          "kindleberger": "Stage 2 — +42.9% da entry in 2 sessioni. Monitorare reversal patterns."
+        },
+        {
+          "ticker": "EDIT",
+          "direction": "NEGATIVE — DILUTION LETALE",
+          "entry": 3.19,
+          "shares": 268,
+          "premarket_price": 2.94,
+          "gap_pct_from_entry": -7.8,
+          "catalyst": "DILUZIONE LETALE: .4M public offering priced .25 + warrants .50. 55.5M new shares. Closing ~May 27. Filtro 1 triggered.",
+          "pnl_implied": "-.00",
+          "offering_price": 2.25,
+          "azione_suggerita": "STOP LOSS URGENTE — hard stop .60. EXIT se scende sotto .70. Dilution gravity verso .25 persistente settimane.",
+          "note": "SKIP ASSOLUTO Filtro 1 se nuovo candidato. Per posizione existente: proteggere con stop aggressivo immediato."
+        }
+      ],
+      "note": "ZERO ticker watchlist PROFITRC in gap >10% oggi. Hot PCE (+2.8% core) = rischio intraday pullback. ASCO apre domani May 29 — MBRX cardiac safety poster May 30 (no cardiotoxicity data). SPRO PDUFA June 18 positioning window."
+    }
+  ]
 }
