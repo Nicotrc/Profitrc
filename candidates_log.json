@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-27T22:00:00+02:00",
+  "last_updated": "2026-05-28T11:00:00+02:00",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -199,48 +199,72 @@
     ]
   },
   "morning_brief": {
-    "date": "2026-05-27",
-    "scan_time": "11:30 IT (09:30 ET — apertura NYSE)",
-    "macro_regime": "TRANSIZIONE — VIX 17.44 (-3.43% intraday), S&P futures -0.15%. Sentiment generale positivo con spazio AI/tech. Regime: abbasso 1 tier ogni candidato.",
+    "date": "2026-05-28",
+    "generated_at": "11:00 IT",
+    "macro_regime": "TRADE 3/4 🟢",
     "big_themes": [
-      "Ebola Bundibugyo outbreak (WHO PHEIC): narrative plays SNGX, AEMD — tutti SKIP per mancanza 8-K confermato + diluzione",
-      "Space tech momentum: MNTS con Q1 revenue beat 967% YoY, NASA contracts — unico candidato che supera Gate 1",
-      "AI defense (PHGE Zorronet): prezzo $0.63 <$1 + diluzione 497% shares → auto-SKIP"
+      "ASCO Annual Meeting 2026 May 29-June 2: biotech catalyst window APERTA domani",
+      "Iran geo-event: 10Y 4.50% e DXY 99.28 ONE-OFF non strutturale",
+      "SPRO +245% Phase 3 tebipenem: catalizzatore piu forte del giorno fuori universo (float 47.33M)",
+      "CING PDUFA May 31: catalizzatore premium bloccato da ATM shelf attiva",
+      "Scarsita critica nuovi candidati float <15M in ASCO week"
     ],
+    "macro_snapshot": {
+      "VIX": "16.86 calo 3gg trend OK",
+      "SPY": "sopra MA50 bullish",
+      "DXY": "99.28 Iran one-off",
+      "10Y": "4.50% Iran one-off",
+      "verdetto": "3/4 GREEN TRADE"
+    },
     "candidates": [
       {
-        "ticker": "MNTS",
-        "score_meccanico": 62,
-        "score_adj": 62,
+        "ticker": "GRPN",
+        "score": 62,
         "tier": "MONITORING",
-        "catalyst": "Q1 2026 earnings beat: revenue $3.2M vs $0.3M prior year (+967% YoY), 9x 2026 guidance ($10M), Vigoride 7 mission success (SpaceX Transporter-16), NASA contracts (Juno RDRE + Spaceworks COSMIC), debt retired. 8-K confermato.",
-        "pensiero_critico": {
-          "regime": "TRANSIZIONE VIX 17.44 (decline -3.43%) — MNTS space tech micro-cap: settore beneficia da risk-on ma TRANSIZIONE impone cautela. Futures S&P -0.15% (leggero). Regime cap: MONITORING.",
-          "catalyst_verified": true,
-          "catalyst_freshness": "Q1 earnings 8-K pubblicato May 26 — Giorno 2 post-catalyst. Timing ancora valido ma non ottimale per entry.",
-          "narrativa_numeri": "OPERATIVO con revenue reale: $3.2M Q1 (+967% YoY), NASA contracts firmati, missione completata. Fondamentali supportano — NON hype narrativo.",
-          "rischio_asimmetrico": "Scenario peggiore: sell-the-news correction a $5-6 (gap fill da $7.39 close precedente) — probabilità media (35%). Gap fill price: $7.39 (ieri close). Gap +62% aperto oggi.",
-          "kindleberger": "Stage 2-3 — Stock da $4 a $13+ intraday ieri poi pullback a $7.39 close. Oggi +62% pre-market = retesting spike high. NON inseguire open.",
-          "bird_rule": true,
-          "diluzione": false,
-          "flags": [
-            "⚠️ KINDLEBERGER STAGE 2-3 → entry solo su pullback significativo, non all'open",
-            "⚠️ GAP APERTO +62% → gap fill $7.39 è rischio immediato se momentum falisce",
-            "⚠️ BIRD RULE POTENZIALE → TimothySykes + StocksToTrade + StockTwits 'extremely bullish' — retail crowd già dentro",
-            "⚠️ WARRANTS IN-THE-MONEY → Jan $5.40 + Apr $3.75 private placement warrants ora in-the-money a $12, potenziale diluzione futura",
-            "⚠️ REGIME TRANSIZIONE VIX 17.44 → cap a MONITORING"
-          ],
-          "giudizio": "MONITORING — catalyst reale e verificato ma timing Day 2 con Kindleberger Stage 2-3. Entry solo su pullback a $7.50-8.00 (VWAP area). Non aprire all'open di oggi."
-        },
-        "entry": "7.50-8.00 (attesa pullback — NON entry all'open)",
-        "stop": "6.50",
-        "t1": "10.00",
-        "t2": "12.50",
-        "rr": "2.0:1 (da entry 7.75)",
-        "fonte": "2A",
-        "warning": "Entry su pullback VWAP $7.50-8.00 — assolutamente non inseguire spike apertura. Stock già +89% ieri + +62% pre-market oggi = Stage 2-3 Kindleberger. MONITORING solo.",
-        "scan_time": "11:30 IT / 09:30 ET"
+        "catalyst": "AI-native restructuring + EBITDA raise 75-80M + SI 46% float 12.5M squeeze",
+        "entry": "14.00-15.50",
+        "stop": "12.50",
+        "t1": "20.00",
+        "t2": "26.00",
+        "rr": "2.4:1",
+        "giudizio": "MONITORING - probe 1% max, Bird Rule sizing 25%",
+        "flags": [
+          "BIRD RULE",
+          "CATALYST STALE 7gg",
+          "GOLDMAN SELL PT13"
+        ]
       }
+    ],
+    "hunter_skip": [
+      {
+        "ticker": "SPRO",
+        "reason": "float 47.33M fuori universo",
+        "score_raw": 78,
+        "catalyst": "Phase 3 tebipenem +245%"
+      },
+      {
+        "ticker": "OMER",
+        "reason": "float 72.38M fuori universo",
+        "score_raw": 63,
+        "catalyst": "YARTEMLEA EMA pending"
+      },
+      {
+        "ticker": "HYLN",
+        "reason": "float 178M fuori universo",
+        "score_raw": 58,
+        "catalyst": "KARNO Navy +479% rev"
+      }
+    ],
+    "watchlist_removals": [
+      "ONDS (float 483M)",
+      "CMPS (float 123.6M)",
+      "SNDX (float 100M+)",
+      "EIKN (float 45M+)"
+    ],
+    "alerts_tomorrow": [
+      "ASCO opens May 29",
+      "MBRX poster May 30 (SKIP cash runway)",
+      "CING PDUFA May 31 (SKIP ATM)"
     ]
   },
   "phase0_serale": {
