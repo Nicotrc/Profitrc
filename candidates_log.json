@@ -1,13 +1,60 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-28T19:00:00+02:00",
+  "last_updated": "2026-05-28T22:00:00+02:00",
   "watchlist": [
-    "YCBD","HUMA","TRNR","DXF","SNAL","ZENA","BIAF","LOCL","MBRX","CMND",
-    "AVXL","GCTS","CODX","PBM","BBAI","AIV","RXT","ACRS","ACHV","CING",
-    "TBLA","LAC","NIO","GLOO","BULL","FLO","SOUN","QS","YMM","ONDS",
-    "EVC","LUMN","WYY","CMPS","OGN","PIII","VIPS","RDCM","POET","APPN",
-    "HIMS","QURE","VSAT","AEHR","CRMD","FRGT","IMPP","SY","MTVA","SPRO","MNTS",
-    "GRPN","QUBT"
+    "YCBD",
+    "HUMA",
+    "TRNR",
+    "DXF",
+    "SNAL",
+    "ZENA",
+    "BIAF",
+    "LOCL",
+    "MBRX",
+    "CMND",
+    "AVXL",
+    "GCTS",
+    "CODX",
+    "PBM",
+    "BBAI",
+    "AIV",
+    "RXT",
+    "ACRS",
+    "ACHV",
+    "CING",
+    "TBLA",
+    "LAC",
+    "NIO",
+    "GLOO",
+    "BULL",
+    "FLO",
+    "SOUN",
+    "QS",
+    "YMM",
+    "ONDS",
+    "EVC",
+    "LUMN",
+    "WYY",
+    "CMPS",
+    "OGN",
+    "PIII",
+    "VIPS",
+    "RDCM",
+    "POET",
+    "APPN",
+    "HIMS",
+    "QURE",
+    "VSAT",
+    "AEHR",
+    "CRMD",
+    "FRGT",
+    "IMPP",
+    "SY",
+    "MTVA",
+    "SPRO",
+    "MNTS",
+    "GRPN",
+    "QUBT"
   ],
   "morning_brief": {
     "date": "2026-05-28",
@@ -20,7 +67,10 @@
         "catalyst": "AI restructuring + EBITDA 75-80M + short interest 46%",
         "entry": "14.00-15.50",
         "stop": "12.50",
-        "targets": {"t1": "20.00", "t2": "26.00"},
+        "targets": {
+          "t1": "20.00",
+          "t2": "26.00"
+        },
         "rr": "2.4:1",
         "sizing": "25% (Bird Rule)"
       }
@@ -76,7 +126,11 @@
           "kindleberger": "Stage 1-2 — lontano dai picchi storici",
           "bird_rule": true,
           "diluzione": false,
-          "flags": ["BIRD RULE ATTIVA — 53% SI trending social", "COO exit luglio 10 — instabilita management", "Revenue in declino storico — narrativa vs numeri non confermata"],
+          "flags": [
+            "BIRD RULE ATTIVA — 53% SI trending social",
+            "COO exit luglio 10 — instabilita management",
+            "Revenue in declino storico — narrativa vs numeri non confermata"
+          ],
           "giudizio": "MONITORING — squeeze latente strutturale (53% SI, DTC 7.59) ma Bird Rule e COO exit limitano sizing"
         },
         "entry": "$13.50-$15.00",
@@ -102,7 +156,12 @@
           "kindleberger": "Stage 2-3 da verificare — settore quantum ha gia avuto ciclo completo",
           "bird_rule": true,
           "diluzione": false,
-          "flags": ["MARKET CAP $1.67B — non micro-cap", "CATALYST STALE (7+ giorni)", "BIRD RULE probabile — quantum stocks social trending", "CASH RUNWAY NON CONFERMATO"],
+          "flags": [
+            "MARKET CAP $1.67B — non micro-cap",
+            "CATALYST STALE (7+ giorni)",
+            "BIRD RULE probabile — quantum stocks social trending",
+            "CASH RUNWAY NON CONFERMATO"
+          ],
           "giudizio": "MONITORING — thesis parzialmente valida (revenue reale) ma size, timing e social trending limitano a probe only"
         },
         "entry": "$11.00-$12.50",
@@ -116,14 +175,35 @@
       }
     ],
     "skip_list": [
-      {"ticker": "CING", "reason": "SKIP ASSOLUTO — PIPE $12M + ATM $100M shelf (marzo 2026) + warrant 80% + convertible preferred 12% annuo. Tripla flag diluzione. PDUFA domani May31 ma non entrare."},
-      {"ticker": "LAES", "reason": "SKIP — $125M registered direct offering (marzo 2026) + $200M registered direct + PIPE + warrants. Diluzione massiva nonostante SpaceX satellite June 1"},
-      {"ticker": "QBTS", "reason": "SKIP — prezzo $28.13 (>$25 limit), market cap $10.41B, $100M share issuance al DoC = diluzione strutturale"},
-      {"ticker": "RGTI", "reason": "SKIP sessione — GIA CORSO +56% mensile, market cap $8.26B, diluzione history. Monitorare pullback $18-20"},
-      {"ticker": "BBAI", "reason": "SKIP — volume collassato (1.03M vs ADV 43M), no catalyst"},
-      {"ticker": "DVLT", "reason": "SKIP — prezzo $0.47 (sotto $1 threshold)"}
+      {
+        "ticker": "CING",
+        "reason": "SKIP ASSOLUTO — PIPE $12M + ATM $100M shelf (marzo 2026) + warrant 80% + convertible preferred 12% annuo. Tripla flag diluzione. PDUFA domani May31 ma non entrare."
+      },
+      {
+        "ticker": "LAES",
+        "reason": "SKIP — $125M registered direct offering (marzo 2026) + $200M registered direct + PIPE + warrants. Diluzione massiva nonostante SpaceX satellite June 1"
+      },
+      {
+        "ticker": "QBTS",
+        "reason": "SKIP — prezzo $28.13 (>$25 limit), market cap $10.41B, $100M share issuance al DoC = diluzione strutturale"
+      },
+      {
+        "ticker": "RGTI",
+        "reason": "SKIP sessione — GIA CORSO +56% mensile, market cap $8.26B, diluzione history. Monitorare pullback $18-20"
+      },
+      {
+        "ticker": "BBAI",
+        "reason": "SKIP — volume collassato (1.03M vs ADV 43M), no catalyst"
+      },
+      {
+        "ticker": "DVLT",
+        "reason": "SKIP — prezzo $0.47 (sotto $1 threshold)"
+      }
     ],
-    "watchlist_additions": ["GRPN", "QUBT"],
+    "watchlist_additions": [
+      "GRPN",
+      "QUBT"
+    ],
     "next_session_feed": [
       "MBRX ASCO poster oggi 30/05 13:30-16:30 CDT — monitor pre-market per gap",
       "SPRO T-20gg PDUFA June 18 — entry $2.40-2.75 ancora aperta",
@@ -135,10 +215,44 @@
   "discovery_weekly": {
     "date": "2026-05-25",
     "candidates": [
-      {"ticker": "CRMD", "score": 65, "tier": "TIER2", "catalyst": "REZZAYO Phase III Q2 2026 positive topline, consenso Buy 7 analisti, target mediano $15 vs prezzo $8.27", "entry": "7.80-8.30", "stop": "7.10", "targets": {"t1": "11.00", "t2": "14.50"}, "rr": "2.1:1"},
-      {"ticker": "ONDS", "score": 62, "tier": "MONITORING", "catalyst": "Omnisys + Q1 revenue growth", "entry": "8.80-9.40", "stop": "7.80", "targets": {"t1": "12.00", "t2": "16.00"}, "rr": "1.9:1"},
-      {"ticker": "CMPS", "score": 60, "tier": "MONITORING", "catalyst": "Phase 3 TRD met primary endpoint, NDA Q4 2026"},
-      {"ticker": "POET", "score": 55, "tier": "MONITORING", "catalyst": "AI data center photonic interconnect"}
+      {
+        "ticker": "CRMD",
+        "score": 65,
+        "tier": "TIER2",
+        "catalyst": "REZZAYO Phase III Q2 2026 positive topline, consenso Buy 7 analisti, target mediano $15 vs prezzo $8.27",
+        "entry": "7.80-8.30",
+        "stop": "7.10",
+        "targets": {
+          "t1": "11.00",
+          "t2": "14.50"
+        },
+        "rr": "2.1:1"
+      },
+      {
+        "ticker": "ONDS",
+        "score": 62,
+        "tier": "MONITORING",
+        "catalyst": "Omnisys + Q1 revenue growth",
+        "entry": "8.80-9.40",
+        "stop": "7.80",
+        "targets": {
+          "t1": "12.00",
+          "t2": "16.00"
+        },
+        "rr": "1.9:1"
+      },
+      {
+        "ticker": "CMPS",
+        "score": 60,
+        "tier": "MONITORING",
+        "catalyst": "Phase 3 TRD met primary endpoint, NDA Q4 2026"
+      },
+      {
+        "ticker": "POET",
+        "score": 55,
+        "tier": "MONITORING",
+        "catalyst": "AI data center photonic interconnect"
+      }
     ]
   },
   "macro_regime_weekly": {
@@ -152,6 +266,282 @@
       "MBRX ASCO poster May 30",
       "CING PDUFA May 31 (NON TRADARE — diluzione)",
       "SPRO PDUFA June 18 (T-21gg — accumulo attivo)"
+    ]
+  },
+  "phase0_serale": {
+    "date": "2026-05-28",
+    "session": "22:00 IT",
+    "regime_q0": {
+      "vix": 16.29,
+      "sp_futures_pct": -0.25,
+      "dxy": 99.3,
+      "yield_10y": 4.47,
+      "regime": "BULL CON CAUTELA",
+      "notes": "VIX 16.29 moderato-bull strutturale. Futures -0.25% (⚠️ leggerm. negativi). 10Y 4.47% in calo da picco 4.7% del 20/05 — growth-positive. DXY 99.30 debole = risk-on. US-Iran peace progress. AMD +3.17% su AI results = tech sentiment positivo"
+    },
+    "watchlist_movers": [
+      "ATPC +97-124% AH (pump-squeeze, no fundamental)",
+      "HOTH/RKTO +27.94% AH (rebrand AI/space, ATM shelf attiva → SKIP)",
+      "GRPN -0.24% AH (flat, COO exit luglio confermato)",
+      "CRMD +3.70% regular session (Q1 momentum)",
+      "MBRX -2.09% AH (pre-ASCO weakness, going concern)",
+      "QUBT -5.12% regular session (consolidamento post-Q1 run)",
+      "SNOW +36% AH (large cap, fuori universo)"
+    ],
+    "candidates": [
+      {
+        "ticker": "SPRO",
+        "score": 74,
+        "tier": "TIER2",
+        "catalyst": "PDUFA June 18 tebipenem cUTI — primo carbapenem orale US, GSK global license, Phase3 stop early per efficacy",
+        "ah_pct": "0.0%",
+        "close": "$2.59",
+        "pensiero_critico": {
+          "regime": "BULL CON CAUTELA — futures -0.25%, supportivo per biotech pre-PDUFA",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — T-21gg PDUFA June 18",
+          "narrativa_numeri": "Cash $56.1M runway 2028, Q1 loss $7.2M (vs -$13.9M prev), no PIPE/ATM trovato nel 2026",
+          "rischio_asimmetrico": "Worst case: FDA CRL → -60/70% ($0.80-1.00). Mitigato da Phase3 early stop e GSK commitment",
+          "kindleberger": "Stage 1-2 — $2.59 vs 52w high $3.22, accumulo pre-PDUFA",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [],
+          "giudizio": "PROCEDI TIER2 — 50% sizing. Setup pre-PDUFA più pulito del sistema"
+        },
+        "entry": "$2.40-$2.75",
+        "stop": "$1.90",
+        "t1": "$4.50",
+        "t2": "$6.00",
+        "rr": "2.8:1",
+        "fonte": "memoria discovery_daily — confermato serale",
+        "giudizio": "TIER2",
+        "warning": ""
+      },
+      {
+        "ticker": "CRMD",
+        "score": 68,
+        "tier": "TIER2",
+        "catalyst": "Q1 beat May14 ($127.4M +226% YoY, EBITDA $70M, guidance $325-345M raised). sNDA submission H2 2026. DefenCath momentum. 6 analisti Strong Buy PT $14.83",
+        "ah_pct": "+0.0% AH (no move tonight)",
+        "close": "$8.25",
+        "pensiero_critico": {
+          "regime": "BULL CON CAUTELA — farmaceutici commercializzati favoriti",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — Q1 beat May 14 (14gg), Phase III April 27 (31gg). Già prezzati ma fundamentals in accelerazione",
+          "narrativa_numeri": "Revenue $127.4M Q1, EBITDA $70M, guidance raised → narrativa CONFERMATA dai numeri",
+          "rischio_asimmetrico": "Worst case: FDA CRL per sNDA (H2 2026 binary) → -40-50%",
+          "kindleberger": "Stage 2 — già run +175% da inizio anno circa. Caution",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ CATALYST STALE — Q1 e Phase III già prezzati. Entry solo su pullback",
+            "⚠️ KINDLEBERGER 2 — già corso significativo"
+          ],
+          "giudizio": "PROCEDI TIER2 — 50% sizing. Entry SOLO su pullback $7.50-8.00"
+        },
+        "entry": "$7.50-$8.00",
+        "stop": "$7.00",
+        "t1": "$11.00",
+        "t2": "$14.50",
+        "rr": "2.3:1",
+        "fonte": "memoria discovery_weekly — upgrade confermato",
+        "giudizio": "TIER2",
+        "warning": "Catalysts stale. Entry solo pullback. sNDA binary H2 2026"
+      },
+      {
+        "ticker": "GRPN",
+        "score": 62,
+        "tier": "MONITORING",
+        "catalyst": "SI 53.17% (DTC 7.59). EBITDA $75-80M raised. 400 job cuts AI pivot. PT Northland $26. COO exit luglio 10",
+        "ah_pct": "-0.24%",
+        "close": "$16.91",
+        "pensiero_critico": {
+          "regime": "BULL CON CAUTELA",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — restructuring announcement May 27 (COO exit), PT raise questa settimana",
+          "narrativa_numeri": "EBITDA $75-80M confermato. Revenue storico in declino — AI pivot non nei numeri ancora. DISCREPANZA moderata",
+          "rischio_asimmetrico": "Worst case: AI pivot fallisce + COO exit = leadership void → $10-12 (-30%)",
+          "kindleberger": "Stage 1-2",
+          "bird_rule": true,
+          "diluzione": false,
+          "flags": [
+            "🚨 BIRD RULE ATTIVA — trending social, SI 53% molto discusso",
+            "⚠️ COO exit luglio 10 — management instability"
+          ],
+          "giudizio": "MONITORING — 25% sizing (Bird Rule attiva)"
+        },
+        "entry": "$13.50-$15.00",
+        "stop": "$12.00",
+        "t1": "$20.00",
+        "rr": "2.1:1",
+        "fonte": "memoria confermata serale",
+        "giudizio": "MONITORING",
+        "warning": "Bird Rule. COO exit luglio. Max 25% sizing"
+      },
+      {
+        "ticker": "QUBT",
+        "score": 55,
+        "tier": "MONITORING",
+        "catalyst": "Q1 revenue +9361% YoY, US Govt $2B quantum investment, analyst target $17.83 (Buy)",
+        "ah_pct": "-0.09% AH (flat)",
+        "close": "$12.27",
+        "pensiero_critico": {
+          "regime": "BULL CON CAUTELA",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — Q1 beat May 7 (21gg). -5.12% oggi = consolidamento/distribuzione",
+          "narrativa_numeri": "Revenue $3.69M (reale ma minuscolo). Market cap elevato vs revenue. Cash runway non confermato",
+          "rischio_asimmetrico": "Worst case: quantum hype deflate → $6-7 (-45%)",
+          "kindleberger": "Stage 2-3 da monitorare",
+          "bird_rule": true,
+          "diluzione": false,
+          "flags": [
+            "⚠️ CATALYST STALE (21 giorni)",
+            "⚠️ BIRD RULE probabile — quantum stocks trending",
+            "⚠️ KINDLEBERGER 2-3"
+          ],
+          "giudizio": "MONITORING — probe 1% max loss"
+        },
+        "entry": "$11.00-$12.50",
+        "stop": "$9.50",
+        "t1": "$17.00",
+        "rr": "2.5:1",
+        "fonte": "memoria confermata",
+        "giudizio": "MONITORING",
+        "warning": "Market cap elevato. Stale catalyst. Aspettare pullback $10-11"
+      },
+      {
+        "ticker": "CMPS",
+        "score": 68,
+        "tier": "TIER2",
+        "catalyst": "FDA rolling review COMP360 TRD NDA + Priority Voucher (May 15 2026). Phase 3 met primary endpoint. PT Maxim $20 (da $12, +68% upside)",
+        "ah_pct": "flat (no AH data)",
+        "close": "$11.81",
+        "pensiero_critico": {
+          "regime": "BULL CON CAUTELA — NDA in rolling review = FDA engagement attivo",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — rolling review annunciato May 15 (13 giorni)",
+          "narrativa_numeri": "Biotech puro, no revenue. Cash runway non verificato stanotte. NDA in review = processo avanzato",
+          "rischio_asimmetrico": "Worst case: FDA CRL → -50-60% (~$5-6)",
+          "kindleberger": "Stage 1-2 — $11.81, lontano da picchi storici",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ FLOAT: UK plc ADR, presumibilmente >15M — fuori universo strict",
+            "⚠️ CASH RUNWAY non verificato stanotte"
+          ],
+          "giudizio": "PROCEDI TIER2 — 50% sizing. Upgrade da MONITORING per FDA rolling review"
+        },
+        "entry": "$10.50-$12.00",
+        "stop": "$9.00",
+        "t1": "$16.00",
+        "t2": "$20.00",
+        "rr": "2.3:1",
+        "fonte": "4B Hunter — FDA rolling review upgrade da memoria",
+        "giudizio": "TIER2",
+        "warning": "Float UK ADR da verificare. Cash runway confermare mattino"
+      },
+      {
+        "ticker": "HYLN",
+        "score": 56,
+        "tier": "MONITORING",
+        "catalyst": "US Navy/DARPA KARNO 800KW reactor trial selezionato. Q1 beat +146% rev ($2.8M vs $1.15M). LOI VFG $400M potential. Russell inclusion anticipated. Military contracts $40-50M 2026",
+        "ah_pct": "N/A (nuovo candidato Hunter 4B)",
+        "close": "$5.99",
+        "pensiero_critico": {
+          "regime": "BULL CON CAUTELA — DoD/defense settore favorito in macro militarizzato",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH-STALE — Navy trial May 16-24, Q1 May 12. Già corso +28% post-Navy. T-Catalyst per LOI closing",
+          "narrativa_numeri": "Revenue $2.8M (reale). DoD = forward revenue signal. Cash runway non verificato",
+          "rischio_asimmetrico": "Worst case: Navy trial fallisce, KARNO non scalabile → -40% (~$3.60)",
+          "kindleberger": "Stage 2-3 — già salito significativamente dai minimi",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ FLOAT: 178M shares — FUORI UNIVERSO strict (<15M)",
+            "⚠️ CATALYST PARZIALMENTE PREZZATO (+28% post-Navy già corso)",
+            "⚠️ CASH RUNWAY non verificato",
+            "⚠️ KINDLEBERGER 2-3"
+          ],
+          "giudizio": "MONITORING — probe 1%. Flag critica su float 178M"
+        },
+        "entry": "$5.50-$6.10",
+        "stop": "$4.80",
+        "t1": "$8.00",
+        "t2": "$10.00",
+        "rr": "2.1:1",
+        "fonte": "4B Hunter — DoD/defense KARNO catalyst",
+        "giudizio": "MONITORING",
+        "warning": "FLOAT 178M: FUORI UNIVERSO. PROBE ONLY 1%. Kindleberger 2-3"
+      },
+      {
+        "ticker": "AVXL",
+        "score": 48,
+        "tier": "SKIP",
+        "catalyst": "FDA dialogue per NDA blarcamesine Alzheimer. PT $22 (3 analyst Strong Buy). EU withdrawal prezzato (-33% March 26)",
+        "ah_pct": "-0.73% ($2.76 AH)",
+        "close": "$2.74",
+        "pensiero_critico": {
+          "regime": "N/A — SKIP",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — EU withdrawal March 26 (63gg). FDA pathway = processo lungo senza data",
+          "narrativa_numeri": "No revenue. EU rejection = clinical red flag. Cash runway non verificato",
+          "rischio_asimmetrico": "Worst case: FDA non approva pathway → -50-70%",
+          "kindleberger": "Stage 1 — post-crash EU",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ FLOAT: ~106M shares — fuori universo strict",
+            "⚠️ CATALYST TIMING INCERTO — FDA senza data",
+            "⚠️ EU regulatory red flag"
+          ],
+          "giudizio": "SKIP — Score 48pt <55pt. Timing incerto. Float >15M"
+        },
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "fonte": "4C Hunter — watchlist review",
+        "giudizio": "SKIP",
+        "warning": "Score <55pt. Float fuori range. Catalyst timing incerto"
+      }
+    ],
+    "skip_list_ah": [
+      {
+        "ticker": "ATPC",
+        "reason": "PUMP +97-124% AH — float squeeze, no 8-K firmato, revenue $1.52M Malaysia company, deep negative margins"
+      },
+      {
+        "ticker": "HOTH/RKTO",
+        "reason": "⚠️ PIPE AH TRAP — 424B5 filing oggi con ATM $50M shelf attiva + registered direct history. Serial diluter. Float 20.5M >15M. Rebrand AI/space = AI-washing"
+      },
+      {
+        "ticker": "MBRX",
+        "reason": "GOING CONCERN — cash $1.7M (May 4), runway solo giugno 2026. SKIP obbligatorio"
+      },
+      {
+        "ticker": "BIAF",
+        "reason": "GOING CONCERN — cash $3.0M → $1.7M (May 4), runway giugno 2026"
+      },
+      {
+        "ticker": "LOCL",
+        "reason": "DILUZIONE — 424B3 to sell 13.6M shares. Float 22.75M >15M"
+      },
+      {
+        "ticker": "POET",
+        "reason": "FLOAT: 152M shares, fuori universo strict"
+      },
+      {
+        "ticker": "AVXL",
+        "reason": "Score 48pt <55pt. Float ~106M. Catalyst timing incerto"
+      },
+      {
+        "ticker": "HYLN",
+        "reason": "NOTE: float 178M fuori universo strict — inserito come MONITORING con flag. Non è SKIP ma va gestito con PROBE 1%"
+      }
+    ],
+    "watchlist_additions_suggested": [
+      "HYLN (MONITORING 56pt | DoD KARNO catalyst) — aggiungere watchlist domani",
+      "CMPS (TIER2 68pt | FDA rolling review) — già in watchlist, upgrade"
     ]
   }
 }
