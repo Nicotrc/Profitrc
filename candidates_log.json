@@ -643,6 +643,39 @@
     {
       "date": "2026-05-28",
       "scan_time": "14:30 IT",
+      "macro_regime": "TRANSIZIONE — VIX 16.86 declining, SPY 750.98 -0.03% flat, DXY 99.30 soft, 10Y 4.47% declining da 4.70% high",
+      "gap_candidates": [
+        {
+          "ticker": "MNTS",
+          "gap_pct": 62.2,
+          "close_prev_approx": 12.03,
+          "premarket_price": 19.5,
+          "catalyst": "9x revenue guidance 2026, Q1 .2M revenue, NASA/DoD contracts, SpaceX IPO halo. CONCURRENT: M ATM placement chiude oggi.",
+          "catalyst_tier": "TIER2-downgraded",
+          "filtro": "FILTRO 1 SKIP — Diluzione letale: ATM M + shelf M attivo",
+          "score": 0,
+          "tier": "SKIP",
+          "giudizio": "SKIP — Filtro1 diluzione + Kindleberger Stage 3 + Bird Rule"
+        }
+      ],
+      "watchlist_in_gap": [
+        "MNTS"
+      ],
+      "gap_movers_non_watchlist": [
+        "YMAT +288%",
+        "SNGX +108%",
+        "PHGE +94%",
+        "NCPL +31%",
+        "NNVC +28%",
+        "AKTX -25%",
+        "CNSP -15%"
+      ],
+      "open_positions_alert": [],
+      "note": "MNTS unico watchlist match (+62.2%) — SKIP Filtro1 diluzione. 0 candidati attivi. SPRO (non in rules.json) PDUFA June 18 da monitorare."
+    },
+    {
+      "date": "2026-05-28",
+      "scan_time": "14:30 IT",
       "macro_regime": "TRANSIZIONE — VIX 17.01 (futures 18.53 elevated PCE risk), PCE core +2.8% YoY hot (vs 2.7% exp, +0.4% MoM), SPY futures +0.67%, NQ futures +1.03% (SNOW +38% earnings blowout), 10Y 4.48% declining (Iran deal), Russell 2000 flat",
       "gap_candidates": [],
       "watchlist_in_gap": [],
