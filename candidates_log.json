@@ -1,6 +1,6 @@
 {
   "schema": "PROFITRC-MEMORY-v1",
-  "last_updated": "2026-05-28T22:00:00+02:00",
+  "last_updated": "2026-05-29T12:30:00Z",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -543,5 +543,137 @@
       "HYLN (MONITORING 56pt | DoD KARNO catalyst) — aggiungere watchlist domani",
       "CMPS (TIER2 68pt | FDA rolling review) — già in watchlist, upgrade"
     ]
-  }
+  },
+  "premarket_gap": [
+    {
+      "date": "2026-05-29",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v2",
+      "macro_regime": "TRANSIZIONE",
+      "macro_detail": "VIX 16.74 (+2.76% event-driven non strutturale), SPY 7520 flat +0.02%, DXY 99.30 stabile, 10Y 4.46% in calo (US-Iran deal). RUT -0.03%, futures SPY+0.19%/NQ+0.15%.",
+      "vix": 16.74,
+      "spy_change_pct": 0.02,
+      "dxy": 99.3,
+      "ten_year_yield": 4.46,
+      "tier_a_explosive_count": 0,
+      "tier_b_significant_count": 1,
+      "tier_c_catalyst_count": 1,
+      "gap_candidates": [
+        {
+          "ticker": "RCAT",
+          "scan_tier": "TIER_B",
+          "gap_pct": 32.6,
+          "close_prev": 10.67,
+          "premarket_price": 14.15,
+          "catalyst": "Japan ATLA contract 173 Black Widow UAS per Japan Ground Self-Defense Force (FY2026 funding) + Quaze Technologies acquisition completata May 20 + Clear Street Buy PT $22.",
+          "catalyst_tier": "TIER1",
+          "catalyst_source": "ATLA government contract + 8-K filing May 27 2026",
+          "score": 67,
+          "tier": "TIER2",
+          "kindleberger_stage": "Stage 2 (+45% 30gg: ~$9.75 -> $14.15)",
+          "short_interest_pct": "19-26% float, DTC 2.75",
+          "shares_outstanding": "150.27M (36% dilution in 1 anno)",
+          "pensiero_critico": {
+            "q0_regime": "VIX 16.74 event-driven. SPY flat. DXY stabile. 10Y in calo (US-Iran deal). Regime: TRANSIZIONE — cautela selettiva.",
+            "q1_conferma": "Si — tesi NDAA-compliant drone reggeva prima del Japan contract. Multi-layer: Japan + Quaze + Clear Street.",
+            "q2_narrativa_numeri": "Business reale (contratti DoD, ATLA). Revenue in crescita. RISCHIO: 36% dilution in 1 anno — management ha storicamente stampato azioni.",
+            "q3_rischio_asimmetrico": "Scenario peggiore: secondary offering a ~$14 + lock-up expiry post-Quaze = ritorno $9-10 (-35%). Gap fill risk basso breve termine.",
+            "q4_timing": "Catalyst 2 giorni fa (May 27). +32% gia mosso. NON entry immediata — aspettare pull-back $12.50-$13.00.",
+            "q5_kindleberger": "Stage 2 — probe accettabile, sizing max 25-50%.",
+            "q6_bird_rule": "Trending su StocksToTrade/TimothySykes. Flag BIRD RULE moderato — sizing 50% TIER2."
+          },
+          "piano_entry": {
+            "strategia": "PULL-BACK — NON chase all'open. Attendere ritracciamento.",
+            "entry_range": "$12.50 - $13.00",
+            "stop": "$11.50",
+            "target1": "$16.00 (R/R ~2.5:1)",
+            "target2": "$19.00-$22.00 (PT Clear Street)",
+            "sizing": "TIER2 50%"
+          },
+          "giudizio": "PROCEDI TIER2 50% sizing — Japan MoD contract verificato TIER1, PT $22, ma 2-day latency + Stage2 + dilution storico -> pull-back entry $12.50-$13."
+        },
+        {
+          "ticker": "AEHR",
+          "scan_tier": "TIER_C",
+          "gap_pct": 0.08,
+          "close_prev": 99.9,
+          "premarket_price": 99.98,
+          "premarket_volume": 49180,
+          "catalyst": "$41M follow-on AI chip order da hyperscale customer per burn-in custom ASIC + record backlog $50.9M + Craig-Hallum conference May 28.",
+          "catalyst_tier": "TIER1",
+          "catalyst_source": "Press release + Craig-Hallum conference May 28 2026",
+          "score": 59,
+          "tier": "MONITORING",
+          "kindleberger_stage": "Stage 3 (~+150-327% YTD 2026) — probe 25% max",
+          "pensiero_critico": {
+            "q0_regime": "TRANSIZIONE — AI sector guidance NQ. Regime non ostile per semiconductor.",
+            "q1_conferma": "Si parzialmente — $41M order reale (iperscaler non nominato). Backlog record $50.9M.",
+            "q2_narrativa_numeri": "+327% YTD, $41M order, backlog record. Rischio: cliente non divulgato.",
+            "q3_rischio_asimmetrico": "ATH $109.16 overhead resistance. Pull-back $85-90 possibile se AI sector si raffredda.",
+            "q4_timing": "NON timing ideale — pull-back da ATH in corso. Entry migliore $90-95.",
+            "q5_kindleberger": "Stage 3 — probe 25% sizing max per protocollo.",
+            "q6_bird_rule": "Trending Motley Fool 'obliterating Nvidia AMD Broadcom'. BIRD RULE attivo — sizing probe minimo."
+          },
+          "piano_entry": {
+            "strategia": "PROBE MONITORING — aspettare pull-back $90-95 o conferma supporto $100.",
+            "entry_range": "$90.00 - $95.00",
+            "stop": "$82.00",
+            "target1": "$110.00 (ATH, R/R ~2:1)",
+            "target2": "$125.00",
+            "sizing": "Probe 25% — Stage 3 + BIRD RULE"
+          },
+          "giudizio": "MONITORING probe 1% max loss — AI tesi solida, catalyst reale, ma Stage3 Kindleberger + pull-back da ATH + BIRD RULE -> sizing minimo, entry paziente."
+        }
+      ],
+      "watchlist_in_gap": [
+        "RCAT"
+      ],
+      "gap_movers_non_watchlist": [
+        {
+          "ticker": "ASTC",
+          "gap_pct": 66.8,
+          "volume": 12800000,
+          "catalyst": "Lunar resource initiative Helium-3/Silicon-28 per quantum computing supply chains. Board approval.",
+          "note": "Non in watchlist. Stage4+ review futura."
+        },
+        {
+          "ticker": "ATPC",
+          "gap_pct": 105.1,
+          "volume_vs_adv": "6x",
+          "catalyst": "Non specificato",
+          "note": "Non in watchlist. Move estremo."
+        }
+      ],
+      "open_positions_alert": [],
+      "excluded_tickers": [
+        {
+          "ticker": "CODX",
+          "motivo": "SKIP — Kindleberger Stage4 (+630% in 6 sessioni). FILTRO1 diluzione: $3M PIPE May19 + S-3 shelf attiva. Gap down premarket ($11 -> $8.20)."
+        },
+        {
+          "ticker": "GOVX",
+          "motivo": "SKIP — FILTRO1 diluzione attiva: S-1 May22 per resale 7.6M shares da PIPE May19. Warrants $1.94 esercitabili."
+        },
+        {
+          "ticker": "HIMS",
+          "motivo": "SKIP scoring (44/100) — Director insider buy $1.17M priced in. Stock a BofA PT $25 = resistance. Q1 loss $92.1M."
+        },
+        {
+          "ticker": "NIO",
+          "motivo": "SKIP scoring (43/100) — Gap negativo -2.09% premarket dopo +9% ieri. China demand warning. Float enorme (ADR)."
+        },
+        {
+          "ticker": "WYY",
+          "motivo": "VOLUME ANOMALO — premarket +4.33% dopo -13.21% drop May26. Nessun catalyst fresco identificato. Max probe 0.5%."
+        },
+        {
+          "ticker": "BBAI",
+          "motivo": "MONITORING — defense backlog $282M catalyst 3 giorni fa. Nessun catalyst fresco May29."
+        }
+      ],
+      "watchlist_scanned": 57,
+      "candidates_found": 2,
+      "note": "1 TIER B (RCAT — Japan MoD defense contract TIER1). 1 TIER C monitoring (AEHR — AI chip order pull-back). Non-watchlist: ASTC +66.8%, ATPC +105.1%. Nessuna posizione aperta."
+    }
+  ]
 }
