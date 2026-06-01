@@ -63,7 +63,9 @@
     "ONDS"
   ],
   "discovery_daily_candidates": [],
-  "phase0_serale_candidates": [],
+  "phase0_serale_candidates": [
+    "SPRO"
+  ],
   "premarket_gap_candidates": [],
   "morning_brief": {
     "date": "2026-06-01",
@@ -238,5 +240,135 @@
         "warning": "Stage 3: NON inseguire. Probe solo su breakout con volume 3x+ su notizia DoD specifica. Trigger: nuovo contratto o upgrade analyst."
       }
     ]
+  },
+  "phase0_serale": {
+    "date": "2026-06-01",
+    "orario": "22:00 IT",
+    "macro_regime": "BULL CONFERMATO — S&P500 e Nasdaq a nuovi record storici. PCE soft, Iran ceasefire +60gg, Brent $92/bbl, 10Y 4.43% in calo, DXY 98.94 downtrend.",
+    "futures_ah": "Positivi — mercato chiuso su massimi, nessun segnale ribassista AH significativo.",
+    "vix": "~15.31",
+    "yield_10y": "4.43%",
+    "dxy": "98.94",
+    "watchlist_movers": [
+      "ONDS +23.7% (Drone Dominance $1.1B Trump + $457M backlog) → SKIP Kindleberger 4",
+      "BBAI +3.34% (Panama AI deployment, backlog $281.9M)",
+      "RCAT +2.47% (drone sector rally)",
+      "VRDN AH -2.95% (PIPE confermata, SKIP)"
+    ],
+    "candidati_da_memoria_aggiornati": {
+      "VRDN": {
+        "status": "SKIP IMMEDIATO",
+        "motivo": "PIPE confermata: 424B5 filings maggio 2026 — $225M convertible notes + 7.35M shares equity offering. Meno di 30gg fa. Anti-dilution pre-check FAIL. AH -2.95% conferma pressione vendita.",
+        "precedente_score": 73,
+        "score_aggiornato": 0
+      },
+      "GLSI": {
+        "status": "SKIP",
+        "motivo": "Prezzo $28.31 fuori range sistema $1-$25. Entry $22.50-$23.50 persa. Stock up post-ASCO. Non inseguire.",
+        "precedente_score": 67,
+        "score_aggiornato": 0
+      },
+      "UNCY": {
+        "status": "SKIP IMMEDIATO",
+        "motivo": "ATM shelf $100M attiva (novembre 2025, Guggenheim). Anti-dilution pre-check FAIL.",
+        "precedente_score": 57,
+        "score_aggiornato": 0
+      },
+      "RCAT": {
+        "status": "SKIP",
+        "motivo": "Float 122M+ shares (conferma: Morningstar 152.19M shares outstanding). Fuori criteri <15M. Kindleberger Stage 3.",
+        "precedente_score": 58,
+        "score_aggiornato": 0
+      },
+      "SPRO": {
+        "status": "MONITORING — CONFERMATO",
+        "motivo_conferma": "PDUFA June 18 verificato. Cash $56.1M fino 2028. No dilution recente. Bird Rule clean. AH piatto = nessun rischio overnight.",
+        "update_serale": "Kindleberger Stage 3 confermato (52w low $0.656, current $2.50 = +281%). Float 57M confermato fuori criteri L1. Solo LAYER 2 probe minimo.",
+        "precedente_score": 72,
+        "score_aggiornato": 65
+      }
+    },
+    "candidates": [
+      {
+        "ticker": "SPRO",
+        "score": 65,
+        "tier": "MONITORING",
+        "catalyst": "PDUFA June 18 tebipenem HBr cUTI — GSK-partnered, resubmission NDA, Phase 3 PIVOT-PO stopped early for efficacy",
+        "ah_pct": "+0.0%",
+        "close": "$2.50",
+        "pensiero_critico": {
+          "regime": "BULL — S&P record, PCE soft, Iran ceasefire, 10Y 4.43%. Favorevole per biotech.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "PDUFA June 18 = 17gg = FRESH countdown",
+          "narrativa_numeri": "Cash $56.1M runway 2028. Q1 loss $7.2M migliorato da $13.9M. Profittabilità SE tebipenem approvato con GSK commercializzazione.",
+          "rischio_asimmetrico": "worst case: CRL (come primo tentativo) → $0.50-1.00 (-60-80%)",
+          "kindleberger": "Stage 3 — +281% da 52w low $0.656",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ KINDLEBERGER STAGE 3 (+281% da 52w low) → MONITORING solo",
+            "⚠️ FLOAT 57M FUORI CRITERI L1 (<15M richiesto)",
+            "⚠️ PRECEDENTE CRL FDA — resubmission a rischio",
+            "⚠️ ATM SHELF $75M IN PLACE (non attiva di recente)"
+          ],
+          "giudizio": "MONITORING probe 1% max — Layer 2 only"
+        },
+        "entry": "$2.40-$2.55",
+        "stop": "$1.90",
+        "t1": "$3.80",
+        "t2": "$5.50",
+        "rr": "2.5:1",
+        "fonte": "morning_brief_verified",
+        "giudizio": "MONITORING",
+        "warning": "Float 57M, Kindleberger Stage 3, CRL precedente. PROBE MINIMO 1% max loss. Entry valida solo a 15:35-15:45 IT su volume confermato."
+      }
+    ],
+    "hunter_segnalazioni": [
+      {
+        "ticker": "EVC",
+        "nome": "Entravision Communications",
+        "evento": "Q1 2026 earnings: EPS $0.13 vs -$0.53 YoY, revenue raddoppiato $91.9M→$197M (+114%). Ex-dividend June 16.",
+        "score_tentativo": 50,
+        "close": "$9.38",
+        "note": "FLOAT NON VERIFICATO — probabile >15M (media company). Kindleberger Stage 2-3 (+71.91% recente). Non qualificato L1. Solo watchlist per ulteriore verifica float."
+      },
+      {
+        "ticker": "ONDS",
+        "nome": "Ondas Holdings",
+        "evento": "DRONE DOMINANCE: +23.7% oggi. $30M+ ordini maggio, backlog $457M, acquisizione Omnisys AI, Trump $1.1B drone program.",
+        "score_tentativo": 0,
+        "close": "$13.36",
+        "note": "SKIP OBBLIGATORIO — Kindleberger Stage 4 (+1135% da 52w low $1.26). Nonostante catalyst eccellente, regola Stage 4 → SKIP."
+      },
+      {
+        "ticker": "BBAI",
+        "nome": "BigBear.ai Holdings",
+        "evento": "Commercial AI Panama deployment, backlog $281.9M, Q1 revenue beat $34.44M vs $33.60M est.",
+        "score_tentativo": 45,
+        "close": "$5.11",
+        "note": "FLOAT PROBABILE >15M (AI company multi-milioni shares). Non qualificato L1 criteri stretti. Interessante per macro AI-defense play ma fuori universo."
+      }
+    ],
+    "skip_list_completa": [
+      "VRDN — PIPE $225M maggio 2026 (<30gg) → anti-dilution FAIL",
+      "GLSI — prezzo $28.31 > $25 range sistema",
+      "UNCY — ATM $100M attiva novembre 2025",
+      "RCAT — float 122-152M shares",
+      "ONDS — Kindleberger Stage 4 (+1135%)",
+      "MBRX — going concern (cash Q3 2026 only), regole SKIP",
+      "HUMA — float 222M, price ~$0.85 (<$1), ATM $60M attiva",
+      "GRPN — float 38M",
+      "QUBT — market cap $2.7B, float >15M",
+      "CMPS — shares outstanding 134.95M",
+      "BTDR — market cap $2.39B",
+      "LOCL — registration statement filed May 15 2026 (<30gg)"
+    ],
+    "setup_domani_2_giugno": {
+      "primario": "SPRO — MONITORING probe 1%, entry $2.40-$2.55, stop $1.90. Layer 2 only.",
+      "trigger": "Conferma volume >2x ADV a 15:35 IT",
+      "attenzione": "Scanner pre-market 15:30 IT per nuovi AH movers non trovati stasera",
+      "regole": "Silenzio 15:30-15:35 IT | Entry 15:35-15:45 IT | Stop prima entry | Dopo 2 loss: stop sessione"
+    },
+    "note_scanner": "Serata difficile per trovare nuovi micro-cap con float <15M. PROFITRC L1 (float <15M, $1-$25) rimane il filtro più restrittivo. La maggior parte dei candidati del mercato drone/biotech ha floats molto superiori a 15M. Unico candidato confermato: SPRO (Layer 2, float warning). Raccomandazione: ampliare watchlist con titoli micro-cap aggiuntivi alla prossima discovery_weekly."
   }
 }
