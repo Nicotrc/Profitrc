@@ -267,59 +267,177 @@
     "hunter_note": "Scanner ha identificato 1 candidato qualificato >= 55pt (TNDM 74pt TIER2). JFB (48pt) e GALT (50pt) analizzati e SKIP. Filtro float <15M esclude la maggioranza dei movers odierni. Obiettivo 3 candidati Hunter non raggiunto per scarsità di micro-cap con catalizzatori FRESH confermati oggi."
   },
   "discovery_daily": {
-    "date": "2026-06-01",
+    "date": "2026-06-02",
     "alerts": [
-      "GLSI — ASCO FLAMINGO-01 Phase III presentata oggi June 1: GIA CORSO +20% da entry $22-23; non inseguire. Nuovo entry su pullback $25-26.",
-      "SPRO — PDUFA countdown: 17 giorni a June 18 (tebipenem, cUTI, GSK-partnered). Finestra di ingresso ancora aperta.",
-      "VRDN — PDUFA June 30 veligrotug TED (Priority Review): 29 giorni, Bird Rule attiva, sizing 25%"
+      "BBAI — BigBear.ai: Panama Logistics Deal LIVE + $60M+ National Security contract wins Q1. Fresco oggi June 2. $5.32 +5.95%.",
+      "QUBT — Quantum Computing: Q1 revenue $3.69M vs $3.13M stima (+18% beat). $12.26 +8.57% oggi. Investor conferences June.",
+      "SPRO — PDUFA countdown 16 giorni (June 18). Tebipenem cUTI, GSK-partnered. Finestra accumulo aperta. $2.50.",
+      "IMPP — Imperial Petroleum: Iran escalation oggi (Bab-el-Mandeb threat). Q1 revenue +92% YoY. VLCC rates $200K/day record.",
+      "ASC — Ardmore Shipping: Q1 EPS beat +$0.07, revenue $87.92M vs $58.08M atteso (+51%). Q2 MR rates +55% da Q1. Nuova ADD watchlist."
     ],
     "candidates": [
       {
-        "ticker": "VRDN",
-        "score": 73,
-        "tier": "SKIP",
-        "catalyst": "PDUFA June 30 veligrotug TED (Priority Review). SKIP: 424B5 maggio 2026 <30gg.",
+        "ticker": "ASC",
+        "score": 70,
+        "tier": "TIER2",
+        "catalyst": "Q1 2026 EPS beat ($0.58 vs $0.51 cons); Revenue $87.92M vs $58.08M atteso (+51%). Q2 MR tanker rates $52,100/day (+55% da Q1 $33,700), 55% booked. Iran/Hormuz crisis strutturale.",
         "pensiero_critico": {
-          "regime": "SKIP per dilution rule",
+          "regime": "TRANSIZIONE/SELECTIVE 🟡 ma BULL settoriale per tanker: VLCC rates $200K/day record, BWET ETF +600% YTD. Iran-Bab el Mandeb threat fresco oggi.",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESH",
-          "narrativa_numeri": "Cash $762M. Pre-launch. Strong Buy 22/9. PT $41.42.",
-          "rischio_asimmetrico": "worst case: FDA CRL -> $7-9 (-50-60%)",
-          "kindleberger": "Stage 1",
-          "bird_rule": true,
-          "diluzione": true,
+          "catalyst_freshness": "FRESH — earnings call June 1, Q2 rates freschissimi (55% booked)",
+          "narrativa_numeri": "Q1 revenue beat +51%, EPS beat. Q2 guidance implica +55% da Q1 sui rates. Cash flow positivo, dividendo $0.39/share (66% earnings). Numericamente confermato.",
+          "rischio_asimmetrico": "worst case: Iran deal rapido → rates crollo → $13-14 (-30%). Iran war ongoing 3+ mesi suggerisce bassa probabilita pace improvvisa.",
+          "kindleberger": "Stage 2 (stimato: +50-80% dai minimi pre-Hormuz crisis)",
+          "bird_rule": false,
+          "diluzione": false,
           "flags": [
-            "424B5 maggio 2026 <30gg -> SKIP IMMEDIATO",
-            "Bird Rule attiva"
+            "⚠️ FLOAT STIMATO ~38M (sopra threshold 15M) → sizing ridotto 30-40%"
           ],
-          "giudizio": "SKIP"
+          "giudizio": "ALERT URGENTE — TIER 2 (con flag float)"
         },
-        "entry": "N/A",
-        "stop": "N/A",
-        "t1": "N/A",
-        "t2": "N/A",
-        "rr": "N/A",
-        "fonte": "discovery_daily_overridden",
-        "giudizio": "SKIP",
-        "warning": "PIPE/424B5 < 30gg. Rivalidare June 13, 2026."
+        "entry": "$18.80-$19.60",
+        "stop": "$17.50",
+        "t1": "$22.50",
+        "t2": "$25.00",
+        "rr": "2.0:1",
+        "fonte": "2E+settore tanker Iran",
+        "giudizio": "ALERT URGENTE",
+        "warning": "Float stimato ~38M sopra soglia 15M. Sizing 30-40% del normale. Rischio pace Iran rapida = rates crollo."
       },
       {
-        "ticker": "RCAT",
-        "score": 0,
-        "tier": "SKIP",
-        "catalyst": "Drone defense. SKIP: PIPE $225M May 13 2026 (<30gg). Float 122M+.",
+        "ticker": "BBAI",
+        "score": 68,
+        "tier": "TIER2",
+        "catalyst": "Panama Logistics deal LIVE (ISC + BigBear AI). $60M+ new Q1 national security contracts. Backlog $282M. 2026 revenue guidance reaffermata. Catalyst FRESCO oggi June 2.",
         "pensiero_critico": {
-          "regime": "SKIP",
+          "regime": "SELECTIVE 🟡 — AI defense in BULL strutturale (Trump $1.1B Drone Dominance, Pentagono AI spend)",
           "catalyst_verified": true,
-          "catalyst_freshness": "N/A",
-          "narrativa_numeri": "N/A",
-          "rischio_asimmetrico": "N/A",
-          "kindleberger": "Stage 3",
+          "catalyst_freshness": "FRESH — surges into new week June 2 su news confermata",
+          "narrativa_numeri": "Q1 revenue $34.4M. Backlog $282M (8x quarterly revenue). $75M new Q1 wins. Panama deal non-revenue inizialmente ma valida AI narrative oltre defense.",
+          "rischio_asimmetrico": "worst case: Panama deal no revenue traction + defense budget cuts → $3.00-3.50 (-35-40%)",
+          "kindleberger": "Stage 2 (da $2.90 low a $5.32 = +83%)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ FLOAT ALTO (>100M shares tipico per NYSE small cap AI) → sizing conservativo",
+            "⚠️ GIA WATCHLIST — monitoring upgrade"
+          ],
+          "giudizio": "TIER2 — watchlist name con catalyst FRESH oggi"
+        },
+        "entry": "$4.80-$5.10",
+        "stop": "$4.20",
+        "t1": "$6.50",
+        "t2": "$8.00",
+        "rr": "2.1:1",
+        "fonte": "2C+2E watchlist",
+        "giudizio": "ALERT URGENTE",
+        "warning": "Panama deal non ha ancora revenue disclosure. Monitor per conferma volume continuation."
+      },
+      {
+        "ticker": "QUBT",
+        "score": 66,
+        "tier": "TIER2",
+        "catalyst": "Q1 2026 revenue $3.69M vs $3.13M stima (+18% beat). vs $39K Q1 2025 = +9.000% YoY. Bullish options activity. Investor conference lineup June 2026.",
+        "pensiero_critico": {
+          "regime": "SELECTIVE 🟡 — Quantum computing in bull strutturale, AI macro positivo",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — risultati June 1, +8.57% oggi June 2",
+          "narrativa_numeri": "Revenue da $39K a $3.69M YoY = traction reale. Ma ancora pre-profitto. Cash runway non confermato ma crescita rapida suggerisce burn controllato.",
+          "rischio_asimmetrico": "worst case: hype quantum senza revenue acceleration → $8-9 (-35%)",
+          "kindleberger": "Stage 2 (52w range non confermato, ma +~35% in recente rally earnings)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ RVOL BASSA OGGI (826K vs avg 29.72M) — possibile late-session pickup",
+            "⚠️ GIA WATCHLIST"
+          ],
+          "giudizio": "TIER2 con monitoring RVOL intraday"
+        },
+        "entry": "$11.50-$12.50",
+        "stop": "$10.20",
+        "t1": "$15.00",
+        "t2": "$17.83",
+        "rr": "1.9:1",
+        "fonte": "2C watchlist + earnings",
+        "giudizio": "ALERT URGENTE",
+        "warning": "RVOL molto bassa per ora (826K vs avg 29.72M). Verifica volume pomeriggio. Analyst PT $17.83."
+      },
+      {
+        "ticker": "IMPP",
+        "score": 65,
+        "tier": "TIER2",
+        "catalyst": "Q1 2026 revenue +92% YoY ($61.7M), net income $28M. VLCC rates $200K/day (record). Iran escalation oggi: Bab-el-Mandeb threat fresco. BWET ETF +600% YTD.",
+        "pensiero_critico": {
+          "regime": "TRANSIZIONE 🟡 ma BULL settoriale strutturale per shipping. Iran war ongoing da Feb 28.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH renewals — Iran Bab-el-Mandeb threat oggi June 2",
+          "narrativa_numeri": "Q1 revenue +92% YoY. Net income $28M (second-best ever). EPS $0.60 vs $0.32 YoY. Concretamente solido.",
+          "rischio_asimmetrico": "worst case: Iran deal → rates crollo → $3.50-4.00 (-30%)",
+          "kindleberger": "Stage 2 (52w range $2.71-$6.57, attuale ~$5.68 = 110% dal low)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ GIA WATCHLIST",
+            "⚠️ Dati prezzo June 1, non June 2 live"
+          ],
+          "giudizio": "TIER2 — tanker thesis strutturale + Iran fresh oggi"
+        },
+        "entry": "$5.30-$5.80",
+        "stop": "$4.70",
+        "t1": "$7.00",
+        "t2": "$8.50",
+        "rr": "2.2:1",
+        "fonte": "2E settore + watchlist",
+        "giudizio": "ALERT URGENTE",
+        "warning": "Stessa tesi di ASC. Non duplicare eccessivamente esposizione shipping. Diversificare."
+      },
+      {
+        "ticker": "ONDS",
+        "score": 62,
+        "tier": "MONITORING",
+        "catalyst": "Q1 2026 revenue $50.1M record (+10x YoY). Omnisys acquisition $200M (15a acquisizione Israel defense-tech). Drone Dominance Trump $1.1B initiative.",
+        "pensiero_critico": {
+          "regime": "SELECTIVE 🟡 — drone/defense BULL strutturale",
+          "catalyst_verified": true,
+          "catalyst_freshness": "PARZIALMENTE PREZZATO — Q1 results May, Omnisys recente. Iran catalyst fresco.",
+          "narrativa_numeri": "Revenue $50.1M Q1 2026 vs ~$5M Q1 2025 = crescita reale operativa, non solo acquisitions.",
+          "rischio_asimmetrico": "worst case: acquisizioni integration fail + dilution da stock deal Omnisys ($200M in azioni) → $8-9 (-35%)",
+          "kindleberger": "Stage 2",
           "bird_rule": false,
           "diluzione": true,
           "flags": [
-            "PIPE $225M May 13 2026 (<30gg)",
-            "Float 122M+ shares"
+            "⚠️ Stock deal Omnisys $200M = potenziale diluzione shares",
+            "⚠️ GIA WATCHLIST",
+            "Verifica 424B5 o S-3 su SEC"
+          ],
+          "giudizio": "MONITORING — diluzione potenziale da verificare"
+        },
+        "entry": "$12.50-$13.80",
+        "stop": "$11.00",
+        "t1": "$17.00",
+        "t2": "$20.00",
+        "rr": "1.8:1",
+        "fonte": "watchlist + 2E M&A",
+        "giudizio": "MONITORING",
+        "warning": "Verificare SEC se Omnisys deal ha registrazione shares (potenziale diluzione). Se clean, upgrade a TIER2."
+      },
+      {
+        "ticker": "BTDR",
+        "score": 0,
+        "tier": "SKIP",
+        "catalyst": "Bitdeer Technologies. Crypto miner. Alta short interest. Strong Buy. MA: 424B5 Feb 2026 multipli + $1B shelf attivo.",
+        "pensiero_critico": {
+          "regime": "SKIP",
+          "catalyst_verified": false,
+          "catalyst_freshness": "N/A",
+          "narrativa_numeri": "N/A",
+          "rischio_asimmetrico": "N/A",
+          "kindleberger": "N/A",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "424B5 Feb 2026 multipli (<30gg threshold non soddisfatto)",
+            "$1B shelf registration attivo"
           ],
           "giudizio": "SKIP"
         },
@@ -328,9 +446,9 @@
         "t1": "N/A",
         "t2": "N/A",
         "rr": "N/A",
-        "fonte": "discovery_daily_overridden",
+        "fonte": "2B short squeeze",
         "giudizio": "SKIP",
-        "warning": "PIPE recente e float massiccio. Eliminare dalla watchlist."
+        "warning": "Dilution multi-tranche. Rivalidare se shelf scade o viene withdrawn."
       }
     ]
   },
