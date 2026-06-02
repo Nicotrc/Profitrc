@@ -67,7 +67,122 @@
   "phase0_serale_candidates": [
     "SPRO"
   ],
-  "premarket_gap_candidates": [],
+  "premarket_gap_candidates": [
+    {
+      "date": "June 2, 2026",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "TradingView",
+        "GitHub",
+        "WebSearch"
+      ],
+      "macro_regime": "VIX 16.16 (+0.69%) | SPY $756.96 (-0.21%) | PFRC Rgm: SELECTIVE 2/4 (from morning brief)",
+      "account_snapshot": {
+        "net_liq_eur": 1661.0,
+        "buying_power_eur": 1661.0,
+        "open_positions": 0
+      },
+      "tier_a_count": 1,
+      "tier_b_count": 4,
+      "tier_c_count": 0,
+      "gap_candidates": [
+        {
+          "ticker": "BIAF",
+          "gap_pct": 10.0,
+          "last": 1.925,
+          "prior_close": 1.75,
+          "volume_premarket": 37760,
+          "adv_20d": 166174,
+          "rvol_premarket": 0.23,
+          "tier_raw": "TIER A",
+          "tier_final": "SKIP",
+          "skip_reason": "Going concern — cash expires June 2026 ($1.7M), imminent dilution risk",
+          "catalyst": "CyPath Lung 2000-patient study initiation (May 27); float 4.5M shares"
+        },
+        {
+          "ticker": "CODX",
+          "gap_pct": 9.19,
+          "last": 6.77,
+          "prior_close": 6.2,
+          "volume_premarket": 320120,
+          "adv_20d": 12249954,
+          "rvol_premarket": 0.03,
+          "tier_raw": "TIER B",
+          "tier_final": "SKIP",
+          "skip_reason": "Kindleberger STAGE 4: +437% from $1.26 low — automatic skip",
+          "catalyst": "No today catalyst; post-speculative run (went $1.26 → $11.19 in 2 weeks)"
+        },
+        {
+          "ticker": "POET",
+          "gap_pct": 7.49,
+          "last": 14.93,
+          "prior_close": 13.89,
+          "volume_premarket": 3696769,
+          "adv_20d": 46670310,
+          "rvol_premarket": 0.08,
+          "tier_raw": "TIER B",
+          "tier_final": "SKIP",
+          "skip_reason": "Kindleberger STAGE 3 (+111% from $7.07) + Bird Rule (heavy media coverage) + regime SELECTIVE 2/4 → 4 penalty levels",
+          "catalyst": "Lumilens deal $50M→$500M 5yr (June 1), US redomiciling vote June 26, $150M raise Jan 2026"
+        },
+        {
+          "ticker": "NVTS",
+          "gap_pct": 5.51,
+          "last": 26.23,
+          "prior_close": 24.86,
+          "volume_premarket": 1162262,
+          "adv_20d": 29674846,
+          "rvol_premarket": 0.04,
+          "tier_raw": "TIER B",
+          "tier_final": "MONITORING",
+          "skip_reason": null,
+          "catalyst": "Cyient GaN deal India (May 22), Q1 beat + Q2 guide above est, CEO Evercore conf June 3, Baird PT $9→$20; Kindleberger STAGE 2 +75%"
+        },
+        {
+          "ticker": "LAC",
+          "gap_pct": 7.62,
+          "last": 5.93,
+          "prior_close": 5.51,
+          "volume_premarket": 1434524,
+          "adv_20d": 10132404,
+          "rvol_premarket": 0.14,
+          "tier_raw": "TIER B",
+          "tier_final": "MONITORING",
+          "skip_reason": null,
+          "catalyst": "Q1 first profitable quarter, Thacker Pass 95% engineering, macro tailwind (oil +6.31% Iran tensions); Kindleberger STAGE 2 +30%; no specific today catalyst"
+        }
+      ],
+      "skipped": [
+        {
+          "ticker": "BIAF",
+          "reason": "Going concern — cash through June 2026 only, imminent dilution"
+        },
+        {
+          "ticker": "CODX",
+          "reason": "Kindleberger STAGE 4 +437% from $1.26 low — automatic skip"
+        },
+        {
+          "ticker": "POET",
+          "reason": "STAGE 3 (+111%) + Bird Rule (heavy AI infra media) + regime → 4 penalty levels → SKIP"
+        },
+        {
+          "ticker": "FRGT",
+          "reason": "Gap DOWN -11.48% — no long entry"
+        },
+        {
+          "ticker": "LAC",
+          "reason": "No today catalyst, large float (200M+), sector macro play only → MONITORING, no trade"
+        },
+        {
+          "ticker": "NVTS",
+          "reason": "Catalyst from May (not today), above Baird PT $20 at $26, STAGE 2 → MONITORING only"
+        }
+      ],
+      "open_positions_alert": []
+    }
+  ],
   "morning_brief": {
     "date": "2026-06-02",
     "macro_regime": "SELECTIVE 2/4 🟡",
