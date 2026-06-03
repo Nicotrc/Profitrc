@@ -852,5 +852,6 @@
       "regole": "Silenzio 15:30-15:35 IT | Entry 15:35-15:45 IT | Stop prima entry | Dopo 2 loss: stop sessione"
     },
     "note_scanner": "Serata difficile per trovare nuovi micro-cap con float <15M. PROFITRC L1 (float <15M, $1-$25) rimane il filtro più restrittivo. La maggior parte dei candidati del mercato drone/biotech ha floats molto superiori a 15M. Unico candidato confermato: SPRO (Layer 2, float warning). Raccomandazione: ampliare watchlist con titoli micro-cap aggiuntivi alla prossima discovery_weekly."
-  }
+  },
+  "_sistema_note": "GitHub API fix v3.0 testato e funzionante — 2026-06-03 12:14 IT"
 }
