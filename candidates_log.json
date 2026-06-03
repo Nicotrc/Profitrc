@@ -184,87 +184,305 @@
     }
   ],
   "morning_brief": {
-    "date": "2026-06-02",
-    "macro_regime": "SELECTIVE 2/4 🟡",
+    "date": "2026-06-03",
+    "macro_regime": "TRADE 3/4 🟢 (interpretato 3.5/4 - VIX strutturale, SPY ATH, Iran geopolitico non inflazionistico)",
     "big_themes": [
-      "Iran-USA tensions: sospese comunicazioni, oil WTI +6.31% a $92.87",
-      "ISM Manufacturing PMI 54 (4-year high) - economia forte, growth-positive",
-      "White House EO psichedelici: DEA rescheduling review rapido (settore tailwind CMPS)",
-      "PDUFA season in corso: SPRO June 18, UNCY SKIP (ATM), VRDN SKIP (424B5 <30gg)"
+      "AI/Defense drone momentum (RCAT, BBAI, LASE)",
+      "Iran tanker trade - VLCC rates $200K/day (IMPP)",
+      "Biotech PDUFA countdown SPRO 15gg / UNCY 26gg",
+      "Small cap bull - RUT +15% YTD, SPY sopra 7600 ATH"
     ],
     "candidates": [
       {
-        "ticker": "SPRO",
-        "score": 72,
-        "tier": "MONITORING",
-        "catalyst": "PDUFA June 18 (16gg) tebipenem HBr cUTI. GSK-partnered. Phase 3 PIVOT-PO stopped early efficacy. CRL superato con resubmissione.",
-        "pensiero_critico": {
-          "regime": "🟡 SELECTIVE - VIX 15.88 one-off Iran, SPY/QQQ forti, DXY safe-haven transitorio",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH - PDUFA 16gg",
-          "narrativa_numeri": "Cash $56.1M into 2028. Q1 loss $7.2M (-48% YoY). Pre-launch stage. GSK commercializzazione post-approvazione.",
-          "rischio_asimmetrico": "worst case: secondo CRL FDA -> $0.50-1.00 (-60-80%)",
-          "kindleberger": "Stage 3 (+281% da 52w low $0.656)",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "⚠️ Kindleberger Stage 3 (+281% da low)",
-            "⚠️ Float 57M (>15M) -> L2 ONLY",
-            "⚠️ ATM shelf Cantor $75M (2024, non recente)",
-            "⚠️ CRL precedente FDA"
-          ],
-          "giudizio": "MONITORING"
-        },
-        "entry": "$2.45-$2.55",
-        "stop": "$1.90",
-        "t1": "$3.80",
-        "t2": "$5.50",
-        "rr": "2.3:1",
-        "fonte": "phase0_serale",
-        "giudizio": "MONITORING",
-        "warning": "Float 57M viola criteri L1 (<15M). Solo Layer 2 swing. Sizing 25% max. Binary PDUFA event."
-      },
-      {
-        "ticker": "TNDM",
-        "score": 74,
+        "ticker": "BBAI",
+        "score": 68,
         "tier": "TIER2",
-        "catalyst": "Wells Fargo upgrade OW PT $27 OGGI (da Equal Weight). Pharmacy channel pivot: 80% US pump shipments -> farmacia in 2-3yr. 19 analyst Buy consensus PT $28.16.",
+        "catalyst": "Panama AI cargo security commercial deployment + $60M national security backlog Q1",
         "pensiero_critico": {
-          "regime": "🟡 SELECTIVE - medtech/healthcare settore neutro-positivo",
+          "regime": "ALZATO - VIX 16 strutturale, SPY ATH, Iran safe-haven neutro-positivo",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESH - upgrade WF pubblicato oggi 02/06/2026",
-          "narrativa_numeri": "MedTech revenue crescente. Pharmacy model = margin expansion. Convertible notes $200M 2032 con capped calls (no PIPE/ATM).",
-          "rischio_asimmetrico": "worst case: Medicare/insurance reimbursement change o product recall -> $13-14 (-30%)",
-          "kindleberger": "Stage 2 (+65% da 52w low ~$11.57)",
+          "catalyst_freshness": "STALE (Q1 pubblicato 5 maggio >30gg)",
+          "narrativa_numeri": "Revenue guidance $135-165M (+18%), $431M liquidita zero LTD - ok",
+          "rischio_asimmetrico": "Worst case: voto 9 giugno share increase passa -> diluzione -15-20%",
+          "kindleberger": "Stage 2",
           "bird_rule": false,
           "diluzione": false,
           "flags": [
-            "⚠️ Float 68M (>15M) -> L2 ONLY",
-            "⚠️ Kindleberger Stage 2 -> sizing 50%"
+            "⚠️ DILUTION RISK voto 9 giugno",
+            "⚠️ STALE catalyst >30gg",
+            "⚠️ Float >>15M"
           ],
           "giudizio": "TIER2"
         },
-        "entry": "$18.50-$19.50",
-        "stop": "$16.80",
-        "t1": "$23.00",
-        "t2": "$27.00",
+        "entry": "$4.80-$5.10",
+        "stop": "$3.75",
+        "t1": "$6.80",
+        "t2": "$8.00",
         "rr": "2.1:1",
-        "fonte": "hunter_analyst_upgrade",
+        "fonte": "discovery_daily",
         "giudizio": "TIER2",
-        "warning": "Float 68M fuori criteri L1 (<15M). SOLO Layer 2 swing. Kindleberger Stage 2: sizing 50% max. Pullback ideale per entry."
+        "warning": "Monitorare voto shareholders 9 giugno - se proposta 1B shares passa -> SKIP immediato"
+      },
+      {
+        "ticker": "QUBT",
+        "score": 66,
+        "tier": "TIER2",
+        "catalyst": "Q1 revenue $3.7M beat, conferenze investor BofA 2-3 giugno, quantum momentum +29.9% mese",
+        "pensiero_critico": {
+          "regime": "ALZATO - AI/quantum favorito da tech rally SPY ATH",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE-FRESH (Q1 maggio, conferenze oggi)",
+          "narrativa_numeri": "Revenue $3.7M vs $39K YoY ma operating loss $20.6M, gross margin negativo",
+          "rischio_asimmetrico": "Worst case: gross margin negativo persistente + rotation tech -> $8",
+          "kindleberger": "Stage 2 (+29.9% ultimo mese)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ Gross margin negativo",
+            "⚠️ Operating loss $20.6M",
+            "⚠️ Float ~50M >>15M"
+          ],
+          "giudizio": "TIER2"
+        },
+        "entry": "$11.50-$12.50",
+        "stop": "$9.00",
+        "t1": "$17.00",
+        "t2": "$18.50",
+        "rr": "2.1:1",
+        "fonte": "discovery_daily",
+        "giudizio": "TIER2",
+        "warning": "Gross margin negativo e' un flag strutturale - solo L2 swing con sizing 50%"
+      },
+      {
+        "ticker": "IMPP",
+        "score": 65,
+        "tier": "TIER2",
+        "catalyst": "Q1 revenue +92% YoY $61.7M, net income $28M record, Iran -> VLCC rates $200K/day",
+        "pensiero_critico": {
+          "regime": "ALZATO - Iran escalation direttamente positivo per tanker rates",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH - Iran ongoing + earnings June 16",
+          "narrativa_numeri": "Revenue $61.7M +92%, EPS $0.60 vs $0.32 YoY, operating income +240%",
+          "rischio_asimmetrico": "Worst case: Iran ceasefire/deal -> tanker rates collasso -40%",
+          "kindleberger": "Stage 1 (52wk range $2.71-$6.57)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ Binary event earnings June 16",
+            "⚠️ Iran geopolitical reversale risk"
+          ],
+          "giudizio": "TIER2"
+        },
+        "entry": "$5.30-$5.80",
+        "stop": "$4.60",
+        "t1": "$7.45",
+        "t2": "$8.00",
+        "rr": "2.0:1",
+        "fonte": "discovery_daily",
+        "giudizio": "TIER2",
+        "warning": "EXIT o stop tightening PRIMA di earnings June 16 se no binary exposure"
+      },
+      {
+        "ticker": "RCAT",
+        "score": 72,
+        "tier": "TIER2",
+        "catalyst": "Blue Ops Variant 7 USV full-rate production + Black Widow drones + Drone Dominance $1.5T budget",
+        "pensiero_critico": {
+          "regime": "ALZATO - Drone Dominance presidential priority, Iran war = defense spend",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH - full-rate production recente",
+          "narrativa_numeri": "Contratti DoD visibili, Black Widow SRR, TEAL 2 blu UAS - revenue in crescita",
+          "rischio_asimmetrico": "Worst case: DoD budget sequester o cambio priority -> $10",
+          "kindleberger": "Stage 1-2",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ Float da verificare pre-entry"
+          ],
+          "giudizio": "TIER2"
+        },
+        "entry": "$13.80-$14.80",
+        "stop": "$11.50",
+        "t1": "$19.90",
+        "t2": "$22.00",
+        "rr": "2.0:1",
+        "fonte": "watchlist",
+        "giudizio": "TIER2",
+        "warning": "HC Wainwright Buy PT $20, Roth/MKM buy. Drone Dominance tailwind."
+      },
+      {
+        "ticker": "UNCY",
+        "score": 63,
+        "tier": "MONITORING",
+        "catalyst": "PDUFA June 29 OLC (oxylanthanum carbonate) malattia renale, 10 analisti Strong Buy PT $40.99",
+        "pensiero_critico": {
+          "regime": "TRADE 3/4",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH - PDUFA 26gg window ottimale",
+          "narrativa_numeri": "Pre-revenue, cash $57.1M runway 2027, shares da 11.7M a 23.9M in 1 anno (+104%)",
+          "rischio_asimmetrico": "Worst case: FDA CRL -> -65% gap down giorno J",
+          "kindleberger": "Stage 1 (da ATH ~-70%)",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "⚠️ ATM shelf $50M S-3 2022 potenzialmente attiva",
+            "⚠️ Shares raddoppiati 1 anno diluzione ATM",
+            "⚠️ Binary event FDA June 29"
+          ],
+          "giudizio": "MONITORING"
+        },
+        "entry": "$7.20-$7.80",
+        "stop": "$5.80",
+        "t1": "$11.50",
+        "t2": "$18.00",
+        "rr": "2.4:1",
+        "fonte": "watchlist",
+        "giudizio": "MONITORING",
+        "warning": "MAX PROBE 1% loss. Shelf $50M da verificare attività. Shares raddoppiati = ATM in corso. PT analisti $40.99 = speculativo."
+      },
+      {
+        "ticker": "SPRO",
+        "score": 65,
+        "tier": "MONITORING",
+        "catalyst": "PDUFA June 18 (15gg) tebipenem HBr cUTI, GSK partnership, cash $56.1M runway 2028",
+        "pensiero_critico": {
+          "regime": "TRADE 3/4",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH - PDUFA countdown attivo",
+          "narrativa_numeri": "Q1 loss $7.2M (vs $13.9M YoY), cash $56.1M runway 2028 - solido",
+          "rischio_asimmetrico": "Worst case: FDA CRL (precedente gia ricevuto) -> -70%",
+          "kindleberger": "Stage 3 (+281% da minimi) CAUTION",
+          "bird_rule": true,
+          "diluzione": false,
+          "flags": [
+            "🚨 BIRD RULE trending pre-PDUFA",
+            "⚠️ Kindleberger Stage 3 +281%",
+            "⚠️ Float 57M >>15M",
+            "⚠️ Precedente CRL storico"
+          ],
+          "giudizio": "MONITORING"
+        },
+        "entry": "$2.35-$2.55",
+        "stop": "$1.90",
+        "t1": "$3.55",
+        "t2": "$4.50",
+        "rr": "2.0:1",
+        "fonte": "phase0_serale",
+        "giudizio": "MONITORING",
+        "warning": "MAX PROBE 1% loss. BIRD RULE attiva = sizing 25%. PDUFA binary June 18. Stage 3."
+      },
+      {
+        "ticker": "CRMD",
+        "score": 70,
+        "tier": "TIER2",
+        "catalyst": "DefenCath revenue crescita, Q1 EPS beat + guidance raise, $75M buyback autorizzato, 6 analisti Strong Buy PT $14.83",
+        "pensiero_critico": {
+          "regime": "TRADE 3/4",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE - Q1 settimane fa, buyback ongoing",
+          "narrativa_numeri": "DefenCath crescita stabile, Q1 revenue + guidance raise, $75M buyback = confidence management",
+          "rischio_asimmetrico": "Worst case: pricing pressure DefenCath da competition -> $5",
+          "kindleberger": "Stage 1 (oversold -35.5% YTD vs peers)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ STALE catalyst principale",
+            "⚠️ Float >15M stimato"
+          ],
+          "giudizio": "TIER2"
+        },
+        "entry": "$7.90-$8.50",
+        "stop": "$6.80",
+        "t1": "$11.10",
+        "t2": "$14.50",
+        "rr": "1.9:1",
+        "fonte": "watchlist",
+        "giudizio": "TIER2",
+        "warning": "Verificare DefenCath Q1 2026 revenue effettivo. Dati da fonti multiple - cross-check SEC EDGAR."
+      },
+      {
+        "ticker": "GRPN",
+        "score": 55,
+        "tier": "MONITORING",
+        "catalyst": "SI 53.91% (12.98M short, 5.4x DTC), AI restructuring 400 job cuts, return to profitability H2 2026 guided",
+        "pensiero_critico": {
+          "regime": "TRADE 3/4 - ma small cap value play non pure momentum",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH - AI restructuring annuncio recente",
+          "narrativa_numeri": "Q1 EPS -$0.32 vs +$0.04 expected = miss 900%. Revenue $117M vs $124M. MISS importante.",
+          "rischio_asimmetrico": "Worst case: restructuring fail, cash burn accelera -> $8-10",
+          "kindleberger": "Stage 1-2 (post ristrutturazione)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ Q1 EPS MISS enorme (900%)",
+            "⚠️ Float ~24M >15M",
+            "⚠️ Needs squeeze trigger"
+          ],
+          "giudizio": "MONITORING"
+        },
+        "entry": "$16.00-$18.00",
+        "stop": "$13.00",
+        "t1": "$23.00",
+        "t2": "$26.33",
+        "rr": "2.1:1",
+        "fonte": "watchlist",
+        "giudizio": "MONITORING",
+        "warning": "MAX PROBE 1% loss. Squeeze play solo - needs positive trigger. EPS miss recente e' un peso."
       }
     ],
-    "skip_odierni": [
-      "RCAT - PIPE $225M May 13 2026 (<30gg)",
-      "VRDN - 424B5 maggio 2026 <30gg (rivalidare June 13)",
-      "UNCY - ATM shelf $100M attiva (novembre 2025)",
-      "GLSI - prezzo $28.31 > $25 sistema + ATM attivo",
-      "CMPS - dilution multiple: PIPE warrants 2023 + offering $150M Feb 2026 + ATM",
-      "SOUN - ATM $300M equity program attivo",
-      "JFB - score 48pt: all-stock merger dilution + no analyst coverage",
-      "GALT - score 50pt: cash runway 11M borderline + 1 solo analyst"
+    "skip_list": [
+      {
+        "ticker": "ONDS",
+        "motivo": "Shelf $258.45M approvato 28 maggio, ATM attiva -> SKIP auto"
+      },
+      {
+        "ticker": "TNDM",
+        "motivo": "Float 68M, stock -16% post-earnings maggio, PT cuts Citi $17 Goldman $21"
+      },
+      {
+        "ticker": "LASE",
+        "motivo": "PIPE + S-1 424B4 + warrant exercise 2026 -> PRE-CHECK fail diluzione. Float 38.57M >15M. PT $1.72 < price $2.42"
+      },
+      {
+        "ticker": "ASC",
+        "motivo": "PT analisti $13.67 < price $19.44 = bearish consensus, float 40.6M, score 41pt"
+      },
+      {
+        "ticker": "BJDX",
+        "motivo": "$23.6M private placement annunciato col move -> SKIP offerta pre-market"
+      },
+      {
+        "ticker": "RLYB",
+        "motivo": "$215M PIPE, RLYB holders retain 2.8% combined entity -> SKIP"
+      },
+      {
+        "ticker": "UMAC",
+        "motivo": "Prezzo $33 > $25 limite L2, market cap $1.59B, non micro cap"
+      },
+      {
+        "ticker": "LUMN",
+        "motivo": "Hold consensus (8 analisti), PT $7.91, nessun Buy rating. Non qualifica TIER1/2"
+      }
     ],
-    "hunter_note": "Scanner ha identificato 1 candidato qualificato >= 55pt (TNDM 74pt TIER2). JFB (48pt) e GALT (50pt) analizzati e SKIP. Filtro float <15M esclude la maggioranza dei movers odierni. Obiettivo 3 candidati Hunter non raggiunto per scarsità di micro-cap con catalizzatori FRESH confermati oggi."
+    "watchlist_update": [
+      {
+        "ticker": "LASE",
+        "azione": "AGGIUNGI dopo scadenza shelf/PIPE (monitorare Q3 2026)",
+        "motivazione": "DoD MEIA Vulcan anti-drone selection = TIER1 catalyst. L1 price range $2.42. Aspettare clean dilution picture."
+      },
+      {
+        "ticker": "TGHL",
+        "azione": "AGGIUNGI watchlist LOW PRIORITY",
+        "motivazione": "Reverse merger EnChem America battery electrolyte. Nasdaq listing catalyst. Monitorare closing Q4 2026."
+      },
+      {
+        "ticker": "ASC",
+        "azione": "MANTIENI in discovery - non in main watchlist",
+        "motivazione": "Iran tanker play interessante SE analisti aggiornano PT >$19.44."
+      }
+    ],
+    "hunter_note": "Giornata avara di nuovi micro-cap float <15M fuori dalla watchlist con score >=55pt. 3 candidati analizzati (LASE, ASC, TGHL): LASE skippa per PRE-CHECK diluzione nonostante catalyst TIER1, ASC per PT < prezzo, TGHL troppo speculativo. Best new setups oggi sono upgrade di member watchlist gia esistenti (RCAT, CRMD)."
   },
   "discovery_daily": {
     "date": "2026-06-02",
