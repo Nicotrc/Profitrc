@@ -429,6 +429,59 @@
         "fonte": "watchlist",
         "giudizio": "MONITORING",
         "warning": "MAX PROBE 1% loss. Squeeze play solo - needs positive trigger. EPS miss recente e' un peso."
+      },
+      {
+        "ticker": "CMPS",
+        "score": 52,
+        "tier": "MONITORING",
+        "catalyst": "Jefferies HC Conference 12:45pm ET June 3 2026 — NDA rolling review COMP360 psilocybin TRD, Q1 2026 profit first ever, cash $466M runway 2028, White House EO psychedelics tailwind",
+        "pensiero_critico": {
+          "regime": "TRANSIZIONE — VIX 16.05 +1.78%, SPY -0.07%",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — conference TODAY 12:45pm ET confirmed",
+          "narrativa_numeri": "Q1 2026 profit + $466M cash + FDA NDA rolling = fundamentals support",
+          "rischio_asimmetrico": "Fireside chat not binary; pullback risk $11-12 if disappoints; prior low $8 (Feb offering)",
+          "kindleberger": "Stage 3 (180% from $4.88 low over 100D)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "RVOL insufficient at open (3,612 shares)",
+            "KINDLEBERGER STAGE 3"
+          ],
+          "giudizio": "MONITORING — entry only if RVOL >2x confirmed by 12:30pm ET AND holds $13.50 support"
+        },
+        "ibkr_data": {
+          "last": 13.69,
+          "prior_close": 13.33,
+          "change_pct": 2.7,
+          "volume": 3612,
+          "adv_20d": 3445782
+        },
+        "scan_summary": {
+          "scan_date": "June 3, 2026",
+          "macro": "VIX 16.05 +1.78% | SPY $759.01 -0.07% | TRANSIZIONE",
+          "account": "Net liq EUR 1528.42 | Cash | 0 positions",
+          "tickers_scanned": 57,
+          "tier1_tier2": 0,
+          "monitoring": [
+            "CMPS Jefferies 12:45pm",
+            "SPRO PDUFA June 18"
+          ],
+          "downside_alerts": [
+            "FRGT -5.26%",
+            "CODX -4.98%",
+            "LFS -3.48%",
+            "MNTS -3.05%"
+          ],
+          "watchlist_flags": [
+            "POET - CFO breach/lawsuits/dilution → review for removal",
+            "CMND - reverse split May21 → review for removal"
+          ],
+          "skipped_movers": [
+            "BIAF +3.57% (going concern)",
+            "WYY +3.76% (vol 208 opening noise)"
+          ]
+        }
       }
     ],
     "skip_list": [
