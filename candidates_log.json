@@ -615,134 +615,273 @@
     ]
   },
   "phase0_serale": {
-    "date": "2026-06-01",
-    "orario": "22:00 IT",
-    "macro_regime": "BULL CONFERMATO — S&P500 e Nasdaq a nuovi record storici. PCE soft, Iran ceasefire +60gg, Brent $92/bbl, 10Y 4.43% in calo, DXY 98.94 downtrend.",
-    "futures_ah": "Positivi — mercato chiuso su massimi, nessun segnale ribassista AH significativo.",
-    "vix": "~15.31",
-    "yield_10y": "4.43%",
-    "dxy": "98.94",
+    "date": "2026-06-04",
+    "regime": "BULL — Russell 2000 +1.59%, Healthcare +3.14%, VIX 16.06, 10Y 4.48%. Small cap outperformance strutturale. Nasdaq -0.09% per chip selloff AVGO (one-off). Iran Hormuz persistente. PDT rule elimination effective June 4 → maggior volume small cap da domani.",
     "watchlist_movers": [
-      "ONDS +23.7% (Drone Dominance $1.1B Trump + $457M backlog) → SKIP Kindleberger 4",
-      "BBAI +3.34% (Panama AI deployment, backlog $281.9M)",
-      "RCAT +2.47% (drone sector rally)",
-      "VRDN AH -2.95% (PIPE confermata, SKIP)"
+      "RCAT -9% intraday (da 4.88 a 3.52, profit taking)",
+      "BBAI -4.31% (da .01 a .64)",
+      "QS -9.2% intraday (da .33 a .47)",
+      "ONDS +1.54% (1.79, .8M defense contract Naval Forces)",
+      "SPRO -1.61% AH (.52, PDUFA June 18 approaching)",
+      "SOUN -8.5% intraday (da .79 a .04)"
     ],
-    "candidati_da_memoria_aggiornati": {
-      "VRDN": {
-        "status": "SKIP IMMEDIATO",
-        "motivo": "PIPE confermata: 424B5 filings maggio 2026 — $225M convertible notes + 7.35M shares equity offering. Meno di 30gg fa. Anti-dilution pre-check FAIL. AH -2.95% conferma pressione vendita.",
-        "precedente_score": 73,
-        "score_aggiornato": 0
-      },
-      "GLSI": {
-        "status": "SKIP",
-        "motivo": "Prezzo $28.31 fuori range sistema $1-$25. Entry $22.50-$23.50 persa. Stock up post-ASCO. Non inseguire.",
-        "precedente_score": 67,
-        "score_aggiornato": 0
-      },
-      "UNCY": {
-        "status": "SKIP IMMEDIATO",
-        "motivo": "ATM shelf $100M attiva (novembre 2025). Anti-dilution pre-check FAIL.",
-        "precedente_score": 57,
-        "score_aggiornato": 0
-      },
-      "RCAT": {
-        "status": "SKIP",
-        "motivo": "Float 122M+ shares (conferma: Morningstar 152.19M shares outstanding). Fuori criteri <15M. Kindleberger Stage 3.",
-        "precedente_score": 58,
-        "score_aggiornato": 0
-      },
-      "SPRO": {
-        "status": "MONITORING — CONFERMATO",
-        "motivo_conferma": "PDUFA June 18 verificato. Cash $56.1M fino 2028. No dilution recente. Bird Rule clean. AH piatto = nessun rischio overnight.",
-        "update_serale": "Kindleberger Stage 3 confermato (52w low $0.656, current $2.50 = +281%). Float 57M confermato fuori criteri L1. Solo LAYER 2 probe minimo.",
-        "precedente_score": 72,
-        "score_aggiornato": 65
-      }
-    },
-    "candidates": [
+    "candidati_da_memoria": [
       {
-        "ticker": "SPRO",
-        "score": 65,
+        "ticker": "CRMD",
+        "score": 70,
         "tier": "MONITORING",
-        "catalyst": "PDUFA June 18 tebipenem HBr cUTI — GSK-partnered, resubmission NDA, Phase 3 PIVOT-PO stopped early for efficacy",
-        "ah_pct": "+0.0%",
-        "close": "$2.50",
+        "catalyst": "DefenCath revenue 27.4M Q1, REZZAYO Phase III positivo, 5M buyback, 5/5 analyst Strong Buy",
+        "ah_pct": "~0%",
         "pensiero_critico": {
-          "regime": "BULL — S&P record, PCE soft, Iran ceasefire, 10Y 4.43%. Favorevole per biotech.",
+          "regime": "BULL — Healthcare +3.14% favorevole",
           "catalyst_verified": true,
-          "catalyst_freshness": "PDUFA June 18 = 17gg = FRESH countdown",
-          "narrativa_numeri": "Cash $56.1M runway 2028. Q1 loss $7.2M migliorato da $13.9M. Profittabilità SE tebipenem approvato con GSK commercializzazione.",
-          "rischio_asimmetrico": "worst case: CRL (come primo tentativo) → $0.50-1.00 (-60-80%)",
-          "kindleberger": "Stage 3 — +281% da 52w low $0.656",
+          "catalyst_freshness": "STALE — no catalyst AH tonight",
+          "narrativa_numeri": "Confermata — revenue Q1 27.4M, guidance 25-345M annual",
+          "rischio_asimmetrico": "ATM dilution se usato, ma 2.1M vs 00M+ annual revenue = <5%",
+          "kindleberger": "Stage 1-2 — verifica richiesta",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "⚠️ ATM SHELF ACTIVE (2.1M remaining) — regola: SKIP immediato",
+            "⚠️ STALE — no catalyst AH"
+          ],
+          "giudizio": "MONITORING (ATM active → regola formale SKIP, ma ATM pre-esistente e piccola vs revenue profittevole. Re-valutare se ATM terminato o usato)"
+        },
+        "entry": "N/A — monitoring only",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "fonte": "memory_morning_brief",
+        "giudizio": "MONITORING",
+        "warning": "ATM shelf active — per regola SKIP immediato. Azienenda profittevole con revenue reale, ma rispettare regola sistema."
+      },
+      {
+        "ticker": "ASC",
+        "score": 70,
+        "tier": "MONITORING",
+        "catalyst": "Iran Hormuz strutturale, tanker rates elevated, Q1 +51% revenue, dividendo doubled",
+        "ah_pct": "~0%",
+        "pensiero_critico": {
+          "regime": "BULL — energia/geopolitica favorevole",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — no catalyst AH tonight, price down da 8.87 (May 7) a 6.05",
+          "narrativa_numeri": "Confermata — Q1 beat, dividendo doubled, newbuild orders",
+          "rischio_asimmetrico": "Ceasefire Iran-US (April 8) potrebbe ridurre premium tanker. Strait traffic ancora sotto pre-war.",
+          "kindleberger": "Stage 2 (run-up da low) — verifica richiesta",
           "bird_rule": false,
           "diluzione": false,
           "flags": [
-            "⚠️ KINDLEBERGER STAGE 3 (+281% da 52w low) → MONITORING solo",
-            "⚠️ FLOAT 57M FUORI CRITERI L1 (<15M richiesto)",
-            "⚠️ PRECEDENTE CRL FDA — resubmission a rischio",
-            "⚠️ ATM SHELF $75M IN PLACE (non attiva di recente)"
+            "⚠️ STALE — no catalyst AH",
+            "⚠️ FLOAT non verificato — potenzialmente >15M shares"
           ],
-          "giudizio": "MONITORING probe 1% max — Layer 2 only"
+          "giudizio": "MONITORING — verificare float <15M prima di entry"
         },
-        "entry": "$2.40-$2.55",
-        "stop": "$1.90",
-        "t1": "$3.80",
-        "t2": "$5.50",
-        "rr": "2.5:1",
-        "fonte": "morning_brief_verified",
+        "entry": "N/A — monitoring only",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "fonte": "memory_discovery_daily",
         "giudizio": "MONITORING",
-        "warning": "Float 57M, Kindleberger Stage 3, CRL precedente. PROBE MINIMO 1% max loss. Entry valida solo a 15:35-15:45 IT su volume confermato."
-      }
-    ],
-    "hunter_segnalazioni": [
-      {
-        "ticker": "EVC",
-        "nome": "Entravision Communications",
-        "evento": "Q1 2026 earnings: EPS $0.13 vs -$0.53 YoY, revenue raddoppiato $91.9M→$197M (+114%). Ex-dividend June 16.",
-        "score_tentativo": 50,
-        "close": "$9.38",
-        "note": "FLOAT NON VERIFICATO — probabile >15M (media company). Kindleberger Stage 2-3 (+71.91% recente). Non qualificato L1. Solo watchlist per ulteriore verifica float."
+        "warning": "Float non verificato. Se float >15M → fuori universo."
       },
       {
-        "ticker": "ONDS",
-        "nome": "Ondas Holdings",
-        "evento": "DRONE DOMINANCE: +23.7% oggi. $30M+ ordini maggio, backlog $457M, acquisizione Omnisys AI, Trump $1.1B drone program.",
-        "score_tentativo": 0,
-        "close": "$13.36",
-        "note": "SKIP OBBLIGATORIO — Kindleberger Stage 4 (+1135% da 52w low $1.26). Nonostante catalyst eccellente, regola Stage 4 → SKIP."
+        "ticker": "IMPP",
+        "score": 65,
+        "tier": "MONITORING",
+        "catalyst": "Iran Hormuz, Q1 +92% revenue, 00K/day VLCC rates",
+        "ah_pct": "-2.7% AH (.68 → .50)",
+        "pensiero_critico": {
+          "regime": "BULL — shipping/geopolitica favorevole",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — no catalyst AH tonight",
+          "narrativa_numeri": "Positiva — VLCC rates elevate strutturalmente da Iran war",
+          "rischio_asimmetrico": "Normalizzazione geopolitica improvvisa → -30%",
+          "kindleberger": "Stage 1-2 — da verificare da low",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ STALE — no catalyst AH"
+          ],
+          "giudizio": "MONITORING"
+        },
+        "entry": "N/A — monitoring only",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "fonte": "memory_discovery_daily",
+        "giudizio": "MONITORING",
+        "warning": "Nessuna news AH stasera. Tesi geopolitica intatta ma no catalyst fresco."
       },
       {
         "ticker": "BBAI",
-        "nome": "BigBear.ai Holdings",
-        "evento": "Commercial AI Panama deployment, backlog $281.9M, Q1 revenue beat $34.44M vs $33.60M est.",
-        "score_tentativo": 45,
-        "close": "$5.11",
-        "note": "FLOAT PROBABILE >15M (AI company multi-milioni shares). Non qualificato L1 criteri stretti. Interessante per macro AI-defense play ma fuori universo."
+        "score": 68,
+        "tier": "MONITORING",
+        "catalyst": "Panama logistics deployment, 0M+ contract wins DoD",
+        "ah_pct": "-4.31% day (.01 → .64)",
+        "pensiero_critico": {
+          "regime": "BULL — AI/defense favorevole",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — no catalyst AH tonight, down 4.31% today",
+          "narrativa_numeri": "Da verificare — contratti DoD reali ma revenue da confermare",
+          "rischio_asimmetrico": "Down 7.4% intraday da high suggerisce distribuzione",
+          "kindleberger": "Da verificare",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ STALE — no catalyst AH",
+            "⚠️ DOWN significativo today da high"
+          ],
+          "giudizio": "MONITORING"
+        },
+        "entry": "N/A — monitoring only",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "fonte": "memory_discovery_daily",
+        "giudizio": "MONITORING",
+        "warning": "Down 4.3% oggi senza catalyst. Distribuzione tecnica in corso."
       }
     ],
-    "skip_list_completa": [
-      "VRDN — PIPE $225M maggio 2026 (<30gg) → anti-dilution FAIL",
-      "GLSI — prezzo $28.31 > $25 range sistema",
-      "UNCY — ATM $100M attiva novembre 2025",
-      "RCAT — float 122-152M shares",
-      "ONDS — Kindleberger Stage 4 (+1135%)",
-      "MBRX — going concern (cash Q3 2026 only), regole SKIP",
-      "HUMA — float 222M, price ~$0.85 (<$1), ATM $60M attiva",
-      "GRPN — float 38M",
-      "QUBT — market cap $2.7B, float >15M",
-      "CMPS — shares outstanding 134.95M",
-      "BTDR — market cap $2.39B",
-      "LOCL — registration statement filed May 15 2026 (<30gg)"
+    "candidati": [
+      {
+        "ticker": "ACHV",
+        "score": 62,
+        "tier": "MONITORING",
+        "catalyst": "FDA NDA accettata per cytisinicline (smoking cessation), PDUFA June 20 2026, FDA Commissioner Priority Voucher ricevuto, due Phase 3 successi",
+        "ah_pct": "N/A — no AH move tonight",
+        "pensiero_critico": {
+          "regime": "BULL — Healthcare +3.14%, regime favorevole per biotech PDUFA",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE (16 giorni a PDUFA June 20) — timing 4-7pt",
+          "narrativa_numeri": "Da verificare — Q1 2026 risultati postati ma dettagli non trovati. Cash runway da verificare.",
+          "rischio_asimmetrico": "Binary event: approvazione vs rejection. Se rejection → -50%+",
+          "kindleberger": "Da verificare vs 52-week range",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ FLOAT NON VERIFICATO — market cap 02M implica ~100M shares → probabile OUT universe",
+            "⚠️ TIMING 16gg a PDUFA → non entry domani",
+            "⚠️ BINARY RISK — approvazione/rejection"
+          ],
+          "giudizio": "MONITORING — verificare float PRIMA di qualsiasi entry. Se float <15M e pre-PDUFA setup chiaro → upgrade a TIER2 entry June 16-18"
+        },
+        "entry": "entry solo 2-3gg prima di PDUFA (June 17-18) se float confermato",
+        "stop": "N/A ora",
+        "t1": "N/A ora",
+        "rr": "N/A ora",
+        "fonte": "4B — PDUFA calendar",
+        "giudizio": "MONITORING",
+        "warning": "Float critico: market cap 02M / .90 → ~102M shares → probabilmente OUT universo float <15M. Verificare URGENTE."
+      },
+      {
+        "ticker": "CING",
+        "score": 48,
+        "tier": "SKIP",
+        "catalyst": "FDA ADHD/anxiety approval mid-late 2026, 3 analyst Strong Buy",
+        "ah_pct": "N/A",
+        "pensiero_critico": {
+          "regime": "BULL",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — mid-late 2026, timing >48h = 0-3pt",
+          "narrativa_numeri": "Da verificare",
+          "rischio_asimmetrico": "Da verificare",
+          "kindleberger": "Da verificare",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ TIMING troppo lontano — FDA mid-late 2026 non imminente",
+            "⚠️ SCORE <55pt"
+          ],
+          "giudizio": "SKIP — timing non favorevole per entry domani. Monitorare per re-entry vicino a catalyst FDA specifico."
+        },
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "fonte": "4A/4B — watchlist interno",
+        "giudizio": "SKIP",
+        "warning": "Timing troppo lontano. Aggiungere a watchlist per catalysts specifici 2026."
+      },
+      {
+        "ticker": "WYY",
+        "score": 55,
+        "tier": "MONITORING",
+        "catalyst": "DoE contract MobileAnchor sicurezza mobile, 3 analyst Strong Buy, PT .67",
+        "ah_pct": "N/A",
+        "pensiero_critico": {
+          "regime": "BULL",
+          "catalyst_verified": true,
+          "catalyst_freshness": "Da verificare",
+          "narrativa_numeri": "DoE government contract reale, tech sicurezza",
+          "rischio_asimmetrico": "Da verificare",
+          "kindleberger": "Da verificare",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ DATI INCOMPLETI — prezzo e float non verificati"
+          ],
+          "giudizio": "MONITORING — approfondire domani mattina pre-market"
+        },
+        "entry": "N/A — dati incompleti",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "fonte": "4C — insider/government contract",
+        "giudizio": "MONITORING",
+        "warning": "Dati insufficienti per scoring completo. Pre-market check obbligatorio."
+      }
     ],
-    "setup_domani_2_giugno": {
-      "primario": "SPRO — MONITORING probe 1%, entry $2.40-$2.55, stop $1.90. Layer 2 only.",
-      "trigger": "Conferma volume >2x ADV a 15:35 IT",
-      "attenzione": "Scanner pre-market 15:30 IT per nuovi AH movers non trovati stasera",
-      "regole": "Silenzio 15:30-15:35 IT | Entry 15:35-15:45 IT | Stop prima entry | Dopo 2 loss: stop sessione"
-    },
-    "note_scanner": "Serata difficile per trovare nuovi micro-cap con float <15M. PROFITRC L1 (float <15M, $1-$25) rimane il filtro più restrittivo. La maggior parte dei candidati del mercato drone/biotech ha floats molto superiori a 15M. Unico candidato confermato: SPRO (Layer 2, float warning). Raccomandazione: ampliare watchlist con titoli micro-cap aggiuntivi alla prossima discovery_weekly."
+    "skip_list": [
+      {
+        "ticker": "SPRO",
+        "motivo": "ATM shelf active (14.9M shares) + doubling authorized shares → SKIP immediato"
+      },
+      {
+        "ticker": "ONDS",
+        "motivo": "Kindleberger Stage 4 (+1,135% da low) + Omnisys stock deal 99M dilution"
+      },
+      {
+        "ticker": "KAPA",
+        "motivo": "Going concern disclosure nel 8-K June 4 2026"
+      },
+      {
+        "ticker": "CGTX",
+        "motivo": "Float 88M shares (>15M, fuori universo), EU filing ritirata"
+      },
+      {
+        "ticker": "AVXL",
+        "motivo": "Float 83M shares (>15M), ATM overhang, EU filing ritirata"
+      },
+      {
+        "ticker": "GRPN",
+        "motivo": "Float 38M shares (>15M, fuori universo)"
+      },
+      {
+        "ticker": "SOUN",
+        "motivo": "Float 426M shares (>15M, fuori universo)"
+      },
+      {
+        "ticker": "CMPS",
+        "motivo": "Float 124M shares (>15M, fuori universo)"
+      },
+      {
+        "ticker": "BIVI",
+        "motivo": "S-1/A attiva per 5M raise vs 0M market cap = diluzione devastante"
+      },
+      {
+        "ticker": "CODX",
+        "motivo": "S-3 shelf + losses -6.9M LTM + revenue 46K Q1 = insostenibile"
+      },
+      {
+        "ticker": "GLOO",
+        "motivo": "Float 79M shares (>15M, fuori universo)"
+      },
+      {
+        "ticker": "IMRX",
+        "motivo": "Market cap 77M implica float ~60M (>15M), ASCO data già STALE (June 1)"
+      }
+    ],
+    "note_sistema": "PDT rule elimination effective June 4 2026 → maggior volume small cap/micro cap atteso da domani. Regime BULL small cap ma nessun catalyst AH fresco stasera nella watchlist. Nessun candidato TIER1/TIER2 per entry domani 15:35-15:45 IT. Watch ACHV per pre-PDUFA setup June 17-18 se float confermato."
   },
   "_sistema_note": "GitHub API fix v3.0 testato e funzionante — 2026-06-03 12:14 IT"
 }
