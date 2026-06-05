@@ -184,249 +184,141 @@
     }
   ],
   "morning_brief": {
-    "date": "2026-06-04",
-    "macro_regime": "SELECTIVE 1/4 🟡 (interpretato: alzato da 🔴 — driver ADP one-off, non strutturale)",
+    "date": "2026-06-05",
+    "macro_regime": "TRADE 3/4 🟢 → Interpretato 🟡 SELECTIVE (DXY near 2M high, tech rotation)",
+    "vix": "16.05",
+    "spy": "$753.72 (-0.45%, tech selloff Broadcom -13%)",
+    "dxy": "99.3 near 2M high (+1.18% 4wks) — inflazione 3.8%",
+    "yield_10y": "4.47% easing -0.01",
     "big_themes": [
-      "Drone Defense dominance (RCAT, ONDS border protection)",
-      "PDUFA countdown (SPRO June 18, UNCY June 29)",
-      "Tanker Iran escalation (IMPP earnings June 16)",
-      "Short squeeze setup (GRPN 46% SI)",
-      "DXY forza post-ADP = headwind macro lieve per small cap"
+      "Tech selloff guidato da Broadcom (AVGO -13%): AI chip spend guidance non alzata",
+      "Rotazione da tech verso blue-chip/defensivi (Dow up, Nasdaq down)",
+      "DXY forte su ADP +122K e inflazione 3.8% → Fed hawkish",
+      "Drone/defense sector ancora caldo: RCAT +9.6%, ONDS +5.6%",
+      "Float issues critici: CRMD/RCAT/BBAI/ONDS/GRPN superano limite 15M float"
     ],
+    "flag_sistematico": "ATTENZIONE: CRMD (78M sh), RCAT (150M sh), BBAI (mid-cap), ONDS (ATM attiva), GRPN (26M float) FUORI dai parametri sistema float <15M. Memoria precedente da ricalibrare.",
     "candidates": [
+      {
+        "ticker": "MBRX",
+        "score": 57,
+        "tier": "MONITORING",
+        "fonte": "watchlist",
+        "catalyst": "Phase 2B/3 MIRACLE trial AML — 45 pazienti enrolled, interim readout atteso mid-2026 + brevetto australiano Annamycin",
+        "price_today": "$2.46",
+        "change_pct": "~flat",
+        "pensiero_critico": {
+          "regime": "Interpretato SELECTIVE: DXY hawkish, tech rotation. Biotech small cap soffre meno del tech.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "24-48h (enrollment update recente)",
+          "narrativa_numeri": "Pre-revenue clinical stage. Burn rate sconosciuto. Buy/Outperform Northland+Wedbush PT $12 (tagliato da $14).",
+          "rischio_asimmetrico": "Worst case: interim readout negativo → -60-70% istantaneo. Catalyst binario tipico biotech.",
+          "kindleberger": "Stage 1 (<30% dal low)",
+          "bird_rule": false,
+          "diluzione": "Sconosciuto — verificare cash runway prima di entry",
+          "flags": [
+            "⚠️ CASH RUNWAY NON VERIFICATA — verificare prima entry",
+            "⚠️ CATALYST BINARIO — sizing ridotto obbligatorio"
+          ],
+          "giudizio": "MONITORING — probe max 1% loss. Attendere conferma data readout."
+        },
+        "entry": "$2.30-$2.50",
+        "stop": "$1.95",
+        "t1": "$3.50",
+        "t2": "$5.00",
+        "rr": "2.5:1",
+        "giudizio": "MONITORING",
+        "warning": "Catalyst binario. Cash runway non confermata. Entry solo se volume >2x ADV pre-readout."
+      },
+      {
+        "ticker": "CING",
+        "score": 15,
+        "tier": "SKIP",
+        "fonte": "watchlist",
+        "catalyst": "FDA CRL (Complete Response Letter) ricevuto June 2, 2026 per CTx-1301 ADHD → NEGATIVE",
+        "price_today": "$4.92",
+        "giudizio": "SKIP — FDA CRL negativo, catalyst invertito",
+        "warning": "FDA rejection il 2 giugno. Nessun trigger bullish."
+      },
       {
         "ticker": "CRMD",
         "score": 70,
-        "tier": "TIER2",
-        "catalyst": "DefenCath revenue crescita + $75M buyback + Strong Buy 5/5 analisti",
-        "pensiero_critico": {
-          "regime": "🟡 Specialty pharma immune da DXY — regime confermato",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH strutturale (buyback evergreen)",
-          "narrativa_numeri": "Strong Buy unanime 5/5, PT medio $14.25 vs $8.23 attuale (+73% upside)",
-          "rischio_asimmetrico": "worst case: $5.75 (-30%) per perdita account ospedaliero major",
-          "kindleberger": "Stage 1-2 (da 52w low, upside >70% verso PT analisti)",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [],
-          "giudizio": "TIER2"
-        },
-        "entry": "$7.90-$8.50",
-        "stop": "$6.80",
-        "t1": "$11.10",
-        "t2": "$14.50",
-        "rr": "2.4:1",
-        "fonte": "memoria_precedente + upgrade odierno",
-        "giudizio": "TIER2",
-        "warning": "Top pick oggi — watch volume apertura NYSE 15:30 IT"
+        "tier": "SKIP_FLOAT",
+        "fonte": "discovery_weekly",
+        "catalyst": "DefenCath $97.5M Q1, revenue +226% YoY, guidance alzata $325-345M, buyback $75M",
+        "price_today": "$8.23",
+        "change_pct": "+2.88%",
+        "giudizio": "SKIP — Float ~78M shares >> 15M limite sistema. Candidato eccellente per sistemi mid-cap.",
+        "warning": "Float non compatibile con sistema PROFITRC (small-micro <15M)"
       },
       {
         "ticker": "RCAT",
         "score": 72,
-        "tier": "TIER2",
-        "catalyst": "Blue Ops Variant 7 USV full-rate production + Roth Capital Buy June 1 (+70% upside target)",
-        "pensiero_critico": {
-          "regime": "🟡 alzato per defense — immune da DXY",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH (Roth Capital initiation June 1)",
-          "narrativa_numeri": "Defense contractor con backlog reale, margini in miglioramento",
-          "rischio_asimmetrico": "worst case: $11.50 stop (-15% da $13.52)",
-          "kindleberger": "Stage 2 (entro range analisti)",
-          "bird_rule": true,
-          "diluzione": false,
-          "flags": [
-            "⚠️ Bird Rule marginale (StockTwits activity)"
-          ],
-          "giudizio": "TIER2"
-        },
-        "entry": "$13.80-$14.80",
-        "stop": "$11.50",
-        "t1": "$19.90",
-        "t2": "$22.00",
-        "rr": "2.6:1",
-        "fonte": "memoria_precedente",
-        "giudizio": "TIER2",
-        "warning": "Sizing 75% per Bird Rule marginale. Wait entry range $13.80+"
+        "tier": "SKIP_FLOAT",
+        "fonte": "discovery_weekly",
+        "catalyst": "Contratto JGSDF Giappone, US Army Threat Kit con Safe Pro, Buy HC Wainwright $20 + Roth $25, +9.57% oggi",
+        "price_today": "$15.11",
+        "change_pct": "+9.57%",
+        "giudizio": "SKIP — Float 150.27M shares >> 15M limite sistema. Top pick assoluto per sistemi small-cap allargati.",
+        "warning": "Float non compatibile. Tenere d'occhio per eventuale watchlist allargata."
       },
       {
         "ticker": "ONDS",
-        "score": 80,
-        "tier": "MONITORING",
-        "catalyst": "Border protection system contract (migliaia droni) + Mistral acquisition $264M backlog + 6 acquisizioni 2026 + $457M backlog totale + revenue guidance $390M+",
-        "pensiero_critico": {
-          "regime": "🟡 alzato — border security immune da macro, DoD spending non correlato DXY",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH (news giugno 1-2)",
-          "narrativa_numeri": "Revenue guidance $390M+ transformativo, backlog $457M reale. Rischio: integrazione 6 acquisizioni",
-          "rischio_asimmetrico": "worst case: $6.93 (-40%) per fallimento integrazione + dilution heavy",
-          "kindleberger": "Stage 3 (+251% 1 anno) — probe only",
-          "bird_rule": true,
-          "diluzione": true,
-          "flags": [
-            "⚠️ Kindleberger Stage 3 (+251% 1 anno)",
-            "⚠️ DILUZIONE SERIA da 6 acquisizioni stock-deal",
-            "⚠️ Bird Rule parziale (media mainstream)",
-            "⚠️ Stop originale $11.00 quasi violato (intraday low $11.10)"
-          ],
-          "giudizio": "MONITORING"
-        },
-        "entry": "$12.00-$12.50 (attendi conferma rotta resistenza)",
-        "stop": "$10.50",
-        "t1": "$16.00",
-        "t2": "$19.00",
-        "rr": "2.2:1",
-        "fonte": "watchlist_upgrade",
-        "giudizio": "MONITORING",
-        "warning": "PROBE 1% max loss. Upgrade a TIER2 se rompe $12.50 con volume confermato"
+        "score": 35,
+        "tier": "SKIP",
+        "fonte": "discovery_weekly",
+        "catalyst": "$110M+ ordini Q2, backlog $457M, +5.56% oggi",
+        "price_today": "$12.26",
+        "change_pct": "+5.56%",
+        "giudizio": "SKIP — ATM shelf attiva (multipli 424B7 in 2026) + warrants 121M+ azioni = diluzione quasi certa",
+        "warning": "PIPE/ATM attivo. Skip automatico per regola anti-diluzione."
       },
       {
-        "ticker": "BBAI",
-        "score": 68,
-        "tier": "MONITORING",
-        "catalyst": "Panama logistics deployment + $60M security contracts backlog Q1",
-        "pensiero_critico": {
-          "regime": "🟡 defense AI — supportato",
-          "catalyst_verified": true,
-          "catalyst_freshness": "SEMI-STALE (nessun update fresco oggi)",
-          "narrativa_numeri": "Backlog reale ma profittabilità ancora negativa",
-          "rischio_asimmetrico": "worst case: $3.75 stop",
-          "kindleberger": "Stage 2-3 borderline (+83% da 52w low)",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "⚠️ Prezzo $4.64 sotto entry range $4.80 — no entry oggi"
-          ],
-          "giudizio": "MONITORING"
-        },
-        "entry": "$4.80-$5.10",
-        "stop": "$3.75",
-        "t1": "$6.80",
-        "t2": "$8.00",
-        "rr": "2.1:1",
-        "fonte": "memoria_precedente",
-        "giudizio": "MONITORING",
-        "warning": "Nessun entry fino a rimbalzo sopra $4.80"
+        "ticker": "FOXX",
+        "score": 38,
+        "tier": "SKIP",
+        "fonte": "hunter_4A",
+        "catalyst": "Real estate partnership vaga, +143% ieri, RVOL 10x",
+        "price_today": "$6.67",
+        "change_pct": "+143% ieri",
+        "giudizio": "SKIP — Cash $3.2M, perdite operative $33M/anno → cash runway <6M (circa 6 settimane)",
+        "warning": "Cash runway critico. Diluzione quasi certa."
       },
       {
-        "ticker": "IMPP",
-        "score": 65,
-        "tier": "MONITORING",
-        "catalyst": "Q1 +92% revenue $61.7M, Strong Buy upgrade, Iran tanker escalation",
-        "pensiero_critico": {
-          "regime": "🟡 tanker/geopolitics immune da DXY forza",
-          "catalyst_verified": true,
-          "catalyst_freshness": "SEMI-FRESH (earnings binario June 16 = 12 giorni)",
-          "narrativa_numeri": "Revenue +92%, EPS $0.60, secondo miglior trimestre storia aziendale",
-          "rischio_asimmetrico": "worst case: -30% su earnings miss June 16 = $3.98",
-          "kindleberger": "Stage 1-2",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "⚠️ EARNINGS BINARIO June 16 — ridurre sizing a 25%"
-          ],
-          "giudizio": "MONITORING"
-        },
-        "entry": "$5.30-$5.80",
-        "stop": "$4.60",
-        "t1": "$7.45",
-        "t2": "$8.00",
-        "rr": "1.9:1",
-        "fonte": "memoria_precedente",
-        "giudizio": "MONITORING",
-        "warning": "MAX 25% sizing — earnings binario June 16"
+        "ticker": "STI",
+        "score": 22,
+        "tier": "SKIP",
+        "fonte": "hunter_4A",
+        "catalyst": "Gen-ECB platform grafene per spazio (SpaceX/NASA) +350% ieri",
+        "price_today": "$22.71",
+        "change_pct": "+350%",
+        "giudizio": "SKIP — Kindleberger Stage 4 (>300%), revenue $85K, perdite $41M/anno, S-1 offerta in corso",
+        "warning": "Triplo skip: K4 + zero revenue + diluzione attiva"
       },
-      {
-        "ticker": "SPRO",
-        "score": 63,
-        "tier": "MONITORING",
-        "catalyst": "PDUFA June 18 tebipenem HBr (oral carbapenem cUTI) — GSK partnership, cash $56M to 2028",
-        "pensiero_critico": {
-          "regime": "🟡",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH (PDUFA June 18 = 14 giorni)",
-          "narrativa_numeri": "Cash $56M runway 2028, $25M milestone GSK Q1. Float 57.9M INCOMPATIBILE con sistema (<15M)",
-          "rischio_asimmetrico": "worst case: -60% su CRL (CRL precedente avvenuto) = $1.00",
-          "kindleberger": "Stage 3 (+281% da 52w low $0.656)",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "⚠️ Float 57.9M > soglia 15M del sistema",
-            "⚠️ Kindleberger Stage 3 (+281% da 52w low)",
-            "⚠️ Precedente CRL history = rischio reale"
-          ],
-          "giudizio": "MONITORING"
-        },
-        "entry": "$2.35-$2.55",
-        "stop": "$1.90",
-        "t1": "$3.55",
-        "t2": "$4.50",
-        "rr": "2.5:1",
-        "fonte": "memoria_precedente",
-        "giudizio": "MONITORING",
-        "warning": "CORREZIONE: non 'Sprout Pharma' — è Spero Therapeutics. Float 57.9M incompatibile L1. Max 25% sizing solo se vuoi PDUFA trade.",
-        "nota_correzione": "SPRO = Spero Therapeutics (tebipenem, PDUFA June 18 2026), non Sprout Pharmaceuticals (privata)"
-      },
-      {
-        "ticker": "GRPN",
-        "score": 55,
-        "tier": "MONITORING",
-        "catalyst": "Short Interest 46.06% — highest in watchlist — squeeze setup puro",
-        "pensiero_critico": {
-          "regime": "🟡 — squeeze play indipendente da macro",
-          "catalyst_verified": true,
-          "catalyst_freshness": "SEMI-FRESH (SI dati costantemente elevati)",
-          "narrativa_numeri": "EPS miss -900% — fondamentali deboli. Tesi puramente squeeze.",
-          "rischio_asimmetrico": "worst case: $13.00 stop se squeeze non si attiva",
-          "kindleberger": "Stage 1-2",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "⚠️ Fondamentali deboli — pura scommessa squeeze"
-          ],
-          "giudizio": "MONITORING"
-        },
-        "entry": "$17.50-$18.50",
-        "stop": "$13.00",
-        "t1": "$23.00",
-        "t2": "$26.00",
-        "rr": "2.1:1",
-        "fonte": "memoria_precedente",
-        "giudizio": "MONITORING",
-        "warning": "Solo se RVOL >5x all'apertura. Pura squeeze play."
-      }
-    ],
-    "skip_list": [
       {
         "ticker": "VIDA",
-        "motivo": "58pt — SKIP post-Pensiero Critico: timing semi-stale, revenue base microscopica, CEO buy era pre-IPO, overallotment supply June 14"
-      },
-      {
-        "ticker": "SPCE",
-        "motivo": "60pt — SKIP: Bird Rule attiva, Kindleberger Stage 3 dal high $7.52, cash burn strutturale FCF -$87-92M, catalyst già prezzato"
-      },
-      {
-        "ticker": "MLYS",
-        "motivo": "SKIP AUTOMATICO: 8-K capital raise/offerta giugno 3 (pre-market)"
-      },
-      {
-        "ticker": "MBRX",
-        "motivo": "Cash runway <6M (solo Q3 2026 = 4 mesi) — diluzione quasi certa"
-      },
-      {
-        "ticker": "TRNR",
-        "motivo": "Prezzo $0.81 — sotto soglia $1.00"
-      },
-      {
-        "ticker": "DVLT",
-        "motivo": "Prezzo $0.557 — sotto soglia $1.00; Q1 revenue miss vs estimates"
+        "score": 45,
+        "tier": "SKIP",
+        "fonte": "hunter_IPO",
+        "catalyst": "IPO recente maggio 2026, CEO insider buying 312.9K share per $1.19M, AI SaaS agenti",
+        "price_today": "$3.80",
+        "change_pct": "-9.31%",
+        "giudizio": "SKIP — Cash $2.32M su revenue $0.55M → runway critico. Prezzo cade oggi. Non fresco.",
+        "warning": "Cash runway <6M ipotetico. Negativo oggi. Attendere."
       }
     ],
-    "watchlist_updates": [
-      "AGGIUNGI: VIDA (MONITORING | 58pt) — AI agent OS IPO, float 8.84M. Monitorare per Q2 earnings o analyst initiation post-June 12",
-      "UPGRADE: ONDS da MONITORING 62pt a MONITORING/TIER2-ready 80pt — border protection contract + $457M backlog",
-      "UPGRADE: CRMD da TIER2 70pt a TIER1-candidato se rompe $8.50 con volume",
-      "CORREZIONE: SPRO = Spero Therapeutics (non Sprout Pharma)"
-    ]
+    "watchlist_update_suggested": [
+      "RIMUOVERE CRMD (float 78M > 15M limite)",
+      "RIMUOVERE RCAT (float 150M > 15M limite)",
+      "RIMUOVERE BBAI (mid-cap, float enorme)",
+      "RIMUOVERE ONDS (ATM shelf attiva)",
+      "RIMUOVERE GRPN (float 26M > 15M)",
+      "RIMUOVERE QUBT (market cap $2.5B, 227M shares)",
+      "TENERE MBRX (float ~14M, catalyst binario mid-2026)",
+      "AGGIUNGERE FOXX (low float ~1.2M, monitorare dopo cleanup diluzione)",
+      "AGGIUNGERE CING_WATCH (aspettare reazione post-CRL per eventuale bounce)"
+    ],
+    "note": "Hunter module: 0 candidati ≥55pt oggi. Mercato tech-off con Broadcom -13% trascina. DXY hawkish limita appetito risk-on small cap. Sessione NYSE difficile per setup validi."
   },
   "discovery_daily": {
     "date": "2026-06-02",
