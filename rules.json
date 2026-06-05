@@ -3,23 +3,66 @@
   "autore": "Nicola",
   "aggiornato": "2026-05-27 — v2.6 (watchlist sincronizzata: 57 ticker — MNTS aggiunto da Candidati Scanner 27/05/2026 11:30 IT, tier MONITORING)",
   "universo": "NYSE / NASDAQ | Float target <15M | Catalyst TIER 1/2 | Orizzonte 1-30 giorni | $1-25",
-
   "watchlist": [
-    "YCBD", "HUMA", "TRNR", "DXF",  "SNAL", "ZENA", "BIAF", "LOCL",
-    "MBRX", "CMND", "AVXL", "GCTS", "CODX", "PBM",  "BBAI", "AIV",
-    "RXT",  "ACRS", "ACHV", "CING", "TBLA", "LAC",  "REPL", "NIO",
-    "GLOO", "BULL", "FLO",  "IBRX", "EOSE", "SOUN", "QS",   "YMM",
-    "RCAT", "ONDS", "EVC",  "LUMN", "WYY",  "CMPS", "OGN",  "PIII",
-    "VIPS", "RDCM", "POET", "APPN", "HIMS", "NVTS", "QURE", "VSAT",
-    "AEHR", "CRMD",
-    "FRGT", "IMPP", "SY",
-    "GOVX", "MTVA",
+    "YCBD",
+    "HUMA",
+    "TRNR",
+    "DXF",
+    "SNAL",
+    "ZENA",
+    "BIAF",
+    "LOCL",
+    "MBRX",
+    "CMND",
+    "AVXL",
+    "GCTS",
+    "CODX",
+    "PBM",
+    "BBAI",
+    "AIV",
+    "RXT",
+    "ACRS",
+    "ACHV",
+    "CING",
+    "TBLA",
+    "LAC",
+    "REPL",
+    "NIO",
+    "GLOO",
+    "BULL",
+    "FLO",
+    "IBRX",
+    "EOSE",
+    "SOUN",
+    "QS",
+    "YMM",
+    "RCAT",
+    "ONDS",
+    "EVC",
+    "LUMN",
+    "WYY",
+    "CMPS",
+    "OGN",
+    "PIII",
+    "VIPS",
+    "RDCM",
+    "POET",
+    "APPN",
+    "HIMS",
+    "NVTS",
+    "QURE",
+    "VSAT",
+    "AEHR",
+    "CRMD",
+    "FRGT",
+    "IMPP",
+    "SY",
+    "GOVX",
+    "MTVA",
     "LFS",
     "MNTS"
   ],
-
   "default_timeframe": "D",
-
   "timezone": {
     "trader_location": "Italia (Europe/Rome)",
     "tz_summer": "CEST — UTC+2 (fine marzo → fine ottobre)",
@@ -37,7 +80,6 @@
     },
     "nota_dst": "Attenzione: USA e Italia cambiano ora legale in date diverse — verificare offset nei periodi di transizione (marzo e novembre). In quei periodi l'offset può essere +5h invece di +6h."
   },
-
   "layers": {
     "layer_1": {
       "nome": "Bullet Intraday",
@@ -61,7 +103,6 @@
       "max_posizioni": 3
     }
   },
-
   "macro_regime_check": {
     "descrizione": "Verifica mattutina obbligatoria — 4 indicatori macro da completare in Fase 0",
     "indicatori": [
@@ -82,7 +123,6 @@
       "qe_restart": "Explosive risk-on → TRADE, window of opportunity"
     }
   },
-
   "bias_criteria": {
     "descrizione": "Criteri SMC-based per determinare il bias direzionale su ogni titolo (timeframe H4)",
     "bullish": [
@@ -109,7 +149,6 @@
       "Regime macro in transizione (2/4 indicatori): attendere chiarimento"
     ]
   },
-
   "scoring_system": {
     "descrizione": "PROFITRC v2 — Score totale 0-100. Soglia minima per procedere: 65/100. Se Catalyst Score < 10 → SCARTO automatico indipendentemente dagli altri score.",
     "dimensioni": {
@@ -154,7 +193,12 @@
           "newsletter_promo_pump_coordinato": "-10 → SCARTO"
         },
         "warning": "Sentiment alto + Catalyst basso = probabile pump senza sostanza → SCARTO",
-        "fonti": ["Reddit (r/pennystocks, r/stocks)", "StockTwits", "X/Twitter", "Unusual Whales"]
+        "fonti": [
+          "Reddit (r/pennystocks, r/stocks)",
+          "StockTwits",
+          "X/Twitter",
+          "Unusual Whales"
+        ]
       },
       "technical_score": {
         "max": 20,
@@ -198,7 +242,6 @@
       "tier_2": "Sizing ridotto 50% + stop più stretto -15%"
     }
   },
-
   "multi_timeframe_analysis": {
     "descrizione": "Analisi obbligatoria su 4 timeframe sequenziali — PROFITRC v2 Layer 3",
     "workflow": [
@@ -228,7 +271,6 @@
       }
     ]
   },
-
   "catalyst_tier": {
     "tier_1": {
       "label": "ACTIONABLE — alto sizing permesso",
@@ -266,7 +308,6 @@
       ]
     }
   },
-
   "entry_rules": {
     "long": [
       "Catalyst TIER 1/2 verificato su fonte primaria (SEC 8-K, comunicato ufficiale, press release)",
@@ -280,7 +321,6 @@
       "Nessun entry se il titolo ha già fatto +300% nella stessa sessione (BIRD-rule)"
     ]
   },
-
   "exit_rules": [
     "T1 (+15-25%): chiudere 33-50% della posizione, spostare stop a breakeven sul resto",
     "T2 (+40-60%): chiudere ulteriore 33%, trailing stop SMC-based sul residuo",
@@ -292,7 +332,6 @@
     "Invalidation tecnica: chiusura candle sotto lo stop strutturale → exit end of day senza eccezioni",
     "Pre-PDUFA rule: chiudere 50% PRIMA del PDUFA day per ridurre binary risk"
   ],
-
   "risk_rules": [
     "Stop loss PRIMA dell'entry, mai dopo — se non sai dove stai sbagliando, non entrare",
     "Layer 1 sizing: $2,000 bullet unico — stop max -25% (~$500 rischio reale per trade)",
@@ -307,7 +346,6 @@
     "R/R minimo: 1:2 su ogni trade — se il target non è 2x il rischio, saltare il setup",
     "Stress test pre-entry (sizing >1%): il trade regge a VIX +20? Regge a contagio settoriale -20%?"
   ],
-
   "pipeline_operativa": {
     "fase_meno1": {
       "orario_it": "22:00-23:00",
@@ -349,7 +387,6 @@
       "azione": "Trailing stop SMC-based, regola 3 candele 15min, scale-out su T1/T2/T3"
     }
   },
-
   "pattern_library": {
     "pattern_1_shell_pivot_ai": {
       "nome": "Shell-Pivot-AI (BIRD-type)",
@@ -405,7 +442,6 @@
       "stop": "Sotto il minimo del pull-back (swing low strutturale)"
     }
   },
-
   "anti_pattern_library": [
     {
       "id": 1,
@@ -462,7 +498,6 @@
       "regola": "Con $2K e -25% stop, il rischio è già calibrato. La finestra entry è 15:35-15:45, non 16:30."
     }
   ],
-
   "10_commandments": [
     "1. NO TRADE senza catalyst TIER 1/2 verificato — cash è una posizione valida. Aspetta il setup.",
     "2. Stop loss PRIMA dell'entry, mai dopo — se non sai dove stai sbagliando, non entrare.",
@@ -475,7 +510,6 @@
     "9. Layer 1 e Layer 2: capitali separati e non comunicanti — un loss non finanzia l'altro.",
     "10. Post-mortem entro 24h su ogni loss significativo — l'errore non analizzato è un errore futuro."
   ],
-
   "due_diligence_checklist": {
     "livello_1_catalyst": [
       "Fonte primaria: 8-K SEC filing depositato e leggibile",
@@ -496,7 +530,6 @@
       "Short Interest >30%: opportunità squeeze o red flag fondamentale?"
     ]
   },
-
   "pre_trade_stress_test": [
     "Se VIX sale da X a X+20 durante la posizione, il trade tiene?",
     "Se il settore cade -20% per contagio, dove finisce la posizione?",
@@ -504,7 +537,6 @@
     "Il mio stop loss regge a uno slippage del 5% (flash crash scenario)?",
     "La position size è ≤1-2% dell'ADV per evitare market impact all'uscita?"
   ],
-
   "behavioral_checklist_pre_trade": [
     "Ho una tesi contraria credibile? (se non riesco a formularla → probabile bias)",
     "Il mio stop loss è definito prima dell'entry? (no = overconfidence sul timing)",
@@ -512,7 +544,6 @@
     "Quante volte ho avuto ragione nell'ultima settimana? (calibration check anti-overconfidence)",
     "Sto entrando per un catalyst verificato o per FOMO da social/news?"
   ],
-
   "pine_indicators": {
     "descrizione": "Indicatori Pine Script salvati su TradingView Desktop — aggiungere al chart prima di ogni sessione",
     "indicatori_profitrc": [
@@ -521,7 +552,10 @@
         "shorttitle": "PFRC RVOL",
         "versione": "v6",
         "funzione": "Calcola RVOL (volume relativo vs ADV) e Volume Score (0-25pt) — PROFITRC Layer 1",
-        "output_mcp": ["data_get_study_values → 'RVOL x', 'Volume Score /25', 'ADV'", "data_get_pine_tables → tabella con RVOL, ADV, Tier, Score"],
+        "output_mcp": [
+          "data_get_study_values → 'RVOL x', 'Volume Score /25', 'ADV'",
+          "data_get_pine_tables → tabella con RVOL, ADV, Tier, Score"
+        ],
         "settings": "ADV Period: 20 bars (default) — su timeframe intraday"
       },
       {
@@ -529,7 +563,10 @@
         "shorttitle": "PFRC Rgm",
         "versione": "v6",
         "funzione": "Calcola score macro Layer 0 (VIX/SPY/DXY/10Y) e regime operativo — funziona su qualsiasi simbolo",
-        "output_mcp": ["data_get_study_values → 'Regime Score', 'VIX Score', 'SPY Score', 'DXY Score', '10Y Score', 'VIX'", "data_get_pine_tables → tabella Layer 0 con regime finale"],
+        "output_mcp": [
+          "data_get_study_values → 'Regime Score', 'VIX Score', 'SPY Score', 'DXY Score', '10Y Score', 'VIX'",
+          "data_get_pine_tables → tabella Layer 0 con regime finale"
+        ],
         "note": "Usa request.security() su VIX, AMEX:SPY, TVC:DXY, TVC:US10Y — aggiornato su Daily"
       }
     ],
@@ -568,7 +605,6 @@
       "5. Per ogni candidato: chart_set_symbol → multi_timeframe_analysis → data_get_pine_lines/labels → PFRC RVOL → generate Setup Card"
     ]
   },
-
   "automazioni_ccr": {
     "descrizione": "Agenti remoti Claude (CCR) schedulati — girano su cloud Anthropic, NON hanno accesso a TradingView MCP locale",
     "agenti": [
@@ -579,7 +615,10 @@
         "cron": "0 9 * * 1-5",
         "orario_it": "11:00 IT (CEST) — 10:00 IT in CET invernale → aggiornare cron a '0 10 * * 1-5' a ottobre",
         "funzione": "Regime check macro + scan watchlist + catalyst classification → output operativo pre-sessione",
-        "tools": ["WebSearch", "WebFetch"]
+        "tools": [
+          "WebSearch",
+          "WebFetch"
+        ]
       },
       {
         "nome": "PROFITRC Phase 0 Serale — Discovery",
@@ -588,7 +627,10 @@
         "cron": "0 20 * * 1-5",
         "orario_it": "22:00 IT (CEST) — coincide con chiusura NYSE 16:00 ET",
         "funzione": "Phase 0 serale: scan 8-K SEC AH + AH movers + earnings AH + catalyst noti per domani → output Setup Card parziale (Catalyst/Sentiment/Risk Score pre-compilati)",
-        "tools": ["WebSearch", "WebFetch"],
+        "tools": [
+          "WebSearch",
+          "WebFetch"
+        ],
         "output_format": "PROFITRC Setup Card con Subtotale /55 — Technical Score completato il giorno dopo con TradingView MCP"
       }
     ],
@@ -603,14 +645,17 @@
         "dst": "automatico — usa orario locale IT, nessun aggiornamento manuale necessario",
         "funzione": "Scansiona watchlist PROFITRC per gap premarket >10% dal close precedente. Per ogni match: verifica catalyst (8-K SEC, news), applica filtri PROFITRC (diluzione, Kindleberger, float, BIRD RULE), calcola score 0-100, genera piano entry con Pensiero Critico completo. Segnala posizioni aperte impattate dal gap. Push su candidates_log.json sezione premarket_gap.",
         "output": "candidates_log.json → sezione 'premarket_gap' + alert testuale in sessione",
-        "tools": ["WebSearch", "WebFetch", "GitHub API"],
+        "tools": [
+          "WebSearch",
+          "WebFetch",
+          "GitHub API"
+        ],
         "gap_threshold": ">10% dal close precedente",
         "entry_window": "15:35-15:45 IT (dopo silenzio apertura 15:30-15:35)",
         "integrazione_open_positions": "Legge open_positions da rules.json — non suggerisce nuovi entry su ticker già in posizione, segnala solo P&L implicito del gap"
       }
     ]
   },
-
   "standard_output_format": {
     "descrizione": "Formato PROFITRC Setup Card — output standard obbligatorio per ogni trade analizzato. Non usare formati informali.",
     "formato": [
@@ -670,7 +715,6 @@
       "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     ]
   },
-
   "open_positions": {
     "descrizione": "Posizioni aperte — registrate SOLO su input esplicito di Nicola. Le routine CCR (Morning Brief, Phase 0 Serale, Discovery) devono leggere questo campo e considerare le posizioni aperte nella propria analisi.",
     "istruzioni_ccr": [
@@ -696,7 +740,7 @@
         "tranche": [
           {
             "shares": 154,
-            "exit_price": 7.00,
+            "exit_price": 7.0,
             "pnl_usd": 354.74,
             "pnl_pct": 49.12,
             "note": "Prima tranche — venduta al massimo di giornata $7.00"
@@ -705,11 +749,11 @@
             "shares": 153,
             "exit_price": 6.61,
             "pnl_usd": 292.76,
-            "pnl_pct": 40.80,
+            "pnl_pct": 40.8,
             "note": "Seconda tranche — venduta su distribuzione post-apertura"
           }
         ],
-        "pnl_totale_usd": 647.50,
+        "pnl_totale_usd": 647.5,
         "pnl_medio_pct": 45.0,
         "note": "TRADE MODELLO PROFITRC v2. Entry pre-earnings $4.69 su pattern Pre-Earnings Binary Bet. Hold overnight su earnings beat confermato (+78% EPS). Doppio upgrade analitico in premarket (Zacks Rank#1 + BofA Neutral→Buy PT$7.50). Prima tranche venduta $7.00 (massimo di giornata), seconda su distribuzione $6.61. Lesson: catalyst multipli in sequenza (earnings + dual upgrade) = momentum sostenuto e prevedibile. Sistema PROFITRC validato sul campo."
       },
@@ -749,6 +793,64 @@
     ],
     "ultimo_aggiornamento": "2026-05-27 sessione NYSE — APPS chiusa +$647.50 (doppio upgrade + earnings beat), EDIT chiusa +$127.24 (offering bounce), CRMD chiusa -$26.38. P&L NETTO SESSIONE: +$748.36"
   },
-
-  "notes": "Sistema PROFITRC v2.2 — Multi-layer speculativo costruito su 29 fonti accademiche e istituzionali (Hamilton 2016, Kahneman/Tversky 1979, Fama-French 1993, Ernie Chan 2009, Kindleberger, Reinhart/Rogoff 2008, Glasserman Columbia). Universo operativo: NYSE/NASDAQ small/micro-cap $1-25, float <15M, catalyst event-driven TIER 1/2. Broker: IBKR. Piattaforma analisi: TradingView Desktop + Claude AI via MCP (78 tools). Automazioni: CCR Morning Brief 11:00 IT + CCR Phase 0 Serale 22:00 IT + Auto Watchlist Adder 19:45 IT. Pine Scripts custom: PFRC RVOL + PFRC Regime Dashboard. Framework v2.2: 5 layer sequenziali (L0 Regime Gate → L1 Scan/Discovery → L2 Catalyst Verification → L3 Technical SMC → L4 Behavioral Filter). Output standard: PROFITRC Setup Card (score 0-100, soglia 65). Watchlist: 57 ticker, Maggio 2026. REGOLA SYNC: ogni modifica alla watchlist TradingView aggiorna immediatamente questo file."
+  "notes": "Sistema PROFITRC v2.2 — Multi-layer speculativo costruito su 29 fonti accademiche e istituzionali (Hamilton 2016, Kahneman/Tversky 1979, Fama-French 1993, Ernie Chan 2009, Kindleberger, Reinhart/Rogoff 2008, Glasserman Columbia). Universo operativo: NYSE/NASDAQ small/micro-cap $1-25, float <15M, catalyst event-driven TIER 1/2. Broker: IBKR. Piattaforma analisi: TradingView Desktop + Claude AI via MCP (78 tools). Automazioni: CCR Morning Brief 11:00 IT + CCR Phase 0 Serale 22:00 IT + Auto Watchlist Adder 19:45 IT. Pine Scripts custom: PFRC RVOL + PFRC Regime Dashboard. Framework v2.2: 5 layer sequenziali (L0 Regime Gate → L1 Scan/Discovery → L2 Catalyst Verification → L3 Technical SMC → L4 Behavioral Filter). Output standard: PROFITRC Setup Card (score 0-100, soglia 65). Watchlist: 57 ticker, Maggio 2026. REGOLA SYNC: ogni modifica alla watchlist TradingView aggiorna immediatamente questo file.",
+  "contract_ids": {
+    "YCBD": 779325429,
+    "HUMA": 511289575,
+    "TRNR": 857032766,
+    "DXF": 746112646,
+    "SNAL": 596545634,
+    "ZENA": 722705694,
+    "BIAF": 815036802,
+    "LOCL": 635438413,
+    "MBRX": 835050787,
+    "CMND": 885007800,
+    "AVXL": 209007500,
+    "GCTS": 692416133,
+    "CODX": 842556629,
+    "PBM": 846773110,
+    "BBAI": 530965695,
+    "AIV": 457630882,
+    "RXT": 438220546,
+    "ACRS": 209011562,
+    "ACHV": 437395849,
+    "CING": 721288785,
+    "TBLA": 500046666,
+    "LAC": 657517509,
+    "REPL": 326314577,
+    "NIO": 332794741,
+    "GLOO": 832145925,
+    "BULL": 776352706,
+    "FLO": 11913510,
+    "IBRX": 475852081,
+    "EOSE": 455592457,
+    "SOUN": 558869874,
+    "QS": 457599435,
+    "YMM": 498287734,
+    "RCAT": 376496231,
+    "ONDS": 455415330,
+    "EVC": 9899879,
+    "LUMN": 446613345,
+    "WYY": 452077614,
+    "CMPS": 446091350,
+    "OGN": 490414355,
+    "PIII": 776339208,
+    "VIPS": 104863799,
+    "RDCM": 51828876,
+    "POET": 547618418,
+    "APPN": 277374861,
+    "HIMS": 466188387,
+    "NVTS": 522128117,
+    "QURE": 143720844,
+    "VSAT": 6746554,
+    "AEHR": 4725941,
+    "CRMD": 357214541,
+    "FRGT": 883618054,
+    "IMPP": 628616566,
+    "SY": 362283658,
+    "GOVX": 844624201,
+    "MTVA": 836365956,
+    "LFS": 821253151,
+    "MNTS": 839174082
+  }
 }
