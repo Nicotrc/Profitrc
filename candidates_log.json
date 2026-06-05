@@ -775,5 +775,98 @@
     ],
     "note_sistema": "PDT rule elimination effective June 4 2026 → maggior volume small cap/micro cap atteso da domani. Regime BULL small cap ma nessun catalyst AH fresco stasera nella watchlist. Nessun candidato TIER1/TIER2 per entry domani 15:35-15:45 IT. Watch ACHV per pre-PDUFA setup June 17-18 se float confermato."
   },
-  "_sistema_note": "GitHub API fix v3.0 testato e funzionante — 2026-06-03 12:14 IT"
+  "_sistema_note": "GitHub API fix v3.0 testato e funzionante — 2026-06-03 12:14 IT",
+  "premarket_gap": [
+    {
+      "date": "2026-06-05",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "TradingView",
+        "WebSearch"
+      ],
+      "macro_regime": "VIX 16.05 | SPY $753.72 (-0.45%) | PFRC Rgm: SELECTIVE (DXY high, tech selloff Broadcom -13%)",
+      "account_snapshot": {
+        "net_liq_eur": 1446.96,
+        "buying_power_eur": 1446.96,
+        "open_positions": 0
+      },
+      "watchlist_scanned": 57,
+      "tier_a_count": 1,
+      "tier_b_count": 2,
+      "tier_c_count": 0,
+      "gap_candidates": [],
+      "skipped": [
+        {
+          "ticker": "CMND",
+          "gap_pct": 31.27,
+          "prior_close": 2.91,
+          "last": 3.82,
+          "volume_premarket": 16623019,
+          "rvol": 13.3,
+          "motivo": "⛔ Reverse split 1-for-10 May 21 2026 (<6 mesi) + going concern risk (20-F) + convertible note $2.7M diluzione. Catalyst: webinar announcement June 10 (TIER3 — no new data)",
+          "tier": "SKIP"
+        },
+        {
+          "ticker": "MTVA",
+          "gap_pct": 9.39,
+          "prior_close": 2.45,
+          "last": 2.68,
+          "volume_premarket": 11574207,
+          "rvol": 2.0,
+          "score": 52,
+          "motivo": "⚠️ Score 52/100 sotto soglia. K-Stage 3 (+177% da $0.97 low). RVOL 2.0x <3x. ATM shelf $2.3M attivo. Catalyst ADA 2026 (June 5-8) TIER2 legittimo ma non sufficiente.",
+          "tier": "SKIP"
+        },
+        {
+          "ticker": "MNTS",
+          "gap_pct": 8.42,
+          "prior_close": 15.79,
+          "last": 17.12,
+          "volume_premarket": 768373,
+          "rvol": 0.11,
+          "motivo": "🚨 DILUZIONE LETALE: PIPE $25M at-market May 27 2026 + registration statement June 1 2026. K-Stage 3 (+291% da low $4.38). RVOL 0.11x.",
+          "tier": "SKIP"
+        },
+        {
+          "ticker": "DXF",
+          "gap_pct": -36.17,
+          "prior_close": 0.8345,
+          "last": 0.5327,
+          "motivo": "Gap DOWN -36%. Non candidato long.",
+          "tier": "DOWN_MOVER"
+        }
+      ],
+      "open_positions_alert": [],
+      "notable_down_movers": [
+        {
+          "ticker": "DXF",
+          "change_pct": -36.17,
+          "prior_close": 0.8345,
+          "last": 0.5327
+        },
+        {
+          "ticker": "LFS",
+          "change_pct": -4.83,
+          "prior_close": 2.07,
+          "last": 1.97
+        },
+        {
+          "ticker": "POET",
+          "change_pct": -4.68,
+          "prior_close": 15.475,
+          "last": 14.75
+        },
+        {
+          "ticker": "AEHR",
+          "change_pct": -4.11,
+          "prior_close": 116.58,
+          "last": 111.79
+        }
+      ],
+      "summary": "Scan pulito: 3 movers identificati (CMND +31% TIER A, MTVA +9.4% TIER B, MNTS +8.4% TIER B). Tutti filtrati: CMND reverse split recente, MNTS PIPE attivo, MTVA score sotto soglia (52/100). 0 trade attivi oggi.",
+      "morning_context": "MB 2026-06-05: MBRX MONITORING, CING SKIP (FDA CRL), CRMD/RCAT SKIP float"
+    }
+  ]
 }
