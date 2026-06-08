@@ -1,7 +1,7 @@
 {
   "sistema": "PROFITRC — Sistema Speculativo Multi-Layer v2.0",
   "autore": "Nicola",
-  "aggiornato": "2026-05-27 — v2.6 (watchlist sincronizzata: 57 ticker — MNTS aggiunto da Candidati Scanner 27/05/2026 11:30 IT, tier MONITORING)",
+  "aggiornato": "2026-06-08 — v2.7 (watchlist: 58 ticker — DLTH aggiunto 08/06/2026, tier MONITORING, earnings beat Q1)",
   "universo": "NYSE / NASDAQ | Float target <15M | Catalyst TIER 1/2 | Orizzonte 1-30 giorni | $1-25",
   "watchlist": [
     "YCBD",
@@ -60,7 +60,8 @@
     "GOVX",
     "MTVA",
     "LFS",
-    "MNTS"
+    "MNTS",
+    "DLTH"
   ],
   "default_timeframe": "D",
   "timezone": {
