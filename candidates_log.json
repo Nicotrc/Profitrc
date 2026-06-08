@@ -1,10 +1,136 @@
 {
   "last_updated": "2026-06-07",
   "session_type": "discovery_weekly",
-  "watchlist": ["YCBD","HUMA","TRNR","DXF","SNAL","BIAF","LOCL","MBRX","GCTS","PBM","BBAI","AIV","ACRS","ACHV","TBLA","LAC","NIO","GLOO","BULL","FLO","SOUN","QS","YMM","EVC","LUMN","WYY","CMPS","OGN","VIPS","RDCM","APPN","QURE","VSAT","AEHR","CRMD","FRGT","IMPP","SY","MTVA","GRPN","QUBT","GLSI","UNCY","VRDN","RCAT","TNDM"],
-  "watchlist_removed_this_week": ["CING","AVXL","ONDS","CMND","SPRO"],
+  "watchlist": [
+    "YCBD",
+    "HUMA",
+    "TRNR",
+    "DXF",
+    "SNAL",
+    "BIAF",
+    "LOCL",
+    "MBRX",
+    "GCTS",
+    "PBM",
+    "BBAI",
+    "AIV",
+    "ACRS",
+    "ACHV",
+    "TBLA",
+    "LAC",
+    "NIO",
+    "GLOO",
+    "BULL",
+    "FLO",
+    "SOUN",
+    "QS",
+    "YMM",
+    "EVC",
+    "LUMN",
+    "WYY",
+    "CMPS",
+    "OGN",
+    "VIPS",
+    "RDCM",
+    "APPN",
+    "QURE",
+    "VSAT",
+    "AEHR",
+    "CRMD",
+    "FRGT",
+    "IMPP",
+    "SY",
+    "MTVA",
+    "GRPN",
+    "QUBT",
+    "GLSI",
+    "UNCY",
+    "VRDN",
+    "RCAT",
+    "TNDM"
+  ],
+  "watchlist_removed_this_week": [
+    "CING",
+    "AVXL",
+    "ONDS",
+    "CMND",
+    "SPRO"
+  ],
   "discovery_daily": [],
-  "morning_brief": [],
+  "morning_brief": {
+    "date": "2026-06-08",
+    "macro_regime": "TRADE 4/4 verde — 3.5/4 interpretato",
+    "big_themes": [
+      "SPY pullback -2.58% venerdi post-jobs report (NFP > attese)",
+      "VIX 15.77 strutturalmente basso, recovery da spike aprile tariffe",
+      "Watchlist dominata da vendite: VSAT -7.88%, RCAT -7.76%, QUBT -11.36%",
+      "DXY 100.07 debole, 10Y 4.54% stabile growth-positive"
+    ],
+    "candidates": [
+      {
+        "ticker": "MBRX",
+        "score": 67,
+        "tier": "MONITORING",
+        "catalyst": "MIRACLE trial unblinding entro 30 giugno 2026 (22 giorni); ASCO May cardiac safety positivo; 3 analisti Strong Buy avg PT $21",
+        "pensiero_critico": {
+          "regime": "3.5/4 interpretato — pullback SPY ordinato post-jobs, non breakdown strutturale",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH (evento futuro entro 22 giorni)",
+          "narrativa_numeri": "Narrativa forte (AML unmet need), numeri critici: cash $10.96M, net loss $12.8M/Q1, zero revenue, capital raise ogni 6 mesi",
+          "rischio_asimmetrico": "worst case: MIRACLE trial negativo -> -60/70%, secondary offering obbligatorio -> target $0.80-1.00",
+          "kindleberger": "Stage 1 (prezzo vicino ai minimi annuali, PT $21 vs $2.59)",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "CASH RUNWAY <12M ($10.96M, burn ~$12.8M/trim)",
+            "DILUZIONE STORICA FREQUENTE (raise giu/feb/dic 2025)",
+            "BINARY EVENT RISK (trial unblinding)",
+            "Q1 FAIL total catalyst dependence"
+          ],
+          "giudizio": "MONITORING"
+        },
+        "entry": "$2.50-$2.65",
+        "stop": "$2.00",
+        "t1": "$4.00",
+        "t2": "$6.00",
+        "rr": "2.6:1",
+        "fonte": "discovery_weekly reassessment",
+        "giudizio": "MONITORING",
+        "warning": "Verificare ogni giorno pre-apertura per ATM/PIPE filing SEC. Entry SOLO se: no nuove offering + RVOL >5x ADV + regime verde. Max probe 1% portafoglio."
+      }
+    ],
+    "skip_list": [
+      {
+        "ticker": "STI",
+        "motivo": "Kindleberger Stage 4 (+1115% 52wk), prezzo >$25, stale 3-4gg, BIRD RULE attiva"
+      },
+      {
+        "ticker": "BGMS",
+        "motivo": "Diluzione estrema reverse merger all-stock, catalyst stale 4gg, BIRD RULE"
+      },
+      {
+        "ticker": "RCAT",
+        "motivo": "Float 152M (post-offering $200M maggio 2026) >> 15M max sistema"
+      },
+      {
+        "ticker": "QUBT",
+        "motivo": "Float 220M+, catalyst stale (earnings May 11)"
+      },
+      {
+        "ticker": "VSAT",
+        "motivo": "Prezzo $67 > $25 max L2, insider selling su DoD contract"
+      }
+    ],
+    "watchlist_notes": {
+      "remove_candidates": [
+        "RCAT (float 152M incompatibile)",
+        "QUBT (float 220M+ incompatibile)"
+      ],
+      "monitoring": [
+        "MBRX — MIRACLE trial unblinding entro 30 giugno, verificare daily per PIPE/ATM"
+      ]
+    }
+  },
   "phase0_serale": [],
   "discovery_weekly": [
     {
@@ -22,7 +148,12 @@
         "kindleberger": "Stage 1 (2-week: +9.7% da $2.36)",
         "bird_rule": false,
         "diluzione": true,
-        "flags": ["ATM SHELF ATTIVA $7.38M remaining", "STALE CATALYST >14gg", "CPI WEEK", "CASH MARGINALE"],
+        "flags": [
+          "ATM SHELF ATTIVA $7.38M remaining",
+          "STALE CATALYST >14gg",
+          "CPI WEEK",
+          "CASH MARGINALE"
+        ],
         "giudizio": "MONITORING — carry da 3 settimane, evento binary imminente"
       },
       "entry": "$2.30-$2.70",
@@ -49,7 +180,10 @@
         "kindleberger": "Stage 2 da 52-week low",
         "bird_rule": false,
         "diluzione": false,
-        "flags": ["SKIP_FLOAT: 53.24M >> 15M", "S-3 attiva $300M"],
+        "flags": [
+          "SKIP_FLOAT: 53.24M >> 15M",
+          "S-3 attiva $300M"
+        ],
         "giudizio": "SKIP — float 53.24M viola criteri"
       },
       "entry": "N/A",
@@ -76,7 +210,12 @@
         "kindleberger": "Stage 2",
         "bird_rule": false,
         "diluzione": true,
-        "flags": ["PIPE $60M <60gg", "Float 125M", "GOING CONCERN", "CPI WEEK"],
+        "flags": [
+          "PIPE $60M <60gg",
+          "Float 125M",
+          "GOING CONCERN",
+          "CPI WEEK"
+        ],
         "giudizio": "SKIP — PIPE + Float + Going concern multipli"
       },
       "entry": "N/A",
@@ -103,7 +242,10 @@
         "kindleberger": "Stage 4 (+423% da $0.57)",
         "bird_rule": false,
         "diluzione": false,
-        "flags": ["KINDLEBERGER STAGE 4 -> SKIP immediato", "Float 57.89M >> 15M"],
+        "flags": [
+          "KINDLEBERGER STAGE 4 -> SKIP immediato",
+          "Float 57.89M >> 15M"
+        ],
         "giudizio": "SKIP doppio: Stage 4 + Float"
       },
       "entry": "N/A",
@@ -130,7 +272,12 @@
         "kindleberger": "Stage 2 (52-week: +166%)",
         "bird_rule": false,
         "diluzione": true,
-        "flags": ["ATM SHELF ATTIVA", "STALE CATALYST", "GIA CORSO -17.56% post-ASCO", "NASDAQ NOTICE 10-K"],
+        "flags": [
+          "ATM SHELF ATTIVA",
+          "STALE CATALYST",
+          "GIA CORSO -17.56% post-ASCO",
+          "NASDAQ NOTICE 10-K"
+        ],
         "giudizio": "SKIP — ATM + stale catalyst"
       },
       "entry": "N/A",
@@ -157,7 +304,10 @@
         "kindleberger": "Stage 2",
         "bird_rule": false,
         "diluzione": false,
-        "flags": ["SKIP_FLOAT: 45.21M >> 15M", "STALE per weekly"],
+        "flags": [
+          "SKIP_FLOAT: 45.21M >> 15M",
+          "STALE per weekly"
+        ],
         "giudizio": "SKIP_FLOAT — fondamentali eccellenti"
       },
       "entry": "N/A",
@@ -184,7 +334,10 @@
         "kindleberger": "Stage 2",
         "bird_rule": false,
         "diluzione": false,
-        "flags": ["SKIP_FLOAT: 476M >> 15M", "STALE per weekly"],
+        "flags": [
+          "SKIP_FLOAT: 476M >> 15M",
+          "STALE per weekly"
+        ],
         "giudizio": "SKIP_FLOAT — squeeze potenziale lungo periodo"
       },
       "entry": "N/A",
