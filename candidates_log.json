@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-07",
+  "last_updated": "2026-06-08T22:00:00+02:00",
   "session_type": "discovery_weekly",
   "watchlist": [
     "YCBD",
@@ -131,7 +131,122 @@
       ]
     }
   },
-  "phase0_serale": [],
+  "phase0_serale": {
+    "date": "2026-06-08",
+    "session_start": "22:00 IT",
+    "market_regime": {
+      "spy_close": "+0.8%",
+      "nasdaq_close": "+1.71%",
+      "russell2000": "+1.68%",
+      "vix": "~21.51",
+      "yield_10y": "4.564%",
+      "dxy": "100.1",
+      "brent": "96.47",
+      "sp_futures_ah": "-0.02%",
+      "nasdaq_futures_ah": "+0.29%",
+      "regime_domani": "TRANSIZIONE — recovery valida ma fragile. AH piatti. VIX elevato + 10Y alto + geopolitica oil."
+    },
+    "watchlist_movers": [
+      "MBRX +12.44% (SKIP — going concern)",
+      "RCAT -13.98% (float 150M out universe)",
+      "ONDS -12.87% (float 507M out universe)",
+      "HUMA -8.14% (sotto 1 dollar out range)",
+      "QUBT -6% (AI quantum watch)",
+      "VSAT -5.6% (prezzo >25 out range)"
+    ],
+    "candidates": [],
+    "skip_list": [
+      {
+        "ticker": "MBRX",
+        "motivo": "Cash runway <3M + Going concern 10-Q + ATM shelf attiva. Capital raise imminente."
+      },
+      {
+        "ticker": "RCAT",
+        "motivo": "Float 150M fuori universo <15M"
+      },
+      {
+        "ticker": "ONDS",
+        "motivo": "Float 507M fuori universo"
+      },
+      {
+        "ticker": "HUMA",
+        "motivo": "Prezzo 0.92 sotto 1 dollaro"
+      },
+      {
+        "ticker": "VSAT",
+        "motivo": "Prezzo 66+ fuori range insider selling"
+      },
+      {
+        "ticker": "CMPS",
+        "motivo": "Float 124M fuori universo"
+      },
+      {
+        "ticker": "TNGX",
+        "motivo": "Float 141M market cap 2.9B fuori universo"
+      },
+      {
+        "ticker": "ACHV",
+        "motivo": "Float 53M fuori universo. PDUFA June 20 monitor esterno."
+      },
+      {
+        "ticker": "UNCY",
+        "motivo": "Float 26M fuori universo. PDUFA June 29 cash 57M — rivalutare."
+      },
+      {
+        "ticker": "GRPN",
+        "motivo": "Float 26M + earnings miss Q1. Short squeeze teorico no catalyst AH."
+      },
+      {
+        "ticker": "GLSI",
+        "motivo": "Score 48. Readout September 2026 timing troppo lontano."
+      }
+    ],
+    "hunter_scan": {
+      "external_ah_movers_found": 0,
+      "note": "AH market quieto. Nessun small cap float <15M con 8-K catalyst confermato stasera.",
+      "candidates_evaluated": [
+        {
+          "ticker": "ACHV",
+          "score": 51,
+          "flag": "SKIP_FLOAT 53M",
+          "catalyst": "PDUFA June 20",
+          "note": "Monitor external"
+        },
+        {
+          "ticker": "GRPN",
+          "score": 39,
+          "flag": "SKIP score <55 float >15M",
+          "catalyst": "Project Foundry AI SI 41%"
+        },
+        {
+          "ticker": "IMPP",
+          "score": 32,
+          "flag": "SKIP score <55",
+          "catalyst": "Iran-Israel oil surge Brent +3.6%"
+        }
+      ]
+    },
+    "memory_updates": {
+      "retrocedi_a_skip": [
+        "MBRX"
+      ],
+      "rimuovi_da_watchlist_operativa": [
+        "RCAT",
+        "VSAT",
+        "HUMA"
+      ],
+      "external_monitor": [
+        "ACHV PDUFA June 20",
+        "UNCY PDUFA June 29 cash ok"
+      ]
+    },
+    "setup_domani": {
+      "candidati_tier1": 0,
+      "candidati_tier2": 0,
+      "azione": "NESSUNA POSIZIONE — nessun candidato post-Pensiero Critico. Osservare 15:30 IT rivalutare catalyst pre-market.",
+      "attenzione": "MBRX: se annuncia capital raise overnight conferma SKIP. Se MIRACLE anticipato non rientrare senza nuovo Pensiero Critico."
+    }
+  },
   "discovery_weekly": [
     {
       "ticker": "MBRX",
