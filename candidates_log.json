@@ -349,5 +349,123 @@
       "giudizio": "SKIP_FLOAT — 26.5% SI = squeeze fuel se contract news",
       "warning": "Defense AI sector in momentum. Mantenere in watchlist per opportunita squeeze."
     }
+  ],
+  "premarket_gap": [
+    {
+      "date": "June 8, 2026",
+      "scan_time": "14:32 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "TradingView",
+        "GitHub",
+        "WebSearch"
+      ],
+      "macro_regime": {
+        "vix": "18.80 (-12.6%)",
+        "spy": "$248.93 (+1.18%)",
+        "pfrc_rgm": "NON DISPONIBILE (indicatore non caricato su TV chart)",
+        "regime_interpretato": "TRANSIZIONE → BULL RISK-ON",
+        "note": "VIX -12.6% recupero da selloff chip Jun 5 — one-off, non trend strutturale"
+      },
+      "account_snapshot": {
+        "net_liq_eur": 1456.35,
+        "buying_power_eur": 1456.35,
+        "posizioni_aperte": 0,
+        "trade_oggi": 0
+      },
+      "scan_stats": {
+        "ticker_scansionati": 57,
+        "tier_a_positivo_count": 0,
+        "tier_a_negativo_count": 2,
+        "tier_b_count": 4
+      },
+      "gap_candidates": [
+        {
+          "ticker": "AEHR",
+          "gap_pct": 6.65,
+          "last": 105.0,
+          "prior_close": 98.45,
+          "vol_premarket": 55230,
+          "adv_20d": 2445357,
+          "rvol_pm": 0.023,
+          "catalyst": "Record $41M AI order + William Blair conf Jun 2 + bookings $92M H2",
+          "catalyst_tier": "TIER1 (aged 6d)",
+          "bird_rule": false,
+          "kindleberger": "STAGE 2",
+          "dilution": "April offering cleared",
+          "score": 58,
+          "tier_final": "MONITORING",
+          "entry": "$104-106.50",
+          "stop": "$96.50",
+          "t1": "$113",
+          "t2": "$116.58",
+          "sizing": "PROBE 1% max",
+          "condition": "Entry SOLO SE RVOL >3x ADV post-open + chiude >$107 entro 15:40 IT"
+        },
+        {
+          "ticker": "NVTS",
+          "gap_pct": 5.38,
+          "last": 26.43,
+          "prior_close": 25.08,
+          "vol_premarket": 1467164,
+          "adv_20d": 32651500,
+          "catalyst": "NVIDIA MGX (Jun 3, aged 5d) + YTD +346%",
+          "catalyst_tier": "TIER1 (aged)",
+          "bird_rule": true,
+          "kindleberger": "STAGE 2",
+          "dilution": "3.28M shares Jun 4 + $125M offering",
+          "score": 48,
+          "tier_final": "SKIP",
+          "skip_reason": "Bird Rule (top trending Stocktwits) + diluzione + bounce da -18% selloff"
+        },
+        {
+          "ticker": "MNTS",
+          "gap_pct": 7.91,
+          "last": 16.09,
+          "prior_close": 14.91,
+          "score": 38,
+          "tier_final": "SKIP",
+          "skip_reason": "DILUZIONE $25M PIPE May 28 (<30gg) + Kindleberger STAGE 3 (219%)"
+        },
+        {
+          "ticker": "POET",
+          "gap_pct": 5.9,
+          "last": 12.56,
+          "prior_close": 11.86,
+          "score": 22,
+          "tier_final": "SKIP",
+          "skip_reason": "TESI ROTTA: Marvell+CelestialAI order cancellazioni + $400M diluzione + lawsuits"
+        }
+      ],
+      "movers_negativi": [
+        {
+          "ticker": "CMND",
+          "gap_pct": -20.1,
+          "note": "Promissory notes overhang, webinar Jun 10"
+        },
+        {
+          "ticker": "MTVA",
+          "gap_pct": -14.01,
+          "note": "AGM oggi + offering $12.8M — sell-the-news"
+        }
+      ],
+      "near_tier_b": [
+        {
+          "ticker": "RCAT",
+          "gap_pct": 4.5
+        },
+        {
+          "ticker": "ONDS",
+          "gap_pct": 4.6
+        },
+        {
+          "ticker": "RDCM",
+          "gap_pct": 4.71,
+          "note": "vol 4.6K — illiquido"
+        }
+      ],
+      "morning_brief_today": "MBRX MONITORING (score 67) — no cambio raccomandazione"
+    }
   ]
 }
