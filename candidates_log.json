@@ -58,78 +58,51 @@
   ],
   "discovery_daily": [],
   "morning_brief": {
-    "date": "2026-06-08",
-    "macro_regime": "TRADE 4/4 verde — 3.5/4 interpretato",
+    "date": "2026-06-09",
+    "generated_at": "11:00 IT",
+    "macro_regime": "SELECTIVE 3/4 abbassato CPI risk",
+    "macro_details": {
+      "vix": "19.04 in calo da 21.51 Friday",
+      "spy": "757.09 sopra MA50 711.90",
+      "dxy": "99.95 in calo sotto 100",
+      "yield_10y": "4.57% in rialzo jobs beats",
+      "event_risk": "CPI May 2026 release domani 10 giugno"
+    },
     "big_themes": [
-      "SPY pullback -2.58% venerdi post-jobs report (NFP > attese)",
-      "VIX 15.77 strutturalmente basso, recovery da spike aprile tariffe",
-      "Watchlist dominata da vendite: VSAT -7.88%, RCAT -7.76%, QUBT -11.36%",
-      "DXY 100.07 debole, 10Y 4.54% stabile growth-positive"
+      "CPI domani - April era 3.8% YoY",
+      "Defense AI rally",
+      "10Y yield 4.57% rialzo",
+      "NRIX Roche 2.3B deal"
     ],
-    "candidates": [
+    "candidates": [],
+    "hunter_found": [
       {
-        "ticker": "MBRX",
-        "score": 67,
-        "tier": "MONITORING",
-        "catalyst": "MIRACLE trial unblinding entro 30 giugno 2026 (22 giorni); ASCO May cardiac safety positivo; 3 analisti Strong Buy avg PT $21",
-        "pensiero_critico": {
-          "regime": "3.5/4 interpretato — pullback SPY ordinato post-jobs, non breakdown strutturale",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH (evento futuro entro 22 giorni)",
-          "narrativa_numeri": "Narrativa forte (AML unmet need), numeri critici: cash $10.96M, net loss $12.8M/Q1, zero revenue, capital raise ogni 6 mesi",
-          "rischio_asimmetrico": "worst case: MIRACLE trial negativo -> -60/70%, secondary offering obbligatorio -> target $0.80-1.00",
-          "kindleberger": "Stage 1 (prezzo vicino ai minimi annuali, PT $21 vs $2.59)",
-          "bird_rule": false,
-          "diluzione": true,
-          "flags": [
-            "CASH RUNWAY <12M ($10.96M, burn ~$12.8M/trim)",
-            "DILUZIONE STORICA FREQUENTE (raise giu/feb/dic 2025)",
-            "BINARY EVENT RISK (trial unblinding)",
-            "Q1 FAIL total catalyst dependence"
-          ],
-          "giudizio": "MONITORING"
-        },
-        "entry": "$2.50-$2.65",
-        "stop": "$2.00",
-        "t1": "$4.00",
-        "t2": "$6.00",
-        "rr": "2.6:1",
-        "fonte": "discovery_weekly reassessment",
-        "giudizio": "MONITORING",
-        "warning": "Verificare ogni giorno pre-apertura per ATM/PIPE filing SEC. Entry SOLO se: no nuove offering + RVOL >5x ADV + regime verde. Max probe 1% portafoglio."
+        "ticker": "NRIX",
+        "score_raw": 89,
+        "giudizio": "SKIP_FLOAT",
+        "motivo": "Float 94M>>15M"
+      },
+      {
+        "ticker": "LASE",
+        "score_raw": 67,
+        "giudizio": "SKIP",
+        "motivo": "Float 19.83M+KS3+Nasdaq delist"
+      },
+      {
+        "ticker": "BCDA",
+        "score_raw": 52,
+        "giudizio": "SKIP",
+        "motivo": "Score<55pt+offering June5"
       }
     ],
     "skip_list": [
-      {
-        "ticker": "STI",
-        "motivo": "Kindleberger Stage 4 (+1115% 52wk), prezzo >$25, stale 3-4gg, BIRD RULE attiva"
-      },
-      {
-        "ticker": "BGMS",
-        "motivo": "Diluzione estrema reverse merger all-stock, catalyst stale 4gg, BIRD RULE"
-      },
-      {
-        "ticker": "RCAT",
-        "motivo": "Float 152M (post-offering $200M maggio 2026) >> 15M max sistema"
-      },
-      {
-        "ticker": "QUBT",
-        "motivo": "Float 220M+, catalyst stale (earnings May 11)"
-      },
-      {
-        "ticker": "VSAT",
-        "motivo": "Prezzo $67 > $25 max L2, insider selling su DoD contract"
-      }
+      "MBRX-ATM",
+      "GCTS-cash600K",
+      "STI-KS4",
+      "INDP-cash1.5M",
+      "ONDS-float507M"
     ],
-    "watchlist_notes": {
-      "remove_candidates": [
-        "RCAT (float 152M incompatibile)",
-        "QUBT (float 220M+ incompatibile)"
-      ],
-      "monitoring": [
-        "MBRX — MIRACLE trial unblinding entro 30 giugno, verificare daily per PIPE/ATM"
-      ]
-    }
+    "operative_note": "CPI risk domani sizing -25%. Entry solo RVOL>3x."
   },
   "phase0_serale": {
     "date": "2026-06-08",
