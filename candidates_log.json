@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-08T22:00:00+02:00",
-  "session_type": "discovery_weekly",
+  "last_updated": "2026-06-09T22:00:00+02:00",
+  "session_type": "phase0_serale",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -105,120 +105,164 @@
     "operative_note": "CPI risk domani sizing -25%. Entry solo RVOL>3x."
   },
   "phase0_serale": {
-    "date": "2026-06-08",
+    "date": "2026-06-09",
     "session_start": "22:00 IT",
     "market_regime": {
-      "spy_close": "+0.8%",
-      "nasdaq_close": "+1.71%",
-      "russell2000": "+1.68%",
-      "vix": "~21.51",
-      "yield_10y": "4.564%",
-      "dxy": "100.1",
-      "brent": "96.47",
-      "sp_futures_ah": "-0.02%",
-      "nasdaq_futures_ah": "+0.29%",
-      "regime_domani": "TRANSIZIONE — recovery valida ma fragile. AH piatti. VIX elevato + 10Y alto + geopolitica oil."
+      "spy_close": "-2.2%",
+      "nasdaq_close": "-3.3%",
+      "vix": "20.45 (+8.1%)",
+      "yield_10y": "4.57%",
+      "event_risk_tomorrow": "CPI May 2026 + Iran escalazione + SpaceX IPO",
+      "trigger_oggi": "Trump 'must respond' a attacco elicottero iraniano",
+      "sp_futures_ah": "MIXED — incerto, Iran risk overnight",
+      "regime_domani": "RISK-OFF / INCERTO — VIX 20.45, Nasdaq -3.3%, CPI domani, Iran guerra escalation. Zero posizioni salvo catalyst TIER1 + RVOL >3x post-CPI."
     },
     "watchlist_movers": [
-      "MBRX +12.44% (SKIP — going concern)",
-      "RCAT -13.98% (float 150M out universe)",
-      "ONDS -12.87% (float 507M out universe)",
-      "HUMA -8.14% (sotto 1 dollar out range)",
-      "QUBT -6% (AI quantum watch)",
-      "VSAT -5.6% (prezzo >25 out range)"
+      "CING close $4.73 | no new AH catalyst",
+      "RCAT $11.19 | flat post -14% ieri | no catalyst",
+      "Mercato: S&P -2.2%, Nasdaq -3.3% su Iran escalation",
+      "AEHR rimosso universe (prezzo $95-101)"
     ],
     "candidates": [],
-    "skip_list": [
-      {
-        "ticker": "MBRX",
-        "motivo": "Cash runway <3M + Going concern 10-Q + ATM shelf attiva. Capital raise imminente."
-      },
-      {
-        "ticker": "RCAT",
-        "motivo": "Float 150M fuori universo <15M"
-      },
-      {
-        "ticker": "ONDS",
-        "motivo": "Float 507M fuori universo"
-      },
-      {
-        "ticker": "HUMA",
-        "motivo": "Prezzo 0.92 sotto 1 dollaro"
-      },
-      {
-        "ticker": "VSAT",
-        "motivo": "Prezzo 66+ fuori range insider selling"
-      },
-      {
-        "ticker": "CMPS",
-        "motivo": "Float 124M fuori universo"
-      },
-      {
-        "ticker": "TNGX",
-        "motivo": "Float 141M market cap 2.9B fuori universo"
-      },
-      {
-        "ticker": "ACHV",
-        "motivo": "Float 53M fuori universo. PDUFA June 20 monitor esterno."
-      },
-      {
-        "ticker": "UNCY",
-        "motivo": "Float 26M fuori universo. PDUFA June 29 cash 57M — rivalutare."
-      },
-      {
-        "ticker": "GRPN",
-        "motivo": "Float 26M + earnings miss Q1. Short squeeze teorico no catalyst AH."
-      },
-      {
-        "ticker": "GLSI",
-        "motivo": "Score 48. Readout September 2026 timing troppo lontano."
-      }
-    ],
     "hunter_scan": {
       "external_ah_movers_found": 0,
-      "note": "AH market quieto. Nessun small cap float <15M con 8-K catalyst confermato stasera.",
+      "8k_filed_today": [
+        "MBOT",
+        "IXHL",
+        "ZEOX",
+        "RNAC",
+        "DBGI",
+        "SXTP"
+      ],
+      "note": "Zero small cap float <15M con catalyst TIER1/2 fresh tonight. RISK-OFF severo.",
       "candidates_evaluated": [
         {
-          "ticker": "ACHV",
-          "score": 51,
-          "flag": "SKIP_FLOAT 53M",
-          "catalyst": "PDUFA June 20",
-          "note": "Monitor external"
+          "ticker": "RNAC",
+          "score": 48,
+          "flag": "SKIP_FLOAT",
+          "catalyst": "CAR-T WestGene license 8-K (durante sessione)",
+          "note": "Float 28M>>15M. Catalyst priced in. Volume 35K vs ADV 191K."
         },
         {
-          "ticker": "GRPN",
-          "score": 39,
-          "flag": "SKIP score <55 float >15M",
-          "catalyst": "Project Foundry AI SI 41%"
+          "ticker": "DBGI",
+          "score": 42,
+          "flag": "SKIP_STALE",
+          "catalyst": "$125M GCC apparel (June 1 — 8 giorni fa)",
+          "note": "STALE. Stock da $18 a $1. KS3+."
         },
         {
-          "ticker": "IMPP",
+          "ticker": "MBOT",
+          "score": 38,
+          "flag": "SKIP_FLOAT+ATM",
+          "catalyst": "Michigan LIBERTY adoption 8-K",
+          "note": "Float ~39M + ATM $39M attivo."
+        },
+        {
+          "ticker": "IXHL",
+          "score": 22,
+          "flag": "SKIP_FLOAT",
+          "catalyst": "AGP BUY coverage PT $18",
+          "note": "346M shares. Multiple offerings."
+        },
+        {
+          "ticker": "ZEOX",
+          "score": 18,
+          "flag": "SKIP_OTC+CATALYST",
+          "catalyst": "Advisory Board expansion",
+          "note": "OTC pinx. Catalyst debole."
+        },
+        {
+          "ticker": "SXTP",
+          "score": 25,
+          "flag": "SKIP_REVERSE_SPLIT",
+          "catalyst": "Nessuno",
+          "note": "Reverse split Jan 2026 (<6m)."
+        },
+        {
+          "ticker": "RR",
           "score": 32,
-          "flag": "SKIP score <55",
-          "catalyst": "Iran-Israel oil surge Brent +3.6%"
+          "flag": "SKIP_FLOAT+KS3",
+          "catalyst": "Earnings June 3 (stale)",
+          "note": "Float 180M. KS3 +282% YTD."
         }
       ]
     },
-    "memory_updates": {
-      "retrocedi_a_skip": [
-        "MBRX"
-      ],
-      "rimuovi_da_watchlist_operativa": [
-        "RCAT",
-        "VSAT",
-        "HUMA"
-      ],
-      "external_monitor": [
-        "ACHV PDUFA June 20",
-        "UNCY PDUFA June 29 cash ok"
-      ]
+    "memory_prior_sessions": {
+      "cing": {
+        "status": "MONITORING debole",
+        "price": "$4.73",
+        "catalyst": "CRL CMC-only June 2",
+        "dilution": "Lincoln Park attivo",
+        "note": "No new AH catalyst."
+      },
+      "achv": {
+        "status": "External monitor",
+        "catalyst": "PDUFA June 20",
+        "note": "Float 53M fuori universe."
+      },
+      "mbrx": {
+        "status": "SKIP perm",
+        "motivo": "Going concern+ATM"
+      },
+      "rcat": {
+        "status": "WATCH ONLY",
+        "price": "$11.19",
+        "note": "Iran tailwind ma no catalyst fresh. Float>15M."
+      }
     },
-    "setup_domani": {
-      "candidati_tier1": 0,
-      "candidati_tier2": 0,
-      "azione": "NESSUNA POSIZIONE — nessun candidato post-Pensiero Critico. Osservare 15:30 IT rivalutare catalyst pre-market.",
-      "attenzione": "MBRX: se annuncia capital raise overnight conferma SKIP. Se MIRACLE anticipato non rientrare senza nuovo Pensiero Critico."
-    }
+    "skip_list": [
+      {
+        "ticker": "RNAC",
+        "motivo": "Float 28M. Priced in."
+      },
+      {
+        "ticker": "DBGI",
+        "motivo": "STALE June 1. KS3."
+      },
+      {
+        "ticker": "MBOT",
+        "motivo": "Float 39M + ATM."
+      },
+      {
+        "ticker": "IXHL",
+        "motivo": "Float 346M."
+      },
+      {
+        "ticker": "ZEOX",
+        "motivo": "OTC + catalyst debole."
+      },
+      {
+        "ticker": "SXTP",
+        "motivo": "Reverse split <6m."
+      },
+      {
+        "ticker": "RR",
+        "motivo": "Float 180M. KS3."
+      },
+      {
+        "ticker": "OCS",
+        "motivo": "Float 57M. DIAMOND fail."
+      },
+      {
+        "ticker": "CTOR",
+        "motivo": "Prezzo $0.79 <$1."
+      },
+      {
+        "ticker": "AEHR",
+        "motivo": "Prezzo $95-101 >$25."
+      },
+      {
+        "ticker": "NUVL",
+        "motivo": "Large cap. GSK buyout."
+      },
+      {
+        "ticker": "CYCN",
+        "motivo": "AH surge era set 2025. Going concern."
+      }
+    ],
+    "actionable_setups_tomorrow": 0,
+    "regime_alert": "TRIPLE RISK 10-giu: CPI ore 14:30 IT + Iran escalation Trump + VIX 20.45. Sizing max 25%. NESSUNA entry prima CPI. Valutare post-CPI 14:35 IT.",
+    "summary": "Sessione serale NEGATIVA. Zero candidati TIER1/2. Tutti i hunter falliscono filtri. CPI domani 14:30 IT. SILENZIO fino post-CPI. Account euro 1451.98, zero posizioni."
   },
   "discovery_weekly": [
     {
