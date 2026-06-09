@@ -440,6 +440,139 @@
   ],
   "premarket_gap": [
     {
+      "date": "June 9, 2026",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "TradingView",
+        "GitHub",
+        "WebSearch"
+      ],
+      "macro_regime": {
+        "vix": 18.17,
+        "vix_change_pct": -3.96,
+        "spy_price": 742.95,
+        "spy_change_pct": 0.5,
+        "pfrc_rgm": "N/A (TV indicator not loaded)",
+        "regime_estimate": "TRANSIZIONE → BULL RISK-ON (VIX -4% compression, SPY +0.5%)"
+      },
+      "account_snapshot": {
+        "net_liq_eur": 1451.98,
+        "buying_power_eur": 1451.98,
+        "open_positions": 0,
+        "trades_today": 0
+      },
+      "watchlist_scanned": 58,
+      "tier_a_count": 0,
+      "tier_b_count": 1,
+      "tier_b_tickers": [
+        "MNTS"
+      ],
+      "tier_c_count": 3,
+      "tier_c_tickers": [
+        "AEHR",
+        "ONDS",
+        "CING"
+      ],
+      "gap_candidates": [
+        {
+          "ticker": "MNTS",
+          "tier": "B",
+          "gap_pct": 8.84,
+          "last_price": 13.3,
+          "prior_close": 12.22,
+          "premarket_volume": 254675,
+          "catalyst": "SpaceX IPO sector tailwind (IPO June 12) + prior $25M PP",
+          "catalyst_tier": "TIER1",
+          "verdict": "SKIP",
+          "skip_reason": "DILUZIONE LETALE — $25M private placement closed June 8, S-3 shelf 3.09M shares for resale",
+          "kindleberger": "STAGE 3 (+164% from 1M low $5.04)"
+        }
+      ],
+      "monitoring": [
+        {
+          "ticker": "AEHR",
+          "gap_pct": 3.06,
+          "last_price": 98.5,
+          "prior_close": 95.58,
+          "premarket_volume": 37723,
+          "adv_20d": 1581748,
+          "catalyst": "$41M AI production order (hyperscale, announced June 2-3)",
+          "catalyst_tier": "TIER1",
+          "kindleberger": "STAGE 1 (+28.3% from 1M low $76.76)",
+          "note": "Catalyst already priced in last week (stock peaked $121.80 on Jun 3). Today = bounce from support $93-95. Watch for momentum confirmation post-open.",
+          "score_estimate": 55
+        },
+        {
+          "ticker": "ONDS",
+          "gap_pct": 2.52,
+          "last_price": 10.56,
+          "prior_close": 10.3,
+          "premarket_volume": 1040128,
+          "adv_20d": 77399797,
+          "catalyst": "Navy SOUTHCOM drone contract + $30M orders (announced June 2)",
+          "catalyst_tier": "TIER2",
+          "kindleberger": "STAGE 1 (+21.8% from 1M low $8.67)",
+          "note": "CEO sold $31.9M shares (Jun 1) + 2.1M Omnisys shares registered resale. Supply overhang caps rallies.",
+          "score_estimate": 52
+        },
+        {
+          "ticker": "CING",
+          "gap_pct": 3.75,
+          "last_price": 4.7,
+          "prior_close": 4.53,
+          "premarket_volume": 41857,
+          "catalyst": "FDA CRL June 2 — CTx-1301 CMC-only (no clinical concerns, re-submission path open)",
+          "catalyst_tier": "TIER2",
+          "kindleberger": "N/A",
+          "note": "FDA did NOT approve CTx-1301. CRL = CMC manufacturing issue only. Re-submission possible but timeline uncertain.",
+          "score_estimate": 48
+        }
+      ],
+      "skipped": [
+        {
+          "ticker": "MNTS",
+          "motivo": "DILUZIONE LETALE — $25M PP + S-3 shelf (multiple offerings)"
+        },
+        {
+          "ticker": "CODX",
+          "motivo": "KINDLEBERGER STAGE 4 (+319% from 1M low $1.26)"
+        },
+        {
+          "ticker": "NVTS",
+          "motivo": "Contingent share issuance (3.28M shares) + no new catalyst"
+        },
+        {
+          "ticker": "SNAL",
+          "motivo": "No catalyst verificato (8-K = shareholder meeting only)"
+        },
+        {
+          "ticker": "MTVA",
+          "motivo": "DILUZIONE LETALE (424B3 prospectus) — crash -23.42%"
+        },
+        {
+          "ticker": "CMND",
+          "motivo": "Post-catalyst fade (June 5 +27% run from clinical news)"
+        }
+      ],
+      "notable_crashes": [
+        {
+          "ticker": "MTVA",
+          "gap_pct": -23.42,
+          "reason": "424B3 prospectus (dilutive offering) filed + ADA conference data"
+        },
+        {
+          "ticker": "CMND",
+          "gap_pct": -10.29,
+          "reason": "Post-run distribution after June 5 +27% clinical trial catalyst"
+        }
+      ],
+      "open_positions_alert": [],
+      "actionable_setups_today": 0,
+      "summary": "Scan quieto. Nessun setup TIER1/TIER2 approvato. MNTS unico TIER B eliminato da diluzione letale. Monitoring: AEHR (catalyst stale), ONDS (supply overhang), CING (FDA CRL). Attendere conferma momentum post-apertura prima di ogni engagement."
+    },
+    {
       "date": "June 8, 2026",
       "scan_time": "14:32 IT",
       "scanner_version": "v3.0",
