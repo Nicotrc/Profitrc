@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-09T22:00:00+02:00",
+  "last_updated": "2026-06-10T22:00:00+02:00",
   "session_type": "phase0_serale",
   "watchlist": [
     "YCBD",
@@ -188,164 +188,150 @@
     }
   },
   "phase0_serale": {
-    "date": "2026-06-09",
-    "session_start": "22:00 IT",
-    "market_regime": {
-      "spy_close": "-2.2%",
-      "nasdaq_close": "-3.3%",
-      "vix": "20.45 (+8.1%)",
-      "yield_10y": "4.57%",
-      "event_risk_tomorrow": "CPI May 2026 + Iran escalazione + SpaceX IPO",
-      "trigger_oggi": "Trump 'must respond' a attacco elicottero iraniano",
-      "sp_futures_ah": "MIXED — incerto, Iran risk overnight",
-      "regime_domani": "RISK-OFF / INCERTO — VIX 20.45, Nasdaq -3.3%, CPI domani, Iran guerra escalation. Zero posizioni salvo catalyst TIER1 + RVOL >3x post-CPI."
+    "date": "2026-06-10",
+    "generated_at": "22:00 IT",
+    "macro_regime": "RISK-OFF",
+    "macro_details": {
+      "vix": "Spiking - USA-Iran escalation",
+      "spy_futures": "7341.75 SELL signal, oil near 90 USD/barrel",
+      "dxy": "Strengthening safe-haven",
+      "yield_10y": "4.52-4.55% rising - CPI 4.2% 3yr high - Fed hike Oct prob 51%",
+      "regime_assessment": "RISK-OFF TRANSIZIONE - No entry standard. Solo TIER1 con catalyst FRESCO e float <15M.",
+      "iran_note": "US-Iran military exchange intensifying. Defense/oil bid. Broad market risk-off."
     },
     "watchlist_movers": [
-      "CING close $4.73 | no new AH catalyst",
-      "RCAT $11.19 | flat post -14% ieri | no catalyst",
-      "Mercato: S&P -2.2%, Nasdaq -3.3% su Iran escalation",
-      "AEHR rimosso universe (prezzo $95-101)"
+      "SOUN +7.7% AH (ATM 300M SKIP diluzione)",
+      "QUBT -8.72% AH (bearish)",
+      "BBAI -7.66% day (distribuzione AI)",
+      "CRMD +2.88% earnings beat + Phase3 pos ma float 77M SKIP",
+      "RCAT -2.34% day (difesa Iran ma float 150M SKIP criteri)",
+      "MBRX -2.09% AH (pre-catalyst setup, nessun annuncio stanotte)",
+      "TRNR 0.78 SKIP sotto 1 dollaro",
+      "SNAL 0.86 SKIP sotto 1 dollaro",
+      "AEHR 103 SKIP sopra 25 dollari"
     ],
-    "candidates": [],
-    "hunter_scan": {
-      "external_ah_movers_found": 0,
-      "8k_filed_today": [
-        "MBOT",
-        "IXHL",
-        "ZEOX",
-        "RNAC",
-        "DBGI",
-        "SXTP"
-      ],
-      "note": "Zero small cap float <15M con catalyst TIER1/2 fresh tonight. RISK-OFF severo.",
-      "candidates_evaluated": [
-        {
-          "ticker": "RNAC",
-          "score": 48,
-          "flag": "SKIP_FLOAT",
-          "catalyst": "CAR-T WestGene license 8-K (durante sessione)",
-          "note": "Float 28M>>15M. Catalyst priced in. Volume 35K vs ADV 191K."
+    "candidates": [
+      {
+        "ticker": "MBRX",
+        "score": 50,
+        "tier": "MONITORING",
+        "catalyst": "MIRACLE trial unblinding IMMINENTE fine Q2 2026. Blinded CRc>40% vs storico 17-18%. ASCO: no cardiotossicita Annamycin. 3 analisti Strong Buy PT 21.",
+        "close": 2.46,
+        "ah_pct": "-2.09% (2.44)",
+        "pensiero_critico": {
+          "regime": "RISK-OFF Iran+CPI. Biotech indip dal macro MA capital raise difficile in risk-off.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "PENDING - unblinding atteso non ancora annunciato",
+          "narrativa_numeri": "ATTENZIONE: Cash 10.3M + 8.3M financing. Runway solo Q3 2026. Needs 25M more.",
+          "rischio_asimmetrico": "worst case: unblinding negativo -> 1.00 (-60%). S-3 6.37M shares + warrants 2.40 diluzione.",
+          "kindleberger": "Stage 1 (37% sopra 52w low 1.79)",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "CASH RUNWAY <6M",
+            "S-3 SHELF ATTIVO 6.37M",
+            "WARRANTS 2.40 OVERHANG",
+            "FUTURES NEGATIVI"
+          ],
+          "giudizio": "MONITORING - solo su 8-K unblinding fresco pre-market"
         },
-        {
-          "ticker": "DBGI",
-          "score": 42,
-          "flag": "SKIP_STALE",
-          "catalyst": "$125M GCC apparel (June 1 — 8 giorni fa)",
-          "note": "STALE. Stock da $18 a $1. KS3+."
-        },
-        {
-          "ticker": "MBOT",
-          "score": 38,
-          "flag": "SKIP_FLOAT+ATM",
-          "catalyst": "Michigan LIBERTY adoption 8-K",
-          "note": "Float ~39M + ATM $39M attivo."
-        },
-        {
-          "ticker": "IXHL",
-          "score": 22,
-          "flag": "SKIP_FLOAT",
-          "catalyst": "AGP BUY coverage PT $18",
-          "note": "346M shares. Multiple offerings."
-        },
-        {
-          "ticker": "ZEOX",
-          "score": 18,
-          "flag": "SKIP_OTC+CATALYST",
-          "catalyst": "Advisory Board expansion",
-          "note": "OTC pinx. Catalyst debole."
-        },
-        {
-          "ticker": "SXTP",
-          "score": 25,
-          "flag": "SKIP_REVERSE_SPLIT",
-          "catalyst": "Nessuno",
-          "note": "Reverse split Jan 2026 (<6m)."
-        },
-        {
-          "ticker": "RR",
-          "score": 32,
-          "flag": "SKIP_FLOAT+KS3",
-          "catalyst": "Earnings June 3 (stale)",
-          "note": "Float 180M. KS3 +282% YTD."
-        }
-      ]
-    },
-    "memory_prior_sessions": {
-      "cing": {
-        "status": "MONITORING debole",
-        "price": "$4.73",
-        "catalyst": "CRL CMC-only June 2",
-        "dilution": "Lincoln Park attivo",
-        "note": "No new AH catalyst."
-      },
-      "achv": {
-        "status": "External monitor",
-        "catalyst": "PDUFA June 20",
-        "note": "Float 53M fuori universe."
-      },
-      "mbrx": {
-        "status": "SKIP perm",
-        "motivo": "Going concern+ATM"
-      },
-      "rcat": {
-        "status": "WATCH ONLY",
-        "price": "$11.19",
-        "note": "Iran tailwind ma no catalyst fresh. Float>15M."
+        "entry": "2.40-2.55 SOLO se 8-K unblinding positivo pre-market domani",
+        "stop": "1.85 (-27%)",
+        "t1": "4.80 (+90%)",
+        "rr": "condizionale",
+        "fonte": "watchlist+Hunter",
+        "giudizio": "MONITORING",
+        "warning": "Non entrare senza 8-K unblinding. Cash critico. Diluzione overhang."
       }
-    },
-    "skip_list": [
+    ],
+    "hunter_investigated": [
       {
-        "ticker": "RNAC",
-        "motivo": "Float 28M. Priced in."
-      },
-      {
-        "ticker": "DBGI",
-        "motivo": "STALE June 1. KS3."
-      },
-      {
-        "ticker": "MBOT",
-        "motivo": "Float 39M + ATM."
+        "ticker": "AZI",
+        "score": 12,
+        "tier": "SKIP",
+        "catalyst": "Low-float pump +858% giu9 senza catalyst. Ora crolla -27% AH.",
+        "float_M": 1.73,
+        "price_ah": "2.35",
+        "giudizio": "SKIP - BIRD RULE + Kindleberger 4 + no fundamentals"
       },
       {
         "ticker": "IXHL",
-        "motivo": "Float 346M."
+        "score": 28,
+        "tier": "SKIP",
+        "catalyst": "8-K R&D tax refund A6M non-dilutive giu10. Ma gia +16.44% ieri.",
+        "float_M_est": 17.5,
+        "price": "3.40",
+        "giudizio": "SKIP - STALE prezzato ieri. Float >15M. Regime risk-off."
       },
       {
-        "ticker": "ZEOX",
-        "motivo": "OTC + catalyst debole."
+        "ticker": "CHAI",
+        "score": 22,
+        "tier": "SKIP",
+        "catalyst": "OpenAI S-1 sympathy. PIPE 5.4M closing giu11.",
+        "giudizio": "SKIP - PIPE AH IMMEDIATO. Going concern. Cash 1.93M. AI-washing."
       },
       {
-        "ticker": "SXTP",
-        "motivo": "Reverse split <6m."
+        "ticker": "CRMD",
+        "score": 78,
+        "tier": "SKIP_FLOAT",
+        "catalyst": "Q1 earnings beat 127.4M rev EPS 0.43. Guidance raised. Phase3 REZZAYO positivo.",
+        "float_M": 77.41,
+        "price": "8.23",
+        "giudizio": "SKIP_FLOAT - Float 77.41M > limite 15M sistema. Ottimi fondamentali."
+      }
+    ],
+    "skip_list": [
+      {
+        "ticker": "SOUN",
+        "reason": "ATM shelf 300M attivo"
       },
       {
-        "ticker": "RR",
-        "motivo": "Float 180M. KS3."
+        "ticker": "QUBT",
+        "reason": "-8.72% AH bearish"
       },
       {
-        "ticker": "OCS",
-        "motivo": "Float 57M. DIAMOND fail."
+        "ticker": "CRMD",
+        "reason": "Float 77M SKIP_FLOAT"
       },
       {
-        "ticker": "CTOR",
-        "motivo": "Prezzo $0.79 <$1."
+        "ticker": "RCAT",
+        "reason": "Float 150M SKIP_FLOAT, tesi difesa valida ma fuori criteri"
+      },
+      {
+        "ticker": "VRDN",
+        "reason": "Float 110M SKIP_FLOAT"
+      },
+      {
+        "ticker": "TRNR",
+        "reason": "Prezzo 0.78 sotto 1 dollaro"
+      },
+      {
+        "ticker": "SNAL",
+        "reason": "Prezzo 0.86 sotto 1 dollaro"
       },
       {
         "ticker": "AEHR",
-        "motivo": "Prezzo $95-101 >$25."
+        "reason": "Prezzo 103 sopra 25 dollari"
       },
       {
-        "ticker": "NUVL",
-        "motivo": "Large cap. GSK buyout."
+        "ticker": "BBAI",
+        "reason": "Float large distribuzione AI"
       },
       {
-        "ticker": "CYCN",
-        "motivo": "AH surge era set 2025. Going concern."
+        "ticker": "GLOO",
+        "reason": "Float 82M SKIP_FLOAT"
       }
     ],
-    "actionable_setups_tomorrow": 0,
-    "regime_alert": "TRIPLE RISK 10-giu: CPI ore 14:30 IT + Iran escalation Trump + VIX 20.45. Sizing max 25%. NESSUNA entry prima CPI. Valutare post-CPI 14:35 IT.",
-    "summary": "Sessione serale NEGATIVA. Zero candidati TIER1/2. Tutti i hunter falliscono filtri. CPI domani 14:30 IT. SILENZIO fino post-CPI. Account euro 1451.98, zero posizioni."
+    "regime_override": "RISK-OFF - Domani 11 giu: no entry TIER1/TIER2 senza catalyst FRESCO pre-market. MBRX solo su 8-K unblinding confirmed.",
+    "watchlist_updates": {
+      "remove": [
+        "TRNR",
+        "SNAL"
+      ],
+      "remove_reason": "Prezzi sotto 1 dollaro fuori range sistema",
+      "add": [],
+      "note": "Considerare aggiungere CRMD quando torna in range float o su pullback con catalyst fresh"
+    }
   },
   "discovery_weekly": [
     {
