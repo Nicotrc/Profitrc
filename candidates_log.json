@@ -58,51 +58,134 @@
   ],
   "discovery_daily": [],
   "morning_brief": {
-    "date": "2026-06-09",
+    "date": "2026-06-10",
     "generated_at": "11:00 IT",
-    "macro_regime": "SELECTIVE 3/4 abbassato CPI risk",
+    "macro_regime": "NO TRADE 2/4 abbassato CPI EVENT DAY 🔴",
     "macro_details": {
-      "vix": "19.04 in calo da 21.51 Friday",
-      "spy": "757.09 sopra MA50 711.90",
-      "dxy": "99.95 in calo sotto 100",
-      "yield_10y": "4.57% in rialzo jobs beats",
-      "event_risk": "CPI May 2026 release domani 10 giugno"
+      "vix": "~20-21 est (19.04 ieri, rimbalzo su SPY -3%)",
+      "spy": "734.76 sopra MA50 711.90 ma -3% da ieri 757.09",
+      "dxy": "99.73 in calo sotto 100",
+      "yield_10y": "4.57% near 2-week high, Fed rate hike Dec prob 70%",
+      "event_risk": "CPI May 2026 ore 14:30 IT OGGI. Expected 4.2% YoY. FOMC settimana prossima."
     },
     "big_themes": [
-      "CPI domani - April era 3.8% YoY",
-      "Defense AI rally",
-      "10Y yield 4.57% rialzo",
-      "NRIX Roche 2.3B deal"
+      "CPI May 2026 ore 14:30 IT - atteso 4.2% YoY (Iran war energia)",
+      "SPY -3% pre-CPI da $757 a $734",
+      "Nasdaq -2.1% distribuzione semiconduttori MU MRVL",
+      "FOMC settimana prossima - rate hike Dec prob 70%",
+      "BBAI -7.66% 43M vol, distribuzione watchlist AI"
     ],
     "candidates": [],
     "hunter_found": [
       {
-        "ticker": "NRIX",
-        "score_raw": 89,
-        "giudizio": "SKIP_FLOAT",
-        "motivo": "Float 94M>>15M"
+        "ticker": "CHAI",
+        "score_raw": 44,
+        "tier": "SKIP",
+        "catalyst": "OpenAI S-1 sympathy play",
+        "pensiero_critico": {
+          "regime": "abbassato: CPI+FOMC+SPY -3%",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE (ieri Jun 9)",
+          "narrativa_numeri": "RED FLAG: cash $1.93M, deficit $31.96M, no revenue",
+          "rischio_asimmetrico": "worst case: $0.82 (-75%), hype esaurisce",
+          "kindleberger": "Stage 3 (+306%)",
+          "bird_rule": true,
+          "diluzione": true,
+          "flags": [
+            "⚠️ CASH RUNWAY <6M",
+            "⚠️ KINDLEBERGER 3+",
+            "🚨 BIRD RULE"
+          ],
+          "giudizio": "SKIP"
+        },
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "t2": "N/A",
+        "rr": "N/A",
+        "fonte": "hunter-sympathy",
+        "giudizio": "SKIP",
+        "warning": "Cash $1.93M, KS Stage3+, Bird Rule, 44pt<55pt"
       },
       {
-        "ticker": "LASE",
-        "score_raw": 67,
+        "ticker": "AZI",
+        "score_raw": 34,
+        "tier": "SKIP",
+        "catalyst": "No catalyst - reverse split pump +224%",
+        "pensiero_critico": {
+          "regime": "abbassato 🔴",
+          "catalyst_verified": false,
+          "catalyst_freshness": "STALE",
+          "narrativa_numeri": "No fundamentals",
+          "rischio_asimmetrico": "worst case: ritorno pre-pump",
+          "kindleberger": "Stage 3+",
+          "bird_rule": true,
+          "diluzione": true,
+          "flags": [
+            "🚨 BIRD RULE",
+            "⚠️ KINDLEBERGER 3+",
+            "⚠️ NO CATALYST"
+          ],
+          "giudizio": "SKIP"
+        },
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "t2": "N/A",
+        "rr": "N/A",
+        "fonte": "hunter-top-gainers",
         "giudizio": "SKIP",
-        "motivo": "Float 19.83M+KS3+Nasdaq delist"
+        "warning": "Reverse split pump, no catalyst, 34pt"
       },
       {
         "ticker": "BCDA",
-        "score_raw": 52,
+        "score_raw": 17,
+        "tier": "SKIP",
+        "catalyst": "FDA PMA pathway nod Jun 6-7 (stale 4gg)",
+        "pensiero_critico": {
+          "regime": "abbassato 🔴",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE 4 giorni",
+          "narrativa_numeri": "No revenue, cash incerto, going concern",
+          "rischio_asimmetrico": "worst case: delisting, price<$0.50",
+          "kindleberger": "Stage 1 (prezzo basso ma <$1)",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "⚠️ PRICE <$1 fuori range",
+            "⚠️ STALE catalyst",
+            "⚠️ CASH RUNWAY incerto"
+          ],
+          "giudizio": "SKIP"
+        },
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "t2": "N/A",
+        "rr": "N/A",
+        "fonte": "hunter-biotech",
         "giudizio": "SKIP",
-        "motivo": "Score<55pt+offering June5"
+        "warning": "Price $0.84 <$1, catalyst stale 4gg, no revenue"
       }
     ],
     "skip_list": [
-      "MBRX-ATM",
-      "GCTS-cash600K",
-      "STI-KS4",
-      "INDP-cash1.5M",
-      "ONDS-float507M"
+      "CHAI-cash1.93M+KS3+BirdRule",
+      "AZI-nocat+reverseplit+pump",
+      "BCDA-price0.84<1+stale4gg",
+      "INHD-T12halt-Nasdaq",
+      "ACRS-float139M>>15M",
+      "SOUN-cap3.04B>>criteri",
+      "GRPN-cap768M>>criteri",
+      "NRIX-float94M(confermato)",
+      "LASE-Nasdaq-delist(confermato)",
+      "BBAI-distribuzione-7.66pct"
     ],
-    "operative_note": "CPI risk domani sizing -25%. Entry solo RVOL>3x."
+    "operative_note": "SILENZIO fino post-CPI 14:30 IT. CPI hot>4.2%: no trade giornata. CPI in-line: monitoring. CPI cool<3.9%: rivaluta CRMD RVOL>3x. Zero posizioni. Conto euro 1451.98.",
+    "cpi_scenario": {
+      "hot_4_2_plus": "NO TRADE tutta sessione",
+      "inline_4_0_4_2": "Monitoring only, nessun setup attuale",
+      "cool_sub_3_9": "Rivaluta watchlist, CRMD priorità se RVOL>3x"
+    }
   },
   "phase0_serale": {
     "date": "2026-06-09",
