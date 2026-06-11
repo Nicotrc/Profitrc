@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-11T11:00:00+02:00",
-  "session_type": "morning_brief",
+  "last_updated": "2026-06-11T22:00:00+02:00",
+  "session_type": "phase0_serale",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -163,150 +163,199 @@
     }
   },
   "phase0_serale": {
-    "date": "2026-06-10",
+    "date": "2026-06-11",
     "generated_at": "22:00 IT",
-    "macro_regime": "RISK-OFF",
+    "macro_regime": "TRANSIZIONE",
     "macro_details": {
-      "vix": "Spiking - USA-Iran escalation",
-      "spy_futures": "7341.75 SELL signal, oil near 90 USD/barrel",
-      "dxy": "Strengthening safe-haven",
-      "yield_10y": "4.52-4.55% rising - CPI 4.2% 3yr high - Fed hike Oct prob 51%",
-      "regime_assessment": "RISK-OFF TRANSIZIONE - No entry standard. Solo TIER1 con catalyst FRESCO e float <15M.",
-      "iran_note": "US-Iran military exchange intensifying. Defense/oil bid. Broad market risk-off."
+      "vix": "22.22 (chiusura 10 giu) — moderato, non estremo",
+      "spy_futures_ah": "+0.73% (7331.50) — risk-on stasera",
+      "russell2000_today": "+2.11% — small cap in forza",
+      "dxy": ">100 — headwind ma stabile",
+      "yield_10y": "4.52-4.55% — near 2-week high",
+      "ppi_may": "accelerato — inflazione strutturale",
+      "iran_note": "Trump: USA riprenderà attacchi Iran, possibile Kharg Island. Strait Hormuz threat. Crude +$3.",
+      "spacex_ipo_domani": "ATTENZIONE: SpaceX IPO domani — attention drain retail da small cap",
+      "regime_assessment": "TRANSIZIONE — risk-on selettivo. Small cap e defense/energy beneficiari. Ma PPI+Iran = headwind rate. Nessun setup approvato per domani."
     },
     "watchlist_movers": [
-      "SOUN +7.7% AH (ATM 300M SKIP diluzione)",
-      "QUBT -8.72% AH (bearish)",
-      "BBAI -7.66% day (distribuzione AI)",
-      "CRMD +2.88% earnings beat + Phase3 pos ma float 77M SKIP",
-      "RCAT -2.34% day (difesa Iran ma float 150M SKIP criteri)",
-      "MBRX -2.09% AH (pre-catalyst setup, nessun annuncio stanotte)",
-      "TRNR 0.78 SKIP sotto 1 dollaro",
-      "SNAL 0.86 SKIP sotto 1 dollaro",
-      "AEHR 103 SKIP sopra 25 dollari"
+      "BATL +57% day +16% AH — Iran/oil macro (ATM $150M SKIP)",
+      "HUMA -DILUZIONE: $50M public offering 47.6M shares a $1.05 annunciata stasera SKIP",
+      "BBAI +5.1% intraday $3.91-$4.14 — nessun catalyst AH",
+      "SOUN debole $6.66-$7.17 (-6.8% dal high) — nessun catalyst",
+      "QUBT debole $9.57-$9.82 (-2.1% dal high) — nessun catalyst",
+      "CRMD +2.2% $8.73-$8.93 — patent win Federal Circuit (float 77M SKIP)",
+      "MBRX +5.3% est $2.59 — SKIP going concern + cash <Q3",
+      "RCAT +8.81% $11.86 Japan MoD+DoD contracts (float 150M SKIP perimetro)",
+      "PPCB +288% $1.35→$5.20 Kindleberger Stage 4 SKIP",
+      "CPOP +322% ieri -10.53% oggi — STALE Chinese pump SKIP",
+      "DSY -36.25% AH $4.59 — Nasdaq compliance pump crolla SKIP"
     ],
-    "candidates": [
-      {
-        "ticker": "MBRX",
-        "score": 50,
-        "tier": "MONITORING",
-        "catalyst": "MIRACLE trial unblinding IMMINENTE fine Q2 2026. Blinded CRc>40% vs storico 17-18%. ASCO: no cardiotossicita Annamycin. 3 analisti Strong Buy PT 21.",
-        "close": 2.46,
-        "ah_pct": "-2.09% (2.44)",
-        "pensiero_critico": {
-          "regime": "RISK-OFF Iran+CPI. Biotech indip dal macro MA capital raise difficile in risk-off.",
-          "catalyst_verified": true,
-          "catalyst_freshness": "PENDING - unblinding atteso non ancora annunciato",
-          "narrativa_numeri": "ATTENZIONE: Cash 10.3M + 8.3M financing. Runway solo Q3 2026. Needs 25M more.",
-          "rischio_asimmetrico": "worst case: unblinding negativo -> 1.00 (-60%). S-3 6.37M shares + warrants 2.40 diluzione.",
-          "kindleberger": "Stage 1 (37% sopra 52w low 1.79)",
-          "bird_rule": false,
-          "diluzione": true,
-          "flags": [
-            "CASH RUNWAY <6M",
-            "S-3 SHELF ATTIVO 6.37M",
-            "WARRANTS 2.40 OVERHANG",
-            "FUTURES NEGATIVI"
-          ],
-          "giudizio": "MONITORING - solo su 8-K unblinding fresco pre-market"
-        },
-        "entry": "2.40-2.55 SOLO se 8-K unblinding positivo pre-market domani",
-        "stop": "1.85 (-27%)",
-        "t1": "4.80 (+90%)",
-        "rr": "condizionale",
-        "fonte": "watchlist+Hunter",
-        "giudizio": "MONITORING",
-        "warning": "Non entrare senza 8-K unblinding. Cash critico. Diluzione overhang."
-      }
-    ],
+    "candidates": [],
     "hunter_investigated": [
       {
-        "ticker": "AZI",
-        "score": 12,
+        "ticker": "BATL",
+        "score": 47,
         "tier": "SKIP",
-        "catalyst": "Low-float pump +858% giu9 senza catalyst. Ora crolla -27% AH.",
-        "float_M": 1.73,
-        "price_ah": "2.35",
-        "giudizio": "SKIP - BIRD RULE + Kindleberger 4 + no fundamentals"
+        "source": "4A — after hours movers",
+        "catalyst": "US-Iran military exchange — Strait Hormuz closure — crude +$3 — oil beta 2.5x",
+        "close": 2.06,
+        "ah_pct": "+16.44% ($2.40)",
+        "volume_vs_avg": "30x (199.66M vs 6.68M)",
+        "float_M": "~19-20M (22M shares, Gen IV 23.2%)",
+        "pensiero_critico": {
+          "pre_check_diluizione": "ATM SHELF $150M SU 22M SHARES — equivale a 6.8x shares outstanding. SKIP IMMEDIATO.",
+          "regime": "TRANSIZIONE oil-friendly, ma ATM invalida setup",
+          "catalyst_verified": false,
+          "catalyst_freshness": "FRESH AH oggi",
+          "narrativa_numeri": "Delaware Basin upstream, micro cap $29-48M, oil-leveraged",
+          "rischio_asimmetrico": "Worst case ceasefire Iran: -30-50%. ATM diluzione: altro -20%.",
+          "kindleberger": "Da verificare — 52w range non trovato",
+          "bird_rule": true,
+          "bird_rule_note": "Volume 30x ADV — massimo social buzz",
+          "diluzione": true,
+          "flags": [
+            "⚠️ ATM $150M ATTIVA (letale su 22M shares)",
+            "⚠️ FLOAT >15M (19-20M)",
+            "🚨 BIRD RULE (30x volume)",
+            "⚠️ MACRO DIPENDENTE (no catalyst aziendale)"
+          ],
+          "giudizio": "SKIP — ATM letale + float borderline + BIRD RULE + macro-dependent"
+        },
+        "giudizio": "SKIP",
+        "fonte": "4A"
       },
       {
-        "ticker": "IXHL",
-        "score": 28,
+        "ticker": "PPCB",
+        "score": 38,
         "tier": "SKIP",
-        "catalyst": "8-K R&D tax refund A6M non-dilutive giu10. Ma gia +16.44% ieri.",
-        "float_M_est": 17.5,
-        "price": "3.40",
-        "giudizio": "SKIP - STALE prezzato ieri. Float >15M. Regime risk-off."
+        "source": "4A — AH movers",
+        "catalyst": "CDMO GMP manufacturer ingaggiato per Phase 1b PRP trial (solid tumors, 30-40 pz) + $5M buyback",
+        "close_est": 5.2,
+        "day_move": "+288% da $1.35",
+        "float_M_est": "~18-20M (21.86M shares)",
+        "pensiero_critico": {
+          "pre_check_diluizione": "No PIPE recente trovata. $5M buyback = anti-dilutivo.",
+          "regime": "TRANSIZIONE",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH oggi — ma già +288% prezzato",
+          "narrativa_numeri": "Pre-clinical → Phase 1b filing Australia 2026. Orfan drug designation pancreatico.",
+          "rischio_asimmetrico": "Worst case fade domani: -30-50% da $5.20",
+          "kindleberger": "STAGE 4: 52w low $0.10-$1.30 → ora $5.20 = +300-5200%",
+          "bird_rule": true,
+          "bird_rule_note": "43x volume, trending on Timothy Sykes + StocksToTrade",
+          "diluzione": false,
+          "flags": [
+            "⚠️ KINDLEBERGER STAGE 4 → SKIP automatico",
+            "🚨 BIRD RULE (43x volume)",
+            "⚠️ FLOAT >15M (est 18-20M)",
+            "⚠️ GAP-UP >30% — aspettare conferma"
+          ],
+          "giudizio": "SKIP — Kindleberger Stage 4 + BIRD RULE + già +288%"
+        },
+        "giudizio": "SKIP",
+        "fonte": "4A"
       },
       {
-        "ticker": "CHAI",
-        "score": 22,
+        "ticker": "CPOP",
+        "score": 32,
         "tier": "SKIP",
-        "catalyst": "OpenAI S-1 sympathy. PIPE 5.4M closing giu11.",
-        "giudizio": "SKIP - PIPE AH IMMEDIATO. Going concern. Cash 1.93M. AI-washing."
-      },
-      {
-        "ticker": "CRMD",
-        "score": 78,
-        "tier": "SKIP_FLOAT",
-        "catalyst": "Q1 earnings beat 127.4M rev EPS 0.43. Guidance raised. Phase3 REZZAYO positivo.",
-        "float_M": 77.41,
-        "price": "8.23",
-        "giudizio": "SKIP_FLOAT - Float 77.41M > limite 15M sistema. Ottimi fondamentali."
+        "source": "4A — Benzinga AH movers",
+        "catalyst": "Revenue +65% YoY H1 FY26 ($68.9M). Digital entertainment +79%.",
+        "close_today": 1.52,
+        "day_today": "-10.53% (fading dal +322% ieri)",
+        "volume": "287.96M shares (vs 4.21M avg)",
+        "pensiero_critico": {
+          "pre_check_diluizione": "Chinese nano cap — verifica S-1 shelf non effettuata (time constraint)",
+          "regime": "TRANSIZIONE",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — earnings annunciate ieri (10 giu), rally già fatto",
+          "narrativa_numeri": "Entrate $68.9M. China-based digital media.",
+          "rischio_asimmetrico": "Worst case: -50% da $1.52 (pump che continua a deflate)",
+          "kindleberger": "STAGE 4: da sub-$0.30 a $2.55 ieri = +750%+",
+          "bird_rule": true,
+          "flags": [
+            "⚠️ STALE (catalyst ieri)",
+            "⚠️ KINDLEBERGER STAGE 4",
+            "🚨 BIRD RULE (volume 68x ADV)",
+            "⚠️ CHINESE MICRO CAP (pump pattern)"
+          ],
+          "giudizio": "SKIP — STALE + Stage 4 + Chinese pump pattern"
+        },
+        "giudizio": "SKIP",
+        "fonte": "4A"
       }
     ],
-    "skip_list": [
+    "watchlist_skip_update": [
       {
-        "ticker": "SOUN",
-        "reason": "ATM shelf 300M attivo"
+        "ticker": "HUMA",
+        "motivo": "PIPE AH STASERA: $50M public offering 47.6M shares a $1.05 (closing June 12). RIMUOVERE watchlist."
       },
       {
-        "ticker": "QUBT",
-        "reason": "-8.72% AH bearish"
+        "ticker": "MBRX",
+        "motivo": "Going concern + cash solo Q3 2026 + shares +528% YoY. Score 50 confermato. Binary event June 30 ancora attivo ma con troppi flag."
       },
       {
         "ticker": "CRMD",
-        "reason": "Float 77M SKIP_FLOAT"
+        "motivo": "Float 77.41M fuori perimetro. Patent win Federal Circuit ottimo ma non tradable per sistema."
       },
       {
         "ticker": "RCAT",
-        "reason": "Float 150M SKIP_FLOAT, tesi difesa valida ma fuori criteri"
+        "motivo": "Float 150M fuori perimetro. DoD+Japan MoD contracts validi strategicamente."
+      },
+      {
+        "ticker": "UNCY",
+        "motivo": "Float 25.24M > 15M. PDUFA June 29 interessante — monitorare se float riduce."
       },
       {
         "ticker": "VRDN",
-        "reason": "Float 110M SKIP_FLOAT"
+        "motivo": "Float 95-102M >> 15M. PDUFA June 30 interessante — non tradable per sistema."
       },
       {
-        "ticker": "TRNR",
-        "reason": "Prezzo 0.78 sotto 1 dollaro"
-      },
-      {
-        "ticker": "SNAL",
-        "reason": "Prezzo 0.86 sotto 1 dollaro"
-      },
-      {
-        "ticker": "AEHR",
-        "reason": "Prezzo 103 sopra 25 dollari"
-      },
-      {
-        "ticker": "BBAI",
-        "reason": "Float large distribuzione AI"
-      },
-      {
-        "ticker": "GLOO",
-        "reason": "Float 82M SKIP_FLOAT"
+        "ticker": "BATL",
+        "motivo": "Non in watchlist. ATM $150M su 22M shares. Oil/Iran macro play. SKIP."
       }
     ],
-    "regime_override": "RISK-OFF - Domani 11 giu: no entry TIER1/TIER2 senza catalyst FRESCO pre-market. MBRX solo su 8-K unblinding confirmed.",
-    "watchlist_updates": {
-      "remove": [
-        "TRNR",
-        "SNAL"
+    "watchlist_update_suggestion": {
+      "remove_immediately": [
+        "HUMA"
       ],
-      "remove_reason": "Prezzi sotto 1 dollaro fuori range sistema",
-      "add": [],
-      "note": "Considerare aggiungere CRMD quando torna in range float o su pullback con catalyst fresh"
-    }
+      "remove_reason_huma": "Public offering $50M a $1.05 closing June 12 — diluzione massiva annunciata stasera",
+      "downgrade_monitoring": [
+        "MBRX"
+      ],
+      "downgrade_reason_mbrx": "Cash runway <Q3 2026, going concern, shares +528%. Tener solo per 8-K unblinding June 30 poi rimuovere.",
+      "note": "UNCY PDUFA June 29 e VRDN PDUFA June 30: eventi binari importanti. Entrambe fuori perimetro float ma da seguire come indicator settore FDA biotech."
+    },
+    "note_domani_june12": [
+      "SpaceX IPO (SPACEX) — mega evento attention drain retail e capital flows",
+      "Iran/Hormuz: monitorare crude premarket — se oil gap-up, energy micro cap potenziale",
+      "PPI strutturale + rate hike risk: headwind broad risk-on",
+      "Silenzio 15:30-15:35 IT | Entry window 15:35-15:45 IT",
+      "NESSUN SETUP ATTIVO per domani — sessione CASH",
+      "Watch: MBRX (eventuali 8-K unblinding — probabilità bassa intra-day)",
+      "Watch: UNCY (PDUFA June 29 si avvicina — 18 giorni)"
+    ],
+    "skip_list_full": [
+      "MBRX: going concern + cash <Q3 + shares +528% (binary event ancora attivo ma no setup domani)",
+      "HUMA: PIPE AH $50M 47.6M shares a $1.05 → SKIP obbligatorio + rimuovere watchlist",
+      "CRMD: float 77M fuori perimetro",
+      "UNCY: float 25M fuori perimetro (PDUFA June 29 interessante)",
+      "VRDN: float 95M fuori perimetro (PDUFA June 30 interessante)",
+      "CCCC: float 104M fuori perimetro (53% ORR EHA data ottima)",
+      "RCAT: float 150M fuori perimetro",
+      "PPCB: Kindleberger Stage 4 + BIRD RULE + +288% intraday",
+      "BATL: ATM $150M + BIRD RULE + float 19-20M + macro-dependent",
+      "BGMS: diluzione holders <1% (all-stock Future NRG deal)",
+      "NEXR: STALE catalyst 4 giugno (Fort Technology listing)",
+      "CPOP: STALE+Chinese pump + Kindleberger Stage 4",
+      "DSY: Nasdaq compliance pump + -36% AH",
+      "DAIC: reverse split 1-for-25 (<6m) + LOI non-binding",
+      "YCBD: prezzo $0.97 sotto $1 fuori perimetro",
+      "BBAI: nessun catalyst AH, prezzo range stretto",
+      "SOUN: debole -6.8% dal high, nessun catalyst",
+      "QUBT: debole -2.1% dal high, nessun catalyst"
+    ],
+    "session_summary": "Scansione serale 11 giugno 2026 — NESSUN SETUP VALIDO. Regime TRANSIZIONE con S&P futures +0.73% ma PPI strutturale, Iran escalation e SpaceX IPO domani (attention drain). La watchlist soffre di un problema sistemico: la maggior parte dei ticker ha float >15M. Tre nuovi hunter candidati identificati (BATL, PPCB, CPOP): tutti SKIP per flag letali. HUMA rimossa per PIPE AH stasera. Sistema funziona correttamente — meglio cash che rischio in assenza di setup puliti."
   },
   "discovery_weekly": [
     {
