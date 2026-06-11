@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-10T22:00:00+02:00",
-  "session_type": "phase0_serale",
+  "last_updated": "2026-06-11T11:00:00+02:00",
+  "session_type": "morning_brief",
   "watchlist": [
     "YCBD",
     "HUMA",
@@ -58,133 +58,108 @@
   ],
   "discovery_daily": [],
   "morning_brief": {
-    "date": "2026-06-10",
+    "date": "2026-06-11",
     "generated_at": "11:00 IT",
-    "macro_regime": "NO TRADE 2/4 abbassato CPI EVENT DAY 🔴",
+    "macro_regime": "NO TRADE 1/4 abbassato 🔴",
     "macro_details": {
-      "vix": "~20-21 est (19.04 ieri, rimbalzo su SPY -3%)",
-      "spy": "734.76 sopra MA50 711.90 ma -3% da ieri 757.09",
-      "dxy": "99.73 in calo sotto 100",
-      "yield_10y": "4.57% near 2-week high, Fed rate hike Dec prob 70%",
-      "event_risk": "CPI May 2026 ore 14:30 IT OGGI. Expected 4.2% YoY. FOMC settimana prossima."
+      "vix": "22.22 (+11.83%), apertura 20.10 — IN SALITA 2 sedute consecutive",
+      "spy": "Sopra MA50 717.45 | Recovery +0.81% su ceasefire Israel-Iran (fragile)",
+      "dxy": ">100 — geopolitico+inflazionistico headwind small cap",
+      "yield_10y": "4.57% near 2-week high — CPI May 4.2% strutturale",
+      "event_risk": "CPI 4.2% YoY (3-year high). Ceasefire Israel-Iran tattico. Oil Brent $96. Iran war 100gg. FOMC imminente."
     },
     "big_themes": [
-      "CPI May 2026 ore 14:30 IT - atteso 4.2% YoY (Iran war energia)",
-      "SPY -3% pre-CPI da $757 a $734",
-      "Nasdaq -2.1% distribuzione semiconduttori MU MRVL",
-      "FOMC settimana prossima - rate hike Dec prob 70%",
-      "BBAI -7.66% 43M vol, distribuzione watchlist AI"
+      "CPI May 4.2% YoY strutturale: inflazione mantenuta da oil $96 + Iran war",
+      "Israel-Iran ceasefire fragile: recovery +0.81% tattica, VIX rimane 22+",
+      "HUMA Phase 3 V012 POSITIVO (superiority endpoint) + offerta $50M a $1.05 SKIP",
+      "VIX 22.22 in salita su 2 sedute — risk-off persistente",
+      "Russell reconstitution effective June 26 — forced buying index inclusions"
+    ],
+    "setup_attivi": [
+      {
+        "ticker": "MBRX",
+        "nome": "Moleculin Biotech",
+        "source": "phase0_serale + watchlist",
+        "price_oggi": "2.59",
+        "change_pct": "+5.3% est da AH 2.46",
+        "score": 53,
+        "tier": "MONITORING",
+        "catalyst": "MIRACLE trial unblinding imminente fine Q2 2026: 45 soggetti, 40% CR blinded data, no cardiotoxicity (ASCO June). Market assessment June 5: physician interest 6/7.",
+        "giudizio": "MONITORING — entry SOLO su 8-K unblinding positivo pre-market",
+        "entry": "2.40-2.55 solo su 8-K unblinding positivo",
+        "stop": "1.85",
+        "t1": "4.80",
+        "t2": "6.50",
+        "rr": "2.6:1",
+        "warning": "BINARY EVENT. No trade anticipatorio in regime NO TRADE.",
+        "flags": [
+          "BINARY EVENT",
+          "CASH RUNWAY da monitorare",
+          "NO TRADE oggi"
+        ]
+      }
     ],
     "candidates": [],
     "hunter_found": [
       {
-        "ticker": "CHAI",
-        "score_raw": 44,
+        "ticker": "HUMA",
+        "score_raw": 76,
         "tier": "SKIP",
-        "catalyst": "OpenAI S-1 sympathy play",
-        "pensiero_critico": {
-          "regime": "abbassato: CPI+FOMC+SPY -3%",
-          "catalyst_verified": true,
-          "catalyst_freshness": "STALE (ieri Jun 9)",
-          "narrativa_numeri": "RED FLAG: cash $1.93M, deficit $31.96M, no revenue",
-          "rischio_asimmetrico": "worst case: $0.82 (-75%), hype esaurisce",
-          "kindleberger": "Stage 3 (+306%)",
-          "bird_rule": true,
-          "diluzione": true,
-          "flags": [
-            "⚠️ CASH RUNWAY <6M",
-            "⚠️ KINDLEBERGER 3+",
-            "🚨 BIRD RULE"
-          ],
-          "giudizio": "SKIP"
-        },
-        "entry": "N/A",
-        "stop": "N/A",
-        "t1": "N/A",
-        "t2": "N/A",
-        "rr": "N/A",
-        "fonte": "hunter-sympathy",
-        "giudizio": "SKIP",
-        "warning": "Cash $1.93M, KS Stage3+, Bird Rule, 44pt<55pt"
+        "catalyst": "Phase 3 V012 POSITIVO: 220 vs 129 catheter-free days, p=0.00070. Presentazione VAM Boston today.",
+        "giudizio": "SKIP — offerta pubblica $50M a $1.05 prezzata June 10 (closing June 12). Regola offerta pre-market.",
+        "flags": [
+          "OFFERTA PRE-MARKET",
+          "GOING CONCERN",
+          "SKIP AUTOMATICO"
+        ],
+        "fonte": "hunter"
       },
       {
-        "ticker": "AZI",
-        "score_raw": 34,
+        "ticker": "PDYN",
+        "score_raw": 50,
         "tier": "SKIP",
-        "catalyst": "No catalyst - reverse split pump +224%",
-        "pensiero_critico": {
-          "regime": "abbassato 🔴",
-          "catalyst_verified": false,
-          "catalyst_freshness": "STALE",
-          "narrativa_numeri": "No fundamentals",
-          "rischio_asimmetrico": "worst case: ritorno pre-pump",
-          "kindleberger": "Stage 3+",
-          "bird_rule": true,
-          "diluzione": true,
-          "flags": [
-            "🚨 BIRD RULE",
-            "⚠️ KINDLEBERGER 3+",
-            "⚠️ NO CATALYST"
-          ],
-          "giudizio": "SKIP"
-        },
-        "entry": "N/A",
-        "stop": "N/A",
-        "t1": "N/A",
-        "t2": "N/A",
-        "rr": "N/A",
-        "fonte": "hunter-top-gainers",
-        "giudizio": "SKIP",
-        "warning": "Reverse split pump, no catalyst, 34pt"
+        "catalyst": "IAI partnership esclusiva loitering munitions DoD. Northland PT $15. Revenue +107% YoY. Cash $43.7M.",
+        "giudizio": "SKIP — float ~35M viola regola <15M. Catalyst 3gg vecchio (STALE).",
+        "flags": [
+          "FLOAT >15M",
+          "STALE 3gg",
+          "MARKET CAP >micro"
+        ],
+        "fonte": "hunter — defense AI"
       },
       {
-        "ticker": "BCDA",
-        "score_raw": 17,
+        "ticker": "SIDU",
+        "score_raw": 28,
         "tier": "SKIP",
-        "catalyst": "FDA PMA pathway nod Jun 6-7 (stale 4gg)",
-        "pensiero_critico": {
-          "regime": "abbassato 🔴",
-          "catalyst_verified": true,
-          "catalyst_freshness": "STALE 4 giorni",
-          "narrativa_numeri": "No revenue, cash incerto, going concern",
-          "rischio_asimmetrico": "worst case: delisting, price<$0.50",
-          "kindleberger": "Stage 1 (prezzo basso ma <$1)",
-          "bird_rule": false,
-          "diluzione": true,
-          "flags": [
-            "⚠️ PRICE <$1 fuori range",
-            "⚠️ STALE catalyst",
-            "⚠️ CASH RUNWAY incerto"
-          ],
-          "giudizio": "SKIP"
-        },
-        "entry": "N/A",
-        "stop": "N/A",
-        "t1": "N/A",
-        "t2": "N/A",
-        "rr": "N/A",
-        "fonte": "hunter-biotech",
-        "giudizio": "SKIP",
-        "warning": "Price $0.84 <$1, catalyst stale 4gg, no revenue"
+        "catalyst": "Russell 2000/3000 reconstitution effective June 26. Space/defense AI. Cash $27.35M debt-free.",
+        "giudizio": "SKIP — offerte multiple $158.5M <30gg + float espanso + catalyst stale 15gg.",
+        "flags": [
+          "PIPE MULTIPLI <30GG",
+          "STALE",
+          "KINDLEBERGER Stage 2-3"
+        ],
+        "fonte": "hunter — russell"
       }
     ],
-    "skip_list": [
-      "CHAI-cash1.93M+KS3+BirdRule",
-      "AZI-nocat+reverseplit+pump",
-      "BCDA-price0.84<1+stale4gg",
-      "INHD-T12halt-Nasdaq",
-      "ACRS-float139M>>15M",
-      "SOUN-cap3.04B>>criteri",
-      "GRPN-cap768M>>criteri",
-      "NRIX-float94M(confermato)",
-      "LASE-Nasdaq-delist(confermato)",
-      "BBAI-distribuzione-7.66pct"
+    "skip_list_today": [
+      "HUMA: offerta $50M a $1.05",
+      "SOUN: ATM shelf $300M",
+      "ONDS: CEO selling + shares +483%",
+      "PDYN: float ~35M",
+      "SIDU: offerte multiple",
+      "ACHV: attende CRL + float 53M",
+      "RDZN: float ~80M + offering",
+      "INHD: Nasdaq HALT T12"
     ],
-    "operative_note": "SILENZIO fino post-CPI 14:30 IT. CPI hot>4.2%: no trade giornata. CPI in-line: monitoring. CPI cool<3.9%: rivaluta CRMD RVOL>3x. Zero posizioni. Conto euro 1451.98.",
-    "cpi_scenario": {
-      "hot_4_2_plus": "NO TRADE tutta sessione",
-      "inline_4_0_4_2": "Monitoring only, nessun setup attuale",
-      "cool_sub_3_9": "Rivaluta watchlist, CRMD priorità se RVOL>3x"
+    "watchlist_update_suggestion": [
+      "PDYN (defense AI): aggiungi MONITORING — doD exclusive catalyst valido, ma float ora troppo grande. Rievalutare se float <15M.",
+      "SIDU: monitora post-June 26 Russell rebalancing"
+    ],
+    "operative_notes": {
+      "account_status": "1451.98 EUR — zero posizioni aperte",
+      "regime": "NO TRADE — attesa macro improvement o catalyst TIER1 eccezionale",
+      "watch_for": "MBRX 8-K unblinding. VIX direction. DXY sotto 100. Ceasefire news.",
+      "note_hunter": "In regime NO TRADE con VIX 22+ e CPI strutturale, nessun candidato supera doppia verifica Gate1+Gate2. HUMA 76pt cade a PRE-CHECK offerta. Tutti gli altri sotto 55pt o con flag letali. Il sistema funziona correttamente filtrando il rischio."
     }
   },
   "phase0_serale": {
