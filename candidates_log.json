@@ -564,6 +564,91 @@
   ],
   "premarket_gap": [
     {
+      "date": "June 12, 2026",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "TradingView",
+        "GitHub",
+        "WebSearch"
+      ],
+      "macro_regime": {
+        "vix": 19.15,
+        "vix_change_pct": -1.49,
+        "spy_last": 739.99,
+        "spy_change_pct": 0.3,
+        "pfrc_rgm": "UNAVAILABLE (indicator not loaded on chart)",
+        "regime_assessed": "TRANSIZIONE",
+        "regime_note": "VIX 19.15 (<20, calmo), SPY +0.30% (lieve positivo). PFRC Rgm non disponibile. Assessment conservativo: TRANSIZIONE."
+      },
+      "account_snapshot": {
+        "net_liq_eur": 1467.73,
+        "buying_power_eur": 1467.73,
+        "cash_eur": 1467.73,
+        "open_positions": 0
+      },
+      "scan_summary": {
+        "tickers_scanned": 58,
+        "tier_a_count": 0,
+        "tier_b_count": 0,
+        "tier_c_count": 0,
+        "top_positive_mover": "FRGT +4.09%",
+        "notable_gap_downs": [
+          "MNTS -16.81%",
+          "MTVA -6.97%"
+        ]
+      },
+      "gap_candidates": [],
+      "tier_c_monitoring": [],
+      "skipped": [
+        {
+          "ticker": "MNTS",
+          "price": 13.56,
+          "prior_close": 16.3,
+          "gap_pct": -16.81,
+          "volume_premarket": 1447039,
+          "motivo": "🚨 GAP DOWN -16.81% | F1 DILUZIONE LETALE: S-3/A filed June 5 2026 — 3,089,100 shares registrate per rivendita da selling stockholders (PIPE maggio 2026: $25M + warrants). $200M shelf totale. Nessun provento per la società. Vendere i PP holders → selling pressure strutturale."
+        },
+        {
+          "ticker": "MTVA",
+          "price": 1.87,
+          "prior_close": null,
+          "gap_pct": -6.97,
+          "volume_premarket": 55557,
+          "motivo": "⛔ GAP DOWN -6.97% | F6 REVERSE SPLIT: Approvato dagli azionisti il 8 giugno 2026 (annual meeting). Segnale di distress strutturale. Skip obbligatorio."
+        },
+        {
+          "ticker": "NIO",
+          "price": 5.29,
+          "prior_close": null,
+          "gap_pct": 1.15,
+          "volume_premarket": 729584,
+          "motivo": "⚠️ RISCHIO GEOPOLITICO: DoD ha aggiunto NIO alla lista 'Chinese military companies' il 9 giugno 2026. Potenziale blocco investimenti istituzionali. Evitare long."
+        },
+        {
+          "ticker": "FRGT",
+          "price": 3.31,
+          "prior_close": 3.18,
+          "gap_pct": 4.09,
+          "volume_premarket": 19011,
+          "motivo": "❌ SKIP: +4.09% sotto soglia TIER B (5%). Nessun catalyst verificato oggi (ultimo news: strategic pivot aprile 2026). FRGT era a $3.47-3.86 il 2 giugno → prezzo attuale $3.31 è declino rispetto a 2 settimane fa, non breakout."
+        },
+        {
+          "ticker": "GCTS",
+          "price": 2.63,
+          "prior_close": 2.57,
+          "gap_pct": 2.33,
+          "volume_premarket": 121373,
+          "motivo": "📊 MONITORING: Forti fondamentali (MaxLinear partnership May 27, satellite deal May 7, Q1 revenue +287% YoY, +85% prezzo YTD) ma nessun catalyst intraday nuovo. Score stimato ~35/100. Aggiungere alla watchlist per breakout con volume."
+        }
+      ],
+      "open_positions_alert": [],
+      "no_operative_setup": true,
+      "no_operative_setup_note": "Nessun ticker supera soglia 65/100 oggi. Mercato in fase di consolidamento premarket. MNTS è il mover principale ma per gap DOWN (dilution). Giornata operativamente neutra — NO TRADE.",
+      "next_window": "NYSE apre tra 60 min | Window entry 15:35-15:45 IT | NO TRADE 15:30-15:35"
+    },
+    {
       "date": "June 9, 2026",
       "scan_time": "14:30 IT",
       "scanner_version": "v3.0",
