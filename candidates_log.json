@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11T22:00:00+02:00",
+  "last_updated": "2026-06-12T11:00:00+02:00",
   "session_type": "phase0_serale",
   "watchlist": [
     "YCBD",
@@ -58,108 +58,95 @@
   ],
   "discovery_daily": [],
   "morning_brief": {
-    "date": "2026-06-11",
-    "generated_at": "11:00 IT",
-    "macro_regime": "NO TRADE 1/4 abbassato 🔴",
-    "macro_details": {
-      "vix": "22.22 (+11.83%), apertura 20.10 — IN SALITA 2 sedute consecutive",
-      "spy": "Sopra MA50 717.45 | Recovery +0.81% su ceasefire Israel-Iran (fragile)",
-      "dxy": ">100 — geopolitico+inflazionistico headwind small cap",
-      "yield_10y": "4.57% near 2-week high — CPI May 4.2% strutturale",
-      "event_risk": "CPI 4.2% YoY (3-year high). Ceasefire Israel-Iran tattico. Oil Brent $96. Iran war 100gg. FOMC imminente."
-    },
+    "date": "2026-06-12",
+    "macro_regime": "TRADE 3/4 grezzo → interpretato 4/4 contesto Iran-peace",
     "big_themes": [
-      "CPI May 4.2% YoY strutturale: inflazione mantenuta da oil $96 + Iran war",
-      "Israel-Iran ceasefire fragile: recovery +0.81% tattica, VIX rimane 22+",
-      "HUMA Phase 3 V012 POSITIVO (superiority endpoint) + offerta $50M a $1.05 SKIP",
-      "VIX 22.22 in salita su 2 sedute — risk-off persistente",
-      "Russell reconstitution effective June 26 — forced buying index inclusions"
+      "Trump calls off Iran strikes + peace deal → VIX spike geo one-off reversing, SPY +1.8% ieri",
+      "SpaceX SPCX IPO oggi Nasdaq → risk-on environment massimo",
+      "Materials +3.26% / Industrials +3.25% / Nasdaq +2.5% — DXY 99.86 calo",
+      "Hunter scan: nessun TIER1/TIER2 pulito oggi per float o shelf attive",
+      "MBRX binary event imminente: unblinding entro 30 giugno 2026"
     ],
-    "setup_attivi": [
+    "candidates": [
       {
         "ticker": "MBRX",
-        "nome": "Moleculin Biotech",
-        "source": "phase0_serale + watchlist",
-        "price_oggi": "2.59",
-        "change_pct": "+5.3% est da AH 2.46",
-        "score": 53,
+        "score": 52,
         "tier": "MONITORING",
-        "catalyst": "MIRACLE trial unblinding imminente fine Q2 2026: 45 soggetti, 40% CR blinded data, no cardiotoxicity (ASCO June). Market assessment June 5: physician interest 6/7.",
-        "giudizio": "MONITORING — entry SOLO su 8-K unblinding positivo pre-market",
-        "entry": "2.40-2.55 solo su 8-K unblinding positivo",
-        "stop": "1.85",
-        "t1": "4.80",
-        "t2": "6.50",
-        "rr": "2.6:1",
-        "warning": "BINARY EVENT. No trade anticipatorio in regime NO TRADE.",
-        "flags": [
-          "BINARY EVENT",
-          "CASH RUNWAY da monitorare",
-          "NO TRADE oggi"
-        ]
+        "catalyst": "Binary event: primo interim unblinding MIRACLE Phase 2B/3 (Annamycin AML) atteso entro 30 giugno 2026. CRc blinded >40% vs storico 17-18%. Cleveland Clinic: no cardiotossicita.",
+        "pensiero_critico": {
+          "regime": "4/4 interpretato — VIX one-off geo Iran ora risolto; SPY 57 >> MA50 17; DXY cala; 10Y stabile",
+          "catalyst_verified": true,
+          "catalyst_freshness": "IMMINENT — unblinding deadline 18 giorni",
+          "narrativa_numeri": "Pre-revenue biotech, MIRACLE trial 56/90 soggetti iscritti a maggio 2026",
+          "rischio_asimmetrico": "Worst case: interim negativo -> -50%+; binario puro",
+          "kindleberger": "Stage 1 (prezzo ~.50, non ha corso ciclo principale)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "BINARY EVENT — max probe sizing",
+            "PRE-REVENUE BIOTECH"
+          ],
+          "giudizio": "MONITORING — probe 1% max loss, sizing 25%"
+        },
+        "entry": ".40-2.60",
+        "stop": ".80",
+        "t1": ".50",
+        "t2": ".00",
+        "rr": "2:1",
+        "fonte": "watchlist_memory_upgrade",
+        "giudizio": "MONITORING",
+        "warning": "Binary event entro 30 giugno — no aumentare size prima unblinding"
       }
     ],
-    "candidates": [],
-    "hunter_found": [
+    "skip_log": [
       {
-        "ticker": "HUMA",
-        "score_raw": 76,
-        "tier": "SKIP",
-        "catalyst": "Phase 3 V012 POSITIVO: 220 vs 129 catheter-free days, p=0.00070. Presentazione VAM Boston today.",
-        "giudizio": "SKIP — offerta pubblica $50M a $1.05 prezzata June 10 (closing June 12). Regola offerta pre-market.",
-        "flags": [
-          "OFFERTA PRE-MARKET",
-          "GOING CONCERN",
-          "SKIP AUTOMATICO"
-        ],
-        "fonte": "hunter"
+        "ticker": "DPRO",
+        "score": 68,
+        "motivo": "ATM shelf C300M attiva Feb 2026 + float 36.5M > 15M"
       },
       {
-        "ticker": "PDYN",
-        "score_raw": 50,
-        "tier": "SKIP",
-        "catalyst": "IAI partnership esclusiva loitering munitions DoD. Northland PT $15. Revenue +107% YoY. Cash $43.7M.",
-        "giudizio": "SKIP — float ~35M viola regola <15M. Catalyst 3gg vecchio (STALE).",
-        "flags": [
-          "FLOAT >15M",
-          "STALE 3gg",
-          "MARKET CAP >micro"
-        ],
-        "fonte": "hunter — defense AI"
+        "ticker": "CRMD",
+        "score": 65,
+        "motivo": "SKIP_FLOAT — 77.4M shares >> 15M"
       },
       {
-        "ticker": "SIDU",
-        "score_raw": 28,
-        "tier": "SKIP",
-        "catalyst": "Russell 2000/3000 reconstitution effective June 26. Space/defense AI. Cash $27.35M debt-free.",
-        "giudizio": "SKIP — offerte multiple $158.5M <30gg + float espanso + catalyst stale 15gg.",
-        "flags": [
-          "PIPE MULTIPLI <30GG",
-          "STALE",
-          "KINDLEBERGER Stage 2-3"
-        ],
-        "fonte": "hunter — russell"
+        "ticker": "STI",
+        "score": 0,
+        "motivo": "PIPE 30gg (35M Jun 7) + Kindleberger Stage 4 +668% weekly"
+      },
+      {
+        "ticker": "SOUN",
+        "score": 0,
+        "motivo": "SKIP_FLOAT — 150M+ float >> 15M"
+      },
+      {
+        "ticker": "SERV",
+        "score": 0,
+        "motivo": "SKIP_FLOAT — market cap 575M + offering maggio 2026"
+      },
+      {
+        "ticker": "RCAT",
+        "score": 0,
+        "motivo": "SKIP_FLOAT — market cap 1.66B"
+      },
+      {
+        "ticker": "ONDS",
+        "score": 0,
+        "motivo": "SKIP_FLOAT — market cap 4.99B"
+      },
+      {
+        "ticker": "TLSS",
+        "score": 0,
+        "motivo": "OTC insolvente going concern cap 588K"
       }
     ],
-    "skip_list_today": [
-      "HUMA: offerta $50M a $1.05",
-      "SOUN: ATM shelf $300M",
-      "ONDS: CEO selling + shares +483%",
-      "PDYN: float ~35M",
-      "SIDU: offerte multiple",
-      "ACHV: attende CRL + float 53M",
-      "RDZN: float ~80M + offering",
-      "INHD: Nasdaq HALT T12"
-    ],
-    "watchlist_update_suggestion": [
-      "PDYN (defense AI): aggiungi MONITORING — doD exclusive catalyst valido, ma float ora troppo grande. Rievalutare se float <15M.",
-      "SIDU: monitora post-June 26 Russell rebalancing"
-    ],
-    "operative_notes": {
-      "account_status": "1451.98 EUR — zero posizioni aperte",
-      "regime": "NO TRADE — attesa macro improvement o catalyst TIER1 eccezionale",
-      "watch_for": "MBRX 8-K unblinding. VIX direction. DXY sotto 100. Ceasefire news.",
-      "note_hunter": "In regime NO TRADE con VIX 22+ e CPI strutturale, nessun candidato supera doppia verifica Gate1+Gate2. HUMA 76pt cade a PRE-CHECK offerta. Tutti gli altri sotto 55pt o con flag letali. Il sistema funziona correttamente filtrando il rischio."
+    "macro_snapshot": {
+      "vix": "22.22 Jun11 one-off geo; reversione attesa oggi",
+      "spy": "757 sopra MA50 717-724",
+      "qqq": "716-719",
+      "dxy": "99.86 -0.17pct Jun11",
+      "yield_10y": "4.55pct stabile",
+      "context": "Iran peace Trump Jun11 + SpaceX IPO Jun12"
     }
   },
   "phase0_serale": {
