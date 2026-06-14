@@ -1,12 +1,9 @@
 {
-  "last_updated": "2026-06-12T11:00:00+02:00",
-  "session_type": "phase0_serale",
+  "last_updated": "2026-06-14T20:00:00+02:00",
+  "session_type": "discovery_weekly",
   "watchlist": [
     "YCBD",
-    "HUMA",
-    "TRNR",
     "DXF",
-    "SNAL",
     "BIAF",
     "LOCL",
     "MBRX",
@@ -18,7 +15,6 @@
     "ACHV",
     "TBLA",
     "LAC",
-    "NIO",
     "GLOO",
     "BULL",
     "FLO",
@@ -34,868 +30,259 @@
     "RDCM",
     "APPN",
     "QURE",
-    "VSAT",
     "AEHR",
     "CRMD",
     "FRGT",
     "IMPP",
     "SY",
-    "MTVA",
     "GRPN",
     "QUBT",
     "GLSI",
-    "UNCY",
     "VRDN",
-    "RCAT",
-    "TNDM"
+    "TNDM",
+    "PDYN"
   ],
   "watchlist_removed_this_week": [
-    "CING",
-    "AVXL",
-    "ONDS",
-    "CMND",
-    "SPRO"
+    "HUMA",
+    "RCAT",
+    "VSAT",
+    "SNAL",
+    "NIO",
+    "UNCY",
+    "TRNR",
+    "MTVA"
   ],
+  "watchlist_remove_reasons": {
+    "HUMA": "PIPE $50M (47.6M shares @$1.05) annunciata June 11 — diluzione letale",
+    "RCAT": "$225M equity offering priced June 12 — diluzione massiva, float 150M",
+    "VSAT": "Prezzo $70.17 >> $25 filtro — fuori universo; SpaceForce $437.7M contract (watch come evento macro)",
+    "SNAL": "Prezzo $0.76 < $1 filtro minimo",
+    "NIO": "DoD lista 'Chinese military companies' June 9 — blocco investimenti istituzionali",
+    "UNCY": "ATM shelf $150M filed June 5, 2026 (<10gg) — SKIP immediato + float 25.24M",
+    "TRNR": "ATM Sales Agreement attivo ($6.06M target) — vendite ongoing Jan-Mar 2026",
+    "MTVA": "Reverse split 1-for-X approvato da azionisti June 8 — segnale distress strutturale"
+  },
   "discovery_daily": [],
-  "morning_brief": {
-    "date": "2026-06-12",
-    "macro_regime": "TRADE 3/4 grezzo → interpretato 4/4 contesto Iran-peace",
-    "big_themes": [
-      "Trump calls off Iran strikes + peace deal → VIX spike geo one-off reversing, SPY +1.8% ieri",
-      "SpaceX SPCX IPO oggi Nasdaq → risk-on environment massimo",
-      "Materials +3.26% / Industrials +3.25% / Nasdaq +2.5% — DXY 99.86 calo",
-      "Hunter scan: nessun TIER1/TIER2 pulito oggi per float o shelf attive",
-      "MBRX binary event imminente: unblinding entro 30 giugno 2026"
-    ],
-    "candidates": [
-      {
-        "ticker": "MBRX",
-        "score": 52,
-        "tier": "MONITORING",
-        "catalyst": "Binary event: primo interim unblinding MIRACLE Phase 2B/3 (Annamycin AML) atteso entro 30 giugno 2026. CRc blinded >40% vs storico 17-18%. Cleveland Clinic: no cardiotossicita.",
-        "pensiero_critico": {
-          "regime": "4/4 interpretato — VIX one-off geo Iran ora risolto; SPY 57 >> MA50 17; DXY cala; 10Y stabile",
-          "catalyst_verified": true,
-          "catalyst_freshness": "IMMINENT — unblinding deadline 18 giorni",
-          "narrativa_numeri": "Pre-revenue biotech, MIRACLE trial 56/90 soggetti iscritti a maggio 2026",
-          "rischio_asimmetrico": "Worst case: interim negativo -> -50%+; binario puro",
-          "kindleberger": "Stage 1 (prezzo ~.50, non ha corso ciclo principale)",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "BINARY EVENT — max probe sizing",
-            "PRE-REVENUE BIOTECH"
-          ],
-          "giudizio": "MONITORING — probe 1% max loss, sizing 25%"
-        },
-        "entry": ".40-2.60",
-        "stop": ".80",
-        "t1": ".50",
-        "t2": ".00",
-        "rr": "2:1",
-        "fonte": "watchlist_memory_upgrade",
-        "giudizio": "MONITORING",
-        "warning": "Binary event entro 30 giugno — no aumentare size prima unblinding"
-      }
-    ],
-    "skip_log": [
-      {
-        "ticker": "DPRO",
-        "score": 68,
-        "motivo": "ATM shelf C300M attiva Feb 2026 + float 36.5M > 15M"
-      },
-      {
-        "ticker": "CRMD",
-        "score": 65,
-        "motivo": "SKIP_FLOAT — 77.4M shares >> 15M"
-      },
-      {
-        "ticker": "STI",
-        "score": 0,
-        "motivo": "PIPE 30gg (35M Jun 7) + Kindleberger Stage 4 +668% weekly"
-      },
-      {
-        "ticker": "SOUN",
-        "score": 0,
-        "motivo": "SKIP_FLOAT — 150M+ float >> 15M"
-      },
-      {
-        "ticker": "SERV",
-        "score": 0,
-        "motivo": "SKIP_FLOAT — market cap 575M + offering maggio 2026"
-      },
-      {
-        "ticker": "RCAT",
-        "score": 0,
-        "motivo": "SKIP_FLOAT — market cap 1.66B"
-      },
-      {
-        "ticker": "ONDS",
-        "score": 0,
-        "motivo": "SKIP_FLOAT — market cap 4.99B"
-      },
-      {
-        "ticker": "TLSS",
-        "score": 0,
-        "motivo": "OTC insolvente going concern cap 588K"
-      }
-    ],
-    "macro_snapshot": {
-      "vix": "22.22 Jun11 one-off geo; reversione attesa oggi",
-      "spy": "757 sopra MA50 717-724",
-      "qqq": "716-719",
-      "dxy": "99.86 -0.17pct Jun11",
-      "yield_10y": "4.55pct stabile",
-      "context": "Iran peace Trump Jun11 + SpaceX IPO Jun12"
-    }
-  },
-  "phase0_serale": {
-    "date": "2026-06-11",
-    "generated_at": "22:00 IT",
-    "macro_regime": "TRANSIZIONE",
-    "macro_details": {
-      "vix": "22.22 (chiusura 10 giu) — moderato, non estremo",
-      "spy_futures_ah": "+0.73% (7331.50) — risk-on stasera",
-      "russell2000_today": "+2.11% — small cap in forza",
-      "dxy": ">100 — headwind ma stabile",
-      "yield_10y": "4.52-4.55% — near 2-week high",
-      "ppi_may": "accelerato — inflazione strutturale",
-      "iran_note": "Trump: USA riprenderà attacchi Iran, possibile Kharg Island. Strait Hormuz threat. Crude +$3.",
-      "spacex_ipo_domani": "ATTENZIONE: SpaceX IPO domani — attention drain retail da small cap",
-      "regime_assessment": "TRANSIZIONE — risk-on selettivo. Small cap e defense/energy beneficiari. Ma PPI+Iran = headwind rate. Nessun setup approvato per domani."
-    },
-    "watchlist_movers": [
-      "BATL +57% day +16% AH — Iran/oil macro (ATM $150M SKIP)",
-      "HUMA -DILUZIONE: $50M public offering 47.6M shares a $1.05 annunciata stasera SKIP",
-      "BBAI +5.1% intraday $3.91-$4.14 — nessun catalyst AH",
-      "SOUN debole $6.66-$7.17 (-6.8% dal high) — nessun catalyst",
-      "QUBT debole $9.57-$9.82 (-2.1% dal high) — nessun catalyst",
-      "CRMD +2.2% $8.73-$8.93 — patent win Federal Circuit (float 77M SKIP)",
-      "MBRX +5.3% est $2.59 — SKIP going concern + cash <Q3",
-      "RCAT +8.81% $11.86 Japan MoD+DoD contracts (float 150M SKIP perimetro)",
-      "PPCB +288% $1.35→$5.20 Kindleberger Stage 4 SKIP",
-      "CPOP +322% ieri -10.53% oggi — STALE Chinese pump SKIP",
-      "DSY -36.25% AH $4.59 — Nasdaq compliance pump crolla SKIP"
-    ],
-    "candidates": [],
-    "hunter_investigated": [
-      {
-        "ticker": "BATL",
-        "score": 47,
-        "tier": "SKIP",
-        "source": "4A — after hours movers",
-        "catalyst": "US-Iran military exchange — Strait Hormuz closure — crude +$3 — oil beta 2.5x",
-        "close": 2.06,
-        "ah_pct": "+16.44% ($2.40)",
-        "volume_vs_avg": "30x (199.66M vs 6.68M)",
-        "float_M": "~19-20M (22M shares, Gen IV 23.2%)",
-        "pensiero_critico": {
-          "pre_check_diluizione": "ATM SHELF $150M SU 22M SHARES — equivale a 6.8x shares outstanding. SKIP IMMEDIATO.",
-          "regime": "TRANSIZIONE oil-friendly, ma ATM invalida setup",
-          "catalyst_verified": false,
-          "catalyst_freshness": "FRESH AH oggi",
-          "narrativa_numeri": "Delaware Basin upstream, micro cap $29-48M, oil-leveraged",
-          "rischio_asimmetrico": "Worst case ceasefire Iran: -30-50%. ATM diluzione: altro -20%.",
-          "kindleberger": "Da verificare — 52w range non trovato",
-          "bird_rule": true,
-          "bird_rule_note": "Volume 30x ADV — massimo social buzz",
-          "diluzione": true,
-          "flags": [
-            "⚠️ ATM $150M ATTIVA (letale su 22M shares)",
-            "⚠️ FLOAT >15M (19-20M)",
-            "🚨 BIRD RULE (30x volume)",
-            "⚠️ MACRO DIPENDENTE (no catalyst aziendale)"
-          ],
-          "giudizio": "SKIP — ATM letale + float borderline + BIRD RULE + macro-dependent"
-        },
-        "giudizio": "SKIP",
-        "fonte": "4A"
-      },
-      {
-        "ticker": "PPCB",
-        "score": 38,
-        "tier": "SKIP",
-        "source": "4A — AH movers",
-        "catalyst": "CDMO GMP manufacturer ingaggiato per Phase 1b PRP trial (solid tumors, 30-40 pz) + $5M buyback",
-        "close_est": 5.2,
-        "day_move": "+288% da $1.35",
-        "float_M_est": "~18-20M (21.86M shares)",
-        "pensiero_critico": {
-          "pre_check_diluizione": "No PIPE recente trovata. $5M buyback = anti-dilutivo.",
-          "regime": "TRANSIZIONE",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH oggi — ma già +288% prezzato",
-          "narrativa_numeri": "Pre-clinical → Phase 1b filing Australia 2026. Orfan drug designation pancreatico.",
-          "rischio_asimmetrico": "Worst case fade domani: -30-50% da $5.20",
-          "kindleberger": "STAGE 4: 52w low $0.10-$1.30 → ora $5.20 = +300-5200%",
-          "bird_rule": true,
-          "bird_rule_note": "43x volume, trending on Timothy Sykes + StocksToTrade",
-          "diluzione": false,
-          "flags": [
-            "⚠️ KINDLEBERGER STAGE 4 → SKIP automatico",
-            "🚨 BIRD RULE (43x volume)",
-            "⚠️ FLOAT >15M (est 18-20M)",
-            "⚠️ GAP-UP >30% — aspettare conferma"
-          ],
-          "giudizio": "SKIP — Kindleberger Stage 4 + BIRD RULE + già +288%"
-        },
-        "giudizio": "SKIP",
-        "fonte": "4A"
-      },
-      {
-        "ticker": "CPOP",
-        "score": 32,
-        "tier": "SKIP",
-        "source": "4A — Benzinga AH movers",
-        "catalyst": "Revenue +65% YoY H1 FY26 ($68.9M). Digital entertainment +79%.",
-        "close_today": 1.52,
-        "day_today": "-10.53% (fading dal +322% ieri)",
-        "volume": "287.96M shares (vs 4.21M avg)",
-        "pensiero_critico": {
-          "pre_check_diluizione": "Chinese nano cap — verifica S-1 shelf non effettuata (time constraint)",
-          "regime": "TRANSIZIONE",
-          "catalyst_verified": true,
-          "catalyst_freshness": "STALE — earnings annunciate ieri (10 giu), rally già fatto",
-          "narrativa_numeri": "Entrate $68.9M. China-based digital media.",
-          "rischio_asimmetrico": "Worst case: -50% da $1.52 (pump che continua a deflate)",
-          "kindleberger": "STAGE 4: da sub-$0.30 a $2.55 ieri = +750%+",
-          "bird_rule": true,
-          "flags": [
-            "⚠️ STALE (catalyst ieri)",
-            "⚠️ KINDLEBERGER STAGE 4",
-            "🚨 BIRD RULE (volume 68x ADV)",
-            "⚠️ CHINESE MICRO CAP (pump pattern)"
-          ],
-          "giudizio": "SKIP — STALE + Stage 4 + Chinese pump pattern"
-        },
-        "giudizio": "SKIP",
-        "fonte": "4A"
-      }
-    ],
-    "watchlist_skip_update": [
-      {
-        "ticker": "HUMA",
-        "motivo": "PIPE AH STASERA: $50M public offering 47.6M shares a $1.05 (closing June 12). RIMUOVERE watchlist."
-      },
-      {
-        "ticker": "MBRX",
-        "motivo": "Going concern + cash solo Q3 2026 + shares +528% YoY. Score 50 confermato. Binary event June 30 ancora attivo ma con troppi flag."
-      },
-      {
-        "ticker": "CRMD",
-        "motivo": "Float 77.41M fuori perimetro. Patent win Federal Circuit ottimo ma non tradable per sistema."
-      },
-      {
-        "ticker": "RCAT",
-        "motivo": "Float 150M fuori perimetro. DoD+Japan MoD contracts validi strategicamente."
-      },
-      {
-        "ticker": "UNCY",
-        "motivo": "Float 25.24M > 15M. PDUFA June 29 interessante — monitorare se float riduce."
-      },
-      {
-        "ticker": "VRDN",
-        "motivo": "Float 95-102M >> 15M. PDUFA June 30 interessante — non tradable per sistema."
-      },
-      {
-        "ticker": "BATL",
-        "motivo": "Non in watchlist. ATM $150M su 22M shares. Oil/Iran macro play. SKIP."
-      }
-    ],
-    "watchlist_update_suggestion": {
-      "remove_immediately": [
-        "HUMA"
-      ],
-      "remove_reason_huma": "Public offering $50M a $1.05 closing June 12 — diluzione massiva annunciata stasera",
-      "downgrade_monitoring": [
-        "MBRX"
-      ],
-      "downgrade_reason_mbrx": "Cash runway <Q3 2026, going concern, shares +528%. Tener solo per 8-K unblinding June 30 poi rimuovere.",
-      "note": "UNCY PDUFA June 29 e VRDN PDUFA June 30: eventi binari importanti. Entrambe fuori perimetro float ma da seguire come indicator settore FDA biotech."
-    },
-    "note_domani_june12": [
-      "SpaceX IPO (SPACEX) — mega evento attention drain retail e capital flows",
-      "Iran/Hormuz: monitorare crude premarket — se oil gap-up, energy micro cap potenziale",
-      "PPI strutturale + rate hike risk: headwind broad risk-on",
-      "Silenzio 15:30-15:35 IT | Entry window 15:35-15:45 IT",
-      "NESSUN SETUP ATTIVO per domani — sessione CASH",
-      "Watch: MBRX (eventuali 8-K unblinding — probabilità bassa intra-day)",
-      "Watch: UNCY (PDUFA June 29 si avvicina — 18 giorni)"
-    ],
-    "skip_list_full": [
-      "MBRX: going concern + cash <Q3 + shares +528% (binary event ancora attivo ma no setup domani)",
-      "HUMA: PIPE AH $50M 47.6M shares a $1.05 → SKIP obbligatorio + rimuovere watchlist",
-      "CRMD: float 77M fuori perimetro",
-      "UNCY: float 25M fuori perimetro (PDUFA June 29 interessante)",
-      "VRDN: float 95M fuori perimetro (PDUFA June 30 interessante)",
-      "CCCC: float 104M fuori perimetro (53% ORR EHA data ottima)",
-      "RCAT: float 150M fuori perimetro",
-      "PPCB: Kindleberger Stage 4 + BIRD RULE + +288% intraday",
-      "BATL: ATM $150M + BIRD RULE + float 19-20M + macro-dependent",
-      "BGMS: diluzione holders <1% (all-stock Future NRG deal)",
-      "NEXR: STALE catalyst 4 giugno (Fort Technology listing)",
-      "CPOP: STALE+Chinese pump + Kindleberger Stage 4",
-      "DSY: Nasdaq compliance pump + -36% AH",
-      "DAIC: reverse split 1-for-25 (<6m) + LOI non-binding",
-      "YCBD: prezzo $0.97 sotto $1 fuori perimetro",
-      "BBAI: nessun catalyst AH, prezzo range stretto",
-      "SOUN: debole -6.8% dal high, nessun catalyst",
-      "QUBT: debole -2.1% dal high, nessun catalyst"
-    ],
-    "session_summary": "Scansione serale 11 giugno 2026 — NESSUN SETUP VALIDO. Regime TRANSIZIONE con S&P futures +0.73% ma PPI strutturale, Iran escalation e SpaceX IPO domani (attention drain). La watchlist soffre di un problema sistemico: la maggior parte dei ticker ha float >15M. Tre nuovi hunter candidati identificati (BATL, PPCB, CPOP): tutti SKIP per flag letali. HUMA rimossa per PIPE AH stasera. Sistema funziona correttamente — meglio cash che rischio in assenza di setup puliti."
-  },
+  "morning_brief": {},
+  "phase0_serale": {},
   "discovery_weekly": [
     {
-      "ticker": "MBRX",
-      "score": 52,
+      "ticker": "IMPP",
+      "score": 62,
       "tier": "MONITORING",
-      "catalyst": "MIRACLE trial unblinding <June 30 2026 — CRc >40% vs 12% storico in R/R AML — 8-K June 4 market study confirms institutional interest",
+      "catalyst": "Earnings Q1 2026 attesi June 16, 2026. Tanker/shipping sector: WTI crude +20% YTD, Iran Strait Hormuz risk premium. P/E 3.38 (cheap). Maxim raised PT da $8 a $9 (maggio 2026). Buyback anti-dilutivo.",
+      "catalyst_date": "2026-06-16",
+      "pensiero_critico": {
+        "regime": "TRANSIZIONE — VIX 19.25, SPY 737, 10Y 4.47%, DXY 100.07. CPI data June 17-18 = MACRO KILLER EVENT settimana → downgrade 1 tier",
+        "catalyst_verified": true,
+        "catalyst_freshness": "TIMING PERFETTO (≤7gg) — earnings June 16",
+        "narrativa_numeri": "Cash $179.1M, no debt, net income $50M 2025, buyback anti-dilutivo. P/E 3.38 = estremamente economico per il settore",
+        "rischio_asimmetrico": "Worst case earnings miss + oil crash: -35% → $3.35",
+        "kindleberger": "Stage 2 (52-week: $2.90 → $6.57, +127%)",
+        "bird_rule": false,
+        "diluzione": false,
+        "flags": [
+          "⚠️ FLOAT DISPUTE: public float 11-20M (alcuni source) vs shares outstanding 34.41M — VERIFICARE",
+          "⚠️ CPI MACRO KILLER EVENT June 17-18 → downgrade 1 tier",
+          "⚠️ SOLO 1 ANALISTA (Maxim)"
+        ],
+        "giudizio": "MONITORING — probe 1% max loss (CPI week)"
+      },
+      "entry": "$5.00-$5.30",
+      "stop": "$4.40",
+      "t1": "$6.50",
+      "t2": "$8.50",
+      "rr": "2.6:1",
+      "fonte": "2E + watchlist audit",
+      "giudizio": "MONITORING — probe 1% sizing ridotto CPI",
+      "warning": "Float ambiguo: verificare su IBKR/Finviz prima entry. Earnings June 16 PRIMA dell'apertura — no overnight."
+    },
+    {
+      "ticker": "MBRX",
+      "score": 58,
+      "tier": "MONITORING",
+      "catalyst": "MIRACLE Phase 2B/3 primo interim unblinding atteso PRIMA del 30 giugno 2026. CRc blinded >40% vs storico 12-17% in R/R AML. ASCO 2026: no cardiotossicità Annamycin. Float 5.29M — tiny. 3 apparizioni nei log questa settimana.",
       "catalyst_date": "2026-06-30",
       "pensiero_critico": {
-        "regime": "RISK-OFF — VIX 21.51, CPI June 10 MACRO KILLER, 10Y 4.53%, DXY 100.07",
+        "regime": "TRANSIZIONE — CPI week headwind",
         "catalyst_verified": true,
-        "catalyst_freshness": "ANTICIPAZIONE TARDIVA (>14gg, ~23gg) — ai limiti orizzonte weekly",
-        "narrativa_numeri": "CRc 40% vs 12% storico confermato; cash marginale (ATM-dipendente); burn ~$1-2M/quarter",
-        "rischio_asimmetrico": "worst case: $1.50 (MIRACLE negativo -42%)",
-        "kindleberger": "Stage 1 (2-week: +9.7% da $2.36)",
+        "catalyst_freshness": "ANTICIPAZIONE (16gg) — ai limiti ma evento binary imminente",
+        "narrativa_numeri": "Pre-revenue. Cash runway Q3 2026 (marginale). ATM usato $0.8M maggio. Shares outstanding 5.34M — micro float.",
+        "rischio_asimmetrico": "Worst case interim negativo: -60% → $1.00",
+        "kindleberger": "Stage 1 (prezzo ~$2.50, non ha corso ciclo principale post-RS 1:25)",
         "bird_rule": false,
         "diluzione": true,
         "flags": [
-          "ATM SHELF ATTIVA $7.38M remaining",
-          "STALE CATALYST >14gg",
-          "CPI WEEK",
-          "CASH MARGINALE"
+          "⚠️ ATM SHELF ATTIVA (usata $0.8M maggio)",
+          "⚠️ CASH RUNWAY <3M (Q3 2026)",
+          "⚠️ BINARY EVENT — 50/50 outcome",
+          "⚠️ ANTICIPAZIONE (16gg) — borderline weekly"
         ],
-        "giudizio": "MONITORING — carry da 3 settimane, evento binary imminente"
+        "giudizio": "MONITORING — NON aumentare size prima unblinding"
       },
-      "entry": "$2.30-$2.70",
-      "stop": "$1.90",
+      "entry": "$2.20-$2.70",
+      "stop": "$1.80",
       "t1": "$4.50",
       "t2": "$8.00",
-      "rr": "2.2:1",
-      "fonte": "Prioritario 3 apparizioni",
-      "giudizio": "MONITORING — probe 1% max loss",
-      "warning": "ATM shelf attiva. NON aumentare prima unblinding. Binary: negativo -> exit immediato. Positivo: atteso follow-on offering."
-    },
-    {
-      "ticker": "ACHV",
-      "score": 70,
-      "tier": "SKIP_FLOAT",
-      "catalyst": "PDUFA cytisinicline June 20 2026 — primo oral nicotine cessation + Priority Voucher FDA",
-      "catalyst_date": "2026-06-20",
-      "pensiero_critico": {
-        "regime": "RISK-OFF",
-        "catalyst_verified": true,
-        "catalyst_freshness": "ANTICIPAZIONE (13gg) — ottima finestra",
-        "narrativa_numeri": "$354M raise closed, PT $15.50 vs $5.05, SI 12.86%, cash solida",
-        "rischio_asimmetrico": "worst case CRL: -60% -> $2.00",
-        "kindleberger": "Stage 2 da 52-week low",
-        "bird_rule": false,
-        "diluzione": false,
-        "flags": [
-          "SKIP_FLOAT: 53.24M >> 15M",
-          "S-3 attiva $300M"
-        ],
-        "giudizio": "SKIP — float 53.24M viola criteri"
-      },
-      "entry": "N/A",
-      "stop": "N/A",
-      "t1": "N/A",
-      "t2": "N/A",
-      "rr": "N/A",
-      "fonte": "2C",
-      "giudizio": "SKIP_FLOAT — monitorare June 20 come event indicator FDA",
-      "warning": "Se approvato: indica ambiente FDA favorevole per settore biotech. Non tradare per float."
-    },
-    {
-      "ticker": "HUMA",
-      "score": 38,
-      "tier": "SKIP",
-      "catalyst": "Phase 3 V012 interim dialysis access data — June 11 2026 (4 giorni!) — potenziale sBLA 2H 2026",
-      "catalyst_date": "2026-06-11",
-      "pensiero_critico": {
-        "regime": "RISK-OFF",
-        "catalyst_verified": true,
-        "catalyst_freshness": "TIMING PERFETTO (4gg) ma irrilevante per skip multiplo",
-        "narrativa_numeri": "Going concern doubt, $60M PIPE marzo 2026 <60gg, Q1 loss $17.6M",
-        "rischio_asimmetrico": "worst case: $0.50 se dati deludenti + going concern",
-        "kindleberger": "Stage 2",
-        "bird_rule": false,
-        "diluzione": true,
-        "flags": [
-          "PIPE $60M <60gg",
-          "Float 125M",
-          "GOING CONCERN",
-          "CPI WEEK"
-        ],
-        "giudizio": "SKIP — PIPE + Float + Going concern multipli"
-      },
-      "entry": "N/A",
-      "stop": "N/A",
-      "t1": "N/A",
-      "t2": "N/A",
-      "rr": "N/A",
-      "fonte": "2C",
-      "giudizio": "SKIP HARD",
-      "warning": "AGENDA: June 11 data = event watch per sentiment settore medtech. Non tradare."
-    },
-    {
-      "ticker": "SPRO",
-      "score": 40,
-      "tier": "SKIP",
-      "catalyst": "PDUFA tebipenem HBr June 18 2026 — GSK partnership — primo oral carbapenem cUTI",
-      "catalyst_date": "2026-06-18",
-      "pensiero_critico": {
-        "regime": "RISK-OFF",
-        "catalyst_verified": true,
-        "catalyst_freshness": "ANTICIPAZIONE (11gg) ma Kindleberger 4 invalida",
-        "narrativa_numeri": "Cash $56.1M runway 2028, Ph3 met endpoint early",
-        "rischio_asimmetrico": "worst case CRL: -80% -> $0.50",
-        "kindleberger": "Stage 4 (+423% da $0.57)",
-        "bird_rule": false,
-        "diluzione": false,
-        "flags": [
-          "KINDLEBERGER STAGE 4 -> SKIP immediato",
-          "Float 57.89M >> 15M"
-        ],
-        "giudizio": "SKIP doppio: Stage 4 + Float"
-      },
-      "entry": "N/A",
-      "stop": "N/A",
-      "t1": "N/A",
-      "t2": "N/A",
-      "rr": "N/A",
-      "fonte": "Watchlist + 2C",
-      "giudizio": "SKIP — Stage 4 + Float. RIMUOVERE watchlist dopo PDUFA June 18.",
-      "warning": "Monitorare FDA outcome June 18 per direzione antibiotici."
+      "rr": "2.5:1",
+      "fonte": "Watchlist prioritario (3 apparizioni: morning_brief + phase0 + discovery_weekly)",
+      "giudizio": "MONITORING — probe 0.5% max loss (binary event + ATM)",
+      "warning": "Binary puro: unblinding positivo → +200%+; negativo → -50%+. Exit IMMEDIATO su qualsiasi 8-K negativo. Atteso follow-on offering se positivo."
     },
     {
       "ticker": "GLSI",
-      "score": 48,
-      "tier": "SKIP",
-      "catalyst": "FLAMINGO-01 Ph3 full data readout atteso 2H 2026 — ASCO open label June 1-2 già corso",
+      "score": 58,
+      "tier": "MONITORING",
+      "catalyst": "FLAMINGO-01 Ph3 ASCO data (June 1): ~70-80% riduzione recidiva cancro al seno vs placebo = FORTE. SI 22.88% = squeeze fuel. Float 13.85M. BLA preparation in corso con commercial GP2 già approvata da FDA (gennaio 2026). Nasdaq notice 10-K tardiva (non delisting immediato).",
       "catalyst_date": "2026-09-01",
       "pensiero_critico": {
-        "regime": "RISK-OFF",
-        "catalyst_verified": false,
-        "catalyst_freshness": "STALE — ASCO gia corso, next catalyst >14 settimane",
-        "narrativa_numeri": "Float OK 13.85M, cash $10.5M burn $9.5M/anno, ATM attiva come lifeline",
-        "rischio_asimmetrico": "worst case: $15 se ATM accelera -> -35%",
-        "kindleberger": "Stage 2 (52-week: +166%)",
+        "regime": "TRANSIZIONE",
+        "catalyst_verified": true,
+        "catalyst_freshness": "STALE — ASCO June 1 (13gg fa). Next major catalyst: BLA filing 2H 2026 (>14gg). Short squeeze latente.",
+        "narrativa_numeri": "Float 13.85M — passa filtro. Cash $10.5M, burn $9.5M/anno — runway ~12M. ATM shelf status incerto.",
+        "rischio_asimmetrico": "Worst case ATM acceleration + Nasdaq delisting: $15 → -35%",
+        "kindleberger": "Stage 2 (52-week +166% circa)",
         "bird_rule": false,
         "diluzione": true,
         "flags": [
-          "ATM SHELF ATTIVA",
-          "STALE CATALYST",
-          "GIA CORSO -17.56% post-ASCO",
-          "NASDAQ NOTICE 10-K"
+          "⚠️ ATM SHELF STATUS INCERTO (verificare se ancora attiva)",
+          "⚠️ STALE CATALYST (ASCO June 1 = 13gg fa)",
+          "⚠️ NASDAQ NOTICE 10-K tardiva",
+          "⚠️ CPI WEEK"
         ],
-        "giudizio": "SKIP — ATM + stale catalyst"
+        "giudizio": "MONITORING — short squeeze latente, verifica ATM prima entry"
       },
-      "entry": "N/A",
-      "stop": "N/A",
-      "t1": "N/A",
-      "t2": "N/A",
-      "rr": "N/A",
-      "fonte": "2A",
-      "giudizio": "SKIP — unico float OK (13.85M) ma ATM invalida. Riesaminare in 60gg.",
-      "warning": "Float OK. Riesaminare quando ATM scade o dati Ph3 imminenti."
+      "entry": "$21.50-$23.00",
+      "stop": "$19.50",
+      "t1": "$27.00",
+      "t2": "$32.00",
+      "rr": "2.0:1",
+      "fonte": "2C + watchlist",
+      "giudizio": "MONITORING — probe 1% (verifica ATM shelf status PRIMA entry)",
+      "warning": "22.88% short interest = potenziale squeeze se BLA news. Verifica urgente: ATM shelf ancora attiva? Se sì = SKIP. Se ritirata = upgrade a TIER2."
     },
     {
-      "ticker": "IMPP",
+      "ticker": "RDCM",
+      "score": 57,
+      "tier": "MONITORING",
+      "catalyst": "Q2 FY2026 earnings (June 2): revenue +12% YoY a $18.6M, operating margin 20.1%, AI-driven product launches, Tier-1 telco expansions. Strong Buy da 2 analisti, PT $18 vs $11.89 (+51% upside). No catalyst immediato settimanale — play fondamentale.",
+      "catalyst_date": "2026-09-01",
+      "pensiero_critico": {
+        "regime": "TRANSIZIONE",
+        "catalyst_verified": true,
+        "catalyst_freshness": "STALE — earnings June 2 (12gg fa). Nessun catalyst entro 14gg.",
+        "narrativa_numeri": "Shares outstanding 16.03M. Float ~10-12M stimato. Revenue growing. Operating margin 20.1% = profitable.",
+        "rischio_asimmetrico": "Worst case tech selloff + no new contracts: -25% → $9",
+        "kindleberger": "Stage 1-2 (prezzo ~$12, non ha corso ciclo speculativo)",
+        "bird_rule": false,
+        "diluzione": false,
+        "flags": [
+          "⚠️ STALE — nessun catalyst weekly imminente",
+          "⚠️ CPI WEEK headwind"
+        ],
+        "giudizio": "MONITORING — hold watchlist, entry su breakout con catalyst fresco"
+      },
+      "entry": "$11.50-$12.00",
+      "stop": "$10.00",
+      "t1": "$15.00",
+      "t2": "$18.00",
+      "rr": "2.3:1",
+      "fonte": "2E + watchlist",
+      "giudizio": "MONITORING — no trade questa settimana senza catalyst fresco",
+      "warning": "Ottima azienda, fondamentali solidi. Entry valida solo su 8-K contract news o upgrade analisti."
+    },
+    {
+      "ticker": "WYY",
+      "score": 56,
+      "tier": "MONITORING",
+      "catalyst": "Float 9.89M (minuscolo!). Q1 2026: revenue +21% YoY, positive net income, strong FCF. FedRAMP certified = accesso gare governo USA. SaaS e DaaS contracts. EPS potenziale $2 nel 2026 secondo analisti. Annual meeting June 17 (non è catalyst di mercato).",
+      "catalyst_date": "2026-09-01",
+      "pensiero_critico": {
+        "regime": "TRANSIZIONE",
+        "catalyst_verified": true,
+        "catalyst_freshness": "STALE — nessun catalyst entro 14gg. Annual meeting June 17 = admin, non market-moving.",
+        "narrativa_numeri": "9.89M shares outstanding = float tiny. Revenue crescente. FedRAMP = barriera competitiva reale.",
+        "rischio_asimmetrico": "Worst case perdita contratto governo: -30% → $8",
+        "kindleberger": "Stage 1 (prezzo $11.65, trading range stretto)",
+        "bird_rule": false,
+        "diluzione": false,
+        "flags": [
+          "⚠️ STALE — nessun catalyst weekly",
+          "⚠️ LIQUIDITÀ BASSA (vol non verificato)"
+        ],
+        "giudizio": "MONITORING — tiny float con governo contracts. Entry su contract news."
+      },
+      "entry": "$11.00-$12.00",
+      "stop": "$10.00",
+      "t1": "$15.00",
+      "t2": "$20.00",
+      "rr": "2.0:1",
+      "fonte": "2D + watchlist",
+      "giudizio": "MONITORING — tiny float play. Entry solo su 8-K contract win.",
+      "warning": "Float 9.89M = qualsiasi notizia muove +30%+. Verifica volume giornaliero >200K prima entry — rischio illiquidità."
+    },
+    {
+      "ticker": "PDYN",
+      "score": 59,
+      "tier": "MONITORING",
+      "catalyst": "IAI (Israel Aerospace Industries) partnership annunciata June 8, 2026: diritti esclusivi USA per produzione e vendita HARPY, HAROP, Mini HARPY loitering munition systems al DoW. Potential OTA prototype $100-200M (October 2026). Settore difesa/AI in momentum (Industrials #1 June 2026).",
+      "catalyst_date": "2026-10-01",
+      "pensiero_critico": {
+        "regime": "TRANSIZIONE — difesa in momentum",
+        "catalyst_verified": true,
+        "catalyst_freshness": "ANTICIPAZIONE TARDIVA — catalyst June 8 (6gg fa), OTA October 2026 (>14gg) — borderline",
+        "narrativa_numeri": "Float 24.73M (sopra soglia 15M — ATTENZIONE). Shares 35.71-47.2M. Defense AI = real revenue model.",
+        "rischio_asimmetrico": "Worst case OTA non assegnata o partner IAI problemi: -40% → $3.80",
+        "kindleberger": "Stage 1-2 (prezzo $6.40, movimento moderato post-announcement)",
+        "bird_rule": false,
+        "diluzione": false,
+        "flags": [
+          "⚠️ FLOAT 24.73M >> 15M SOGLIA (violazione filtro principale)",
+          "⚠️ OTA OCTOBER 2026 — catalyst STALE per orizzonte weekly",
+          "⚠️ MOU — non contratto firmato, dipende da approvazione DoW"
+        ],
+        "giudizio": "MONITORING — float viola criteri ma catalyst fresco e settore in momentum"
+      },
+      "entry": "$6.00-$6.60",
+      "stop": "$5.00",
+      "t1": "$9.00",
+      "t2": "$12.00",
+      "rr": "2.3:1",
+      "fonte": "2C — 8-K filing defense",
+      "giudizio": "MONITORING — sizing 0.5% (float fuori perimetro)",
+      "warning": "Float 24.73M viola soglia <15M. Includere solo come MONITORING con sizing ridotto. Promovere a TIER2 se OTA confermata e float si riduce (buyback/insider)."
+    },
+    {
+      "ticker": "LOCL",
       "score": 55,
-      "tier": "SKIP_FLOAT",
-      "catalyst": "Settore Energy #1 YTD (+900%), tanker rates, geopolitica — no catalyst specifico weekly",
-      "catalyst_date": "N/A",
+      "tier": "MONITORING",
+      "catalyst": "Strong Buy da analista con PT $6 (+348% da $1.34). Q1 2026: revenue +15% YoY, margini migliorati, net loss ridotto. TIME World's Growth Leaders 2026. CEO platform AI-driven growing (patent USPTO Feb 2026). Indoor farming/CEA sector = ESG + food security narrative.",
+      "catalyst_date": "2026-09-01",
       "pensiero_critico": {
-        "regime": "RISK-OFF",
+        "regime": "TRANSIZIONE",
         "catalyst_verified": false,
-        "catalyst_freshness": "STALE — no catalyst imminente weekly",
-        "narrativa_numeri": "Cash $179.1M, no debt, net income $50M 2025, buyback = anti-dilutivo",
-        "rischio_asimmetrico": "worst case: $3.50 se oil crash -> -38%",
-        "kindleberger": "Stage 2",
+        "catalyst_freshness": "STALE — nessun catalyst weekly imminente. Earnings Q1 maggio 2026 (già corso).",
+        "narrativa_numeri": "22.8M shares outstanding. Fully diluted 41.6M (convertible note + warrants = +82%). Convertible note approvata da shareholders per fino a 7.88M nuove azioni + 5.5M warrant.",
+        "rischio_asimmetrico": "Worst case convertible note diluzione + loss persiste: -40% → $0.80",
+        "kindleberger": "Stage 1-2 (prezzo $1.34, vicino ai minimi storici recenti)",
         "bird_rule": false,
-        "diluzione": false,
+        "diluzione": true,
         "flags": [
-          "SKIP_FLOAT: 45.21M >> 15M",
-          "STALE per weekly"
+          "⚠️ DILUZIONE POTENZIALE 82% (convertible note U.S. Bounti LLC + warrant)",
+          "⚠️ FLOAT 22.8M > 15M soglia",
+          "⚠️ STALE — nessun catalyst settimanale",
+          "⚠️ CASH SITUATION non verificata"
         ],
-        "giudizio": "SKIP_FLOAT — fondamentali eccellenti"
+        "giudizio": "MONITORING borderline — solo per long-term watchlist"
       },
-      "entry": "N/A",
-      "stop": "N/A",
-      "t1": "N/A",
-      "t2": "N/A",
-      "rr": "N/A",
+      "entry": "$1.30-$1.40",
+      "stop": "$1.10",
+      "t1": "$2.00",
+      "t2": "$3.50",
+      "rr": "3.0:1",
       "fonte": "Watchlist",
-      "giudizio": "SKIP_FLOAT — MANTIENI watchlist lungo periodo",
-      "warning": "Buyback = anti-dilutivo. Energy #1 settore. Candidato swing medio termine."
-    },
-    {
-      "ticker": "BBAI",
-      "score": 54,
-      "tier": "SKIP_FLOAT",
-      "catalyst": "Defense AI sector Industrials #1 giugno 2026 — contratti governo potenziali",
-      "catalyst_date": "N/A",
-      "pensiero_critico": {
-        "regime": "RISK-OFF",
-        "catalyst_verified": false,
-        "catalyst_freshness": "STALE — no catalyst specifico imminente",
-        "narrativa_numeri": "Buy consensus 78%, PT $5.50-$6.46 vs $4.18, SI 26.5% = squeeze potential",
-        "rischio_asimmetrico": "worst case: $2.50 se Defense AI sentiment inverte -> -40%",
-        "kindleberger": "Stage 2",
-        "bird_rule": false,
-        "diluzione": false,
-        "flags": [
-          "SKIP_FLOAT: 476M >> 15M",
-          "STALE per weekly"
-        ],
-        "giudizio": "SKIP_FLOAT — squeeze potenziale lungo periodo"
-      },
-      "entry": "N/A",
-      "stop": "N/A",
-      "t1": "N/A",
-      "t2": "N/A",
-      "rr": "N/A",
-      "fonte": "Watchlist",
-      "giudizio": "SKIP_FLOAT — 26.5% SI = squeeze fuel se contract news",
-      "warning": "Defense AI sector in momentum. Mantenere in watchlist per opportunita squeeze."
-    }
-  ],
-  "premarket_gap": [
-    {
-      "date": "June 12, 2026",
-      "scan_time": "14:30 IT",
-      "scanner_version": "v3.0",
-      "connectors_used": [
-        "IBKR",
-        "TradingView",
-        "GitHub",
-        "WebSearch"
-      ],
-      "macro_regime": {
-        "vix": 19.15,
-        "vix_change_pct": -1.49,
-        "spy_last": 739.99,
-        "spy_change_pct": 0.3,
-        "pfrc_rgm": "UNAVAILABLE (indicator not loaded on chart)",
-        "regime_assessed": "TRANSIZIONE",
-        "regime_note": "VIX 19.15 (<20, calmo), SPY +0.30% (lieve positivo). PFRC Rgm non disponibile. Assessment conservativo: TRANSIZIONE."
-      },
-      "account_snapshot": {
-        "net_liq_eur": 1467.73,
-        "buying_power_eur": 1467.73,
-        "cash_eur": 1467.73,
-        "open_positions": 0
-      },
-      "scan_summary": {
-        "tickers_scanned": 58,
-        "tier_a_count": 0,
-        "tier_b_count": 0,
-        "tier_c_count": 0,
-        "top_positive_mover": "FRGT +4.09%",
-        "notable_gap_downs": [
-          "MNTS -16.81%",
-          "MTVA -6.97%"
-        ]
-      },
-      "gap_candidates": [],
-      "tier_c_monitoring": [],
-      "skipped": [
-        {
-          "ticker": "MNTS",
-          "price": 13.56,
-          "prior_close": 16.3,
-          "gap_pct": -16.81,
-          "volume_premarket": 1447039,
-          "motivo": "🚨 GAP DOWN -16.81% | F1 DILUZIONE LETALE: S-3/A filed June 5 2026 — 3,089,100 shares registrate per rivendita da selling stockholders (PIPE maggio 2026: $25M + warrants). $200M shelf totale. Nessun provento per la società. Vendere i PP holders → selling pressure strutturale."
-        },
-        {
-          "ticker": "MTVA",
-          "price": 1.87,
-          "prior_close": null,
-          "gap_pct": -6.97,
-          "volume_premarket": 55557,
-          "motivo": "⛔ GAP DOWN -6.97% | F6 REVERSE SPLIT: Approvato dagli azionisti il 8 giugno 2026 (annual meeting). Segnale di distress strutturale. Skip obbligatorio."
-        },
-        {
-          "ticker": "NIO",
-          "price": 5.29,
-          "prior_close": null,
-          "gap_pct": 1.15,
-          "volume_premarket": 729584,
-          "motivo": "⚠️ RISCHIO GEOPOLITICO: DoD ha aggiunto NIO alla lista 'Chinese military companies' il 9 giugno 2026. Potenziale blocco investimenti istituzionali. Evitare long."
-        },
-        {
-          "ticker": "FRGT",
-          "price": 3.31,
-          "prior_close": 3.18,
-          "gap_pct": 4.09,
-          "volume_premarket": 19011,
-          "motivo": "❌ SKIP: +4.09% sotto soglia TIER B (5%). Nessun catalyst verificato oggi (ultimo news: strategic pivot aprile 2026). FRGT era a $3.47-3.86 il 2 giugno → prezzo attuale $3.31 è declino rispetto a 2 settimane fa, non breakout."
-        },
-        {
-          "ticker": "GCTS",
-          "price": 2.63,
-          "prior_close": 2.57,
-          "gap_pct": 2.33,
-          "volume_premarket": 121373,
-          "motivo": "📊 MONITORING: Forti fondamentali (MaxLinear partnership May 27, satellite deal May 7, Q1 revenue +287% YoY, +85% prezzo YTD) ma nessun catalyst intraday nuovo. Score stimato ~35/100. Aggiungere alla watchlist per breakout con volume."
-        }
-      ],
-      "open_positions_alert": [],
-      "no_operative_setup": true,
-      "no_operative_setup_note": "Nessun ticker supera soglia 65/100 oggi. Mercato in fase di consolidamento premarket. MNTS è il mover principale ma per gap DOWN (dilution). Giornata operativamente neutra — NO TRADE.",
-      "next_window": "NYSE apre tra 60 min | Window entry 15:35-15:45 IT | NO TRADE 15:30-15:35"
-    },
-    {
-      "date": "June 9, 2026",
-      "scan_time": "14:30 IT",
-      "scanner_version": "v3.0",
-      "connectors_used": [
-        "IBKR",
-        "TradingView",
-        "GitHub",
-        "WebSearch"
-      ],
-      "macro_regime": {
-        "vix": 18.17,
-        "vix_change_pct": -3.96,
-        "spy_price": 742.95,
-        "spy_change_pct": 0.5,
-        "pfrc_rgm": "N/A (TV indicator not loaded)",
-        "regime_estimate": "TRANSIZIONE → BULL RISK-ON (VIX -4% compression, SPY +0.5%)"
-      },
-      "account_snapshot": {
-        "net_liq_eur": 1451.98,
-        "buying_power_eur": 1451.98,
-        "open_positions": 0,
-        "trades_today": 0
-      },
-      "watchlist_scanned": 58,
-      "tier_a_count": 0,
-      "tier_b_count": 1,
-      "tier_b_tickers": [
-        "MNTS"
-      ],
-      "tier_c_count": 3,
-      "tier_c_tickers": [
-        "AEHR",
-        "ONDS",
-        "CING"
-      ],
-      "gap_candidates": [
-        {
-          "ticker": "MNTS",
-          "tier": "B",
-          "gap_pct": 8.84,
-          "last_price": 13.3,
-          "prior_close": 12.22,
-          "premarket_volume": 254675,
-          "catalyst": "SpaceX IPO sector tailwind (IPO June 12) + prior $25M PP",
-          "catalyst_tier": "TIER1",
-          "verdict": "SKIP",
-          "skip_reason": "DILUZIONE LETALE — $25M private placement closed June 8, S-3 shelf 3.09M shares for resale",
-          "kindleberger": "STAGE 3 (+164% from 1M low $5.04)"
-        }
-      ],
-      "monitoring": [
-        {
-          "ticker": "AEHR",
-          "gap_pct": 3.06,
-          "last_price": 98.5,
-          "prior_close": 95.58,
-          "premarket_volume": 37723,
-          "adv_20d": 1581748,
-          "catalyst": "$41M AI production order (hyperscale, announced June 2-3)",
-          "catalyst_tier": "TIER1",
-          "kindleberger": "STAGE 1 (+28.3% from 1M low $76.76)",
-          "note": "Catalyst already priced in last week (stock peaked $121.80 on Jun 3). Today = bounce from support $93-95. Watch for momentum confirmation post-open.",
-          "score_estimate": 55
-        },
-        {
-          "ticker": "ONDS",
-          "gap_pct": 2.52,
-          "last_price": 10.56,
-          "prior_close": 10.3,
-          "premarket_volume": 1040128,
-          "adv_20d": 77399797,
-          "catalyst": "Navy SOUTHCOM drone contract + $30M orders (announced June 2)",
-          "catalyst_tier": "TIER2",
-          "kindleberger": "STAGE 1 (+21.8% from 1M low $8.67)",
-          "note": "CEO sold $31.9M shares (Jun 1) + 2.1M Omnisys shares registered resale. Supply overhang caps rallies.",
-          "score_estimate": 52
-        },
-        {
-          "ticker": "CING",
-          "gap_pct": 3.75,
-          "last_price": 4.7,
-          "prior_close": 4.53,
-          "premarket_volume": 41857,
-          "catalyst": "FDA CRL June 2 — CTx-1301 CMC-only (no clinical concerns, re-submission path open)",
-          "catalyst_tier": "TIER2",
-          "kindleberger": "N/A",
-          "note": "FDA did NOT approve CTx-1301. CRL = CMC manufacturing issue only. Re-submission possible but timeline uncertain.",
-          "score_estimate": 48
-        }
-      ],
-      "skipped": [
-        {
-          "ticker": "MNTS",
-          "motivo": "DILUZIONE LETALE — $25M PP + S-3 shelf (multiple offerings)"
-        },
-        {
-          "ticker": "CODX",
-          "motivo": "KINDLEBERGER STAGE 4 (+319% from 1M low $1.26)"
-        },
-        {
-          "ticker": "NVTS",
-          "motivo": "Contingent share issuance (3.28M shares) + no new catalyst"
-        },
-        {
-          "ticker": "SNAL",
-          "motivo": "No catalyst verificato (8-K = shareholder meeting only)"
-        },
-        {
-          "ticker": "MTVA",
-          "motivo": "DILUZIONE LETALE (424B3 prospectus) — crash -23.42%"
-        },
-        {
-          "ticker": "CMND",
-          "motivo": "Post-catalyst fade (June 5 +27% run from clinical news)"
-        }
-      ],
-      "notable_crashes": [
-        {
-          "ticker": "MTVA",
-          "gap_pct": -23.42,
-          "reason": "424B3 prospectus (dilutive offering) filed + ADA conference data"
-        },
-        {
-          "ticker": "CMND",
-          "gap_pct": -10.29,
-          "reason": "Post-run distribution after June 5 +27% clinical trial catalyst"
-        }
-      ],
-      "open_positions_alert": [],
-      "actionable_setups_today": 0,
-      "summary": "Scan quieto. Nessun setup TIER1/TIER2 approvato. MNTS unico TIER B eliminato da diluzione letale. Monitoring: AEHR (catalyst stale), ONDS (supply overhang), CING (FDA CRL). Attendere conferma momentum post-apertura prima di ogni engagement."
-    },
-    {
-      "date": "June 8, 2026",
-      "scan_time": "14:32 IT",
-      "scanner_version": "v3.0",
-      "connectors_used": [
-        "IBKR",
-        "TradingView",
-        "GitHub",
-        "WebSearch"
-      ],
-      "macro_regime": {
-        "vix": "18.80 (-12.6%)",
-        "spy": "$248.93 (+1.18%)",
-        "pfrc_rgm": "NON DISPONIBILE (indicatore non caricato su TV chart)",
-        "regime_interpretato": "TRANSIZIONE → BULL RISK-ON",
-        "note": "VIX -12.6% recupero da selloff chip Jun 5 — one-off, non trend strutturale"
-      },
-      "account_snapshot": {
-        "net_liq_eur": 1456.35,
-        "buying_power_eur": 1456.35,
-        "posizioni_aperte": 0,
-        "trade_oggi": 0
-      },
-      "scan_stats": {
-        "ticker_scansionati": 57,
-        "tier_a_positivo_count": 0,
-        "tier_a_negativo_count": 2,
-        "tier_b_count": 4
-      },
-      "gap_candidates": [
-        {
-          "ticker": "AEHR",
-          "gap_pct": 6.65,
-          "last": 105.0,
-          "prior_close": 98.45,
-          "vol_premarket": 55230,
-          "adv_20d": 2445357,
-          "rvol_pm": 0.023,
-          "catalyst": "Record $41M AI order + William Blair conf Jun 2 + bookings $92M H2",
-          "catalyst_tier": "TIER1 (aged 6d)",
-          "bird_rule": false,
-          "kindleberger": "STAGE 2",
-          "dilution": "April offering cleared",
-          "score": 58,
-          "tier_final": "MONITORING",
-          "entry": "$104-106.50",
-          "stop": "$96.50",
-          "t1": "$113",
-          "t2": "$116.58",
-          "sizing": "PROBE 1% max",
-          "condition": "Entry SOLO SE RVOL >3x ADV post-open + chiude >$107 entro 15:40 IT"
-        },
-        {
-          "ticker": "NVTS",
-          "gap_pct": 5.38,
-          "last": 26.43,
-          "prior_close": 25.08,
-          "vol_premarket": 1467164,
-          "adv_20d": 32651500,
-          "catalyst": "NVIDIA MGX (Jun 3, aged 5d) + YTD +346%",
-          "catalyst_tier": "TIER1 (aged)",
-          "bird_rule": true,
-          "kindleberger": "STAGE 2",
-          "dilution": "3.28M shares Jun 4 + $125M offering",
-          "score": 48,
-          "tier_final": "SKIP",
-          "skip_reason": "Bird Rule (top trending Stocktwits) + diluzione + bounce da -18% selloff"
-        },
-        {
-          "ticker": "MNTS",
-          "gap_pct": 7.91,
-          "last": 16.09,
-          "prior_close": 14.91,
-          "score": 38,
-          "tier_final": "SKIP",
-          "skip_reason": "DILUZIONE $25M PIPE May 28 (<30gg) + Kindleberger STAGE 3 (219%)"
-        },
-        {
-          "ticker": "POET",
-          "gap_pct": 5.9,
-          "last": 12.56,
-          "prior_close": 11.86,
-          "score": 22,
-          "tier_final": "SKIP",
-          "skip_reason": "TESI ROTTA: Marvell+CelestialAI order cancellazioni + $400M diluzione + lawsuits"
-        }
-      ],
-      "movers_negativi": [
-        {
-          "ticker": "CMND",
-          "gap_pct": -20.1,
-          "note": "Promissory notes overhang, webinar Jun 10"
-        },
-        {
-          "ticker": "MTVA",
-          "gap_pct": -14.01,
-          "note": "AGM oggi + offering $12.8M — sell-the-news"
-        }
-      ],
-      "near_tier_b": [
-        {
-          "ticker": "RCAT",
-          "gap_pct": 4.5
-        },
-        {
-          "ticker": "ONDS",
-          "gap_pct": 4.6
-        },
-        {
-          "ticker": "RDCM",
-          "gap_pct": 4.71,
-          "note": "vol 4.6K — illiquido"
-        }
-      ],
-      "morning_brief_today": "MBRX MONITORING (score 67) — no cambio raccomandazione"
+      "giudizio": "MONITORING — sizing minimo 0.5%, solo watchlist awareness",
+      "warning": "LOCL = potenziale lungo termine MA diluzione convertible è rischio reale questa settimana. Non aumentare size senza catalyst fresco o notizie su cash runway."
     }
   ]
 }
