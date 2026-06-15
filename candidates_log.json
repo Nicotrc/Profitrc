@@ -168,7 +168,149 @@
       }
     ]
   },
-  "phase0_serale": {},
+  "phase0_serale": {
+    "date": "2026-06-15",
+    "run_time": "22:00 IT (CEST)",
+    "regime": {
+      "macro": "BULL",
+      "catalyst": "US-Iran peace deal completo (Trump Jun 14), Strait of Hormuz riapertura. Signing ceremony June 19 Svizzera.",
+      "spy": "+1.49-1.74%",
+      "ndx": "+2.07-2.38%",
+      "spy_futures_ah": "+0.7%",
+      "ndx_futures_ah": "+0.8%",
+      "oil": "WTI -5.51% a 0.20 / Brent -5.19% a 2.80",
+      "vix": "subdued (market bull, retail sentiment contrarian bearish su SPY)",
+      "interpretazione": "BULL strutturale per de-escalation geopolitica. Futures positivi overnight. Risk-on favorisce small cap. Headwind settoriale: tanker/shipping (oil -5.5% = compressione potenziale freight rates future)."
+    },
+    "watchlist_movers": [
+      "QUBT +14.9% (conferenze BofA Jun16/Benchmark Jun17 + 13D/A ownership + UK-Japan quantum partnership)",
+      "SOUN +8.48% (AI conversational leader coverage bullish)",
+      "CNTX pump+dump: intraday .58 poi chiude /bin/bash.69 (Phase 1 CTIM-76 data 29% ORR, ma sell-off)",
+      "IMPP +1.93% (earnings eve Q2 domani pre-market)",
+      "ACRS +1.7% (no catalyst specifico)",
+      "LAC +0.66% (lithium, oil peace deal neutro)",
+      "GLSI ~8.50 (sopra entry range, no AH catalyst fresco)"
+    ],
+    "candidates": [
+      {
+        "ticker": "IMPP",
+        "score": 73,
+        "tier": "TIER2",
+        "catalyst": "Q2 2026 earnings pre-market June 16. Track record: Q1 2026 beat +67.3% (/bin/bash.58 EPS vs /bin/bash.3468 stima; revenue 1.71M vs 9.06M +25.8%). Q2 stima: /bin/bash.5814 EPS, 2.6M revenue. Analyst estimates RAISED (Simply Wall St Jun 2026). NAV 08M pro-forma.",
+        "ah_pct": "n/d (flat assunto)",
+        "pensiero_critico": {
+          "regime": "BULL — S&P +1.74%, NDX +2.07%, futures AH +0.7-0.8%. HEADWIND SETTORIALE: Oil -5.5% (Iran deal = compressione potenziale freight rates future). Ma Q2 riflette periodo pre-deal (Apr-Jun, deal Jun 14 = ultimi 2gg trimestre).",
+          "anti_diluzione": "Offering Dec 2025: 0M registered (9.52M shares + warrant) = 6+ mesi fa, NON recente PIPE. OK.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — earnings domani pre-market (<12h)",
+          "narrativa_numeri": "Q1 2026 EPS /bin/bash.58 vs /bin/bash.3468 (+67%), Revenue +25.8%. Q2 stima /bin/bash.5814/2.6M raggiungibile. Tanker fleet operativa durante Q2 con freight rates elevati (Hormuz closure). Forward: incerto (oil -5.5% oggi).",
+          "rischio_asimmetrico": "Worst case: beat Q2 ma guidance taglia per Hormuz reopening = -15-25%. Best case: beat + guidance mantenuta = +20-30%. No gap-up AH >30% atteso (earnings domani mattina, non tonight).",
+          "kindleberger": "Stage 2 stimato (prezzo .28, range recente .13-.68)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "OIL -5.5% (Iran deal headwind guidance forward)",
+            "FLOAT AMBIGUO (verificare IBKR/Finviz prima entry)",
+            "DIPENDENZA TOTALE CATALYST (no earnings beat = no trade)",
+            "NO overnight obbligatorio (regola memory)"
+          ],
+          "giudizio": "PROCEDI TIER2 — 50% sizing CONDIZIONALE su earnings beat + guidance non taglia"
+        },
+        "entry": ".50-.90 (dopo conferma earnings pre-market)",
+        "stop": ".50",
+        "t1": ".00",
+        "t2": ".50",
+        "rr": "2.4:1",
+        "fonte": "memory morning_brief upgrade + 4B earnings",
+        "giudizio": "TIER2 — 50% sizing condizionale",
+        "warning": "Entry 15:35-15:45 IT (9:35-9:45 ET) SOLO post-conferma earnings beat E guidance non taglia. Stop PRIMA entry. Attenzione guidance freight rates post-Iran deal."
+      },
+      {
+        "ticker": "CMPS",
+        "score": 58,
+        "tier": "MONITORING",
+        "catalyst": "Phase 3 COMP360 dati positivi per TRD (Treatment-Resistant Depression). Rolling NDA submission in corso. CNPV (Comparative Novel Pathway) per accelerated FDA review. Launch readiness target fine 2026. 13 analisti Strong Buy consensus.",
+        "ah_pct": "n/d",
+        "pensiero_critico": {
+          "regime": "BULL favorevole a biotech growth. Ma catalyst NDA timeline multi-mese, nessun trigger AH specifico tonight.",
+          "anti_diluzione": "Da verificare (biotech Phase 3 = probabile cash raise futuro).",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — Phase 3 data e NDA rolling anteriori. No AH catalyst specifico Jun 15.",
+          "narrativa_numeri": "Pre-revenue (psilocibina). Cash runway da verificare. 13 analisti Strong Buy = forte institutional coverage. Float probabilmente >15M (biotech NASDAQ Phase 3 scale).",
+          "rischio_asimmetrico": "Worst case NDA rejection o CRL = -50%+. Regulatory risk per nuova categoria farmaceutica (psilocibina).",
+          "kindleberger": "Stage 2 (prezzo 0.10, 52w high probabilmente 5-20 range)",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "FLOAT DA VERIFICARE (probabile >15M)",
+            "CATALYST STALE (no AH trigger tonight)",
+            "REGULATORY RISK FDA psilocibina (prima approvazione categoria)",
+            "PRE-REVENUE = cash runway da monitorare"
+          ],
+          "giudizio": "MONITORING — probe 0.5%. Entry solo su NDA acceptance o PDUFA date confirmation."
+        },
+        "entry": ".50-0.50",
+        "stop": ".00",
+        "t1": "4.00",
+        "t2": "0.00",
+        "rr": "2.3:1",
+        "fonte": "4B + watchlist",
+        "giudizio": "MONITORING",
+        "warning": "Verificare float prima entry. Entry valida solo su: NDA acceptance letter, PDUFA date annunciata, o FDA milestone fresco. Nessun trigger AH tonight."
+      },
+      {
+        "ticker": "VRDN",
+        "score": 46,
+        "tier": "SKIP",
+        "catalyst": "Phase 3 THRIVE e THRIVE-2 per thyroid eye disease (TED). 11 analisti Buy, PT 4.18 (+115% da 5.87). Nessun catalyst AH tonight.",
+        "ah_pct": "n/d",
+        "pensiero_critico": {
+          "regime": "BULL ma nessun trigger AH specifico",
+          "catalyst_verified": false,
+          "catalyst_freshness": "STALE — nessun AH catalyst Jun 15",
+          "narrativa_numeri": "Float da verificare. Biotech Phase 3 = diluzione probabile. Burn rate alto.",
+          "rischio_asimmetrico": "Phase 3 fail = -70%+",
+          "kindleberger": "Stage non determinata",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "NESSUN CATALYST AH (score sotto soglia 55pt)",
+            "FLOAT DA VERIFICARE",
+            "DILUZIONE PHASE 3 probabile"
+          ],
+          "giudizio": "SKIP — 46pt sotto soglia. Monitorare per Phase 3 readout THRIVE."
+        },
+        "entry": "n/d",
+        "stop": "n/d",
+        "t1": "n/d",
+        "rr": "n/d",
+        "fonte": "watchlist + fundamental analyst scan",
+        "giudizio": "SKIP — sotto soglia 55pt",
+        "warning": "Upgrade a TIER2 possibile su Phase 3 readout positivo THRIVE. Keep in watch."
+      }
+    ],
+    "skip_list": [
+      "MBRX — Cash runway <3M + ATM shelf attiva (LETALE)",
+      "PRSO — Catalyst Mobix STALE 5+ mesi (no news da gen 2026)",
+      "QUBT — Float 225M viola filtro <15M + diluzione +74%/anno",
+      "SOUN — Float >15M viola filtro (centinaia di milioni shares)",
+      "CNTX — Chiuso /bin/bash.69 (sotto ), dump da intraday .58, Nasdaq compliance risk",
+      "ACHV — Expected CRL Jun 20 2026 (rejection atteso, non approvazione)",
+      "CRMD — Float 77M viola filtro <15M",
+      "RKLB — Prezzo 02-114 viola filtro 5 max",
+      "GLSI — Price 8.50 sopra entry range 1.50-3.00, Kindleberger Stage 3 (267% dal low .78)",
+      "RDCM — No fresh catalyst (confermato weekly memory, stale earnings Jun 2)",
+      "WYY — No fresh catalyst (confermato weekly memory, annual meeting Jun 17 = non market-moving)",
+      "LOCL — Diluzione convertible 82% letale",
+      "PDYN — Float 24.73M viola filtro + OTA October = STALE per orizzonte daily"
+    ],
+    "watchlist_update": [
+      "AGGIUNGI NOTA IMPP: Earnings Jun 16 pre-market. Se beat confermato → upgrade TIER2 per entry 15:35-15:45 IT",
+      "RIMUOVI ACHV: Expected CRL Jun 20 (rejection). Non utile watchlist short-term.",
+      "TIENI CMPS: Rolling NDA in progress, Strong Buy 13 analisti. Upgrade su PDUFA date.",
+      "TIENI VRDN: Phase 3 readout THRIVE atteso. Upgrade su data positivo."
+    ]
+  },
   "discovery_weekly": [
     {
       "ticker": "IMPP",
