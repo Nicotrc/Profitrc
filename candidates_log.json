@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-14T20:00:00+02:00",
+  "last_updated": "2026-06-15T11:00:00+02:00",
   "session_type": "discovery_weekly",
   "watchlist": [
     "YCBD",
@@ -15,7 +15,6 @@
     "ACHV",
     "TBLA",
     "LAC",
-    "GLOO",
     "BULL",
     "FLO",
     "SOUN",
@@ -50,7 +49,8 @@
     "NIO",
     "UNCY",
     "TRNR",
-    "MTVA"
+    "MTVA",
+    "GLOO"
   ],
   "watchlist_remove_reasons": {
     "HUMA": "PIPE $50M (47.6M shares @$1.05) annunciata June 11 — diluzione letale",
@@ -60,10 +60,114 @@
     "NIO": "DoD lista 'Chinese military companies' June 9 — blocco investimenti istituzionali",
     "UNCY": "ATM shelf $150M filed June 5, 2026 (<10gg) — SKIP immediato + float 25.24M",
     "TRNR": "ATM Sales Agreement attivo ($6.06M target) — vendite ongoing Jan-Mar 2026",
-    "MTVA": "Reverse split 1-for-X approvato da azionisti June 8 — segnale distress strutturale"
+    "MTVA": "Reverse split 1-for-X approvato da azionisti June 8 — segnale distress strutturale",
+    "GLOO": "Float 79.7M >> 15M soglia. Net debt -63M. Violazione criteri fondamentali. Rimosso 2026-06-15."
   },
   "discovery_daily": [],
-  "morning_brief": {},
+  "morning_brief": {
+    "date": "2026-06-15",
+    "macro_regime": "TRADE 3/4 🟢 (Interpretato ALZATO)",
+    "big_themes": [
+      "VIX calo strutturale post-geo da 30+ a 17.68 — favorevole risk-on",
+      "DXY sub-100 (99.75) = ritirata safe-haven = boost small cap",
+      "10Y 4.49% stabile con DXY in calo = economia forte, non inflazione",
+      "IMPP earnings pre-market domani June 16 — catalizzatore principale",
+      "MBRX +12.44% oggi su enrollement 45° paziente MIRACLE = unblinding imminente"
+    ],
+    "candidates": [
+      {
+        "ticker": "IMPP",
+        "score": 68,
+        "tier": "MONITORING-INTRADAY",
+        "catalyst": "Earnings pre-market June 16. Q1 2026: revenue +92% YoY 1.7M, EPS /bin/bash.60, cash 79.1M, P/E 3.38. PT medio analisti .50 (+43% upside). Buyback anti-dilutivo.",
+        "pensiero_critico": {
+          "regime": "🟢 ALZATO — VIX calo strutturale, DXY sub-100, 10Y stabile con economia forte",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — earnings domani pre-market June 16",
+          "narrativa_numeri": "Revenue +92% YoY, net income 8M, cash 79.1M no debt, P/E 3.38 = molto economico per settore shipping",
+          "rischio_asimmetrico": "Worst case earnings miss + oil crash: -35% → .40. Stage 2 = rischio moderato.",
+          "kindleberger": "Stage 2 (52wk .90→.57, +127%). Caution sizing.",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ EARNINGS PRE-MARKET DOMANI → NO OVERNIGHT OBBLIGATORIO",
+            "⚠️ FLOAT AMBIGUO (11-20M vs 34.41M OS — verificare IBKR)",
+            "⚠️ SOLO 1 ANALISTA (Maxim)"
+          ],
+          "giudizio": "MONITORING INTRADAY — probe 1% max loss. Exit obbligatoria prima chiusura 22:00 IT. No overnight."
+        },
+        "entry": ".00-.30",
+        "stop": ".40",
+        "t1": ".50",
+        "t2": ".50",
+        "rr": "2.6:1",
+        "fonte": "discovery_weekly upgrade",
+        "giudizio": "MONITORING INTRADAY",
+        "warning": "EARNINGS DOMANI PRE-MARKET 16 GIUGNO. Entry solo intraday oggi. Exit prima chiusura serale. NO overnight. Verificare float su IBKR prima entry."
+      },
+      {
+        "ticker": "MBRX",
+        "score": 60,
+        "tier": "MONITORING",
+        "catalyst": "MIRACLE trial: 45° paziente enrollato = trigger per interim unblinding imminente (atteso metà 2026). Oggi +12.44% su update. ASCO 2026: no cardiotossicità Annamycin. Float 5.29M tiny.",
+        "pensiero_critico": {
+          "regime": "🟢 favorevole ma binary event attenua beneficio",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — trial update e move +12.44% oggi",
+          "narrativa_numeri": "Pre-revenue. Cash runway Q3 2026 (<3 mesi da ora) = CRITICO. ATM shelf usata /bin/bash.8M maggio.",
+          "rischio_asimmetrico": "Worst case unblinding negativo: -60% → /bin/bash.94. ATM offering immediato post-negativo.",
+          "kindleberger": "Stage 1 (non ha corso ciclo speculativo principale post-RS)",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "⚠️ ATM SHELF ATTIVA (usata maggio 2026)",
+            "⚠️ CASH RUNWAY <3M → diluzione quasi certa se trial negativo",
+            "⚠️ BINARY EVENT 50/50",
+            "⚠️ GIÀ +12.44% OGGI — entry tardiva"
+          ],
+          "giudizio": "MONITORING — probe 0.5% max loss. Exit IMMEDIATO su qualsiasi 8-K negativo."
+        },
+        "entry": ".20-.70",
+        "stop": ".80",
+        "t1": ".50",
+        "t2": ".00",
+        "rr": "2.5:1",
+        "fonte": "discovery_weekly + fresh daily catalyst",
+        "giudizio": "MONITORING",
+        "warning": "Binary event: unblinding positivo → +200%+, negativo → -50%+. Exit immediato. ATM shelf = rischio diluzione reale. Sizing MAX 0.5% loss."
+      },
+      {
+        "ticker": "PRSO",
+        "score": 62,
+        "tier": "MONITORING",
+        "catalyst": "Takeover bid Mobix Labs (MOBX): offerta sweetened cash+stock, ~.30/share floor (53% premium VWAP). Pre-market oggi +85% a ~.50. CATALYST DATE INCERTA — ultima sweetening confermata Sept 2025. Possibile nuovo sviluppo oggi da verificare.",
+        "pensiero_critico": {
+          "regime": "🟢",
+          "catalyst_verified": false,
+          "catalyst_freshness": "INCERTA — sweetening Sept 2025 (STALE?) oppure nuovo sviluppo oggi (FRESH?). DA VERIFICARE su EDGAR 8-K.",
+          "narrativa_numeri": "Target acquisizione = fondamentali irrilevanti. Floor di prezzo = offerta Mobix ~.30.",
+          "rischio_asimmetrico": "Worst case Mobix ritira bid: -50% → /bin/bash.75",
+          "kindleberger": "n.v. (M&A scenario)",
+          "bird_rule": true,
+          "diluzione": false,
+          "flags": [
+            "⚠️ TIMING INCERTO — verificare data esatta sweetening (EDGAR 8-K)",
+            "🚨 BIRD RULE — +85% pre-market = trending retail",
+            "⚠️ SE STALE (Sept 2025) → SKIP immediato"
+          ],
+          "giudizio": "MONITORING pending verifica. SE catalyst oggi → TIER2 50% sizing. SE STALE → SKIP."
+        },
+        "entry": ".30-.45",
+        "stop": ".15",
+        "t1": ".65",
+        "t2": ".85",
+        "rr": "2.0:1",
+        "fonte": "hunter 4D M&A",
+        "giudizio": "MONITORING",
+        "warning": "VERIFICARE EDGAR prima di qualsiasi entry: nuovo 8-K oggi su Mobix/PRSO? Se sì → TIER2. Se nessun nuovo filing oggi → SKIP (move già prezzato da mesi)."
+      }
+    ]
+  },
   "phase0_serale": {},
   "discovery_weekly": [
     {
