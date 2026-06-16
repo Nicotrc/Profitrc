@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T11:00:00+02:00",
+  "last_updated": "2026-06-16T09:00:00Z",
   "session_type": "discovery_weekly",
   "watchlist": [
     "YCBD",
@@ -65,108 +65,129 @@
   },
   "discovery_daily": [],
   "morning_brief": {
-    "date": "2026-06-15",
-    "macro_regime": "TRADE 3/4 🟢 (Interpretato ALZATO)",
+    "date": "2026-06-16",
+    "macro_regime": "TRADE 3/4 🟢",
     "big_themes": [
-      "VIX calo strutturale post-geo da 30+ a 17.68 — favorevole risk-on",
-      "DXY sub-100 (99.75) = ritirata safe-haven = boost small cap",
-      "10Y 4.49% stabile con DXY in calo = economia forte, non inflazione",
-      "IMPP earnings pre-market domani June 16 — catalizzatore principale",
-      "MBRX +12.44% oggi su enrollement 45° paziente MIRACLE = unblinding imminente"
+      "Iran-US deal → Hormuz riapertura → tanker rates in calo → headwind shipping",
+      "SpaceX IPO (13 giugno) completato → consolidazione space plays, halo effect esaurito",
+      "CMPS: rolling NDA + White House EO psychedelics = catalyst freschi e forti",
+      "VIX 16.20 strutturalmente in discesa → risk-on small cap confermato"
     ],
     "candidates": [
       {
-        "ticker": "IMPP",
-        "score": 68,
-        "tier": "MONITORING-INTRADAY",
-        "catalyst": "Earnings pre-market June 16. Q1 2026: revenue +92% YoY 1.7M, EPS /bin/bash.60, cash 79.1M, P/E 3.38. PT medio analisti .50 (+43% upside). Buyback anti-dilutivo.",
+        "ticker": "CMPS",
+        "score": 72,
+        "tier": "TIER2",
+        "catalyst": "Rolling NDA COMP360 FDA, National Priority Review Voucher, White House EO rescheduling psychedelics, Q1 earnings beat, cash $466M runway 2028, 15 analisti Strong Buy",
         "pensiero_critico": {
-          "regime": "🟢 ALZATO — VIX calo strutturale, DXY sub-100, 10Y stabile con economia forte",
+          "regime": "Alzato - VIX 16.20 strutturale (Iran deal geopolitico risolto), non one-off",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESH — earnings domani pre-market June 16",
-          "narrativa_numeri": "Revenue +92% YoY, net income 8M, cash 79.1M no debt, P/E 3.38 = molto economico per settore shipping",
-          "rischio_asimmetrico": "Worst case earnings miss + oil crash: -35% → .40. Stage 2 = rischio moderato.",
-          "kindleberger": "Stage 2 (52wk .90→.57, +127%). Caution sizing.",
+          "catalyst_freshness": "FRESH (oggi 16 giugno)",
+          "narrativa_numeri": "Cash $466M, debt $50.5M, runway fino a 2028 - solidissimo, no diluzione risk",
+          "rischio_asimmetrico": "worst case: $8.50 se NDA filing Q4 2026 subisce delay o Phase 3 Part B delude",
+          "kindleberger": "Stage 1-2",
           "bird_rule": false,
           "diluzione": false,
           "flags": [
-            "⚠️ EARNINGS PRE-MARKET DOMANI → NO OVERNIGHT OBBLIGATORIO",
-            "⚠️ FLOAT AMBIGUO (11-20M vs 34.41M OS — verificare IBKR)",
-            "⚠️ SOLO 1 ANALISTA (Maxim)"
+            "⚠️ FLOAT 134M+ viola criteri L1 intraday - L2 swing only"
           ],
-          "giudizio": "MONITORING INTRADAY — probe 1% max loss. Exit obbligatoria prima chiusura 22:00 IT. No overnight."
+          "giudizio": "TIER2 - L2 swing only"
         },
-        "entry": ".00-.30",
-        "stop": ".40",
-        "t1": ".50",
-        "t2": ".50",
-        "rr": "2.6:1",
-        "fonte": "discovery_weekly upgrade",
-        "giudizio": "MONITORING INTRADAY",
-        "warning": "EARNINGS DOMANI PRE-MARKET 16 GIUGNO. Entry solo intraday oggi. Exit prima chiusura serale. NO overnight. Verificare float su IBKR prima entry."
-      },
-      {
-        "ticker": "MBRX",
-        "score": 60,
-        "tier": "MONITORING",
-        "catalyst": "MIRACLE trial: 45° paziente enrollato = trigger per interim unblinding imminente (atteso metà 2026). Oggi +12.44% su update. ASCO 2026: no cardiotossicità Annamycin. Float 5.29M tiny.",
-        "pensiero_critico": {
-          "regime": "🟢 favorevole ma binary event attenua beneficio",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH — trial update e move +12.44% oggi",
-          "narrativa_numeri": "Pre-revenue. Cash runway Q3 2026 (<3 mesi da ora) = CRITICO. ATM shelf usata /bin/bash.8M maggio.",
-          "rischio_asimmetrico": "Worst case unblinding negativo: -60% → /bin/bash.94. ATM offering immediato post-negativo.",
-          "kindleberger": "Stage 1 (non ha corso ciclo speculativo principale post-RS)",
-          "bird_rule": false,
-          "diluzione": true,
-          "flags": [
-            "⚠️ ATM SHELF ATTIVA (usata maggio 2026)",
-            "⚠️ CASH RUNWAY <3M → diluzione quasi certa se trial negativo",
-            "⚠️ BINARY EVENT 50/50",
-            "⚠️ GIÀ +12.44% OGGI — entry tardiva"
-          ],
-          "giudizio": "MONITORING — probe 0.5% max loss. Exit IMMEDIATO su qualsiasi 8-K negativo."
-        },
-        "entry": ".20-.70",
-        "stop": ".80",
-        "t1": ".50",
-        "t2": ".00",
+        "entry": "$12.80-$13.50",
+        "stop": "$9.80",
+        "t1": "$16.50",
+        "t2": "$19.50",
         "rr": "2.5:1",
-        "fonte": "discovery_weekly + fresh daily catalyst",
-        "giudizio": "MONITORING",
-        "warning": "Binary event: unblinding positivo → +200%+, negativo → -50%+. Exit immediato. ATM shelf = rischio diluzione reale. Sizing MAX 0.5% loss."
+        "fonte": "watchlist upgrade catalyst odierno",
+        "giudizio": "TIER2",
+        "warning": "Float 134M viola criteri L1. Valido solo per L2 swing 15-30gg. Verificare gap apertura NYSE prima dell'entry. Morgan Stanley PT $17."
       },
       {
-        "ticker": "PRSO",
-        "score": 62,
+        "ticker": "IMPP",
+        "score": 58,
         "tier": "MONITORING",
-        "catalyst": "Takeover bid Mobix Labs (MOBX): offerta sweetened cash+stock, ~.30/share floor (53% premium VWAP). Pre-market oggi +85% a ~.50. CATALYST DATE INCERTA — ultima sweetening confermata Sept 2025. Possibile nuovo sviluppo oggi da verificare.",
+        "catalyst": "Q1 2026 earnings beat storico (EPS $0.60 vs $0.34 stima +76%, Rev $61.7M vs $49M stima +25.8%). HEADWIND: Iran deal → Hormuz riapertura → tanker rates normalizzazione Q3+",
+        "pensiero_critico": {
+          "regime": "🟢 generale ma ⚠️ settore shipping in headwind strutturale da Iran deal",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE - Q1 report era 22 maggio 2026 (25 giorni fa)",
+          "narrativa_numeri": "Q1 net income $28M, EBITDA $34.4M, daily rate $43K (vs $27K Q4 2025). Ma Q3+ a rischio forte calo tassi",
+          "rischio_asimmetrico": "worst case: $2.50-3.00 se Hormuz riapre pienamente (-43%/-52% dal prezzo attuale)",
+          "kindleberger": "Stage 2",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ SETTORE HEADWIND Iran deal tanker rates",
+            "⚠️ CATALYST STALE 25 giorni",
+            "⚠️ R/R < 2:1 su entry corrente"
+          ],
+          "giudizio": "MONITORING - no entry oggi"
+        },
+        "entry": "$4.90-$5.10",
+        "stop": "$3.90",
+        "t1": "$6.57",
+        "t2": "$7.50",
+        "rr": "1.5:1",
+        "fonte": "phase0_serale downgrade",
+        "giudizio": "MONITORING",
+        "warning": "Downgrade da TIER2. Iran deal headwind definitivo su tanker rates. +5.23% oggi probabilmente momentum residuo pre-coscienza mercato. Attendere conferma Q3 guidance e normalizzazione Hormuz prima di rientrare."
+      },
+      {
+        "ticker": "WYY",
+        "score": 56,
+        "tier": "MONITORING",
+        "catalyst": "Annual meeting domani 17 giugno. FedRAMP certified, backlog federale $218M, Q1 revenue $40.6M YoY crescita, cash $10.9M",
         "pensiero_critico": {
           "regime": "🟢",
-          "catalyst_verified": false,
-          "catalyst_freshness": "INCERTA — sweetening Sept 2025 (STALE?) oppure nuovo sviluppo oggi (FRESH?). DA VERIFICARE su EDGAR 8-K.",
-          "narrativa_numeri": "Target acquisizione = fondamentali irrilevanti. Floor di prezzo = offerta Mobix ~.30.",
-          "rischio_asimmetrico": "Worst case Mobix ritira bid: -50% → /bin/bash.75",
-          "kindleberger": "n.v. (M&A scenario)",
-          "bird_rule": true,
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH (meeting domani, proxy deadline oggi)",
+          "narrativa_numeri": "Revenue $40.6M crescente, net income $77K marginale ma positivo, backlog $218M = 5x trimestrale - molto solido",
+          "rischio_asimmetrico": "worst case: $8.50 se contratti federali non rinnovati o taglio budget difesa",
+          "kindleberger": "Stage 1",
+          "bird_rule": false,
           "diluzione": false,
           "flags": [
-            "⚠️ TIMING INCERTO — verificare data esatta sweetening (EDGAR 8-K)",
-            "🚨 BIRD RULE — +85% pre-market = trending retail",
-            "⚠️ SE STALE (Sept 2025) → SKIP immediato"
+            "⚠️ CATALYST DEBOLE annual meeting non è tier 1 trigger"
           ],
-          "giudizio": "MONITORING pending verifica. SE catalyst oggi → TIER2 50% sizing. SE STALE → SKIP."
+          "giudizio": "MONITORING"
         },
-        "entry": ".30-.45",
-        "stop": ".15",
-        "t1": ".65",
-        "t2": ".85",
-        "rr": "2.0:1",
-        "fonte": "hunter 4D M&A",
+        "entry": "$11.20-$11.80",
+        "stop": "$8.80",
+        "t1": "$14.80",
+        "t2": "$17.50",
+        "rr": "2:1",
+        "fonte": "discovery_weekly",
         "giudizio": "MONITORING",
-        "warning": "VERIFICARE EDGAR prima di qualsiasi entry: nuovo 8-K oggi su Mobix/PRSO? Se sì → TIER2. Se nessun nuovo filing oggi → SKIP (move già prezzato da mesi)."
+        "warning": "Annual meeting domani. Float 9.89M ideale per sistema. Attendere catalyst più forte: nuovo contratto o guidance upgrade FY2026."
       }
-    ]
+    ],
+    "skip_list": [
+      {
+        "ticker": "MBRX",
+        "motivo": "ATM shelf attiva + cash runway solo Q3 2026 + anti-dilution adjustments confermati SEC → SKIP DEFINITIVO"
+      },
+      {
+        "ticker": "CAST",
+        "motivo": "Kindleberger Stage 4 (+245% ultimi 3gg), float 15.6M over limit, STALE"
+      },
+      {
+        "ticker": "VSME",
+        "motivo": "Stage 4 (+300%+ giugno 10), catalyst solo planning stage AI, STALE"
+      },
+      {
+        "ticker": "NNDM",
+        "motivo": "Float 207M+ viola criteri <15M, merger non-binding"
+      },
+      {
+        "ticker": "GALT",
+        "motivo": "Float ~45M viola criteri, Stage 3 (+211% YTD), no catalyst oggi"
+      },
+      {
+        "ticker": "STAK",
+        "motivo": "Stage 4 ($0.29→$8.80 = +2934%), cinese oilfield/EV, no analyst coverage, score <55pt"
+      }
+    ],
+    "hunter_note": "Giornata thin per Hunter: tutti i candidati fuori watchlist falliscono o per float >15M (NNDM, GALT) o per Kindleberger Stage 4 (CAST, VSME, STAK, INHD). Best opportunity oggi = upgrade CMPS (già in watchlist) + monitoraggio IMPP post-Hormuz."
   },
   "phase0_serale": {
     "date": "2026-06-15",
