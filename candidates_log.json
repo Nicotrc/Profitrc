@@ -551,5 +551,149 @@
       "giudizio": "MONITORING — sizing minimo 0.5%, solo watchlist awareness",
       "warning": "LOCL = potenziale lungo termine MA diluzione convertible è rischio reale questa settimana. Non aumentare size senza catalyst fresco o notizie su cash runway."
     }
+  ],
+  "premarket_gap": [
+    {
+      "date": "June 16 2026",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "GitHub"
+      ],
+      "tradingview_status": "OFFLINE - CDP connection failed, chart analysis skipped",
+      "macro_regime": {
+        "vix": 16.08,
+        "vix_change_pct": -0.74,
+        "spy_last": 754.02,
+        "spy_change_pct": -0.11,
+        "pfrc_rgm": "N/A (TV offline)",
+        "regime_assessed": "TRANSIZIONE",
+        "tier_penalty": 1,
+        "note": "VIX 16.08 moderate/neutral, SPY flat -0.11% → TRANSIZIONE by default (PFRC Rgm non disponibile)"
+      },
+      "account_snapshot": {
+        "net_liq_eur": 1463,
+        "buying_power_eur": 1463,
+        "positions_open": 0,
+        "trades_today": 0
+      },
+      "watchlist_scanned": 57,
+      "tier_a_count": 1,
+      "tier_b_count": 3,
+      "tier_c_count": 0,
+      "tier_a_tickers": [
+        "EOSE"
+      ],
+      "tier_b_tickers": [
+        "DXF",
+        "RXT",
+        "WYY"
+      ],
+      "gap_candidates": [
+        {
+          "ticker": "RXT",
+          "tier": "MONITORING",
+          "gap_pct": 5.24,
+          "last": 6.225,
+          "prior_close": null,
+          "open": 6.73,
+          "volume_premarket": 77071079,
+          "adv_20d": 17608904,
+          "rvol": 4.38,
+          "bid": 6.22,
+          "ask": 6.23,
+          "spread_pct": 0.16,
+          "catalyst": "AMD partnership (AI infrastructure, 8-K Jun 10) + UBS price target raise $5→$5.50 + 15% workforce reduction $75-85M savings",
+          "catalyst_tier": "TIER1",
+          "dilution": "CLEAN - no PIPE/RDO found",
+          "kindleberger_stage": "STAGE2 (+69% da low $3.68)",
+          "kindleberger_penalty": 1,
+          "bird_rule": false,
+          "scoring": {
+            "catalyst": 22,
+            "gap_volume": 13,
+            "sentiment": 15,
+            "technical": 10,
+            "risk": 7,
+            "total": 67
+          },
+          "tier_base": "TIER2",
+          "tier_final": "MONITORING",
+          "penalties_applied": "TRANSIZIONE(1) + Kindleberger STAGE2(1) = -2 tiers → TIER2→MONITORING→probe",
+          "entry_window": "15:35-15:45 IT",
+          "entry_range": "$6.05-$6.30",
+          "stop": "$5.75 (sotto low premarket)",
+          "t1": "$6.90 (R/R 2.3:1)",
+          "t2": "$7.50 (R/R 4.5:1)",
+          "sizing": "PROBE - 1% max loss",
+          "notes": "Attendere conferma volume all'apertura NYSE. Catalyst TIER1 verificato ma Kindleberger STAGE2 impone sizing minimo."
+        }
+      ],
+      "skipped": [
+        {
+          "ticker": "EOSE",
+          "gap_pct": 10.19,
+          "reason": "⚠️ DILUZIONE ATTIVA - Rights offering luglio 1 record date + $40M registered direct offering + warrant a -20% VWAP. Overhang dilutivo attivo precede apertura NYSE.",
+          "catalyst": "New manufacturing facility (8-K Jun 11) + Frontier Power JV Cerberus $100M TIER1 quality",
+          "note": "Rivisitare dopo record date luglio 1 se stock mantiene livelli"
+        },
+        {
+          "ticker": "DXF",
+          "gap_pct": 6.19,
+          "reason": "SKIP - Nessun catalyst verificato per Eason Technology (ex-Dunxin). RVOL 0.18x premarket. TIER B richiede catalyst verificato - non trovato.",
+          "rvol": 0.18
+        },
+        {
+          "ticker": "WYY",
+          "gap_pct": 6.91,
+          "reason": "SKIP - Illiquido (ADV 82K vs 121K ADV). RVOL 0.69x. Nessun catalyst specifico WYY identificato. Spread 1.7% - slippage elevato.",
+          "adv": 121000,
+          "rvol": 0.69
+        }
+      ],
+      "notable_gap_downs": [
+        {
+          "ticker": "BIAF",
+          "change_pct": -24.45,
+          "note": "Verifica catalyst negativo"
+        },
+        {
+          "ticker": "DLTH",
+          "change_pct": -9.28
+        },
+        {
+          "ticker": "RCAT",
+          "change_pct": -7.6,
+          "prior_close": 11.97
+        },
+        {
+          "ticker": "POET",
+          "change_pct": -6.71,
+          "volume": 19617612
+        }
+      ],
+      "watches": [
+        {
+          "ticker": "HIMS",
+          "change_pct": 4.77,
+          "volume": 17706034,
+          "note": "Borderline TIER B, volume elevato - monitorare al open per superamento 5%"
+        },
+        {
+          "ticker": "TRNR",
+          "change_pct": 4.68,
+          "note": "Borderline TIER B"
+        }
+      ],
+      "open_positions_alert": [],
+      "pensiero_critico_rxt": {
+        "regime": "TRANSIZIONE - VIX 16.08 (-0.74%) moderato, SPY -0.11% flat. Non risk-off ma non bull confermato. PFRC Rgm non disponibile (TV offline).",
+        "trend": "STAGE2 Kindleberger: +69% da low $3.68 (maggio). Movimento giustificato da catalyst fondamentali (AMD, cost-cut) non da puro hype.",
+        "catalyst": "VERIFICATO - AMD partnership 8-K + UBS upgrade + 15% workforce reduction $75-85M savings = TIER1 multi-catalyst",
+        "bias_alert": "Nessun flag critico. No Bird Rule (copertura istituzionale, non reddit/social). No Kindleberger STAGE3+ (ancora STAGE2).",
+        "giudizio": "MONITORING/Probe - Catalyst reale ma Kindleberger STAGE2 impone sizing minimo. Entry solo se volume >50M alle 15:35 IT e livelli tecnici confermati (TV offline = no livelli precisi)."
+      }
+    }
   ]
 }
