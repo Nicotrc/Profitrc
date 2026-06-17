@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-16T22:00:00Z",
+  "last_updated": "2026-06-17T09:00:00Z",
   "session_type": "discovery_weekly",
   "watchlist": [
     "YCBD",
@@ -65,129 +65,122 @@
   },
   "discovery_daily": [],
   "morning_brief": {
-    "date": "2026-06-16",
-    "macro_regime": "TRADE 3/4 🟢",
+    "date": "2026-06-17",
+    "macro_regime": "TRADE 4/4 🟢",
     "big_themes": [
-      "Iran-US deal → Hormuz riapertura → tanker rates in calo → headwind shipping",
-      "SpaceX IPO (13 giugno) completato → consolidazione space plays, halo effect esaurito",
-      "CMPS: rolling NDA + White House EO psychedelics = catalyst freschi e forti",
-      "VIX 16.20 strutturalmente in discesa → risk-on small cap confermato"
+      "FOMC inizia oggi — rate unchanged 3.50-3.75% atteso → risk-on confermato",
+      "US-Iran provisional peace deal → petrolio scende → disinflazione → 10Y 4.44%",
+      "Russell 2000 +18.6% YTD — bull market strutturale small cap",
+      "DXY 99.28 debole — positivo per small/micro cap growth"
     ],
+    "macro_snapshot": {
+      "vix": 16.11,
+      "spy_vs_ma50": "SOPRA (SPY ~$754 vs MA50 $740.84)",
+      "dxy": 99.28,
+      "yield_10y": 4.44,
+      "score_grezzo": "4/4",
+      "score_interpretato": "4/4 — disinflazione multi-segnale auto-rinforzante",
+      "verdetto": "🟢 TRADE PIENO"
+    },
     "candidates": [
       {
         "ticker": "CMPS",
         "score": 72,
         "tier": "TIER2",
-        "catalyst": "Rolling NDA COMP360 FDA, National Priority Review Voucher, White House EO rescheduling psychedelics, Q1 earnings beat, cash $466M runway 2028, 15 analisti Strong Buy",
+        "catalyst": "FDA rolling NDA COMP360 accettata; Part B Phase 3 data attesi early Q3 2026. Cash $466M. Pullback -15% settimana = dip setup.",
         "pensiero_critico": {
-          "regime": "Alzato - VIX 16.20 strutturale (Iran deal geopolitico risolto), non one-off",
+          "regime": "🟢 4/4 interpretato rialzato — disinflazione positiva per biotech growth",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESH (oggi 16 giugno)",
-          "narrativa_numeri": "Cash $466M, debt $50.5M, runway fino a 2028 - solidissimo, no diluzione risk",
-          "rischio_asimmetrico": "worst case: $8.50 se NDA filing Q4 2026 subisce delay o Phase 3 Part B delude",
+          "catalyst_freshness": "SEMI-FRESH — FDA rolling NDA è dato acquisito; Part B Q3 = prossimo trigger",
+          "narrativa_numeri": "Cash $466M (ottimo), no dilution recente. Revenue crescente. FDA milestone validata.",
+          "rischio_asimmetrico": "worst case: Part B data Q3 delude → -40% a $6-7. Gap aperto su weekly.",
+          "kindleberger": "Stage 2 (1yr +152%) — sizing ridotto obbligatorio",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ FLOAT ~140M viola criterio <15M (Layer 2 swing accettabile)",
+            "⚠️ KINDLEBERGER Stage 2 — 1yr +152%",
+            "⚠️ -15.4% week — momentum short-term debole"
+          ],
+          "giudizio": "TIER2 — 50% sizing (Layer 2 swing candidato)"
+        },
+        "entry": "$10.80-$11.50",
+        "stop": "$9.20",
+        "t1": "$15.00",
+        "t2": "$20.00",
+        "rr": "2.4:1",
+        "fonte": "memoria_phase0_serale",
+        "giudizio": "TIER2",
+        "warning": "Float ~140M vs criterio <15M: candidato valido SOLO per Layer 2 swing 15-30gg. Non adatto per Layer 1 intraday. Verificare RVOL >3x all'entry 15:35 IT."
+      },
+      {
+        "ticker": "CRVO",
+        "score": 65,
+        "tier": "SKIP",
+        "catalyst": "Private placement $10.5M (June 10) + insider buy $3M Joshua Boger (Vertex founder) + trial nfvPPA fully enrolled ahead of schedule. +31.2% June 16 su 13.4M shares.",
+        "pensiero_critico": {
+          "regime": "🟢 4/4",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE per PIPE — June 10 = 7gg fa",
+          "narrativa_numeri": "PIPE recente <30gg: regola letale attivata",
+          "rischio_asimmetrico": "worst case: warrants Series B/C esercitati → diluzione aggressiva. Prezzo offerta $3.14 funge da resistenza/magnete.",
           "kindleberger": "Stage 1-2",
           "bird_rule": false,
-          "diluzione": false,
+          "diluzione": true,
           "flags": [
-            "⚠️ FLOAT 134M+ viola criteri L1 intraday - L2 swing only"
+            "⚠️ PIPE RECENTE June 10 (<30gg) — SKIP IMMEDIATO OBBLIGATORIO"
           ],
-          "giudizio": "TIER2 - L2 swing only"
+          "giudizio": "SKIP — PIPE recente"
         },
-        "entry": "$12.80-$13.50",
-        "stop": "$9.80",
-        "t1": "$16.50",
-        "t2": "$19.50",
-        "rr": "2.5:1",
-        "fonte": "watchlist upgrade catalyst odierno",
-        "giudizio": "TIER2",
-        "warning": "Float 134M viola criteri L1. Valido solo per L2 swing 15-30gg. Verificare gap apertura NYSE prima dell'entry. Morgan Stanley PT $17."
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "t2": "N/A",
+        "rr": "N/A",
+        "fonte": "hunter_4C_SEC8K",
+        "giudizio": "SKIP",
+        "warning": "PIPE chiusa June 10. Riconsiderare dopo July 10 se catalysis clinici si materializzano (biomarker Q4 2026). Aggiungere a watchlist futura."
       },
       {
-        "ticker": "IMPP",
-        "score": 58,
-        "tier": "MONITORING",
-        "catalyst": "Q1 2026 earnings beat storico (EPS $0.60 vs $0.34 stima +76%, Rev $61.7M vs $49M stima +25.8%). HEADWIND: Iran deal → Hormuz riapertura → tanker rates normalizzazione Q3+",
+        "ticker": "NNDM",
+        "score": 57,
+        "tier": "SKIP",
+        "catalyst": "Non-binding term sheet June 15: merger Nano Dimension con Infinite Epigenetics AI health platform, valorizzazione $890M, combined cash >$400M, nuovo ticker IEAI. Deal definitivo entro July 31.",
         "pensiero_critico": {
-          "regime": "🟢 generale ma ⚠️ settore shipping in headwind strutturale da Iran deal",
+          "regime": "🟢 4/4",
           "catalyst_verified": true,
-          "catalyst_freshness": "STALE - Q1 report era 22 maggio 2026 (25 giorni fa)",
-          "narrativa_numeri": "Q1 net income $28M, EBITDA $34.4M, daily rate $43K (vs $27K Q4 2025). Ma Q3+ a rischio forte calo tassi",
-          "rischio_asimmetrico": "worst case: $2.50-3.00 se Hormuz riapre pienamente (-43%/-52% dal prezzo attuale)",
-          "kindleberger": "Stage 2",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "⚠️ SETTORE HEADWIND Iran deal tanker rates",
-            "⚠️ CATALYST STALE 25 giorni",
-            "⚠️ R/R < 2:1 su entry corrente"
-          ],
-          "giudizio": "MONITORING - no entry oggi"
-        },
-        "entry": "$4.90-$5.10",
-        "stop": "$3.90",
-        "t1": "$6.57",
-        "t2": "$7.50",
-        "rr": "1.5:1",
-        "fonte": "phase0_serale downgrade",
-        "giudizio": "MONITORING",
-        "warning": "Downgrade da TIER2. Iran deal headwind definitivo su tanker rates. +5.23% oggi probabilmente momentum residuo pre-coscienza mercato. Attendere conferma Q3 guidance e normalizzazione Hormuz prima di rientrare."
-      },
-      {
-        "ticker": "WYY",
-        "score": 56,
-        "tier": "MONITORING",
-        "catalyst": "Annual meeting domani 17 giugno. FedRAMP certified, backlog federale $218M, Q1 revenue $40.6M YoY crescita, cash $10.9M",
-        "pensiero_critico": {
-          "regime": "🟢",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH (meeting domani, proxy deadline oggi)",
-          "narrativa_numeri": "Revenue $40.6M crescente, net income $77K marginale ma positivo, backlog $218M = 5x trimestrale - molto solido",
-          "rischio_asimmetrico": "worst case: $8.50 se contratti federali non rinnovati o taglio budget difesa",
+          "catalyst_freshness": "FRESH — June 15, 2gg fa",
+          "narrativa_numeri": "Business 3D printing Nano stagnante. Valore risiede nel cash netto. Nano shareholders = minority con premium 20% su net cash.",
+          "rischio_asimmetrico": "worst case: deal non si conclude entro July 31 → NNDM ritorna a trade su net cash puro ~$2-3. Diluzione minoritaria ma certa.",
           "kindleberger": "Stage 1",
           "bird_rule": false,
           "diluzione": false,
           "flags": [
-            "⚠️ CATALYST DEBOLE annual meeting non è tier 1 trigger"
+            "⚠️ FLOAT >>15M (507M shares, mid-cap $4.8B) — viola universo PROFITRC",
+            "⚠️ DEAL NON-BINDING — alta probabilità renegoziation",
+            "⚠️ Q1 Nano fundamentals deboli standalone"
           ],
-          "giudizio": "MONITORING"
+          "giudizio": "SKIP — float violation + deal non-binding"
         },
-        "entry": "$11.20-$11.80",
-        "stop": "$8.80",
-        "t1": "$14.80",
-        "t2": "$17.50",
-        "rr": "2:1",
-        "fonte": "discovery_weekly",
-        "giudizio": "MONITORING",
-        "warning": "Annual meeting domani. Float 9.89M ideale per sistema. Attendere catalyst più forte: nuovo contratto o guidance upgrade FY2026."
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "t2": "N/A",
+        "rr": "N/A",
+        "fonte": "hunter_4D_MA",
+        "giudizio": "SKIP",
+        "warning": "Non adatto PROFITRC per float. L'eventuale nuovo ticker IEAI post-merger potrebbe essere candidato futuro se float ridotto."
       }
     ],
-    "skip_list": [
-      {
-        "ticker": "MBRX",
-        "motivo": "ATM shelf attiva + cash runway solo Q3 2026 + anti-dilution adjustments confermati SEC → SKIP DEFINITIVO"
-      },
-      {
-        "ticker": "CAST",
-        "motivo": "Kindleberger Stage 4 (+245% ultimi 3gg), float 15.6M over limit, STALE"
-      },
-      {
-        "ticker": "VSME",
-        "motivo": "Stage 4 (+300%+ giugno 10), catalyst solo planning stage AI, STALE"
-      },
-      {
-        "ticker": "NNDM",
-        "motivo": "Float 207M+ viola criteri <15M, merger non-binding"
-      },
-      {
-        "ticker": "GALT",
-        "motivo": "Float ~45M viola criteri, Stage 3 (+211% YTD), no catalyst oggi"
-      },
-      {
-        "ticker": "STAK",
-        "motivo": "Stage 4 ($0.29→$8.80 = +2934%), cinese oilfield/EV, no analyst coverage, score <55pt"
-      }
-    ],
-    "hunter_note": "Giornata thin per Hunter: tutti i candidati fuori watchlist falliscono o per float >15M (NNDM, GALT) o per Kindleberger Stage 4 (CAST, VSME, STAK, INHD). Best opportunity oggi = upgrade CMPS (già in watchlist) + monitoraggio IMPP post-Hormuz."
+    "watchlist_alerts": {
+      "MBRX": "MIRACLE trial unblinding by June 30 (13gg). SKIP oggi per cash runway <Q3+$25M needed. Watch: se raise capital prima del 30/6 → promuovere immediatamente a TIER1.",
+      "GRPN": "Short interest 50%+ float, days-to-cover 11.3. +30% da Aprile. Q1 earnings May 6 STALE. Setup squeeze ancora vivo ma timing degradato.",
+      "GLSI": "52-week +182.84% = Stage 3. Short interest 11-22%. Probe 1% max se squeeze trigger.",
+      "QUBT": "-3.74% oggi per sector selling (Quantinuum IPO sotto IPO price). Watch $9.50 come supporto bounce.",
+      "IMPP": "Q1 risultati eccellenti ($61.7M rev, $28M NI, debt-free, $213M cash) ma catalyst STALE 25+gg. No new entry. Monitor Q2 report."
+    },
+    "hunter_day_note": "FOMC day: smart money in pausa pre-decisione. Pickings thin per nuovi micro-cap catalysts oggi. Tutti e 3 i candidati hunter trovati superano Gate 1 score ma falliscono Gate 2 per regole letali (PIPE, float, deal non-binding). Normal behavior in FOMC day — attendere post-15:30 per conferma direction.",
+    "note": "GitHub write 2026-06-17 11:00 IT"
   },
   "phase0_serale": {
     "date": "2026-06-16",
