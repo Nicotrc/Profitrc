@@ -561,6 +561,109 @@
   ],
   "premarket_gap": [
     {
+      "date": "June 17 2026",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "TradingView",
+        "GitHub"
+      ],
+      "macro_regime": "VIX 16.36 (-0.30%) | SPY $750.78 (+0.06%) | PFRC Rgm: BULL RISK-ON 4/4",
+      "account_snapshot": {
+        "net_liq_eur": 1463.39,
+        "buying_power_eur": 1463.39,
+        "open_positions": 0
+      },
+      "ticker_scanned": 58,
+      "tier_a_count": 2,
+      "tier_b_count": 3,
+      "tier_c_count": 2,
+      "gap_candidates": [
+        {
+          "ticker": "QURE",
+          "gap_pct": 76.51,
+          "last_premarket": 47.64,
+          "prior_close": 26.99,
+          "volume_premarket": 2658079,
+          "adv_20d": 817116,
+          "rvol": 3.25,
+          "catalyst": "FDA accorded accelerated approval path for AMT-130 (Huntington's disease gene therapy) — BLA submission Q3 2026",
+          "catalyst_tier": "TIER1",
+          "score": 86,
+          "tier": "TIER1",
+          "kindleberger": "STAGE 2 (+98% from 20d low $24.00)",
+          "spread_pct": 1.47,
+          "bid_ask": "47.20/47.90",
+          "entry": "$45.00-$48.00",
+          "stop": "$38.00",
+          "t1": "$55.00 (R/R 1.5:1)",
+          "t2": "$65.00 (R/R 3.4:1)",
+          "gap_fill_risk": "$26.99 (-43%)",
+          "sizing": "TIER1 full sizing",
+          "verdict": "PROCEDI TIER1",
+          "tv_ohlcv_100d": {
+            "high": 31.0,
+            "low": 8.73,
+            "close_prev": 26.99,
+            "consolidation": "$24-$28 range last 20d"
+          },
+          "note": "Breakout above 100-bar high ($31). Entry window 15:35-15:45 IT. Attendere stabilizzazione post-open."
+        }
+      ],
+      "monitoring": [
+        {
+          "ticker": "AEHR",
+          "gap_pct": 8.37,
+          "last_premarket": 113.6,
+          "prior_close": 104.83,
+          "rvol": 0.08,
+          "catalyst": "Follow-on silicon photonics production order (FOX-XP system, 9 wafers parallel)",
+          "score": 56,
+          "tier": "MONITORING",
+          "motivo": "RVOL 0.08x premarket (flag <3x) — attendere conferma volume a open"
+        }
+      ],
+      "skipped": [
+        {
+          "ticker": "MNTS",
+          "gap_pct": 19.23,
+          "motivo": "Diluzione letale ($50M ATM + $25M PP Jun 12) + Kindleberger STAGE 3 (103% da low) + Bird Rule social chatter + no fresh catalyst Jun 17"
+        },
+        {
+          "ticker": "REPL",
+          "gap_pct": 7.69,
+          "motivo": "Kindleberger STAGE 3 (112% da low $4.47) + catalyst stale BLA news da 3 settimane + RVOL 0.02x"
+        },
+        {
+          "ticker": "EOSE",
+          "gap_pct": 6.31,
+          "motivo": "Rights offering diluzione (record date Jul 1) + share hike approvato + RVOL 0.045x"
+        },
+        {
+          "ticker": "POET",
+          "gap_pct": 3.04,
+          "motivo": "Securities class action attiva (deadline Jun 29) + 185% monthly surge + no fresh catalyst oggi"
+        },
+        {
+          "ticker": "TRNR",
+          "gap_pct": -19.52,
+          "motivo": "Negative mover — no long setup"
+        },
+        {
+          "ticker": "BIAF",
+          "gap_pct": -12.15,
+          "motivo": "Negative mover — no long setup"
+        },
+        {
+          "ticker": "MTVA",
+          "gap_pct": 3.03,
+          "motivo": "Volume 29K (basso) + no catalyst verificato"
+        }
+      ],
+      "open_positions_alert": []
+    },
+    {
       "date": "June 16 2026",
       "scan_time": "14:30 IT",
       "scanner_version": "v3.0",
