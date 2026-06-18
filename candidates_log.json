@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18T23:00:00+02:00",
+  "last_updated": "2026-06-18T23:30:00+02:00",
   "session_type": "morning_brief_18giu2026",
   "watchlist": [
     "YCBD",
@@ -171,155 +171,155 @@
   },
   "phase0_serale": {
     "date": "2026-06-18",
-    "generated_at": "22:00 IT (CEST)",
-    "juneteenth_alert": "⚠️ NYSE/NASDAQ CHIUSI IL 19/06/2026 (JUNETEENTH) — PROSSIMA ENTRY: VENERDÌ 20/06/2026",
+    "generated_at": "23:30 IT (CEST)",
+    "next_trading_day": "2026-06-22 (Lunedi - NYSE chiuso 19/06 Juneteenth + weekend)",
     "macro": {
-      "vix": "16.20 (-8.37%)",
-      "sp500_june17": "-1.21% (Fed hawkish, dot plot: 9/18 vogliono hike H2)",
-      "russell2000_futures": "+0.90% overnight — small caps recuperano",
-      "dxy": "99.28 (debole, growth-positive)",
-      "ten_y_yield": "4.45%",
-      "geopolitica": "Iran peace deal atteso venerdì 20/06 → Strait Hormuz riapre → oil giù → tankers NEGATIVI",
-      "regime": "TRANSIZIONE — VIX calmo ma Fed hawkish; small caps futures positivi; Russell 2000 in recovery"
+      "vix": "16.20 calmo",
+      "spy_today": "+1.67% tech rally",
+      "regime": "BULL / TRANSIZIONE FAVOREVOLE"
     },
     "watchlist_movers": [
-      "QURE +76% (giugno 17, FDA accelerated approval AMT-130 — già prezzato, Stage 4)",
-      "BBAI +10.42% (contratto DoD 3M — ma float 477M)",
+      "PDYN AH +19.37% ~$7.15 (Army 8-K SwarmOS+Gremlin-X)",
       "ACHV +0.18% AH flat (pre-PDUFA June 20)",
-      "CMPS -4.01% (pullback, no nuovo catalyst)",
-      "GLSI -0.04% AH flat (8.50, price >5 out-of-universe)"
+      "ICCM -6.25% AH (PIPE trap $5.5M)",
+      "ELTX +70.65% intraday (ATM $100M SKIP)",
+      "QURE +76% (Stage4 already run)",
+      "SOUN -5.19% weakness",
+      "QUBT -8.0% quantum retrace"
     ],
-    "candidates": [],
-    "hunter_new_tickers_analyzed": [
-      {
-        "ticker": "FTHM",
-        "nome": "Fathom Holdings",
-        "score": 48,
-        "tier": "SKIP",
-        "catalyst": "Acquisizione all-stock da Bed Bath & Beyond (BBBY) per 3M equity value — 8-K firmato giugno 16",
-        "ah_pct": "+77.7% (giugno 17), confermato a ~.05",
-        "close": "~.05",
-        "pensiero_critico": {
-          "regime": "TRANSIZIONE",
-          "catalyst_verified": true,
-          "catalyst_freshness": "STALE — notizia giugno 16-17, +89% già corso",
-          "narrativa_numeri": "All-stock deal senza cash premium; BBBY (acquirente) ex-fallita 2023; deal valuation 3M equity",
-          "rischio_asimmetrico": "CEO Fregenal ousted per policy violations CONTESTUALMENTE al deal; se BBBY stock crolla, deal value azzerato; deal close H2 2026",
-          "kindleberger": "Stage 3+ (da ~/bin/bash.55 a .05 = +91%)",
-          "bird_rule": true,
-          "diluzione": false,
-          "flags": [
-            "⚠️ FLOAT ~20M > 15M (violazione)",
-            "⚠️ CEO OUSTED PER POLICY VIOLATIONS (governance RED FLAG)",
-            "🚨 BIRD RULE ATTIVA (trending AH)",
-            "⚠️ GAP >30% già corso — no new entry"
-          ],
-          "giudizio": "SKIP — float >15M + CEO ousted + catalyst già prezzato +90%"
-        },
-        "fonte": "4A Hunter (AH mover)",
-        "giudizio": "SKIP",
-        "warning": "CEO rimosso per violazioni politiche aziendali = governance RED FLAG; acquirente BBBY qualità discutibile"
-      },
-      {
-        "ticker": "ICCM",
-        "nome": "IceCure Medical",
-        "score": 41,
-        "tier": "SKIP",
-        "catalyst": "70% crescita install base ProSense (breast cancer cryoablation) — comunicato commerciale",
-        "ah_pct": "+187.9% intraday (giugno 18)",
-        "close": "~.83",
-        "float_post_split": "~2.8M shares (post reverse split 1:30 giugno 4)",
-        "cash": ".1M (Q1 2026) — runway incerto",
-        "pensiero_critico": {
-          "regime": "TRANSIZIONE",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH ma già +200% prezzato",
-          "narrativa_numeri": "Revenue Q1 +26% YoY — trend positivo ma cash solo .1M; F-1 filing 2026 attivo",
-          "rischio_asimmetrico": "Kindleberger Stage 4; F-1/F-3 shelf registrata → diluzione imminente con stock alta",
-          "kindleberger": "Stage 4 (reverse split poi +200% = dilution pump pattern)",
-          "bird_rule": true,
-          "diluzione": true,
-          "flags": [
-            "⚠️ REVERSE SPLIT <6 MESI (1:30 giugno 4) → REGOLA SKIP",
-            "⚠️ KINDLEBERGER STAGE 4",
-            "⚠️ CASH RUNWAY <12M",
-            "🚨 BIRD RULE",
-            "F-1/F-3 shelf attiva 2026"
-          ],
-          "giudizio": "SKIP — reverse split <6m + Stage 4 + diluzione potenziale"
-        },
-        "fonte": "4A Hunter",
-        "giudizio": "SKIP",
-        "warning": "Pattern classico reverse-split-poi-pump; F-1 shelf aperta per potenziali offerte"
-      },
-      {
-        "ticker": "EHGO",
-        "nome": "Eshallgo Inc.",
-        "score": 15,
-        "tier": "SKIP",
-        "catalyst": "Nessun catalyst identificato — puro flusso speculativo",
-        "ah_pct": "+131.2% AH",
-        "giudizio": "SKIP — pura speculazione senza catalyst reale",
-        "fonte": "4A Hunter"
-      }
-    ],
-    "watchlist_skip_tonight": [
-      {
-        "ticker": "QURE",
-        "motivo": "Kindleberger Stage 4 (+461% da 52wk low .73 a 9); catalyst già prezzato +76% il 17/06"
-      },
+    "candidates": [
       {
         "ticker": "ACHV",
-        "motivo": "S-3 shelf attiva con 99M shares registrate per rivendita (maggio 2026) + float 102M > 15M — NONOSTANTE PDUFA June 20"
-      },
-      {
-        "ticker": "MBRX",
-        "motivo": "Cash runway Q3 2026 only (<6M) — SKIP obbligatorio nonostante MIRACLE unblinding <June 30"
-      },
-      {
-        "ticker": "IMPP",
-        "motivo": "Iran peace deal venerdì → Strait Hormuz riapre → tanker rates negativi"
-      },
-      {
-        "ticker": "BBAI",
-        "motivo": "Float 477M shares + ATM attivo (142M shares vendute 2025) + authorized shares raddoppiate"
-      },
-      {
-        "ticker": "CMPS",
-        "motivo": "Float 140M >> 15M; pullback -4% senza nuovo catalyst"
-      },
-      {
-        "ticker": "GLSI",
-        "motivo": "Price 8.50 > 5 (out of universe); catalyst FLAMINGO-01 stale (giugno 1)"
-      },
-      {
-        "ticker": "RDCM",
-        "motivo": "Earnings stale (giugno 2); nessun movimento AH"
+        "score": 65,
+        "tier": "MONITORING",
+        "catalyst": "PDUFA June 20 2026 FDA cytisinicline smoking cessation (prima terapia nuova in 20 anni)",
+        "ah_pct": "+0.18% flat",
+        "close": "$2.72",
+        "float": "9.43M",
+        "pensiero_critico": {
+          "regime": "BULL/TRANSIZIONE favorevole binary biotech",
+          "catalyst_verified": true,
+          "catalyst_freshness": "IMMINENT PDUFA sabato 20/06",
+          "narrativa_numeri": "Cash ~$30-36M no going concern 2 Phase3 completati NDA accettata",
+          "rischio_asimmetrico": "BINARIO: CRL -> -60-80% OR Approval -> +100-200% gap Monday June 22",
+          "kindleberger": "Stage 1-2",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "EVENTO BINARIO 100pct catalyst-dipendente",
+            "Shelf $300M Jan 2026 post-approval raise attesa",
+            "15M warrants overhang",
+            "PDUFA sabato timing incerto"
+          ],
+          "giudizio": "MONITORING probe 1pct max. Entry SOLO su FDA approval confermata."
+        },
+        "entry": "$2.80-$3.10 solo FDA approval",
+        "stop": "$2.15",
+        "t1": "$5.00",
+        "rr": "2.5:1",
+        "fonte": "watchlist_ACHV",
+        "giudizio": "MONITORING",
+        "warning": "Binary FDA play. Non entrare pre-PDUFA. CRL = skip totale."
       },
       {
         "ticker": "PDYN",
-        "motivo": "Float 24.73M > 15M; IAI partnership stale (giugno 8)"
+        "score": 72,
+        "tier": "MONITORING",
+        "catalyst": "US Army 8-K SwarmOS+Gremlin-X June 17 + guidance $24-27M + IQ 2.0",
+        "ah_pct": "+19.37% ~$7.15",
+        "close": "$6.96",
+        "float": "24.73M fuori parametri",
+        "pensiero_critico": {
+          "regime": "BULL defense+AI rally",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH Army 8-K June17 gap June18",
+          "narrativa_numeri": "Cash $43.7M 15mesi revenue +107pct Q1 backlog $17.3M",
+          "rischio_asimmetrico": "GAP 3gg Thu-Mon + BIRD RULE + ATM shelf worst case $5.50",
+          "kindleberger": "Stage 2 (low $4.14 -> $7.15 = +73pct)",
+          "bird_rule": true,
+          "diluzione": false,
+          "flags": [
+            "BIRD RULE ATTIVA trending StockTwits",
+            "FLOAT >15M 24.73M fuori universo",
+            "ATM shelf $50M Jefferies",
+            "GAP 3-day Thu-Mon",
+            "Stage 2 Kindleberger"
+          ],
+          "giudizio": "MONITORING probe 1pct. Entry solo >$7.00 Mon 15:35 IT no fade."
+        },
+        "entry": "$7.00-$7.30 Monday 22/06",
+        "stop": "$5.80",
+        "t1": "$9.00",
+        "t2": "$10.50",
+        "rr": "2.3:1",
+        "fonte": "watchlist_PDYN",
+        "giudizio": "MONITORING",
+        "warning": "BIRD RULE + float fuori parametri + 3-day gap. Max 25% sizing."
       }
     ],
-    "watchlist_monitoring_carryover": [
+    "hunter_new_tickers_analyzed": [
       {
-        "ticker": "WYY",
-        "score": 56,
-        "tier": "MONITORING",
-        "note": "FedRAMP + float tiny 9.89M ma nessun catalyst fresco stasera; mantenere watchlist"
+        "ticker": "ICCM",
+        "score": 38,
+        "tier": "SKIP",
+        "giudizio": "SKIP PIPE AH trap + cash $0.1M",
+        "fonte": "4A"
       },
       {
-        "ticker": "LOCL",
+        "ticker": "ELTX",
+        "score": 42,
+        "tier": "SKIP",
+        "giudizio": "SKIP ATM $100M + Phase2 miss",
+        "fonte": "4A"
+      },
+      {
+        "ticker": "VRDN",
         "score": 55,
         "tier": "MONITORING",
-        "note": "Convertible note dilution risk; mantenere watchlist per ora"
+        "catalyst": "PDUFA June 30 veligrotug thyroid eye disease 11 analyst Buy",
+        "giudizio": "MONITORING aggiungere watchlist",
+        "fonte": "4C"
       }
     ],
-    "alert_giugno20": {
-      "achv_pdufa": "ACHV PDUFA il 20 giugno (venerdì, primo giorno post-Juneteenth) = EVENT DAY = rischio binario estremo. NON entrare senza pre-piano: se apre -20% (CRL) = già stop; se apre +30% = MONITORING/probe solo",
-      "iran_deal": "Iran peace deal firma attesa venerdì 20 → watch FRGT, IMPP per eventuale fade",
-      "regime_check": "Verificare futures giovedì sera (18-19 giugno notte) per apertura venerdì"
-    }
+    "monitoring_updates": [
+      {
+        "ticker": "WYY",
+        "update": "CWMS 3.0 deadline June 24 Float 8.07M revenue +21pct Q1. MONITORING.",
+        "tier": "MONITORING"
+      },
+      {
+        "ticker": "MBRX",
+        "update": "SKIP going concern cash Q3 2026 only. Considera rimozione watchlist.",
+        "tier": "SKIP"
+      },
+      {
+        "ticker": "GLSI",
+        "update": "Phase III ongoing ASCO data stale 17gg. MONITORING.",
+        "tier": "MONITORING"
+      },
+      {
+        "ticker": "IMPP",
+        "update": "Q1 EPS +79pct beat Float 11.03M. Iran crude -2.7pct negativo tanker. Catalyst stale 2gg. MONITORING.",
+        "tier": "MONITORING"
+      }
+    ],
+    "skip_list_tonight": [
+      "ICCM PIPE AH + cash $0.1M",
+      "ELTX ATM $100M + Phase2 miss",
+      "MBRX going concern",
+      "QURE Stage4",
+      "LASE Stage3+ +193pct",
+      "STI PIPE $35M",
+      "STAK Stage4 +498pct",
+      "POET float 153M",
+      "FTHM CEO ousted",
+      "SPRO ATM $75M"
+    ],
+    "watchlist_updates": [
+      "AGGIUNGI: VRDN PDUFA June 30 55pt MONITORING",
+      "CONSIDERA RIMOZIONE: MBRX going concern",
+      "PRIORITA: ACHV PDUFA June 20 IMMINENT"
+    ]
   },
   "discovery_weekly": [
     {
