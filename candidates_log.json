@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-19T11:00:00+02:00",
+  "last_updated": "2026-06-19T22:00:00+02:00",
   "session_type": "morning_brief_19giu2026",
   "watchlist": [
     "YCBD",
@@ -202,156 +202,227 @@
     ]
   },
   "phase0_serale": {
-    "date": "2026-06-18",
-    "generated_at": "23:30 IT (CEST)",
-    "next_trading_day": "2026-06-22 (Lunedi - NYSE chiuso 19/06 Juneteenth + weekend)",
+    "date": "2026-06-19",
+    "generated_at": "22:00 IT (CEST)",
+    "next_trading_day": "2026-06-22 (Lunedi)",
     "macro": {
-      "vix": "16.20 calmo",
-      "spy_today": "+1.67% tech rally",
-      "regime": "BULL / TRANSIZIONE FAVOREVOLE"
+      "vix": "16.41 calmo (da 16.20 del 18/06)",
+      "10y_yield": "4.44% in calo (growth-positive)",
+      "fed": "Invariato 18/06 - possibile rialzo ottobre 2026",
+      "spy": ">7600 vicino ATH",
+      "regime": "TRANSIZIONE/BULL - cautiosamente ottimista"
     },
     "watchlist_movers": [
-      "PDYN AH +19.37% ~$7.15 (Army 8-K SwarmOS+Gremlin-X)",
-      "ACHV +0.18% AH flat (pre-PDUFA June 20)",
-      "ICCM -6.25% AH (PIPE trap $5.5M)",
-      "ELTX +70.65% intraday (ATM $100M SKIP)",
-      "QURE +76% (Stage4 already run)",
-      "SOUN -5.19% weakness",
-      "QUBT -8.0% quantum retrace"
+      "PDYN +13.57% intraday June17 / AH +19.37% ~$7.15 (Army 8-K SwarmOS+Gremlin-X)",
+      "ACHV $4.85 flat (PDUFA June20=sabato, effettivo lun22 - CRL ATTESO)",
+      "WYY $8.24 flat (CWMS 3.0 deadline June24 - catalyst imminente)",
+      "MBRX ~$2.45 flat (MIRACLE unblinding pre-June30, going concern SKIP)",
+      "GRPN ~$16 flat (SI 53% float ma float >20M - fuori universo)",
+      "RCAT $12.01 (drone Pentagon +33%, float 97.9M - fuori universo)"
     ],
     "candidates": [
       {
-        "ticker": "ACHV",
-        "score": 65,
-        "tier": "MONITORING",
-        "catalyst": "PDUFA June 20 2026 FDA cytisinicline smoking cessation (prima terapia nuova in 20 anni)",
-        "ah_pct": "+0.18% flat",
-        "close": "$2.72",
-        "float": "9.43M",
-        "pensiero_critico": {
-          "regime": "BULL/TRANSIZIONE favorevole binary biotech",
-          "catalyst_verified": true,
-          "catalyst_freshness": "IMMINENT PDUFA sabato 20/06",
-          "narrativa_numeri": "Cash ~$30-36M no going concern 2 Phase3 completati NDA accettata",
-          "rischio_asimmetrico": "BINARIO: CRL -> -60-80% OR Approval -> +100-200% gap Monday June 22",
-          "kindleberger": "Stage 1-2",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "EVENTO BINARIO 100pct catalyst-dipendente",
-            "Shelf $300M Jan 2026 post-approval raise attesa",
-            "15M warrants overhang",
-            "PDUFA sabato timing incerto"
-          ],
-          "giudizio": "MONITORING probe 1pct max. Entry SOLO su FDA approval confermata."
-        },
-        "entry": "$2.80-$3.10 solo FDA approval",
-        "stop": "$2.15",
-        "t1": "$5.00",
-        "rr": "2.5:1",
-        "fonte": "watchlist_ACHV",
-        "giudizio": "MONITORING",
-        "warning": "Binary FDA play. Non entrare pre-PDUFA. CRL = skip totale."
-      },
-      {
         "ticker": "PDYN",
-        "score": 72,
+        "score": 67,
         "tier": "MONITORING",
-        "catalyst": "US Army 8-K SwarmOS+Gremlin-X June 17 + guidance $24-27M + IQ 2.0",
-        "ah_pct": "+19.37% ~$7.15",
-        "close": "$6.96",
-        "float": "24.73M fuori parametri",
+        "catalyst": "Army SwarmOS+Gremlin-X 8-K firmato June17; Navy missile contract in corso",
+        "ah_pct": "+19.37% AH June17 (~$7.15)",
+        "close_june18_est": "~$7.00-7.15 (stimato post-AH)",
         "pensiero_critico": {
-          "regime": "BULL defense+AI rally",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH Army 8-K June17 gap June18",
-          "narrativa_numeri": "Cash $43.7M 15mesi revenue +107pct Q1 backlog $17.3M",
-          "rischio_asimmetrico": "GAP 3gg Thu-Mon + BIRD RULE + ATM shelf worst case $5.50",
-          "kindleberger": "Stage 2 (low $4.14 -> $7.15 = +73pct)",
-          "bird_rule": true,
+          "regime": "TRANSIZIONE/BULL - VIX 16.41, S&P>7600. Favorevole difesa/AI.",
           "diluzione": false,
+          "diluzione_note": "S-1 Nov2024 warrant resale VECCHIO. No PIPE recente. No ATM. CLEAN.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "PARZIALMENTE PREZZATO (48h post 8-K)",
+          "narrativa_numeri": "Revenue guidance $24-27M 2026 (da $5.2M 2025). Q1=$3.5M. Cash $43.7M. Burn ~$47M/anno. Runway ~11 mesi: ATTENZIONE.",
+          "rischio_asimmetrico": "Worst case: fade post-catalyst a $5.50 (-20% da chiusura est). Gap-up AH <30% (era +19.37%).",
+          "kindleberger": "Stage 2 (+55-70% da 52W low $4.14). Caution.",
+          "bird_rule": false,
+          "bird_rule_note": "StockTwits 2.867 followers (+11.7% mensile). Non trending. CLEAN.",
           "flags": [
-            "BIRD RULE ATTIVA trending StockTwits",
-            "FLOAT >15M 24.73M fuori universo",
-            "ATM shelf $50M Jefferies",
-            "GAP 3-day Thu-Mon",
-            "Stage 2 Kindleberger"
+            "⚠️ TIMING: 48h old catalyst - parzialmente prezzato",
+            "⚠️ CASH RUNWAY: ~11 mesi (range 6-12M, ATTENZIONE)",
+            "⚠️ FLOAT: shares outstanding 41-47M stimato, float probabile >15M (fuori universo dichiarato)",
+            "⚠️ PRE-PROFITABILITY: operating loss -$11.9M Q1 2026"
           ],
-          "giudizio": "MONITORING probe 1pct. Entry solo >$7.00 Mon 15:35 IT no fade."
+          "giudizio": "MONITORING — probe 1% max loss"
         },
-        "entry": "$7.00-$7.30 Monday 22/06",
-        "stop": "$5.80",
+        "entry": "$6.80-$7.20",
+        "stop": "$5.90",
         "t1": "$9.00",
-        "t2": "$10.50",
-        "rr": "2.3:1",
-        "fonte": "watchlist_PDYN",
-        "giudizio": "MONITORING",
-        "warning": "BIRD RULE + float fuori parametri + 3-day gap. Max 25% sizing."
-      }
-    ],
-    "hunter_new_tickers_analyzed": [
-      {
-        "ticker": "ICCM",
-        "score": 38,
-        "tier": "SKIP",
-        "giudizio": "SKIP PIPE AH trap + cash $0.1M",
-        "fonte": "4A"
+        "rr": "2.5:1",
+        "sizing": "PROBE 1%",
+        "fonte": "Memory (morning_brief + phase0_serale June18)",
+        "warning": "Float fuori universo <15M. Attendere conferma apertura lunedi 22. Entry solo su gap controllato <+15%."
       },
-      {
-        "ticker": "ELTX",
-        "score": 42,
-        "tier": "SKIP",
-        "giudizio": "SKIP ATM $100M + Phase2 miss",
-        "fonte": "4A"
-      },
-      {
-        "ticker": "VRDN",
-        "score": 55,
-        "tier": "MONITORING",
-        "catalyst": "PDUFA June 30 veligrotug thyroid eye disease 11 analyst Buy",
-        "giudizio": "MONITORING aggiungere watchlist",
-        "fonte": "4C"
-      }
-    ],
-    "monitoring_updates": [
       {
         "ticker": "WYY",
-        "update": "CWMS 3.0 deadline June 24 Float 8.07M revenue +21pct Q1. MONITORING.",
-        "tier": "MONITORING"
+        "score": 67,
+        "tier": "WATCHLIST-ATM",
+        "catalyst": "CWMS 3.0 DHS contract award atteso entro June24 (5gg); Q1 $40.6M +21% YoY, primo GAAP profit dal 2021",
+        "ah_pct": "N/A",
+        "close_june18": "$8.24",
+        "pensiero_critico": {
+          "regime": "TRANSIZIONE/BULL - favorevole government IT",
+          "diluzione": true,
+          "diluzione_note": "ATM agreement ATTIVO con Ladenburg Thalmann (gennaio 2026). Shelf S-3 $30M. ATM shelf attiva = SKIP immediato per regole sistema.",
+          "catalyst_verified": false,
+          "catalyst_freshness": "FRESH - CWMS 3.0 decision attesa entro 24 giugno",
+          "narrativa_numeri": "Revenue Q1 $40.6M (+21%), EPS $0.01 GAAP (primo dal 2021), FCF $674K. Analyst PT $57. Eccellente.",
+          "rischio_asimmetrico": "Worst case: CWMS 3.0 esteso ulteriormente o perso → $5-6 (-30%). Upside: PT $57 se assegnato.",
+          "kindleberger": "Float 9.89M shares outstanding. Micro-cap legittimo.",
+          "bird_rule": false,
+          "flags": [
+            "⚠️ ATM SHELF ATTIVA → SKIP IMMEDIATO PER REGOLE",
+            "⚠️ CWMS 3.0 non ancora firmato (rischio no-award o ulteriore estensione)"
+          ],
+          "giudizio": "SKIP — ATM shelf attiva. SE annuncio CWMS 3.0 8-K arriva lunedi 22: rivalutare IMMEDIATO con 50% sizing."
+        },
+        "entry": "N/A (SKIP per ATM)",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "sizing": "SKIP",
+        "fonte": "Watchlist",
+        "warning": "SKIP per ATM. Alert su qualsiasi 8-K WYY relativo CWMS. Se 8-K CWMS 3.0 award SENZA contestuale offerta -> entry $8-8.50, stop $6.50, T1 $15, sizing 50%"
       },
+      {
+        "ticker": "ACHV",
+        "score": 48,
+        "tier": "SKIP",
+        "catalyst": "PDUFA cytisinicline June20 (sabato) effettivo lune 22. Analisti SeekingAlpha (maggio 2026) ASPETTANO CRL per problemi manifatturieri third-party.",
+        "ah_pct": "Flat",
+        "close_june18": "$4.85",
+        "pensiero_critico": {
+          "regime": "N/A - SKIP",
+          "diluzione": false,
+          "catalyst_verified": false,
+          "catalyst_freshness": "FRESH ma BINARIO con tesi BEARISH",
+          "narrativa_numeri": "Clinical-stage, no revenue. Cash runway non verificato.",
+          "rischio_asimmetrico": "CRL -> -60%+ Monday open. Approval -> +200%+. Analyst consensus: HOLD/CRL.",
+          "kindleberger": "N/A",
+          "bird_rule": false,
+          "flags": [
+            "⚠️ ANALYST EXPECTS CRL (SeekingAlpha maggio 2026 - problemi manifatturieri)",
+            "⚠️ MANUFACTURING ISSUE at third-party facility",
+            "⚠️ BINARY EVENT long-only incompatibile con tesi bearish"
+          ],
+          "giudizio": "SKIP — CRL atteso, rischio -60%+ apertura lunedi. NON ENTRARE LONG."
+        },
+        "entry": "N/A",
+        "stop": "N/A",
+        "t1": "N/A",
+        "rr": "N/A",
+        "sizing": "SKIP",
+        "fonte": "Memory",
+        "warning": "ACHV: se FDA approva a sorpresa -> momentum scalp intraday SOLO. Non entry preventiva."
+      }
+    ],
+    "hunter_nuovi_candidati": [
+      {
+        "ticker": "WYY",
+        "nome": "WidePoint Corporation",
+        "evento_ah": "CWMS 3.0 DHS award atteso entro June24 (catalyst imminente, non ancora 8-K)",
+        "score": 67,
+        "float_note": "Float ~7-9M (dentro universo <15M)",
+        "analyst_pt": "$57",
+        "entry": "N/A ora (ATM attiva). Entry se/quando 8-K CWMS 3.0.",
+        "stop": "$6.50",
+        "t1": "$15-20",
+        "sizing": "SKIP ora / 50% su 8-K confermato",
+        "giudizio_hunter": "SKIP-WATCHLIST per ATM. Catalizzatore eccezionale a 5gg."
+      },
+      {
+        "ticker": "RCAT",
+        "nome": "Red Cat Holdings",
+        "evento_ah": "Pentagon drone funding program; 869% revenue surge Q1 2026; Gauntlet II tender $300M",
+        "score": 52,
+        "float_note": "Float 97.9M >> universo <15M. FUORI UNIVERSO.",
+        "analyst_pt": "$22 (6 analysts Strong Buy)",
+        "entry": "N/A - fuori universo",
+        "sizing": "SKIP (fuori universo)",
+        "giudizio_hunter": "SKIP fuori universo. Flag per awareness tema drone/difesa DoD."
+      },
+      {
+        "ticker": "LASE",
+        "nome": "Laser Photonics Corp",
+        "evento_ah": "DoD MEIA Vulcan selection LSAD anti-drone + SOCOM Accelerator Alley June 2026",
+        "score": 44,
+        "float_note": "Shares outstanding 38.57M. Float stimato 20-25M. FUORI UNIVERSO.",
+        "analyst_pt": "N/A",
+        "entry": "N/A",
+        "sizing": "SKIP",
+        "giudizio_hunter": "SKIP - float fuori universo + movimento già avvenuto (da $1.20 a $4.49 poi pullback)."
+      }
+    ],
+    "skip_list": [
       {
         "ticker": "MBRX",
-        "update": "SKIP going concern cash Q3 2026 only. Considera rimozione watchlist.",
-        "tier": "SKIP"
+        "motivo": "Going concern warning + cash runway <6M mesi (funded solo into Q3 2026) + ATM attiva"
       },
       {
-        "ticker": "GLSI",
-        "update": "Phase III ongoing ASCO data stale 17gg. MONITORING.",
-        "tier": "MONITORING"
+        "ticker": "ACHV",
+        "motivo": "CRL atteso per problemi manifatturieri third-party. Sistema long-only. No entry preventiva."
       },
       {
         "ticker": "IMPP",
-        "update": "Q1 EPS +79pct beat Float 11.03M. Iran crude -2.7pct negativo tanker. Catalyst stale 2gg. MONITORING.",
-        "tier": "MONITORING"
+        "motivo": "Earnings May22 = STALE 28gg. Float probabile >15M."
+      },
+      {
+        "ticker": "GLSI",
+        "motivo": "ASCO data June1 = STALE 18gg. Biomarker endpoint, non efficacy primaria."
+      },
+      {
+        "ticker": "RDCM",
+        "motivo": "Earnings June2 = STALE 17gg."
+      },
+      {
+        "ticker": "GRPN",
+        "motivo": "Float 20M+ (fuori universo <15M). SI 53% ma no catalyst fresco."
+      },
+      {
+        "ticker": "VRDN",
+        "motivo": "Float 100M+ (fuori universo). Offerta $367M maggio 2026 dilutiva."
+      },
+      {
+        "ticker": "AEHR",
+        "motivo": "Float 27.18M (fuori universo). Kindleberger Stage 4 (+1060% 52W). SKIP."
+      },
+      {
+        "ticker": "QUBT",
+        "motivo": "Float 200M+ (fuori universo). MOU generico ($10M 'potentially')."
+      },
+      {
+        "ticker": "ONDS",
+        "motivo": "Float ~496M (fuori universo massiccio)."
+      },
+      {
+        "ticker": "CRVO",
+        "motivo": "PIPE recente $10.5M (June11-16, <30gg) = SKIP immediato per regole."
+      },
+      {
+        "ticker": "RCAT",
+        "motivo": "Float 97.9M (fuori universo)."
+      },
+      {
+        "ticker": "LASE",
+        "motivo": "Float stimato 20-25M (fuori universo). Movimento principale avvenuto."
       }
     ],
-    "skip_list_tonight": [
-      "ICCM PIPE AH + cash $0.1M",
-      "ELTX ATM $100M + Phase2 miss",
-      "MBRX going concern",
-      "QURE Stage4",
-      "LASE Stage3+ +193pct",
-      "STI PIPE $35M",
-      "STAK Stage4 +498pct",
-      "POET float 153M",
-      "FTHM CEO ousted",
-      "SPRO ATM $75M"
-    ],
-    "watchlist_updates": [
-      "AGGIUNGI: VRDN PDUFA June 30 55pt MONITORING",
-      "CONSIDERA RIMOZIONE: MBRX going concern",
-      "PRIORITA: ACHV PDUFA June 20 IMMINENT"
-    ]
+    "watchlist_updates": {
+      "rimuovi": [
+        "ACHV (CRL atteso, rimuovere da watchlist long)",
+        "MBRX (going concern)"
+      ],
+      "mantieni": [
+        "PDYN (MONITORING)",
+        "WYY (WATCHLIST con alert CWMS 3.0)"
+      ],
+      "considera_aggiunte": [
+        "RCAT (tema drone DoD, solo se float ridotto)",
+        "WYY gia presente - upgrade alert"
+      ]
+    }
   },
   "discovery_weekly": [
     {
