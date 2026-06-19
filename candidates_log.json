@@ -575,6 +575,95 @@
   ],
   "premarket_gap": [
     {
+      "date": "June 19 2026",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "TradingView",
+        "GitHub",
+        "WebSearch"
+      ],
+      "macro_regime": {
+        "vix": 16.4,
+        "vix_change_pct": -11.06,
+        "spy_prior_close": 739.06,
+        "pfrc_rgm": "N/A (indicator not active on chart) — proxy: BULL RISK-ON (VIX 16.40, -11%)",
+        "regime_verdict": "BULL RISK-ON",
+        "tier_penalty": 0
+      },
+      "account_snapshot": {
+        "net_liq_eur": 1494.56,
+        "buying_power_eur": 1494.56,
+        "cash_eur": 1494.56,
+        "open_positions": 0
+      },
+      "note_ibkr_data": "Premarket scan: all IBKR snapshots returned is_close=true (prior close only) — no premarket bid/ask data available. Gap calculation based on catalyst research + price history. Gap tiers A/B set to 0.",
+      "tier_a_count": 0,
+      "tier_b_count": 0,
+      "tier_c_count": 2,
+      "gap_candidates": [
+        {
+          "ticker": "QURE",
+          "catalyst": "FDA agreed Phase I/II 3yr data acceptable as primary basis for ACCELERATED APPROVAL of AMT-130 (Huntington's gene therapy) — announced June 17. BLA submission Q3 2026. RMAT + Breakthrough Therapy + Fast Track designations.",
+          "catalyst_tier": "TIER1",
+          "catalyst_date": "June 17 2026",
+          "prior_close": 46.29,
+          "ibkr_snapshot_close": 48.16,
+          "pre_event_close": 26.99,
+          "gap_from_pre_event_pct": "+71.5%",
+          "adv_20d": 845472,
+          "rvol_d1": 14.8,
+          "rvol_d2": 3.1,
+          "kindleberger_stage": "STAGE 2 (+92.4% from 30d low $24.06)",
+          "bird_rule": false,
+          "dilution_risk": "LOW — $300M public offering Sep 2025, cash $586M runway 2H2029, no 2026 PIPE/ATM",
+          "reverse_split": "NONE",
+          "float_risk": "MODERATE — ~40M shares, float >30M but TIER1 catalyst qualifies",
+          "smc_support": 40.75,
+          "smc_resistance": 50.08,
+          "score": 74,
+          "tier_base": "TIER2",
+          "tier_final": "MONITORING",
+          "tier_penalty_applied": 1,
+          "entry_window": "15:35-15:45 IT",
+          "entry_zone": "45.50-47.00",
+          "stop": 40.75,
+          "target_1": 50.08,
+          "target_2": 57.64,
+          "rr_t1": "1.7:1",
+          "rr_t2": "4.0:1",
+          "sizing": "probe 1-2% max loss (MONITORING)",
+          "action": "MONITORING — watch for break above $50.08; if volume >2M first 5min, reassess to TIER2"
+        }
+      ],
+      "skipped": [
+        {
+          "ticker": "HIMS",
+          "score": 61,
+          "reason": "RVOL <3x (1.66x), Kindleberger Stage 2 (+62.2% from 30d low) pushes MONITORING→SKIP. $350M convertible notes (converts at $29.53 = in-the-money). Fundamentals strong (Barclays upgrade, Eucalyptus, GLP-1) — add to watchlist focus for tomorrow if volume confirms."
+        },
+        {
+          "ticker": "POET",
+          "reason": "🚨 BIRD RULE (trending Timothy Sykes, CoinCentral, ts2.tech) + securities class action lawsuits (June 29 lead-plaintiff deadline). RVOL <1x (0.5x ADV yesterday). Multiple lawsuits mounting — skip."
+        },
+        {
+          "ticker": "AVXL",
+          "reason": "Nasdaq delinquency notice May 20 2026 — compliance risk, delisting threat"
+        },
+        {
+          "ticker": "BIAF",
+          "reason": "Cash $3.1M, burning $3.6M/quarter — illiquid risk"
+        },
+        {
+          "ticker": "ALL_OTHERS",
+          "reason": "No catalyst found for June 19 2026; IBKR premarket data unavailable (is_close only). No gap_pct calculable."
+        }
+      ],
+      "open_positions_alert": [],
+      "ibkr_discrepancy_note": "IBKR prior-close field appears to show June 17 close rather than June 18 close for QURE ($48.16 vs actual $46.29) and HIMS ($31.89 vs actual $35.47). Using IBKR price_history as source of truth for prior close."
+    },
+    {
       "date": "June 17 2026",
       "scan_time": "14:30 IT",
       "scanner_version": "v3.0",
