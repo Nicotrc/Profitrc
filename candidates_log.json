@@ -1,10 +1,9 @@
 {
-  "last_updated": "2026-06-18T23:30:00+02:00",
-  "session_type": "morning_brief_18giu2026",
+  "last_updated": "2026-06-19T11:00:00+02:00",
+  "session_type": "morning_brief_19giu2026",
   "watchlist": [
     "YCBD",
     "DXF",
-    "BIAF",
     "LOCL",
     "MBRX",
     "GCTS",
@@ -50,7 +49,8 @@
     "UNCY",
     "TRNR",
     "MTVA",
-    "GLOO"
+    "GLOO",
+    "BIAF"
   ],
   "watchlist_remove_reasons": {
     "HUMA": "PIPE $50M (47.6M shares @$1.05) annunciata June 11 — diluzione letale",
@@ -61,112 +61,144 @@
     "UNCY": "ATM shelf $150M filed June 5, 2026 (<10gg) — SKIP immediato + float 25.24M",
     "TRNR": "ATM Sales Agreement attivo ($6.06M target) — vendite ongoing Jan-Mar 2026",
     "MTVA": "Reverse split 1-for-X approvato da azionisti June 8 — segnale distress strutturale",
-    "GLOO": "Float 79.7M >> 15M soglia. Net debt -63M. Violazione criteri fondamentali. Rimosso 2026-06-15."
+    "GLOO": "Float 79.7M >> 15M soglia. Net debt -63M. Violazione criteri fondamentali. Rimosso 2026-06-15.",
+    "BIAF": "Offering $3.2M June 16 a $0.80 + reverse split approvato — PRE-CHECK FAIL diluzione letale"
   },
   "discovery_daily": [],
   "morning_brief": {
-    "date": "2026-06-18",
-    "macro_regime": "SELECTIVE 2/4 🟡 → leaning 🟢 Iran deal",
+    "date": "2026-06-19",
+    "generated_at": "11:00 IT (CEST) — JUNETEENTH NYSE CHIUSO",
+    "next_trading_day": "2026-06-22",
+    "macro_regime": "SELECTIVE 2/4 🟡 (VIX✅ SPY✅ | DXY❌ 10Y❌)",
+    "macro_interpretato": "Iran deal ONE-OFF geo (non strutturale). VIX 16.2 structural low post-FOMC. DXY rialzo per Fed hawkish → negativo small cap. 10Y 4.44% inflation-driven → headwind valutazioni. Sentiment positivo ma regime invariato SELECTIVE.",
     "big_themes": [
-      "Iran peace deal signed → oil -2.7% → small cap bullish",
-      "Juneteenth holiday June 19 NYSE closed",
-      "Army autonomous drone contracts (PDYN)",
-      "FDA approval tebipenem SPRO"
+      "NYSE CHIUSO OGGI 19/06 Juneteenth — prima sessione lunedì 22/06",
+      "ACHV PDUFA June 20 sabato → FDA decision impatta Monday open",
+      "PDYN Army SwarmOS live exercise June 16 + AI partnership June 17 FRESH",
+      "WYY CWMS 2.0 scadenza June 24 → forcing function CWMS 3.0 award imminente",
+      "BIAF rimossa watchlist — offering June 16 $3.2M a $0.80 diluzione",
+      "Fed hawkish: ~50% FOMC pro rate hike 2026, 10Y 4.44%"
     ],
+    "market_alert": "NYSE CHIUSO 19 GIUGNO JUNETEENTH. GAP RISK 5 GIORNI (Thu→Mon). Nessun trade oggi. Preparazione per lunedì 22/06 apertura 15:30 IT.",
     "candidates": [
       {
-        "ticker": "PDYN",
-        "score": 75,
-        "tier": "TIER2",
-        "catalyst": "US Army contracts SwarmOS + Gremlin-X UAV (8-K June 17)",
+        "ticker": "ACHV",
+        "score": 68,
+        "tier": "MONITORING",
+        "catalyst": "PDUFA June 20 (sabato) — cytisinicline smoking cessation, prima terapia nuova in 20 anni, Breakthrough Therapy designation",
+        "price_june18": "$4.93 (down 8.02% pre-PDUFA nervosismo)",
+        "float_note": "INCERTO: 9.43M (IBKR/phase0) vs 53.24M shares outstanding (stockanalysis) — VERIFICARE su IBKR prima entry",
         "pensiero_critico": {
-          "regime": "leaning 🟢 — Iran deal + VIX structural decline compensano DXY/10Y deboli",
+          "pre_check": "Shelf $300M Jan 2026 POST-approval (non ancora emessa) — verifica se attivata",
+          "regime": "leaning GREEN per sentiment ma regime SELECTIVE",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESH",
-          "narrativa_numeri": "Cash $43.7M, guidance 2026 $24-27M (+357%), backlog $17.3M. Revenue 2025 down 33% — execution risk",
-          "rischio_asimmetrico": "worst case: $5.50 (-21%) su fill gap o delusione su contratti Army",
+          "catalyst_freshness": "IMMINENT — lunedì 22/06",
+          "narrativa_numeri": "2 Phase 3 ok (ORCA-2 + ORCA-3). NDA accettata. Commissioner Priority Voucher. 8 analisti Strong Buy, PT $13.11.",
+          "rischio_asimmetrico": "Binary puro: CRL → -60-80% | Approval → +100-200% gap Monday",
           "kindleberger": "Stage 2",
           "bird_rule": false,
           "diluzione": false,
           "flags": [
-            "⚠️ GAP APERTO +16.58%",
-            "⚠️ FLOAT >15M (shares out 47.2M)",
-            "⚠️ JUNETEENTH — L1 chiudi oggi, L2 gap risk 5 giorni"
+            "BINARIO PURO 50/50",
+            "FLOAT INCERTO — verificare IBKR",
+            "SHELF $300M attesa post-approval",
+            "GAP APERTURA INCOGNITO LUNEDÌ"
           ],
-          "giudizio": "TIER2"
+          "giudizio": "MONITORING — NO entry pre-PDUFA. Entry SOLO post-approval confermata lunedì 15:35 IT."
         },
-        "entry": "$6.00-$6.40",
-        "stop": "$5.50",
-        "t1": "$8.50",
-        "t2": "$10.00",
-        "rr": "2.5:1",
-        "fonte": "watchlist_upgrade",
-        "giudizio": "TIER2",
-        "warning": "Solo su pullback. Chiudi L1 EOD per Juneteenth. L2: considera gap risk 5 giorni."
+        "entry": "$5.50-$7.00 solo post-approval confermata",
+        "stop": "$4.50",
+        "t1": "$10.00",
+        "t2": "$15.00",
+        "rr": "3:1",
+        "fonte": "watchlist",
+        "giudizio": "MONITORING",
+        "warning": "NON entrare pre-PDUFA. CRL = skip totale. Entry solo su volume confermato 15:35 IT lunedì."
       },
-      {
-        "ticker": "SPRO",
-        "score": 35,
-        "tier": "SKIP",
-        "catalyst": "FDA approval Utebzi (tebipenem) cUTI — PDUFA hit June 18 2026",
-        "pensiero_critico": {
-          "regime": "leaning 🟢",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH",
-          "narrativa_numeri": "Cash $56.1M runway 2028, Q1 loss $7.2M, commercial launch fine 2026",
-          "rischio_asimmetrico": "ATM shelf $75M Cantor — diluzione probabile post-approval",
-          "kindleberger": "Stage 1-2",
-          "bird_rule": false,
-          "diluzione": true,
-          "flags": [
-            "⚠️ ATM SHELF ATTIVA — SKIP IMMEDIATO",
-            "⚠️ FLOAT >15M (57.9M shares out)",
-            "⚠️ Stock era -15% ieri pre-PDUFA"
-          ],
-          "giudizio": "SKIP"
-        },
-        "entry": "N/A",
-        "stop": "N/A",
-        "t1": "N/A",
-        "t2": "N/A",
-        "rr": "N/A",
-        "fonte": "hunter_4C",
-        "giudizio": "SKIP",
-        "warning": "ATM shelf $75M attiva — regola anti-diluzione. Da rimonitorare se ATM viene chiuso o se stock consolida post-approval."
-      }
-    ],
-    "juneteenth_alert": "NYSE CHIUSO DOMANI 19 GIUGNO. L1 chiudere EOD oggi. L2 no nuove entry (gap risk 5 giorni Wed→Mon 22 giugno).",
-    "watchlist_top_movers": [
       {
         "ticker": "PDYN",
-        "price": 6.96,
-        "change_pct": 16.58,
-        "note": "Army SwarmOS contracts"
+        "score": 72,
+        "tier": "MONITORING",
+        "catalyst": "US Army 4th Infantry live SwarmOS exercise June 16 + AI partnership news June 17 (+13.57%)",
+        "price_june18": "$6.96-7.15 (AH)",
+        "float": "24.73M (fuori criteri <15M)",
+        "pensiero_critico": {
+          "pre_check": "ATM shelf $50M Jefferies — attiva non recentemente usata. Segnalare.",
+          "regime": "SELECTIVE — defense/AI favoriti ma float e ATM pesano",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — June 16-17",
+          "narrativa_numeri": "Q1 rev $3.5M +107% YoY, backlog $17M, guidance $24-27M 2026. EPS miss -$0.28 vs -$0.165.",
+          "rischio_asimmetrico": "Gap fill + Q2 miss → $5.50 (-21%)",
+          "kindleberger": "Stage 2 (+73% da low)",
+          "bird_rule": true,
+          "diluzione": false,
+          "flags": [
+            "BIRD RULE — StockTwits followers +11.7% mese",
+            "FLOAT >15M (24.73M — fuori universo)",
+            "ATM $50M Jefferies",
+            "GAP 3-DAY THU→MON",
+            "EPS MISS Q1"
+          ],
+          "giudizio": "MONITORING — Max 25% sizing. Entry $7.00+ con volume lunedì 15:35 IT."
+        },
+        "entry": "$7.00-$7.30 lunedì 22/06",
+        "stop": "$5.80",
+        "t1": "$9.00",
+        "t2": "$10.50",
+        "rr": "2.3:1",
+        "fonte": "watchlist_upgrade",
+        "giudizio": "MONITORING",
+        "warning": "BIRD RULE + float fuori parametri + gap 3-day. Max 25% sizing assoluto."
       },
       {
-        "ticker": "SOUN",
-        "price": 6.94,
-        "change_pct": -5.19,
-        "note": "weakness, AI voice"
-      },
-      {
-        "ticker": "GLSI",
-        "price": 23.05,
-        "change_pct": -4.2,
-        "note": "ASCO data stale 17gg"
-      },
-      {
-        "ticker": "CMPS",
-        "price": 11.26,
-        "change_pct": -4.01,
-        "note": "NDA rolling, no fresh catalyst"
-      },
-      {
-        "ticker": "QUBT",
-        "price": 10.24,
-        "change_pct": -8.0,
-        "note": "quantum retracement"
+        "ticker": "WYY",
+        "score": 62,
+        "tier": "MONITORING",
+        "catalyst": "CWMS 2.0 ordering period scade June 24 → forcing function CWMS 3.0 DHS award. Senate $72B ICE/CBP bill in avanzamento.",
+        "price_june18": "$12.28-13.08",
+        "float": "8.07M ✅",
+        "pensiero_critico": {
+          "pre_check": "Nessun PIPE/ATM recente — ✅ GREEN",
+          "regime": "SELECTIVE — gov contract play neutro a regime",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — deadline June 24 = 2 giorni da lunedì",
+          "narrativa_numeri": "Revenue +21% Q1 2026. DHS identity management business stabile. Float 8.07M ok.",
+          "rischio_asimmetrico": "CWMS 3.0 delayed → -15% area $10.50",
+          "kindleberger": "Stage 1-2",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "CATALYST TIMING INCERTO — award non ancora confermato",
+            "VOLUME baseline da verificare lunedì"
+          ],
+          "giudizio": "MONITORING — Entry su conferma CWMS 3.0 news. Watch lunedì con volume."
+        },
+        "entry": "$12.50-$13.50 su breakout con volume",
+        "stop": "$11.00",
+        "t1": "$16.00",
+        "t2": "$20.00",
+        "rr": "2.5:1",
+        "fonte": "hunter_watchlist_upgrade",
+        "giudizio": "MONITORING",
+        "warning": "Entry solo su conferma CWMS 3.0. Deadline June 24 = urgency imminente."
       }
+    ],
+    "watchlist_updates": [
+      "RIMOSSO: BIAF — offering $3.2M June 16 a $0.80 + reverse split → diluzione letale",
+      "CANDIDATO RIMOZIONE: MBRX — cash runway Q3 2026 (<6M regola) → skip attivo",
+      "CANDIDATO RIMOZIONE: QUBT — 225M shares out (far fuori <15M float) → verifica",
+      "SKIP ATTIVO: GLSI — ATM attiva Q1 2026 (pre-check fail)",
+      "SKIP ATTIVO: IMPP — Iran deal NEGATIVO per tanker premium"
+    ],
+    "skip_list": [
+      "BIAF: offering June 16 $3.2M diluzione",
+      "GLSI: ATM attiva (pre-check fail)",
+      "MBRX: cash runway <6M",
+      "QUBT: 225M shares (fuori universo)",
+      "INHD: Kindleberger Stage 4+ (+3661% Nasdaq halt)",
+      "LASE: STALE catalyst +193% già corso",
+      "GRPN: float ~26M+ fuori criteri",
+      "IMPP: Iran deal negativo tanker premium"
     ]
   },
   "phase0_serale": {
