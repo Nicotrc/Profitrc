@@ -193,7 +193,240 @@
       }
     ]
   },
-  "phase0_serale": {},
+  "phase0_serale": {
+    "date": "2026-06-22",
+    "generated": "2026-06-22T22:00:00+02:00",
+    "macro_regime": {
+      "vix": "18.55 (in calo strutturale da 31)",
+      "spy_ah": "Flat/misto — S&P -0.3%, Nasdaq -0.5%, Russell 2000 +1% RECORD storico 3000",
+      "dxy": "Modestamente forte",
+      "10y_yield": "4.499%",
+      "fed_stance": "Possibile rialzo entro ottobre — hawkish cautious",
+      "iran_hormuz": "U.S.-Iran deal implementato. Hormuz si riapre. Negativo per tanker.",
+      "interpretazione": "BULL per small cap. Russell 2000 record storico 3000. Grande Rotazione da mega-cap (Alphabet -10%) verso small cap. VIX 18.55 in calo strutturale.",
+      "regime_domani": "BULL small cap"
+    },
+    "watchlist_movers_today": [
+      "WYY -11.10% (close ~9.61 da 10.81) — drop senza news chiara, CWMS 3.0 uncertainty",
+      "MRAM AH -5.11% (24.87) — sell-the-news pre-Russell inclusion June 26",
+      "PDYN AH +19.37% (7.15) — defense cascade fresh catalyst stasera",
+      "GLSI -2.12% (24.00) — no fresh catalyst",
+      "QUBT 10.71 stabile — AI defense deal June 18 gia corso",
+      "BBAI 3.87 stabile",
+      "SOUN 7.12 stabile"
+    ],
+    "candidates": [
+      {
+        "ticker": "WYY",
+        "score": 62,
+        "tier": "MONITORING",
+        "catalyst": "CWMS 3.0 award atteso entro June 24 (2 giorni). CBP task order 27.5M confermato. SaaS deal 40-45M in corso.",
+        "close": "9.61",
+        "change_day_pct": "-11.10",
+        "ah_pct": "n/d",
+        "pensiero_critico": {
+          "regime": "BULL small cap ma WYY ha corso +243% da 2.80 — Stage 3",
+          "catalyst_verified": true,
+          "catalyst_freshness": "PENDING — deadline June 24",
+          "narrativa_numeri": "Q1 rev 40.6M +21% YoY, EPS positivo, 218M backlog, 10.9M cash. PT analista 8.67 ORA SOTTO prezzo 9.61.",
+          "rischio_asimmetrico": "Worst case: DHS proroga ulteriore o award a competitor — drift 6-7 (-30%)",
+          "kindleberger": "Stage 3 (52w low 2.80 -> 9.61 = +243%) — PROBE sizing",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "KINDLEBERGER STAGE 3",
+            "PREZZO SOPRA PT ANALISTA 8.67",
+            "DROP -11% OGGI SENZA NEWS",
+            "ATM SHELF 15.5M attiva"
+          ],
+          "giudizio": "MONITORING — Stage 3 + overextended. Entry solo su CWMS 3.0 confirmed award."
+        },
+        "entry": "Solo su CWMS 3.0 award: 9.00-9.50",
+        "stop": "8.00",
+        "t1": "12.00",
+        "rr": "1.8:1",
+        "sizing": "PROBE 1% max loss",
+        "giudizio": "MONITORING",
+        "warning": "DOWNGRADE da TIER2. Stage 3 Kindleberger. Price sopra PT. Drop -11% oggi = warning."
+      },
+      {
+        "ticker": "MRAM",
+        "score": 55,
+        "tier": "MONITORING",
+        "catalyst": "Russell 2000 inclusion effettiva June 26 (4 giorni). Passive buying 12.2T AUM.",
+        "close": "~26.21",
+        "change_day_pct": "n/d",
+        "ah_pct": "-5.11 (24.87)",
+        "pensiero_critico": {
+          "regime": "Russell record dovrebbe essere bullish ma AH -5.11% segnala smart money in uscita",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — annuncio June 9",
+          "narrativa_numeri": "Rev 14.9M +14% YoY, cash 40.5M.",
+          "rischio_asimmetrico": "Worst case: sell-the-news violento June 26-29 — -15/25% in 3 sessioni",
+          "kindleberger": "Stage 2 (52w low ~17 -> 26 = +53%)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "FLOAT 22.25M > 15M VIOLAZIONE",
+            "SELL-THE-NEWS risk June 26",
+            "AH -5.11% = smart money in uscita"
+          ],
+          "giudizio": "MONITORING — Float violation. AH negativo segnala istituzionali in uscita. Evitare nuovo entry."
+        },
+        "entry": "n/a — no nuovo entry",
+        "stop": "23.50",
+        "t1": "28.00",
+        "sizing": "EXIT parziale consigliata",
+        "giudizio": "MONITORING",
+        "warning": "DOWNGRADE da TIER2. Float 22.25M. AH -5.11% = sell-the-news in anticipo su Russell inclusion."
+      },
+      {
+        "ticker": "PDYN",
+        "score": 68,
+        "tier": "MONITORING",
+        "catalyst": "AH +19.37% (7.15). Cascata difesa: GuideTech Navy ALRRM near-hypersonic, Army SwarmOS+Gremlin-X June17, Air Force HANGTIME, IAI loitering munitions June8. Guidance 24-27M 2026.",
+        "close": "~5.99-6.40",
+        "change_day_pct": "~-8/-14",
+        "ah_pct": "+19.37 (7.15)",
+        "pensiero_critico": {
+          "regime": "BULL small cap + difesa AI in forte momentum",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH AH stasera",
+          "narrativa_numeri": "Q1 rev 3.5M +107% YoY, cash 43.7M, backlog 17M. Guidance 24-27M = 8x ramp da Q1. Loss GAAP 12.6M/Q.",
+          "rischio_asimmetrico": "Worst case: gap-up >30% open -> fade; ATM shelf ongoing dilution; guidance miss Q2.",
+          "kindleberger": "Stage 2 (52w low 4.14 -> 7.15 AH = +72.7%)",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "FLOAT 24.73M > 15M VIOLAZIONE",
+            "ATM SHELF 150M via Jefferies ATTIVA",
+            "GAP-UP > 30% AH aspettare 15:35 IT",
+            "GUIDANCE AMBIZIOSO 8x ramp"
+          ],
+          "giudizio": "MONITORING — Float + ATM violations. Se apertura <+30% gap: probe entry 15:35 IT. Sizing 1% max loss."
+        },
+        "entry": "6.80-7.30 post-conferma 15:35-15:45 IT (solo se apertura <+30%)",
+        "stop": "5.80",
+        "t1": "9.50",
+        "t2": "11.00",
+        "rr": "2.0:1",
+        "sizing": "PROBE 1% max loss",
+        "giudizio": "MONITORING",
+        "warning": "Float 24.73M e ATM 150M = flag hard. Gap-up >30% domani -> SKIP, aspettare pullback 15:35 IT."
+      },
+      {
+        "ticker": "GLSI",
+        "score": 55,
+        "tier": "MONITORING",
+        "catalyst": "Squeeze setup: SI 22.88%, float 6.4M, days-to-cover 3.68. FLAMINGO-01 Ph3 ASCO data (June 1 stale). PT avg 48.45.",
+        "close": "24.00",
+        "change_day_pct": "-2.12",
+        "ah_pct": "n/d",
+        "pensiero_critico": {
+          "regime": "BULL small cap favorevole per squeeze",
+          "catalyst_verified": false,
+          "catalyst_freshness": "STALE — ASCO June 1, 21 giorni",
+          "narrativa_numeri": "Cash runway >12M.",
+          "rischio_asimmetrico": "Worst case: no catalyst -> compressione 18-20 (-17/25%)",
+          "kindleberger": "Stage 2",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "CATALYST STALE ASCO 21 giorni",
+            "ATM shelf usata precedentemente"
+          ],
+          "giudizio": "MONITORING — squeeze dormiente. No entry senza fresh catalyst."
+        },
+        "entry": "n/a — solo su fresh catalyst",
+        "stop": "19.00",
+        "t1": "32.00",
+        "rr": "1.5:1",
+        "sizing": "n/a",
+        "giudizio": "MONITORING",
+        "warning": "Squeeze setup valido (SI 22.88%, float 6.4M) ma STALE. Watch BLA submission o partnership."
+      }
+    ],
+    "skip_list": [
+      {
+        "ticker": "MBRX",
+        "motivo": "Cash <3M runway, binary MIRACLE, ATM attiva — SKIP confermato"
+      },
+      {
+        "ticker": "IMPP",
+        "motivo": "THESIS INVALIDATA: Hormuz deal U.S.-Iran -> riapertura -> tariffe tanker SCENDONO -> BEARISH. Rimuovere da watchlist."
+      },
+      {
+        "ticker": "LOCL",
+        "motivo": "Nessun catalyst, diluzione 82% potenziale"
+      },
+      {
+        "ticker": "HAWK",
+        "motivo": "Market cap 3.15B, float >16M — non micro-cap, fuori universo"
+      },
+      {
+        "ticker": "EDSA",
+        "motivo": "PIPE closing June 15 — SKIP immediato regola anti-diluzione"
+      },
+      {
+        "ticker": "CADL",
+        "motivo": "Float 73M — fuori universo"
+      },
+      {
+        "ticker": "CRMD",
+        "motivo": "Float 77.4M — fuori universo"
+      },
+      {
+        "ticker": "VERU",
+        "motivo": "Catalyst June 4 stale 18gg. Float enorme 69M shares."
+      },
+      {
+        "ticker": "ALGS",
+        "motivo": "Catalyst April 16 stale 2M. Cash Q4 2026 borderline. Score 45pt. Solo watchlist."
+      }
+    ],
+    "hunter_new": [
+      {
+        "ticker": "ALGS",
+        "nome": "Aligos Therapeutics",
+        "fonte": "4C",
+        "evento": "Float eccezionale 5.4M shares. Jefferies Buy PT 48 (+830% da 5.15). China deal Amoytop 25M upfront (stale). Ph2 HBV data 12-18M. Cash Q4 2026.",
+        "score": 45,
+        "tier": "WATCHLIST",
+        "price": "~5.15",
+        "float": "5.387M",
+        "si": "8.6%",
+        "analyst_pt": "48.00 Jefferies Buy",
+        "cash_runway": "Q4 2026 (~6M) borderline",
+        "entry": "n/a — no fresh catalyst",
+        "giudizio": "WATCHLIST. Attivare SOLO su fresh HBV data o partnership.",
+        "warning": "Cash borderline. Catalyst stale. NON entrare ora."
+      }
+    ],
+    "watchlist_changes": {
+      "aggiungi": [
+        "ALGS — float 5.4M eccezionale, watchlist, attivare su fresh catalyst"
+      ],
+      "rimuovi": [
+        "IMPP — thesis invertita Hormuz",
+        "QUBT — float 225M (proposta gia morning_brief)"
+      ],
+      "downgrade": [
+        "WYY: TIER2 -> MONITORING (Stage 3 Kindleberger + price > PT)",
+        "MRAM: TIER2 -> MONITORING (float + AH -5.11% sell-the-news)"
+      ]
+    },
+    "regole_domani": [
+      "Silenzio 15:30-15:35 IT — no entry",
+      "Entry window: 15:35-15:45 IT ONLY",
+      "Stop definitivo PRIMA di ogni entry",
+      "Dopo 2 loss consecutivi: STOP per la giornata",
+      "PDYN: Se gap-up >30% apertura -> SKIP, aspettare 15:35 IT pull-back",
+      "WYY: Entry SOLO su CWMS 3.0 confirmed award annuncio",
+      "MRAM: No nuovo entry. Exit parziale se in posizione prima June 26.",
+      "GLSI: No entry senza fresh catalyst"
+    ],
+    "note_serale": "AH session relativamente tranquilla per micro-cap catalysts. Tema dominante: Grande Rotazione (Russell 2000 record 3000 vs Nasdaq slide). PDYN il setup piu interessante per domani +19.37% AH su cascata difesa, ma float e ATM limitano sizing a PROBE. IMPP rimosso: thesis invertita da Hormuz reopening. WYY: monitorare strettamente per CWMS 3.0 news nelle 48h."
+  },
   "discovery_weekly": [
     {
       "ticker": "WYY",
