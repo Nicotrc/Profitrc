@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-21T20:00:00+02:00",
+  "last_updated": "2026-06-22T11:00:00+02:00",
   "session_type": "discovery_weekly",
   "watchlist": [
     "YCBD",
@@ -51,7 +51,148 @@
     "FRGT": "Prezzo <$1 dopo reverse split 1:5 maggio 2026 — viola filtro minimo prezzo"
   },
   "discovery_daily": {},
-  "morning_brief": {},
+  "morning_brief": {
+    "date": "2026-06-22",
+    "macro_regime": "SELECTIVE 2/4 🟡 — interpretato: orderly pullback post-FOMC, VIX strutturalmente in calo",
+    "big_themes": [
+      "Post-FOMC hawkish selloff in recupero (primo giorno post-Juneteenth)",
+      "VIX strutturalmente in calo 31→17 (da Marzo), uptick FOMC one-off",
+      "Quantum computing momentum: QUBT +9.6% su Planck Dynamics deal",
+      "CWMS 2.0 WYY scade June 24 (48h): catalyst forcing function imminente",
+      "Flag: QUBT e MRAM fuori universo — proposta rimozione watchlist"
+    ],
+    "watchlist_alerts": {
+      "REMOVE_PROPOSED": [
+        "QUBT (float 225M >> 15M)",
+        "MRAM (float 21.6M > 15M, prezzo 7 > 5)"
+      ],
+      "MONITOR_UPGRADE": [
+        "WYY catalyst 48h",
+        "MBRX unblinding entro June 30"
+      ]
+    },
+    "candidates": [
+      {
+        "ticker": "WYY",
+        "score": 72,
+        "tier": "TIER2",
+        "catalyst": "CWMS 2.0 scade June 24 (48h). Q1 0.6M +21%YoY. DHS attesa CWMS 3.0 award.",
+        "pensiero_critico": {
+          "regime": "Interpretato 🟡: Gov IT non correlata a FOMC selloff. Catalyst forcing function indipendente da SPY.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH (48h)",
+          "narrativa_numeri": "Revenue +21%YoY, EPS positivo, 18M backlog, 0.9M cash, no bank debt.",
+          "rischio_asimmetrico": "Worst case: DHS proroga o assegna CWMS 3.0 ad altro → -30-40%.",
+          "kindleberger": "Stage 1",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ ATM SHELF 5.5M attiva (management esclude uso)",
+            "⚠️ ADV bassa 82-121K"
+          ],
+          "giudizio": "TIER2 — 50% sizing"
+        },
+        "entry": ".85-.10",
+        "stop": ".80",
+        "t1": ".50",
+        "t2": "0.00",
+        "rr": "2.5:1",
+        "fonte": "discovery_weekly",
+        "giudizio": "TIER2",
+        "warning": "Entry su conferma volume apertura 15:35 IT. Exit se nessun annuncio CWMS entro June 24."
+      },
+      {
+        "ticker": "MBRX",
+        "score": 58,
+        "tier": "MONITORING",
+        "catalyst": "MIRACLE Phase 2B/3 unblinding BEFORE June 30 (8gg). CRc >40% vs 17-18% storico. Float 5.3M minuscolo.",
+        "pensiero_critico": {
+          "regime": "🟡 SELECTIVE. Binary event: macro irrilevante.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — entro 8gg",
+          "narrativa_numeri": "Float 5.3M shares. Market cap 4.09M. Funding gap in 10-Q = cash critico.",
+          "rischio_asimmetrico": "Worst case: dati negativi → -50-70% immediato. Diluzione quasi certa.",
+          "kindleberger": "Stage 2",
+          "bird_rule": false,
+          "diluzione": true,
+          "flags": [
+            "⚠️ CASH RUNWAY CRITICO",
+            "⚠️ BINARY EVENT",
+            "⚠️ DILUZIONE post-negativo"
+          ],
+          "giudizio": "MONITORING — max 0.5% sizing"
+        },
+        "entry": ".80-.00",
+        "stop": ".20",
+        "t1": ".00",
+        "t2": ".00+",
+        "rr": "4:1 se positivo",
+        "fonte": "discovery_weekly",
+        "giudizio": "MONITORING",
+        "warning": "MAX 0.5% sizing. Non entrare dopo il dato. Binary event puro."
+      },
+      {
+        "ticker": "PDYN",
+        "score": 58,
+        "tier": "MONITORING",
+        "catalyst": "Army SwarmOS+Gremlin-X contracts (8-K June 17, 5gg fa). Range oggi .20-.73. Catalyst parzialmente prezzato.",
+        "pensiero_critico": {
+          "regime": "🟡 SELECTIVE. Defense AI momentum ma catalyst stale.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "STALE — 5 giorni fa, move +16.6% già avvenuto",
+          "narrativa_numeri": "~27M shares outstanding → float probabilmente >15M. ATM shelf 2024 potenzialmente attiva.",
+          "rischio_asimmetrico": "Worst case: profit-taking + no catalyst fresco → -25-35%.",
+          "kindleberger": "Stage 2 (47%YTD)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ STALE CATALYST 5gg",
+            "⚠️ FLOAT >15M non confermato",
+            "⚠️ ATM 2024"
+          ],
+          "giudizio": "MONITORING — probe 1% max loss"
+        },
+        "entry": ".20-.50",
+        "stop": ".80",
+        "t1": ".50",
+        "t2": "0.50",
+        "rr": "1.6:1",
+        "fonte": "discovery_weekly",
+        "giudizio": "MONITORING",
+        "warning": "Verifica float pre-entry. Catalyst stale. Attendere catalyst fresco per upgrade."
+      },
+      {
+        "ticker": "GRCE",
+        "score": 55,
+        "tier": "MONITORING",
+        "catalyst": "HUNTER NEW: Earnings TODAY June 22 + FDA Type A meeting scheduled (GTx-104 NDA resubmission). CRL solo CMC issues (zero problemi clinici). Float ~14M.",
+        "pensiero_critico": {
+          "regime": "🟡 SELECTIVE. Biotech small cap, non correlato SPY.",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH — earnings today",
+          "narrativa_numeri": "Cash 7M, burn ~M/Q → 13+ mesi runway. 16M shares, float ~14M ≤15M threshold.",
+          "rischio_asimmetrico": "Worst case: FDA path non confermato + earnings deludono → -40-50%.",
+          "kindleberger": "Stage 3 (143% da .79 low)",
+          "bird_rule": false,
+          "diluzione": false,
+          "flags": [
+            "⚠️ KINDLEBERGER STAGE 3",
+            "⚠️ PREZZO INCONSISTENTE tra fonti",
+            "⚠️ VOLUME 1.4x ADV modesto"
+          ],
+          "giudizio": "MONITORING — probe 1-2% max loss"
+        },
+        "entry": ".80-.30 (post-earnings)",
+        "stop": ".00",
+        "t1": ".50",
+        "t2": ".00",
+        "rr": "2.0:1",
+        "fonte": "hunter_4C",
+        "giudizio": "MONITORING",
+        "warning": "NON entrare pre-earnings. Stage 3 = sizing probe obbligatorio. Verificare prezzo live."
+      }
+    ]
+  },
   "phase0_serale": {},
   "discovery_weekly": [
     {
