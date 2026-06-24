@@ -52,144 +52,168 @@
   },
   "discovery_daily": {},
   "morning_brief": {
-    "date": "2026-06-23",
-    "macro_regime": "SELECTIVE 2/4 🟡 — VIX 17.29 spike one-off (FOMC hawkish), SPY/QQQ sopra MA50, DXY 100.82 in rialzo (inflazione, Fed hawkish), 10Y 4.50% stabile",
+    "date": "2026-06-24",
+    "macro_regime": "SELECTIVE 2/4 🟡 (interpretato ~1.5/4 — DXY strutturale hawkish)",
     "big_themes": [
-      "Psychedelic therapy sector: DFTX +47% (Phase 3 LSD-depression positivo) → settore hot",
-      "Russell 2000 reconstitution June 26: passive buying su MRAM e altri inclusi",
-      "Cannabis DOJ hearing June 29: rescheduling marijuana possibile",
-      "WYY CWMS 3.0 deadline June 24 (domani): binary catalyst entro 24h",
-      "DXY 100.82 (max 14 mesi): hawkish Fed, CPI 4.2% — regime selettivo"
+      "Fed hawkish shock: Sep hike prob 68% (da 29% settimana scorsa) — headwind strutturale small cap",
+      "Nasdaq -3.3% Jun23 su AI capex skepticism (Micron earnings risk) — tech sector fragile",
+      "DXY 101.38 +4 sessioni consecutive — safe-haven + inflazione = negativo growth micro cap",
+      "WYY dual catalyst: NASA SEWP VI (0B GWAC, prime awardee Jun23 AH) + CWMS 2.0 scade oggi"
     ],
     "candidates": [
       {
         "ticker": "WYY",
-        "score": 62,
-        "tier": "MONITORING",
-        "catalyst": "CWMS 3.0 award atteso entro June 24 (24h). 1 mese di estensione = DHS comunicherà entro deadline. Management 'encouraged'. Q1 2026: revenue $40.6M (+21% YoY), EPS positivo prima volta dal 2021.",
+        "score": 72,
+        "tier": "TIER2",
+        "catalyst": "NASA SEWP VI 0B GWAC prime awardee (Jun23 AH) + CWMS 2.0 scade Jun24 + Q1 EPS positivo",
         "pensiero_critico": {
-          "regime": "🟡 SELECTIVE — abbassato: DXY in rialzo (inflazione) negativo per small cap, VIX spike one-off",
+          "regime": "Interpretato stabile per WYY (IT services gov = defensive, non puro growth tech, parzialmente decoupled DXY)",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESH — deadline domani June 24",
-          "narrativa_numeri": "Fondamentali FORTI: Q1 revenue $40.6M +21% YoY, EPS positivo, Coast Guard $73.4M task order",
-          "rischio_asimmetrico": "Worst case: DHS emette altra estensione (non assegna CWMS 3.0) → stock ritorna $6-7 (-35%). Volume oggi $194K sotto 200K threshold.",
-          "kindleberger": "Stage 2 — +100%+ dai minimi watchlist ($4.75-5.25 → $9.61)",
+          "catalyst_freshness": "FRESH (<12h)",
+          "narrativa_numeri": "Revenue Q1 0.6M crescente, EPS positivo primo volta. NASA SEWP VI 15Y ordering period. Fondamentali confermati.",
+          "rischio_asimmetrico": "Worst case: CWMS 3.0 non aggiudicato a WYY / contratti NASA lenti = -25-30%",
+          "kindleberger": "Stage 2 (stimato)",
           "bird_rule": false,
           "diluzione": false,
           "flags": [
-            "⚠️ RVOL sotto 200K threshold",
-            "⚠️ -11% oggi senza news specifica",
-            "⚠️ Kindleberger Stage 2"
+            "⚠️ S-3 shelf 0M (filed 2025) — esiste potenziale ATM, non offerta <30gg"
           ],
-          "giudizio": "MONITORING — entry solo se CWMS news confermata PRIMA apertura NYSE o se recupera $10 con RVOL >300K nel pomeriggio"
+          "giudizio": "TIER2"
         },
-        "entry": "$9.00-$9.50",
-        "stop": "$8.00",
-        "t1": "$12.00",
-        "t2": "$15.00",
-        "rr": "2.3:1",
-        "fonte": "memory_phase0_serale",
-        "giudizio": "MONITORING",
-        "warning": "CWMS 3.0 vs estensione: management ha hedgiato ('prepared for either outcome'). Volume sotto threshold. Entry solo con catalysis confermato."
-      },
-      {
-        "ticker": "GLSI",
-        "score": 55,
-        "tier": "MONITORING",
-        "catalyst": "FLAMINGO-01 Ph3 ASCO presentato June 1 (22gg fa). SI 22.88%, float 6.4M, days-to-cover 3.68. Short squeeze potenziale senza trigger specifico oggi.",
-        "pensiero_critico": {
-          "regime": "🟡 SELECTIVE",
-          "catalyst_verified": true,
-          "catalyst_freshness": "STALE — 22 giorni fa. Nessuna news oggi.",
-          "narrativa_numeri": "Clinical-stage, nessun revenue. Cash runway non verificato oggi.",
-          "rischio_asimmetrico": "Worst case: nessun trigger squeeze → stock laterale o cede a $18-20 (-20%)",
-          "kindleberger": "Stage 2 (22-24$ range)",
-          "bird_rule": false,
-          "diluzione": false,
-          "flags": [
-            "⚠️ STALE catalyst (22gg)",
-            "⚠️ No trigger identificato oggi"
-          ],
-          "giudizio": "MONITORING — tenere finché no nuovo catalyst. SKIP se nessuna news entro 48h."
-        },
-        "entry": "$22.00-$23.50",
-        "stop": "$19.00",
-        "t1": "$28.00",
-        "t2": "$35.00",
-        "rr": "2:1",
-        "fonte": "memory_phase0_serale",
-        "giudizio": "MONITORING",
-        "warning": "Catalyst stale. Squeeze possibile solo con news / volume anomalo. No entry senza trigger."
+        "entry": " (monitorare apertura 15:35 IT, no gap >15%)",
+        "stop": "-25% da entry",
+        "t1": "+30%",
+        "t2": "+50%",
+        "rr": "1:2",
+        "fonte": "memoria_aggiornata",
+        "giudizio": "TIER2 — 50% sizing",
+        "warning": "S-3 shelf attiva 2025 — monitorare eventuali 424B5 pre-market"
       },
       {
         "ticker": "PDYN",
-        "score": 52,
-        "tier": "SKIP",
-        "catalyst": "Army SwarmOS + Gremlin-X 8-K June 17. Northland PT $10→$15. Revenue Q1 +107% YoY.",
+        "score": 65,
+        "tier": "MONITORING",
+        "catalyst": "US Army SwarmOS + Gremlin-X UAV contracts (Jun22-23) — AH +19.37%, oggi -4.20% profit-taking",
         "pensiero_critico": {
-          "regime": "🟡 SELECTIVE",
+          "regime": "Neutral-positivo per PDYN (defense AI = decoupled da DXY hawkishness, DoD spending strutturalmente positivo)",
           "catalyst_verified": true,
-          "catalyst_freshness": "MODERATO — 6gg fa",
-          "narrativa_numeri": "Revenue $3.5M Q1, guidance $24-27M FY2026 (+357-415%)",
-          "rischio_asimmetrico": "ATM shelf $150M Jefferies → diluzione imminente possibile",
-          "kindleberger": "Stage 2 (48% YTD)",
+          "catalyst_freshness": "FRESCO (1-2gg)",
+          "narrativa_numeri": "Market cap 82M. Contratti R&D Army (non production revenue). Narrative precede numeri significativi. ⚠️ pre-revenue stage.",
+          "rischio_asimmetrico": "Worst case: Army cancella demo program / funding freeze = -40%. Gap up ieri oggi si sta filling.",
+          "kindleberger": "Stage 2 (+44% 6M pre-contratti)",
           "bird_rule": false,
-          "diluzione": true,
+          "diluzione": false,
           "flags": [
-            "⚠️ Float 24.73M > 15M",
-            "⚠️ ATM shelf $150M Jefferies ATTIVA",
-            "⚠️ Float violation"
+            "⚠️ Pre-revenue stage — narrative ahead of fundamentals"
           ],
-          "giudizio": "SKIP — float 24.73M viola soglia 15M, ATM shelf attiva = diluzione quasi certa"
+          "giudizio": "MONITORING"
         },
-        "entry": "N/A",
-        "stop": "N/A",
-        "t1": "N/A",
-        "t2": "N/A",
-        "rr": "N/A",
-        "fonte": "memory_watchlist",
-        "giudizio": "SKIP",
-        "warning": "Float violation + ATM shelf attiva. Non operativo."
+        "entry": ".20-.50 (dip stabile post profit-taking)",
+        "stop": ".30 (-25%)",
+        "t1": "0.50 (+25%)",
+        "t2": "2.00 (+42%)",
+        "rr": "1:2",
+        "fonte": "memoria_phase0_serale",
+        "giudizio": "MONITORING — probe 1% max loss",
+        "warning": "Attendere stabilizzazione 15:35 IT — non inseguire bounce immediato"
+      },
+      {
+        "ticker": "GALT",
+        "score": 71,
+        "tier": "MONITORING",
+        "catalyst": "FDA agreement Phase 3 belapectin (MASH cirrhosis + portal hypertension) Jun23 — stock +22% — HC Wainwright Buy PT 1",
+        "pensiero_critico": {
+          "regime": "Neutral per GALT (biotech binary decoupled da DXY/macro)",
+          "catalyst_verified": true,
+          "catalyst_freshness": "FRESH (Jun23 = ieri)",
+          "narrativa_numeri": "Belapectin Phase 2b dati positivi. FDA agreement = vera milestone. Cash runway non confermata — tipico biotech risk.",
+          "rischio_asimmetrico": "Worst case: Phase 3 design richiede modifiche / trial fallisce = -50%. +22% ieri partially priced.",
+          "kindleberger": "Stage 3 (+211% YTD stima)",
+          "bird_rule": true,
+          "diluzione": false,
+          "flags": [
+            "⚠️ FLOAT da verificare (potenzialmente >15M — criteri PROFITRC)",
+            "⚠️ KINDLEBERGER Stage 3 (>100% corso YTD)",
+            "🚨 BIRD RULE possibile (FDA news retail-friendly, +22%)"
+          ],
+          "giudizio": "MONITORING"
+        },
+        "entry": ".30-.60 (pullback dopo gap +22%)",
+        "stop": ".55 (-25%)",
+        "t1": ".50",
+        "t2": ".00 (HC Wainwright view)",
+        "rr": "1:2",
+        "fonte": "hunter_4C",
+        "giudizio": "MONITORING — probe 1% max loss, sizing 25%",
+        "warning": "VERIFICARE FLOAT prima di entry — se >15M = SKIP automatico per criteri PROFITRC"
       },
       {
         "ticker": "MBRX",
-        "score": 40,
+        "score": 50,
         "tier": "SKIP",
-        "catalyst": "MIRACLE Ph2B/3 unblinding before June 30. Blinded data CRc >40%, CR ~30% vs historical 17-18%. No cardiotoxicity ASCO.",
+        "catalyst": "MIRACLE Phase 2B/3 unblinding <Jun30 — binary event",
         "pensiero_critico": {
-          "regime": "🟡 SELECTIVE",
+          "regime": "Biotech binary decoupled macro",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESH — unblinding entro 7gg",
-          "narrativa_numeri": "Cash $10.3M + $0.8M raised = ~$11.1M. Runway INTO Q3 2026 only. Needs $25M more.",
-          "rischio_asimmetrico": "Worst case: negative trial → -80%. Cash esaurisce Q3 → diluzione certa.",
-          "kindleberger": "Stage 1",
+          "catalyst_freshness": "PENDENTE (unblinding entro Jun30)",
+          "narrativa_numeri": "Cash 0.3M — runway 6-12M ⚠️ — diluzione quasi certa nel tempo",
+          "rischio_asimmetrico": "Worst case: dati negativi MIRACLE = -60-80%. Spike →.70 = distribuzione non accumulo.",
+          "kindleberger": "Stage 2-3",
           "bird_rule": false,
           "diluzione": true,
           "flags": [
-            "⚠️ CASH RUNWAY <6M mesi (Q3 2026 = weeks away)",
-            "⚠️ Diluzione quasi certa"
+            "⚠️ CASH RUNWAY 6-12M — diluzione futura quasi certa",
+            "⚠️ DISTRIBUZIONE: spike →crash .70 = no momentum rialzista"
           ],
-          "giudizio": "SKIP — cash runway <6M threshold violato"
+          "giudizio": "SKIP"
         },
         "entry": "N/A",
         "stop": "N/A",
         "t1": "N/A",
         "t2": "N/A",
         "rr": "N/A",
-        "fonte": "memory_watchlist",
-        "giudizio": "SKIP",
-        "warning": "Binary event ad alto rischio + cash imminente. SKIP secondo regole."
+        "fonte": "memoria_aggiornata",
+        "giudizio": "SKIP — attendere dati MIRACLE se positivi valutare allora",
+        "warning": "No entry oggi. Spike→crash pattern negativo."
       }
     ],
-    "hunter_note": "Scanner 23/06/2026: nessun nuovo ticker fuori watchlist con score >=55pt e float <15M identificato via web search. Top gainers (DFTX +47%, APGE +47%, CAST +57%) tutti SKIP per price>$25 o market cap elevato o going concern. Cannabis DOJ hearing June 29 = watchlist settore ma nessun micro-cap qualificante trovato. CRMD (watchlist) ha REZZAYO sNDA July 1 ma float 78M = non operativo. Hunter vuoto oggi per mancanza di setup qualificanti.",
-    "watchlist_actions": {
-      "add": [],
-      "remove": [
-        "QUBT (float 225M >> 15M)",
-        "MBRX (cash <6M, diluzione certa)",
-        "PDYN (float 24.73M + ATM shelf)"
-      ]
-    }
+    "skip_list": [
+      {
+        "ticker": "MRAM",
+        "motivo": "Float ~26M > 15M limite PROFITRC + Kindleberger Stage 4 (+294% YTD)"
+      },
+      {
+        "ticker": "GLSI",
+        "motivo": "Prezzo 6.18 > 5 limite range PROFITRC"
+      },
+      {
+        "ticker": "LOCL",
+        "motivo": "Dilution risk flagged memoria, no catalyst fresco"
+      },
+      {
+        "ticker": "BIAF",
+        "motivo": "Offerta pubblica .2M chiusa Jun18 (<30gg) = SKIP automatico anti-diluzione"
+      },
+      {
+        "ticker": "PHGE",
+        "motivo": "Float 18M > 15M + catalyst STALE (Jun18 = 6gg fa)"
+      },
+      {
+        "ticker": "CAST",
+        "motivo": "Kindleberger Stage 4 (+420% da deal) + negative equity + cash 19K"
+      },
+      {
+        "ticker": "BFLY",
+        "motivo": "Float 261M >> 15M + mid-cap .3B, fuori universo PROFITRC"
+      }
+    ],
+    "watchlist_add": [
+      "GALT (MONITORING | 71pt) — FDA Phase 3 MASH belapectin + HC Wainwright Buy PT 1 — VERIFICARE FLOAT"
+    ],
+    "watchlist_remove": [
+      "MRAM (float >15M, fuori criteri)",
+      "GLSI (prezzo >5)"
+    ]
   },
   "phase0_serale": {
     "date": "2026-06-22",
