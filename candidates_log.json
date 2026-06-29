@@ -52,167 +52,135 @@
   },
   "discovery_daily": {},
   "morning_brief": {
-    "date": "2026-06-24",
-    "macro_regime": "SELECTIVE 2/4 🟡 (interpretato ~1.5/4 — DXY strutturale hawkish)",
+    "date": "2026-06-29",
+    "macro_regime": "TRADE 3/4 🟢 (interpretato: DXY strutturalmente sceso 108→100, VIX 16.78 in calo, SPY sopra MA50, 10Y 4.455% easing)",
     "big_themes": [
-      "Fed hawkish shock: Sep hike prob 68% (da 29% settimana scorsa) — headwind strutturale small cap",
-      "Nasdaq -3.3% Jun23 su AI capex skepticism (Micron earnings risk) — tech sector fragile",
-      "DXY 101.38 +4 sessioni consecutive — safe-haven + inflazione = negativo growth micro cap",
-      "WYY dual catalyst: NASA SEWP VI (0B GWAC, prime awardee Jun23 AH) + CWMS 2.0 scade oggi"
+      "WYY +40% su DHS CWMS 3.1B CWMS3.0 - catalyst concretizzata, no nuove entry (Kindleberger 3 + ATM)",
+      "PDYN Palladyne AI $6.70 pullback stabile - Army SwarmOS + IAI partnership - MONITORING",
+      "MBRX ALERT: MIRACLE unblinding DOMANI Jun30 - SKIP per ATM+cash critico",
+      "VIX 16.78 basso, SPY 746 sopra MA50, ambiente risk-on per small cap"
     ],
     "candidates": [
       {
         "ticker": "WYY",
         "score": 72,
-        "tier": "TIER2",
-        "catalyst": "NASA SEWP VI 0B GWAC prime awardee (Jun23 AH) + CWMS 2.0 scade Jun24 + Q1 EPS positivo",
+        "tier": "SKIP_NUOVE_ENTRY",
+        "catalyst": "DHS CWMS 3.0 single awardee $3.1B/10yr (Jun25 AH). NASA SEWP VI. Phase 2 deployment Jul1.",
         "pensiero_critico": {
-          "regime": "Interpretato stabile per WYY (IT services gov = defensive, non puro growth tech, parzialmente decoupled DXY)",
+          "regime": "3.5/4 interpretato - growth-positive, DXY strutturalmente sceso",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESH (<12h)",
-          "narrativa_numeri": "Revenue Q1 0.6M crescente, EPS positivo primo volta. NASA SEWP VI 15Y ordering period. Fondamentali confermati.",
-          "rischio_asimmetrico": "Worst case: CWMS 3.0 non aggiudicato a WYY / contratti NASA lenti = -25-30%",
-          "kindleberger": "Stage 2 (stimato)",
-          "bird_rule": false,
-          "diluzione": false,
+          "catalyst_freshness": "FRESH (Jun25, 4gg fa)",
+          "narrativa_numeri": "Backlog $265M, Q1 revenue crescente. ATM $15.5M attiva Aprile 2026.",
+          "rischio_asimmetrico": "Worst case: -40% su ATM dilution + gap fill $9-12. Gap aperto enorme.",
+          "kindleberger": "Stage 3 (+155% da $9.61 a $24.54)",
+          "bird_rule": true,
+          "diluzione": true,
           "flags": [
-            "⚠️ S-3 shelf 0M (filed 2025) — esiste potenziale ATM, non offerta <30gg"
+            "⚠️ ATM ATTIVA $15.5M",
+            "⚠️ KINDLEBERGER Stage 3 +155%",
+            "🚨 BIRD RULE trending social",
+            "⚠️ GAP APERTO $9-12"
           ],
-          "giudizio": "TIER2"
+          "giudizio": "SKIP nuove entry. Kindleberger 3 + BIRD RULE + ATM attiva. Chi detiene da ieri: stop $18."
         },
-        "entry": " (monitorare apertura 15:35 IT, no gap >15%)",
-        "stop": "-25% da entry",
-        "t1": "+30%",
-        "t2": "+50%",
-        "rr": "1:2",
-        "fonte": "memoria_aggiornata",
-        "giudizio": "TIER2 — 50% sizing",
-        "warning": "S-3 shelf attiva 2025 — monitorare eventuali 424B5 pre-market"
+        "entry": "NO NUOVE ENTRY",
+        "stop": "$18.00 (solo chi detiene da ieri)",
+        "t1": "$32.00",
+        "t2": "$40.00",
+        "rr": "N/A - no nuove entry",
+        "fonte": "watchlist",
+        "giudizio": "SKIP_NUOVE_ENTRY",
+        "warning": "Già corso +155% da memoria. ATM $15.5M attiva. BIRD RULE. Kindleberger Stage 3."
       },
       {
         "ticker": "PDYN",
         "score": 65,
         "tier": "MONITORING",
-        "catalyst": "US Army SwarmOS + Gremlin-X UAV contracts (Jun22-23) — AH +19.37%, oggi -4.20% profit-taking",
+        "catalyst": "Army SwarmOS live exercise 2026 + IAI loitering munitions partnership (Jun8) + advisory board ex-Gen. Gainey. PT $11.25.",
         "pensiero_critico": {
-          "regime": "Neutral-positivo per PDYN (defense AI = decoupled da DXY hawkishness, DoD spending strutturalmente positivo)",
+          "regime": "3.5/4 interpretato - defense AI growth-positive",
           "catalyst_verified": true,
-          "catalyst_freshness": "FRESCO (1-2gg)",
-          "narrativa_numeri": "Market cap 82M. Contratti R&D Army (non production revenue). Narrative precede numeri significativi. ⚠️ pre-revenue stage.",
-          "rischio_asimmetrico": "Worst case: Army cancella demo program / funding freeze = -40%. Gap up ieri oggi si sta filling.",
-          "kindleberger": "Stage 2 (+44% 6M pre-contratti)",
+          "catalyst_freshness": "FRESH (SwarmOS exercise recente)",
+          "narrativa_numeri": "Revenue 2026 guidance $24-27M (+357%). Q1: $3.5M (+107% YoY). Cash $43.7M. Runway >12M.",
+          "rischio_asimmetrico": "Worst case: -14% a $5.75 su execution miss. Support tecnico $5.80.",
+          "kindleberger": "Stage 2 (caution, 30-100% corso nel mese)",
           "bird_rule": false,
           "diluzione": false,
           "flags": [
-            "⚠️ Pre-revenue stage — narrative ahead of fundamentals"
+            "⚠️ KINDLEBERGER Stage 2 - sizing 50%"
           ],
-          "giudizio": "MONITORING"
+          "giudizio": "MONITORING - probe 1% max loss"
         },
-        "entry": ".20-.50 (dip stabile post profit-taking)",
-        "stop": ".30 (-25%)",
-        "t1": "0.50 (+25%)",
-        "t2": "2.00 (+42%)",
-        "rr": "1:2",
-        "fonte": "memoria_phase0_serale",
-        "giudizio": "MONITORING — probe 1% max loss",
-        "warning": "Attendere stabilizzazione 15:35 IT — non inseguire bounce immediato"
-      },
-      {
-        "ticker": "GALT",
-        "score": 71,
-        "tier": "MONITORING",
-        "catalyst": "FDA agreement Phase 3 belapectin (MASH cirrhosis + portal hypertension) Jun23 — stock +22% — HC Wainwright Buy PT 1",
-        "pensiero_critico": {
-          "regime": "Neutral per GALT (biotech binary decoupled da DXY/macro)",
-          "catalyst_verified": true,
-          "catalyst_freshness": "FRESH (Jun23 = ieri)",
-          "narrativa_numeri": "Belapectin Phase 2b dati positivi. FDA agreement = vera milestone. Cash runway non confermata — tipico biotech risk.",
-          "rischio_asimmetrico": "Worst case: Phase 3 design richiede modifiche / trial fallisce = -50%. +22% ieri partially priced.",
-          "kindleberger": "Stage 3 (+211% YTD stima)",
-          "bird_rule": true,
-          "diluzione": false,
-          "flags": [
-            "⚠️ FLOAT da verificare (potenzialmente >15M — criteri PROFITRC)",
-            "⚠️ KINDLEBERGER Stage 3 (>100% corso YTD)",
-            "🚨 BIRD RULE possibile (FDA news retail-friendly, +22%)"
-          ],
-          "giudizio": "MONITORING"
-        },
-        "entry": ".30-.60 (pullback dopo gap +22%)",
-        "stop": ".55 (-25%)",
-        "t1": ".50",
-        "t2": ".00 (HC Wainwright view)",
-        "rr": "1:2",
-        "fonte": "hunter_4C",
-        "giudizio": "MONITORING — probe 1% max loss, sizing 25%",
-        "warning": "VERIFICARE FLOAT prima di entry — se >15M = SKIP automatico per criteri PROFITRC"
+        "entry": "$6.50-$7.00",
+        "stop": "$5.75",
+        "t1": "$9.50",
+        "t2": "$11.25",
+        "rr": "2.1:1",
+        "fonte": "watchlist",
+        "giudizio": "MONITORING",
+        "warning": "Kindleberger Stage 2. Sizing massimo 50%. Entry valida 15:35-15:45 IT se sopra $6.50."
       },
       {
         "ticker": "MBRX",
         "score": 50,
         "tier": "SKIP",
-        "catalyst": "MIRACLE Phase 2B/3 unblinding <Jun30 — binary event",
+        "catalyst": "MIRACLE trial unblinding DOMANI Jun30. Blinded: CRc >40% vs storico CR 17-18%. Annamycin R/R AML.",
         "pensiero_critico": {
-          "regime": "Biotech binary decoupled macro",
+          "regime": "irrilevante - SKIP per regole fondamentali",
           "catalyst_verified": true,
-          "catalyst_freshness": "PENDENTE (unblinding entro Jun30)",
-          "narrativa_numeri": "Cash 0.3M — runway 6-12M ⚠️ — diluzione quasi certa nel tempo",
-          "rischio_asimmetrico": "Worst case: dati negativi MIRACLE = -60-80%. Spike →.70 = distribuzione non accumulo.",
-          "kindleberger": "Stage 2-3",
+          "catalyst_freshness": "IMMINENT (domani Jun30) - ma binary",
+          "narrativa_numeri": "Cash Q3 2026 solo. ATM attiva maggio 2026 (venduto a $2.01). Loss $12.8M/trim. Nessun revenue.",
+          "rischio_asimmetrico": "Worst case trial negativo: -70/-80%. Binary puro.",
+          "kindleberger": "Stage 1",
           "bird_rule": false,
           "diluzione": true,
           "flags": [
-            "⚠️ CASH RUNWAY 6-12M — diluzione futura quasi certa",
-            "⚠️ DISTRIBUZIONE: spike →crash .70 = no momentum rialzista"
+            "⚠️ ATM ATTIVA (maggio 2026)",
+            "⚠️ CASH RUNWAY <6M (solo Q3 2026)",
+            "⚠️ BINARY EVENT domani Jun30"
           ],
-          "giudizio": "SKIP"
+          "giudizio": "SKIP. ATM + cash critico. ALERT: monitorare risultati Jun30."
         },
         "entry": "N/A",
         "stop": "N/A",
         "t1": "N/A",
         "t2": "N/A",
         "rr": "N/A",
-        "fonte": "memoria_aggiornata",
-        "giudizio": "SKIP — attendere dati MIRACLE se positivi valutare allora",
-        "warning": "No entry oggi. Spike→crash pattern negativo."
+        "fonte": "watchlist",
+        "giudizio": "SKIP",
+        "warning": "ALERT Jun30: MIRACLE unblinding. Skip per ATM+cash. Se positivo = gap up enorme. Prepara alert."
       }
     ],
-    "skip_list": [
+    "hunter_module_note": "Oggi 29 Jun 2026: modulo Hunter non ha identificato candidati >=55pt fuori watchlist. Ambiente late-June rally concentra speculazione su titoli già corsi (Kindleberger 3-4) o con float >15M. SDOT=Kindleberger4+dilution, IVF=stale+pump<55pt, NVCT=float violation. Focus su PDYN dalla watchlist.",
+    "skip_list_hunter": [
       {
-        "ticker": "MRAM",
-        "motivo": "Float ~26M > 15M limite PROFITRC + Kindleberger Stage 4 (+294% YTD)"
+        "ticker": "SDOT",
+        "motivo": "Kindleberger Stage 4 (+244% da $1.61 a $21.45) + diluzione stock+convertibili"
       },
       {
-        "ticker": "GLSI",
-        "motivo": "Prezzo 6.18 > 5 limite range PROFITRC"
+        "ticker": "IVF",
+        "motivo": "Catalyst stale (earnings Jun22, 7gg fa) + pump pattern + score 51pt <55pt"
       },
       {
-        "ticker": "LOCL",
-        "motivo": "Dilution risk flagged memoria, no catalyst fresco"
+        "ticker": "NVCT",
+        "motivo": "Float violation (market cap $300M+) + Kindleberger Stage 3 (+186% mensile)"
       },
       {
         "ticker": "BIAF",
-        "motivo": "Offerta pubblica .2M chiusa Jun18 (<30gg) = SKIP automatico anti-diluzione"
+        "motivo": "PIPE recente (<30gg, offering chiuso Jun18)"
       },
       {
-        "ticker": "PHGE",
-        "motivo": "Float 18M > 15M + catalyst STALE (Jun18 = 6gg fa)"
+        "ticker": "DFNS",
+        "motivo": "Nasdaq compliance + ATM dilution + $0.20 prezzo"
       },
       {
-        "ticker": "CAST",
-        "motivo": "Kindleberger Stage 4 (+420% da deal) + negative equity + cash 19K"
+        "ticker": "GALT",
+        "motivo": "Float violation 65.8M shares (>15M)"
       },
       {
-        "ticker": "BFLY",
-        "motivo": "Float 261M >> 15M + mid-cap .3B, fuori universo PROFITRC"
+        "ticker": "MRAM",
+        "motivo": "Float violation 23.45M shares (>15M)"
       }
-    ],
-    "watchlist_add": [
-      "GALT (MONITORING | 71pt) — FDA Phase 3 MASH belapectin + HC Wainwright Buy PT 1 — VERIFICARE FLOAT"
-    ],
-    "watchlist_remove": [
-      "MRAM (float >15M, fuori criteri)",
-      "GLSI (prezzo >5)"
     ]
   },
   "phase0_serale": {
