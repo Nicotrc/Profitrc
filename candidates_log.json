@@ -640,5 +640,205 @@
       "warning": "Nessun catalyst settimanale. Solo mantenimento watchlist long-term. Massimo 0.5% sizing se entra."
     }
   ],
-  "premarket_gap": []
+  "premarket_gap": [
+    {
+      "date": "June 29 2026",
+      "scan_time": "14:30 IT",
+      "scanner_version": "v3.0",
+      "connectors_used": [
+        "IBKR",
+        "TradingView",
+        "GitHub",
+        "WebSearch"
+      ],
+      "macro_regime": {
+        "vix": 17.88,
+        "vix_change_pct": -2.88,
+        "spy_last": 738.75,
+        "spy_change_pct": 1.34,
+        "pfrc_rgm": "BULL RISK-ON (inferred — PFRC Rgm not loaded on TV chart)",
+        "tier_penalty": 0
+      },
+      "account_snapshot": {
+        "net_liq_eur": 1748.31,
+        "buying_power_eur": 3.19,
+        "cash_eur": 3.19,
+        "note": "ATTENZIONE: buying power quasi zero — nessun nuovo ingresso possibile"
+      },
+      "open_positions_ibkr": [
+        {
+          "ticker": "MBRX",
+          "shares": 564.4,
+          "avg_entry": 3.265,
+          "last_price": 3.54,
+          "unrealized_pnl_usd": 158.61,
+          "unrealized_pnl_pct": 8.26,
+          "rvol_20d": 5.29,
+          "note": "⚠️ DISCREPANZA: posizione presente in IBKR ma ASSENTE in rules.json open_positions — aggiornare manualmente",
+          "action": "HOLD — stop alzare sopra 3.27 (entry). Gap fill risk: $3.20-$3.27"
+        }
+      ],
+      "discrepancy_alert": "MBRX: 564 shares in IBKR but 0 in rules.json open_positions. Manual reconciliation required.",
+      "watchlist_scanned": 58,
+      "tier_a": [
+        {
+          "ticker": "VSAT",
+          "gap_pct": 21.87,
+          "last": 75.5,
+          "open": 67.39,
+          "prior_close": 61.95,
+          "volume": 2325027,
+          "adv_20d": 1544794,
+          "rvol": 1.51,
+          "catalyst": "Space Force prime contract (Space Systems Command, June 11) + Lockheed Martin NOAA C-130J satcom deal + M&A consolidation speculation (Rocket Lab/Iridium industry dynamic)",
+          "catalyst_tier": "TIER2",
+          "score": 69,
+          "tier": "TIER2",
+          "kindleberger_stage": "STAGE1-2 (20.3% from 100d low, 100d +76%)",
+          "bird_rule": false,
+          "dilution_check": "CLEAR — solo debito (Senior Secured Notes 2024, no equity dilution)",
+          "tv_structure": "V-recovery da $60 support dopo decline da $89 high. Oggi +21.87% gap-up candle con volume 1.51x ADV.",
+          "plan": {
+            "entry_window": "15:35-15:45 IT — SOLO dopo conferma $70+ hold",
+            "entry": "N/A — buying power €3.19 (nessun ingresso possibile)",
+            "stop": "67.39 (open di oggi)",
+            "t1": "80.00",
+            "t2": "89.00 (100d high)",
+            "rr": "N/A",
+            "sizing": "TIER2 50% — ma account BLOCCATO (€3.19 buying power)"
+          }
+        },
+        {
+          "ticker": "HUMA",
+          "gap_pct": 11.19,
+          "last": 0.7879,
+          "prior_close": 0.7086,
+          "volume": 21740000,
+          "adv_20d": 13460121,
+          "rvol": 1.62,
+          "catalyst": "Phase 3 ATEV V012 study meets primary endpoint (June 11 SVS meeting) — 3 mesi extra catheter-free vs AV fistula",
+          "catalyst_tier": "TIER2",
+          "score": 50,
+          "tier": "SKIP",
+          "skip_reason": "⚠️ DILUZIONE LETALE: $50M public offering June 12 (47.6M shares at $1.05 = 21.45% dilution). Shares outstanding: 269.6M. Stock ancora -25% vs prezzo offerta. Supply pressure dalle azioni dell'offering non assorbita.",
+          "kindleberger_stage": "STAGE1 (recovery post-offering)",
+          "dilution_check": "🚨 $50M underwritten offering June 12 — 47.6M shares a $1.05 — net tangible book value dilution $0.83/share"
+        }
+      ],
+      "tier_b": [
+        {
+          "ticker": "MNTS",
+          "gap_pct": 8.79,
+          "last": 7.67,
+          "volume": 2103619,
+          "adv_20d": 4611869,
+          "rvol": 0.46,
+          "score": 0,
+          "tier": "SKIP",
+          "skip_reason": "🚨 DILUZIONE LETALE: $25M registered direct offering (June 12, 1.85M shares) + $75M ATM program (June 18) + S-3 shelf effective June 4. Tripla diluizione in corso."
+        },
+        {
+          "ticker": "RCAT",
+          "gap_pct": 7.33,
+          "last": 9.96,
+          "prior_close": 9.28,
+          "volume": 7082187,
+          "adv_20d": 9968467,
+          "rvol": 0.71,
+          "catalyst": "Hellcat dual-use UAS launched at Eurosatory 2026 + Blue Ops Variant 7 USV full-rate production + HC Wainwright Buy $20 + Roth Capital Buy $25 + Trump Drone Dominance $1.1B program",
+          "catalyst_tier": "TIER1",
+          "score": 52,
+          "tier": "SKIP",
+          "skip_reason": "⚠️ RVOL 0.71x (<3x flag) + stock in 100-day downtrend (-30.64%). Catalyst reali ma volume insufficiente e struttura tecnica debole. Attendere BOS confermato su TF daily prima di riconsiderare.",
+          "kindleberger_stage": "STAGE1 (20% da low $8.36, -30% da 100d high $18.78)",
+          "note": "MONITORING — richiedere conferma tecnica. Rientra nel radar se RVOL > 2x con close > $10.50"
+        },
+        {
+          "ticker": "EVC",
+          "gap_pct": 6.9,
+          "last": 12.86,
+          "prior_close": 12.03,
+          "volume": 1588981,
+          "adv_20d": 1394710,
+          "rvol": 1.14,
+          "catalyst": "Q1 2026 earnings: revenue +114% YoY, EPS swing da -$0.53 a +$0.13. Political ad cycle 2026 (182 giorni a Election Day). Stock +85% AH il 5 maggio.",
+          "catalyst_tier": "TIER1",
+          "score": 52,
+          "tier": "SKIP",
+          "skip_reason": "⚠️ Catalyst già 8 settimane vecchio (earnings May 5). RVOL 1.14x non conferma nuova rottura. Oggi move sembra continuazione inerziale senza trigger fresco.",
+          "note": "MONITORING — se emerge catalyst fresco (earnings update, M&A) nel prossimo ciclo, rientra come TIER1"
+        },
+        {
+          "ticker": "GCTS",
+          "gap_pct": 9.57,
+          "last": 2.575,
+          "volume": 1716047,
+          "adv_20d": 3832847,
+          "rvol": 0.45,
+          "score": 0,
+          "tier": "SKIP",
+          "skip_reason": "⚠️ RVOL 0.45x + nessun catalyst identificato (WebSearch non ha trovato news rilevanti per GCTS). Movimento sospetto senza volume e senza catalyst verificato."
+        },
+        {
+          "ticker": "RXT",
+          "gap_pct": 6.77,
+          "last": 6.385,
+          "volume": 5733117,
+          "adv_20d": 18268822,
+          "rvol": 0.31,
+          "catalyst": "AMD 30MW AI compute deal (June 16) + 15% workforce reduction ($75-85M annualized savings)",
+          "catalyst_tier": "TIER2",
+          "score": 46,
+          "tier": "SKIP",
+          "skip_reason": "⚠️ RVOL 0.31x — solo 31% del volume medio. Movimento +6.77% su volume bassissimo è flag critico. Catalyst AMD reale ma già digerito."
+        },
+        {
+          "ticker": "DLTH",
+          "gap_pct": 6.38,
+          "last": 4.5,
+          "prior_close": 4.23,
+          "volume": 211351,
+          "adv_20d": 189075,
+          "rvol": 1.12,
+          "catalyst": "Q1 2026 earnings (June 8): margin expansion +540bps, EBITDA guidance raised $28-32M. Stock +27.7% il giorno degli earnings.",
+          "catalyst_tier": "TIER2",
+          "score": 50,
+          "tier": "SKIP",
+          "skip_reason": "⚠️ Catalyst earnings già 3 settimane vecchio (June 8). Oggi è continuazione secondaria. RVOL 1.12x insufficiente. Volume assoluto basso (211K)."
+        },
+        {
+          "ticker": "CING",
+          "gap_pct": 5.85,
+          "last": 5.25,
+          "prior_close": 4.96,
+          "volume": 234688,
+          "adv_20d": 515125,
+          "rvol": 0.46,
+          "score": 0,
+          "tier": "SKIP",
+          "skip_reason": "⚠️ RVOL 0.46x + volume basso (234K). Nessun catalyst ricercato — profilo insufficiente per analisi."
+        }
+      ],
+      "pensiero_critico_vsat": {
+        "mode": "FULL",
+        "Q0_regime": "VIX 17.88 (-2.88%): declino strutturale, non event-driven → bullish. SPY +1.34%: mercato in risk-on. PFRC Rgm: non caricato (errore TV chart). Regime effettivo: BULL RISK-ON — 0 tier penalty.",
+        "Q1_conferma": "SI — Space Force + Lockheed sono contratti verificati da 8-K e press release. Il setup regge senza M&A speculation.",
+        "Q2_narrativa_numeri": "VSAT ha fondamentali reali: acquisizione Inmarsat (2023), portafoglio clienti government/military, backlog contratti DoD. M&A speculation è overlay narrativo, non il driver principale.",
+        "Q3_rischio": "Gap fill a $61.95 (-17.9% da $75.50). Supporto chiave a $66-67 (open di oggi). Sotto $66 → stop tecnico.",
+        "Q4_timing": "Stock ha già corso +21.87% oggi. Timing: attendere conferma sopra $70 nella finestra 15:35-15:45 IT. Chasing oltre $76 è pericoloso.",
+        "Q5_kindleberger": "STAGE 1-2 (recovery da $58.40 low, 20.3% da minimo). Non in fase euforica. 100-day +76% ma con correzione intermedia da $89 a $58.",
+        "Q6_bird_rule": "Space consolidation narrative moderatamente in trend ma non virale. Hype risk BASSO.",
+        "giudizio": "PROCEDI TIER2 50% sizing — BLOCCATO: buying power €3.19. Setup da monitorare per rientro post-rifornimento account."
+      },
+      "summary": {
+        "tier1_candidates": 0,
+        "tier2_candidates": 1,
+        "monitoring": 2,
+        "skip": 7,
+        "open_positions": 1,
+        "account_note": "Buying power €3.19 — NESSUN NUOVO INGRESSO POSSIBILE oggi. Scan è informativo.",
+        "priority_alert": "⚠️ Aggiornare rules.json open_positions con MBRX (564 shares, avg $3.265)"
+      }
+    }
+  ]
 }
